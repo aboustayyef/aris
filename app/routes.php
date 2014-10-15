@@ -11,6 +11,14 @@
 |
 */
 
+Route::get('login', ['uses'=>'sessionsController@create']);
+Route::get('logout', ['uses'=>'sessionsController@destroy']);
+Route::resource('session', 'sessionsController', ['only'=>['store','create','destroy']]);
+
+Route::get('/secret', array('before'=>'auth', function(){
+	return 'This is a secret area';
+}));
+
 Route::get('/', function()
 {
 	return View::make('hello');

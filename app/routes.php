@@ -27,3 +27,11 @@ Route::get('sectionsReference', function()
 {
 	return View::make('sections');
 });
+
+/**
+ * Tiny Mce Test
+ */
+Route::get('tinymce', function()
+{
+	return View::make('tinymce');
+});

@@ -19,7 +19,11 @@ Route::get('/secret', array('before'=>'auth', function(){
 	return 'This is a secret area';
 }));
 
-Route::get('/', function()
+
+/**
+ * Produces a reference sheet for sections
+ */
+Route::get('sectionsReference', function()
 {
-	return View::make('hello');
+	return View::make('sections');
 });

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateUserTable extends Migration {
+class AddColumnActiveToSections extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,9 @@ class CreateUserTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('users', function(Blueprint $table)
+		Schema::table('sections', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->string('email');
-			$table->string('password');
-			$table->string('remember_token')->nullable();
-			$table->timestamps();
+			$table->boolean('active');
 		});
 	}
 
@@ -30,7 +26,10 @@ class CreateUserTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('users');
+		Schema::table('sections', function(Blueprint $table)
+		{
+			$table->dropcolumn('active');
+		});
 	}
 
 }

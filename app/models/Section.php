@@ -4,6 +4,9 @@ class Section extends \Eloquent {
 	protected $fillable = ['name','parentId'];
 	public $timestamps = false;
 
+	public function pages(){
+		return $this->hasMany('Page');
+	}
 /**
  * returns a collection of the top level section
  * 	example: About Us, Curriculum, Pastoral.. etc
@@ -32,4 +35,12 @@ class Section extends \Eloquent {
 		$dad = self::find($this->parentId);
 		return $dad;
 	}
+
+/**
+ * Returns the absolute url to this section
+ */
+	public function url(){
+		return '/'.$this->dad()->slug.'/'.$this->slug;
+	}
+	
 }

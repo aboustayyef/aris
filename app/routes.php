@@ -16,15 +16,27 @@ Route::get('/', function()
 	return View::make('home');
 });
 
+Route::get('/{section}/{subsection}/{page?}', array(
+	'uses'		=>	'pageNavigationController@resolve'
+));
+
+Route::get('/admin/createPage', array(
+	'before'	=>	'auth',
+	'as'		=>	'page.create',
+	'uses'		=>	'PageController@create'
+));
+
+Route::post('/admin/createPage', array(
+	'before'	=>	'auth',
+	'as'		=>	'page.store',
+	'uses'		=>	'PageController@store'
+));
+
+// session management. Login & logout
 
 Route::get('login', ['uses'=>'sessionsController@create']);
 Route::get('logout', ['uses'=>'sessionsController@destroy']);
 Route::resource('session', 'sessionsController', ['only'=>['store','create','destroy']]);
-
-Route::get('/secret', array('before'=>'auth', function(){
-	return 'This is a secret area';
-}));
-
 
 /**
  * Produces a reference sheet for sections
@@ -32,16 +44,4 @@ Route::get('/secret', array('before'=>'auth', function(){
 Route::get('sectionsReference', function()
 {
 	return View::make('sections');
-});
-
-/**
- * Tiny Mce Test
- */
-Route::get('test/tinymce', function()
-{
-	return View::make('tinymce');
-});
-Route::post('test/tinymce', function()
-{
-	echo Input::get('content');
 });

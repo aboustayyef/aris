@@ -2,20 +2,45 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tiny MCE Testing</title>
+	<title>Document</title>
 </head>
 <body>
-	<h1>TinyMCE and File Manager Testing</h1>
-	{{ Form::open() }}
-	{{ Form::label('name', 'Name')}}
-	{{ Form::text('content', null, ['id'=>'textarea']) }}
+	@if ($errors->any())
+	    <ul>
+	        {{implode('',$errors->all('<li>:message</li>'))}}
+	    </ul>			
+	@endif
+	{{ Form::open(array('route' => 'page.store')) }}
+
+		{{ Form::label('title', 'Title')}}
+		{{ Form::text('title', null, ['placeholder' => 'Page Title']) }}
+	<br>
+		<?php 		
+			$sections = Section::all()->toArray();
+			$sectionsArray = [];
+			foreach ($sections as $key => $section) {
+				$sectionsArray[$section['id']] = $section['name'];
+			}
+		?>
+
+		{{ Form::label('section', 'Section')}}
+		{{Form::select('section', $sectionsArray)}}
+	<br>
+
+		{{ Form::label('content', 'Content')}}
+		{{ Form::text('content', null,['id'=>'content']) }}
+		
 	{{ Form::submit('Submit it') }}
+
 	{{ Form::close() }}
 </body>
+
+<!-- Ignite TinyMce -->
+
 <script src ="{{asset('js/tinymce/tinymce.min.js')}}"></script>
 <script>
 	tinymce.init({
-    selector: "#textarea",
+    selector: "#content",
     theme: "modern",
     width: 780,
     height: 300,

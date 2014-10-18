@@ -10,12 +10,12 @@
 		echo '<ul>';
 		$majors = (new Section)->majors();
 		foreach ($majors as $key => $major) {
-			echo '<li>' . $major->name . ' ( ' . $major->id . ' )';
+			echo '<li>' . $major->name ;//. ' ( ' . $major->id . ' )';
 			echo '<ul>';
 
 			$children = Section::find($major->id)->children();
 			foreach ($children as $key => $child) {
-				echo '<li>' . $child->name . ' ( ' . $child->id . ' )</li>';
+				echo '<li>' . $child->name ;//. ' ( ' . $child->id . ' )</li>';
 			}
 			echo '</ul>';
 			echo '</li>';

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class AddColumnActiveToSections extends Migration {
+class AddSectionImageAndSectionDescriptionToSections extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -14,7 +14,8 @@ class AddColumnActiveToSections extends Migration {
 	{
 		Schema::table('sections', function(Blueprint $table)
 		{
-			$table->boolean('active');
+			$table->string('image')->nullable();
+			$table->text('description')->nullable();
 		});
 	}
 
@@ -28,7 +29,8 @@ class AddColumnActiveToSections extends Migration {
 	{
 		Schema::table('sections', function(Blueprint $table)
 		{
-			$table->dropcolumn('active');
+			$table->dropColumn('image');
+			$table->dropColumn('description');
 		});
 	}
 

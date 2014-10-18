@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('/', function()
+{
+	return View::make('home');
+});
+
+
 Route::get('login', ['uses'=>'sessionsController@create']);
 Route::get('logout', ['uses'=>'sessionsController@destroy']);
 Route::resource('session', 'sessionsController', ['only'=>['store','create','destroy']]);
@@ -31,7 +37,11 @@ Route::get('sectionsReference', function()
 /**
  * Tiny Mce Test
  */
-Route::get('tinymce', function()
+Route::get('test/tinymce', function()
 {
 	return View::make('tinymce');
+});
+Route::post('test/tinymce', function()
+{
+	echo Input::get('content');
 });

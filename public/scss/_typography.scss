@@ -1,0 +1,76 @@
+html{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	font-size: 100%; // 16px , 1rem;
+}
+//temp
+ul{
+	margin-left:25px;
+}
+
+// vertical unit basis is 15px;
+h1,h2,h3{
+	font-weight:bold;
+}
+h1{
+	font-size:34px;
+	line-height:45px;
+	margin:15px 0;
+	font-weight:500px;
+}
+
+h2{
+	font-size:26px;
+	line-height:45px;
+	margin:15px 0;
+	color:$aris_color;
+}
+
+hr{
+	margin:15px 0;
+}
+
+p{
+	font-size:16px;
+	line-height:30px;
+	margin-bottom:15px;
+	color: lighten(black,40);
+	&.lead{
+		font-size:20px;
+		color:black;
+	}
+}
+
+blockquote{
+	font-size:18px;
+	line-height:30px;
+	font-style:italic;
+	padding: 0 15px;
+	margin:15px 0;
+	border-left: 3px solid $aris_color;
+	color: darken($aris_color, 10);
+}
+.caption{
+	margin: 7.5px 0;
+	color: rgb(173, 173, 173);
+	font-style: italic;
+}
+table{
+	font-size:16px;
+	text-align:left;
+	tr:nth-child(even){
+		background:#F8FFFF;
+	}
+	th{
+		border-bottom:2px solid grey;
+		padding:15px 0;
+		font-weight:bold;
+	}
+	td{
+		border-bottom:1px solid lighten(grey, 10);
+		padding:7.5px 0;
+	}
+	th, td {
+		padding-left:5px;
+	}
+}

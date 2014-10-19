@@ -7,6 +7,14 @@ class Section extends \Eloquent {
 	public function pages(){
 		return $this->hasMany('Page');
 	}
+
+	public function hasOnePageOnly(){
+		if ($this->pages()->count() == 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 /**
  * returns a collection of the top level section
  * 	example: About Us, Curriculum, Pastoral.. etc

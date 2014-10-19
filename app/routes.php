@@ -16,19 +16,24 @@ Route::get('/', function()
 	return View::make('home');
 });
 
+Route::get('styleguide', function(){
+    return View::make('styleguide');
+});
 
-Route::get('/admin/createPage', array(
-	'before'	=>	'auth',
-	'as'		=>	'page.create',
-	'uses'		=>	'PageController@create'
-));
+Route::group(array('prefix' => 'admin', 'before'=>'auth'), function()
+{
 
-Route::post('/admin/createPage', array(
-	'before'	=>	'auth',
-	'as'		=>	'page.store',
-	'uses'		=>	'PageController@store'
-));
+    Route::get('createPage', array(
+    	'as'		=>	'page.create',
+		'uses'		=>	'PageController@create'
+    ));
 
+    Route::post('createPage', array(
+    	'as'		=>	'page.store',
+		'uses'		=>	'PageController@store'
+    ));
+
+});
 
 Route::get('/{section}/{subsection}/{page?}', array(
 	'uses'		=>	'pageNavigationController@resolve'

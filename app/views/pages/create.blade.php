@@ -15,16 +15,10 @@
 		{{ Form::label('title', 'Title')}}
 		{{ Form::text('title', null, ['placeholder' => 'Page Title']) }}
 	<br>
+	{{ Form::label('section', 'Section')}}
 		<?php 		
-			$sections = Section::all()->toArray();
-			$sectionsArray = [];
-			foreach ($sections as $key => $section) {
-				$sectionsArray[$section['id']] = $section['name'];
-			}
+			(new Aris\Navigation)->buildSelectList();
 		?>
-
-		{{ Form::label('section', 'Section')}}
-		{{Form::select('section', $sectionsArray)}}
 	<br>
 
 		{{ Form::label('content', 'Content')}}

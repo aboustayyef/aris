@@ -36,4 +36,19 @@ class Navigation
 		}
 	}
 
+	public function buildSelectList(){
+		echo '<select id="section" name="section">';
+		$majors = (new Section)->majors();
+		foreach ($majors as $key => $major) {
+			echo '<option value="" disabled="disabled"> </option>';
+			echo '<option value="" disabled="disabled">' . $major->name . '</option>';
+			echo '<option value="" disabled="disabled">---------------</option>';
+			$children = Section::find($major->id)->children();
+			foreach ($children as $key => $child) {
+				echo '<option value="'. $child->id .'">'. $child->name .'</option>';
+			}
+		}
+		echo '</select>';
+	}
+
 }

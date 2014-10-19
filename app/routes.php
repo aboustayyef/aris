@@ -16,9 +16,6 @@ Route::get('/', function()
 	return View::make('home');
 });
 
-Route::get('/{section}/{subsection}/{page?}', array(
-	'uses'		=>	'pageNavigationController@resolve'
-));
 
 Route::get('/admin/createPage', array(
 	'before'	=>	'auth',
@@ -30,6 +27,11 @@ Route::post('/admin/createPage', array(
 	'before'	=>	'auth',
 	'as'		=>	'page.store',
 	'uses'		=>	'PageController@store'
+));
+
+
+Route::get('/{section}/{subsection}/{page?}', array(
+	'uses'		=>	'pageNavigationController@resolve'
 ));
 
 // session management. Login & logout

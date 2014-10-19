@@ -1,0 +1,114 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -moz-box-sizing: Border-box;
+       box-sizing: Border-box; }
+
+html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 100%; }
+
+ul {
+  margin-left: 25px; }
+
+h1, h2, h3 {
+  font-weight: bold; }
+
+h1 {
+  font-size: 34px;
+  line-height: 45px;
+  margin: 15px 0;
+  font-weight: 500px; }
+
+h2 {
+  font-size: 26px;
+  line-height: 45px;
+  margin: 15px 0;
+  color: #0097a1; }
+
+hr {
+  margin: 15px 0; }
+
+p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  color: #666666; }
+  p.lead {
+    font-size: 20px;
+    color: black; }
+
+blockquote {
+  font-size: 18px;
+  line-height: 30px;
+  font-style: italic;
+  padding: 0 15px;
+  margin: 15px 0;
+  border-left: 3px solid #0097a1;
+  color: #00676e; }
+
+.caption {
+  margin: 7.5px 0;
+  color: #adadad;
+  font-style: italic; }
+
+table {
+  font-size: 16px;
+  text-align: left; }
+  table tr:nth-child(even) {
+    background: #F8FFFF; }
+  table th {
+    border-bottom: 2px solid grey;
+    padding: 15px 0;
+    font-weight: bold; }
+  table td {
+    border-bottom: 1px solid #9a9a9a;
+    padding: 7.5px 0; }
+  table th, table td {
+    padding-left: 5px; }

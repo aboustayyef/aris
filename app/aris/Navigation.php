@@ -13,18 +13,18 @@ class Navigation
 
 	public function displayHTML(){
 		echo '<ul>';
-		$majors = (new Section)->majors();
-		foreach ($majors as $key => $major) {
-			echo '<li>' . $major->name ;
+		$sections = (new Section)->sections();
+		foreach ($sections as $key => $section) {
+			echo '<li>' . $section->name ;
 			echo '<ul>';
 
-			$children = Section::find($major->id)->children();
-			foreach ($children as $key => $child) {
-				echo '<li><a href="'.$child->url().'">' . $child->name . '</a></li>';
-				$pages = Section::find($child->id)->pages->count();
+			$subsections = Section::find($section->id)->subsections();
+			foreach ($subsections as $key => $subsection) {
+				echo '<li><a href="'.$subsection->url().'">' . $subsection->name . '</a></li>';
+				$pages = Section::find($subsection->id)->pages->count();
 				if ($pages > 0) {
 					echo '<ul>';
-					$pages = Section::find($child->id)->pages;
+					$pages = Section::find($subsection->id)->pages;
 					foreach ($pages as $key => $page) {
 						echo '<li><a href="'.$page->url().'">' . $page->title . '</li></a>';
 					}
@@ -38,14 +38,14 @@ class Navigation
 
 	public function buildSelectList(){
 		echo '<select id="section" name="section">';
-		$majors = (new Section)->majors();
-		foreach ($majors as $key => $major) {
+		$sections = (new Section)->sections();
+		foreach ($sections as $key => $section) {
 			echo '<option value="" disabled="disabled"> </option>';
-			echo '<option value="" disabled="disabled">' . $major->name . '</option>';
+			echo '<option value="" disabled="disabled">' . $section->name . '</option>';
 			echo '<option value="" disabled="disabled">---------------</option>';
-			$children = Section::find($major->id)->children();
-			foreach ($children as $key => $child) {
-				echo '<option value="'. $child->id .'">'. $child->name .'</option>';
+			$subsections = Section::find($section->id)->subsections();
+			foreach ($subsections as $key => $subsection) {
+				echo '<option value="'. $subsection->id .'">'. $subsection->name .'</option>';
 			}
 		}
 		echo '</select>';

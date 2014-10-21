@@ -19,18 +19,18 @@ class Section extends \Eloquent {
  * returns a collection of the top level section
  * 	example: About Us, Curriculum, Pastoral.. etc
  */
-	public function majors(){
-		$majors = $this->where('parentId', null)->where('active', 1)->get();
-		return $majors;
+	public function sections(){
+		$sections = $this->where('parentId', null)->where('active', 1)->get();
+		return $sections;
 	}
 
 /**
  * returns a collection object of Children of category
  */
-	public function children(){
-		$children = $this->where('parentId', $this->id)->get();
-		if ($children->count() > 0) {
-			return $children;
+	public function subsections(){
+		$subsections = $this->where('parentId', $this->id)->get();
+		if ($subsections->count() > 0) {
+			return $subsections;
 		} else {
 			return false;
 		}

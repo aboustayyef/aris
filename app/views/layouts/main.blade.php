@@ -8,21 +8,19 @@
 <body>
 	<div id="siteWrapper">
 		<header>
-			<div id="logo">ARIS International School</div>
-			<div id="quickInfo"></div>
+			@include('partials.header')
 		</header>
 		<nav>
-			<?php 
-				$navigation = new Aris\Navigation;
-				$navigation->displayHTML();
-			?>
+			@include('partials.navigation')
 		</nav>
 		<div id="content">
-			@yield('content')
+				@yield('content')
 		</div>	<!-- /content -->
 		<footer>
-			Footer
+			<div class="inner">
+				Footer
 			<!-- Don't forget analytics -->
+			</div>
 		</footer>
 	</div>	<!-- /siteWrapper -->
 </body>

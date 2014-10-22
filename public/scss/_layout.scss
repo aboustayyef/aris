@@ -1,0 +1,23 @@
+html, body{
+	background:lighten(silver, 20);
+	height:100%;
+}
+#siteWrapper{
+	width: $page_width;
+	background:white;
+	margin:auto;
+	height:100%;
+}
+
+.inner{
+	width:$page_inner_width;
+	margin:auto;
+}
+
+.section{
+	overflow:auto;
+	background:white;
+	&:nth-child(even){
+		background:beige;
+	}
+}

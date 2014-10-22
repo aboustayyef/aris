@@ -8,14 +8,14 @@
 	<?php 
 		echo '<h1>Sections</h1>';
 		echo '<ul>';
-		$majors = (new Section)->majors();
-		foreach ($majors as $key => $major) {
-			echo '<li>' . $major->name ;//. ' ( ' . $major->id . ' )';
+		$sections = (new Section)->sections();
+		foreach ($sections as $key => $section) {
+			echo '<li>' . $section->name ;//. ' ( ' . $section->id . ' )';
 			echo '<ul>';
 
-			$children = Section::find($major->id)->children();
-			foreach ($children as $key => $child) {
-				echo '<li>' . $child->name ;//. ' ( ' . $child->id . ' )</li>';
+			$subsections = Section::find($section->id)->subsections();
+			foreach ($subsections as $key => $subsection) {
+				echo '<li>' . $subsection->name ;//. ' ( ' . $subsection->id . ' )</li>';
 			}
 			echo '</ul>';
 			echo '</li>';

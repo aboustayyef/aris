@@ -1,0 +1,49 @@
+nav{
+	ul{margin:0}
+	ul.sections 
+	{
+		position:relative;
+		li
+		{
+			display: inline-block;
+			padding:5px;
+			&:nth-child(1)
+			{
+				padding-left:0;
+			}
+			ul.subsections
+			{
+				display:none;
+			}
+			&.active
+			{
+				ul.subsections
+				{
+					display: block;
+					position:absolute;
+					top:26px;
+					left:0;
+					width:100%;
+					background: silver;	
+					li{
+						padding:5px;
+						display:block;
+						width: 100%;
+						float:left;
+						ul{
+							display:none;
+						}
+						&.active{
+							ul{
+								display:block;
+								position:absolute;
+								left:400px;
+								top:0;
+							}
+						}
+					}	
+				}
+			}
+		}
+	}
+}

@@ -112,3 +112,54 @@ table {
     padding: 7.5px 0; }
   table th, table td {
     padding-left: 5px; }
+
+nav ul {
+  margin: 0; }
+nav ul.sections {
+  position: relative; }
+  nav ul.sections li {
+    display: inline-block;
+    padding: 5px; }
+    nav ul.sections li:nth-child(1) {
+      padding-left: 0; }
+    nav ul.sections li ul.subsections {
+      display: none; }
+    nav ul.sections li.active ul.subsections {
+      display: block;
+      position: absolute;
+      top: 26px;
+      left: 0;
+      width: 100%;
+      background: silver; }
+      nav ul.sections li.active ul.subsections li {
+        padding: 5px;
+        display: block;
+        width: 100%;
+        float: left; }
+        nav ul.sections li.active ul.subsections li ul {
+          display: none; }
+        nav ul.sections li.active ul.subsections li.active ul {
+          display: block;
+          position: absolute;
+          left: 400px;
+          top: 0; }
+
+html, body {
+  background: #f3f3f3;
+  height: 100%; }
+
+#siteWrapper {
+  width: 100%;
+  background: white;
+  margin: auto;
+  height: 100%; }
+
+.inner {
+  width: 1000px;
+  margin: auto; }
+
+.section {
+  overflow: auto;
+  background: white; }
+  .section:nth-child(even) {
+    background: beige; }

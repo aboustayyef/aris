@@ -12,24 +12,35 @@ class Navigation
 	}
 
 	public function displayHTML(){
-		echo '<ul>';
+		echo '<ul class="sections">';
 		$sections = (new Section)->sections();
 		foreach ($sections as $key => $section) {
-			echo '<li>' . $section->name ;
-			echo '<ul>';
+			if ($section->name == 'About Us') {
+				echo '<li class="active">' . $section->name ;
+			} else {
+				echo '<li>' . $section->name ;
+			}
+			
+			echo '<ul class="subsections">';
 
 			$subsections = Section::find($section->id)->subsections();
 			foreach ($subsections as $key => $subsection) {
-				echo '<li><a href="'.$subsection->url().'">' . $subsection->name . '</a></li>';
+				if ($subsection->name == "Principal's Welcome") {
+					echo '<li class="active">';
+				} else {
+					echo '<li>';
+				}
+				echo '<a href="'.$subsection->url().'">' . $subsection->name . '</a>';
 				$pages = Section::find($subsection->id)->pages->count();
 				if ($pages > 0) {
-					echo '<ul>';
+					echo '<ul class="pages">';
 					$pages = Section::find($subsection->id)->pages;
 					foreach ($pages as $key => $page) {
 						echo '<li><a href="'.$page->url().'">' . $page->title . '</li></a>';
 					}
 					echo '</ul>';
 				}
+				echo '</li>';
 			}
 			echo '</ul>';
 			echo '</li>';

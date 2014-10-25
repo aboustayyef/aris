@@ -1,43 +1,53 @@
 nav{
+	height:$navbar_height;
+	line-height:30px;
+	background:$aris_color;
 	ul{margin:0}
 	ul.sections 
 	{
 		position:relative;
-		li
+		>li
 		{
+			color:white;
+			cursor: pointer;
 			display: inline-block;
-			padding:5px;
-			&:nth-child(1)
-			{
-				padding-left:0;
-			}
+			padding:5px 10px;
 			ul.subsections
 			{
 				display:none;
 			}
 			&.active
 			{
+				background:darken($aris_color, 8);
 				ul.subsections
 				{
+					height:$nav_height;
+					border-top:$top_line_thickness solid darken($aris_color, 8);
 					display: block;
 					position:absolute;
-					top:26px;
+					top:$navbar_height;
 					left:0;
-					width:100%;
+					width:$nav_width;
 					background: silver;	
+					z-index:10;
 					li{
 						padding:5px;
 						display:block;
 						width: 100%;
-						float:left;
+						//float:left;
+						width:$nav_third;
+						line-height: 1.1em;
 						ul{
 							display:none;
 						}
 						&.active{
+							background: lighten($aris_color, 8);
 							ul{
 								display:block;
 								position:absolute;
-								left:400px;
+								left:$nav_third;
+								height: $nav_height - $top_line_thickness;
+								background:lighten(silver,10);
 								top:0;
 							}
 						}

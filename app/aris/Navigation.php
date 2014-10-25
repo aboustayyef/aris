@@ -15,21 +15,13 @@ class Navigation
 		echo '<ul class="sections">';
 		$sections = (new Section)->sections();
 		foreach ($sections as $key => $section) {
-			if ($section->name == 'About Us') {
-				echo '<li class="active">' . $section->name ;
-			} else {
-				echo '<li>' . $section->name ;
-			}
-			
+			echo '<li>' . $section->name ;
+		
 			echo '<ul class="subsections">';
 
 			$subsections = Section::find($section->id)->subsections();
 			foreach ($subsections as $key => $subsection) {
-				if ($subsection->name == "Principal's Welcome") {
-					echo '<li class="active">';
-				} else {
-					echo '<li>';
-				}
+				echo '<li>';
 				echo '<a href="'.$subsection->url().'">' . $subsection->name . '</a>';
 				$pages = Section::find($subsection->id)->pages->count();
 				if ($pages > 0) {

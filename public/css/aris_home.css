@@ -46,8 +46,7 @@ table {
   border-spacing: 0; }
 
 * {
-  -moz-box-sizing: Border-box;
-       box-sizing: Border-box; }
+  box-sizing: Border-box; }
 
 html {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -113,36 +112,55 @@ table {
   table th, table td {
     padding-left: 5px; }
 
-nav ul {
-  margin: 0; }
-nav ul.sections {
-  position: relative; }
-  nav ul.sections li {
-    display: inline-block;
-    padding: 5px; }
-    nav ul.sections li:nth-child(1) {
-      padding-left: 0; }
-    nav ul.sections li ul.subsections {
-      display: none; }
-    nav ul.sections li.active ul.subsections {
-      display: block;
-      position: absolute;
-      top: 26px;
-      left: 0;
-      width: 100%;
-      background: silver; }
-      nav ul.sections li.active ul.subsections li {
-        padding: 5px;
-        display: block;
-        width: 100%;
-        float: left; }
-        nav ul.sections li.active ul.subsections li ul {
-          display: none; }
-        nav ul.sections li.active ul.subsections li.active ul {
+nav {
+  height: 40px;
+  line-height: 30px;
+  background: #0097a1; }
+  nav ul {
+    margin: 0; }
+  nav ul.sections {
+    position: relative; }
+    nav ul.sections > li {
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      padding: 5px 10px; }
+      nav ul.sections > li ul.subsections {
+        display: none; }
+      nav ul.sections > li.active {
+        background: #007178; }
+        nav ul.sections > li.active ul.subsections {
+          height: 260px;
+          border-top: 5px solid #007178;
           display: block;
           position: absolute;
-          left: 400px;
-          top: 0; }
+          top: 40px;
+          left: 0;
+          width: 900px;
+          background: silver;
+          z-index: 10; }
+          nav ul.sections > li.active ul.subsections li {
+            padding: 5px;
+            display: block;
+            width: 100%;
+            width: 300px;
+            line-height: 1.1em; }
+            nav ul.sections > li.active ul.subsections li ul {
+              display: none; }
+            nav ul.sections > li.active ul.subsections li.active {
+              background: #00bdca; }
+              nav ul.sections > li.active ul.subsections li.active ul {
+                display: block;
+                position: absolute;
+                left: 300px;
+                height: 255px;
+                background: #dadada;
+                top: 0; }
+
+header {
+  padding-top: 10px;
+  height: 150px;
+  overflow: auto; }
 
 #logo {
   float: left; }
@@ -189,6 +207,15 @@ html[xmlns] .slides {
 .no-js .slides > li:first-child {
   display: block; }
 
+ul {
+  margin: 0; }
+
+ul.flex-direction-nav {
+  display: none; }
+
+ol {
+  display: none; }
+
 html, body {
   background: #f3f3f3;
   height: 100%; }
@@ -200,9 +227,9 @@ html, body {
   height: 100%; }
 
 .inner {
-  width: 1000px;
+  width: 1240px;
   margin: auto;
-  overflow: auto; }
+  overflow: visible; }
 
 .section {
   overflow: auto;

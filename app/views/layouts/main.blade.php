@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{'title'}}</title>
-	<link rel="stylesheet" href="{{asset('/css/aris.css')}}">
+	<link rel="stylesheet" href="{{asset('/css/aris_home.css')}}">
 </head>
 <body>
 	<div id="siteWrapper">
@@ -17,10 +17,7 @@
 				@yield('content')
 		</div>	<!-- /content -->
 		<footer>
-			<div class="inner">
-				Footer
-			<!-- Don't forget analytics -->
-			</div>
+			@include('partials.footer')
 		</footer>
 	</div>	<!-- /siteWrapper -->
 </body>

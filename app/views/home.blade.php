@@ -2,9 +2,8 @@
 
 @section('content')
 
-<div id="slideshow">
-	<img src="http://text.ses/dfs.jpg" style="background:#E8117F; max-width:100%;" width="2000px" height="300px" alt="">
-</div>
+@include('partials.slideshow')
+
 <div class="section">
 	<div class="inner">
 		<h1>[Reasons to choose aris]</h1>

@@ -3,7 +3,7 @@ $aris_color: #0097a1;
 
 // layout Dimensions
 $page_width:100%;
-$page_inner_width:1240px;
+$page_inner_width:1024px;
 
 // header
 $header_height:150px;
@@ -12,7 +12,8 @@ $header_height:150px;
 $navbar_height:40px;
 
 // navigation 
-$nav_width:900px;
+$nav_background:rgba(200,200,200,0.93);
+$nav_width:930px;
 $nav_third: $nav_width / 3 ;
-$nav_height:260px;
+$nav_height:$nav_third;
 $top_line_thickness: 5px;

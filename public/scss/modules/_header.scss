@@ -1,10 +1,16 @@
 header{
-	padding-top:10px;
+	padding-top:30px;
 	height:$header_height;
 	overflow:auto;
 }
 #logo{
+	text-indent: -999px ; //hide type
+	height:73px;
+	width:400px;
 	float:left;
+	background:url(../img/brand/aris-logo.png);
+	background-repeat:no-repeat;
+	background-size:400px 73px;
 }
 #quickInfo{
 	float:right;

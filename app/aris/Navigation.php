@@ -17,7 +17,12 @@ class Navigation
 		foreach ($sections as $key => $section) {
 			echo '<li>' . $section->name ;
 		
-			echo '<ul class="subsections">';
+			echo '<ul class="subsections"';
+				if (file_exists(public_path().'/img/featured/sections/'.$section->slug.'.jpg')) {
+					//echo '<div class="sectionImage"><img src="' . asset('img/featured/sections/'.$section->slug.'.jpg') . '"></div>';
+					echo 'style="background-image:url(../img/featured/sections/'.$section->slug.'.jpg); background-repeat: no-repeat; background-position:right center"'; 
+				}
+			echo '>';
 
 			$subsections = Section::find($section->id)->subsections();
 			foreach ($subsections as $key => $subsection) {

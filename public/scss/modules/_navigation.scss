@@ -1,4 +1,8 @@
 nav{
+	li a{
+		text-decoration:none;
+		color:black;
+	}
 	height:$navbar_height;
 	line-height:30px;
 	background:$aris_color;
@@ -28,10 +32,11 @@ nav{
 					top:$navbar_height;
 					left:0;
 					width:$nav_width;
-					background: silver;	
+					background: $nav_background;	
 					z-index:10;
+					padding-top:20px;
 					li{
-						padding:5px;
+						padding:5px 15px;
 						display:block;
 						width: 100%;
 						//float:left;
@@ -42,13 +47,24 @@ nav{
 						}
 						&.active{
 							background: lighten($aris_color, 8);
+							&:after{
+								content: ">";
+								float:right;
+							}
 							ul{
+								padding-top:20px;
 								display:block;
 								position:absolute;
 								left:$nav_third;
 								height: $nav_height - $top_line_thickness;
-								background:lighten(silver,10);
+								border-left:3px solid darken($nav_background, 10);
+								background:lighten($nav_background,20);
 								top:0;
+								li{
+									&:hover{
+										background: lighten($aris_color, 12);
+									}
+								}
 							}
 						}
 					}	

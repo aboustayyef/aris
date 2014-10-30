@@ -28,10 +28,10 @@ class Navigation
 			foreach ($subsections as $key => $subsection) {
 				echo '<li>';
 				echo '<a href="'.$subsection->url().'">' . $subsection->name . '</a>';
-				$pages = Section::find($subsection->id)->pages->count();
+				$pages = Section::find($subsection->id)->children()->count();
 				if ($pages > 0) {
 					echo '<ul class="pages">';
-					$pages = Section::find($subsection->id)->pages;
+					$pages = Section::find($subsection->id)->children();
 					foreach ($pages as $key => $page) {
 						echo '<li><a href="'.$page->url().'">' . $page->title . '</li></a>';
 					}

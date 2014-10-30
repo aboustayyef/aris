@@ -35,7 +35,7 @@ Route::group(array('prefix' => 'admin', 'before'=>'auth'), function()
 
 });
 
-Route::get('/{section}/{subsection}/{page?}', array(
+Route::get('/{section}/{subsection?}/{page?}', array(
 	'uses'		=>	'pageNavigationController@resolve'
 ));
 

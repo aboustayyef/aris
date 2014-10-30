@@ -4,12 +4,20 @@ class Section extends \Eloquent {
 	protected $fillable = ['name','parentId'];
 	public $timestamps = false;
 
-	public function pages(){
-		return $this->hasMany('Page');
+	public function __construct(){
+		$this->title = $this->name;
+	}
+
+	public function children(){
+		if ($this->subsections()) {
+			return $this->subsections();
+		} else {
+			return $this->hasMany('Page')->get();
+		}	
 	}
 
 	public function hasOnePageOnly(){
-		if ($this->pages()->count() == 1) {
+		if ($this->children()->count() == 1) {
 			return true;
 		} else {
 			return false;

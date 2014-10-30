@@ -17,8 +17,8 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php"
 		],
-		"psr-0": {
-            "Aris": "app/"
+		"psr-4": {
+            "Aris\\": "app/aris"
         }
 	},
 	"scripts": {

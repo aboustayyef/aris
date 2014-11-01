@@ -35,10 +35,6 @@ Route::group(array('prefix' => 'admin', 'before'=>'auth'), function()
 
 });
 
-Route::get('/{section}/{subsection?}/{page?}', array(
-	'uses'		=>	'pageNavigationController@resolve'
-));
-
 // session management. Login & logout
 
 Route::get('login', ['uses'=>'sessionsController@create']);
@@ -52,3 +48,7 @@ Route::get('sectionsReference', function()
 {
 	return View::make('sections');
 });
+
+Route::get('/{section}/{subsection?}/{page?}', array(
+    'uses'      =>  'pageNavigationController@resolve'
+));

@@ -1,54 +1,52 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
-Route::get('/', function()
+/***************************************************************/
+/***  Dev Stuff  ******************************/
+Route::get('sectionsReference', function()
 {
-	return View::make('home');
+    return View::make('sections');
 });
 
 Route::get('styleguide', function(){
     return View::make('styleguide');
 });
+/***************************************************************/
+/***************************************************************/
 
-Route::group(array('prefix' => 'admin', 'before'=>'auth'), function()
+Route::get('/', function()
 {
-
-    Route::get('createPage', array(
-    	'as'		=>	'page.create',
-		'uses'		=>	'PageController@create'
-    ));
-
-    Route::post('createPage', array(
-    	'as'		=>	'page.store',
-		'uses'		=>	'PageController@store'
-    ));
-
+    return View::make('home');
 });
 
-// session management. Login & logout
+Route::get('admin', array(
+    'as'          =>  'admin.index',
+    'before'      =>  'auth',
+    'uses'        =>  'adminController@index'
+));
 
+// session management. Login & logout
 Route::get('login', ['uses'=>'sessionsController@create']);
 Route::get('logout', ['uses'=>'sessionsController@destroy']);
 Route::resource('session', 'sessionsController', ['only'=>['store','create','destroy']]);
 
-/**
- * Produces a reference sheet for sections
- */
-Route::get('sectionsReference', function()
-{
-	return View::make('sections');
+
+// pages (admin)
+Route::resource('pages', 'PageController');
+
+// news
+Route::resource('news', 'NewsController');
+
+// Ajax
+Route::get('ajaxEditSections/{id}', function($id){
+	if (Auth::check()) {
+		if (Section::find($id)) {
+			return Aris\Ajax::renderTableViewOfPagesInSection($id);
+		}
+	}
+	return null;
 });
 
+// pages (browsing)
 Route::get('/{section}/{subsection?}/{page?}', array(
     'uses'      =>  'pageNavigationController@resolve'
 ));

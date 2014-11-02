@@ -25,7 +25,7 @@ class SessionsController extends \BaseController {
 
 		$attempt = Auth::attempt(['email'=>Input::get('email'),'password'=>Input::get('password')]);
 		if ($attempt) {
-			return Redirect::intended('/');
+			return Redirect::route('admin.index');
 		} else {
 			return Redirect::to('login');
 		}

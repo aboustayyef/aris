@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Log In as Admin</title>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-</head>
-<body>
-	 <div class="container">
-	{{ Form::open(array('action'=>'session.store', 'class' => 'form-signin', 'style'=>'max-width:300px')) }}
-        <h2 class="form-signin-heading">Please sign in</h2>
-		{{ Form::email('email', null, ['class' =>'form-control','placeholder' => 'Email Address']) }}
-		{{ Form::password('password', ['class'=>'form-control','placeholder' => 'Password']) }}
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>     
-     {{ Form::close() }}
+@extends('layouts.admin')
 
-    </div> <!-- /container -->
-</body>
-</html>
+@section('content')
+
+	<h2>Please sign in</h2>
+	<hr>
+	@include('partials.formerrors')
+
+	{{ Form::open(array('route'=>'session.store')) }}
+        <div class="row">
+	        <div class="form-group col-md-6 col-lg-4">
+			    {{ Form::label('email', 'Email')}}
+				{{ Form::text('email', null ,['placeholder' => 'Email Address', 'class'=>'form-control']) }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-6 col-lg-4">
+			    {{ Form::label('password', 'Password')}}
+				{{ Form::password('password', ['class'=>'form-control']) }}
+			</div>
+		</div>
+        <button type="submit" class="btn btn-default">Submit</button>    
+     {{ Form::close() }}
+@stop

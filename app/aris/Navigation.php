@@ -45,7 +45,7 @@ class Navigation
 	}
 
 	public function buildSelectList(){
-		echo '<select id="section" name="section">';
+		echo '<select id="section" name="section" class="form-control">';
 		$sections = (new Section)->sections();
 		foreach ($sections as $key => $section) {
 			echo '<option value="" disabled="disabled"> </option>';

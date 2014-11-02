@@ -1,56 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	@if ($errors->any())
-	    <ul>
-	        {{implode('',$errors->all('<li>:message</li>'))}}
-	    </ul>			
-	@endif
-	{{ Form::open(array('route' => 'page.store')) }}
+@extends('layouts.admin')
 
+@section('content')
+	
+	<h2>Create Page</h2>
+	<hr>	
+	@include('partials.formerrors')
+
+	{{ Form::open(array('route' => 'pages.store')) }}
+
+	<div class="form-group">
 		{{ Form::label('title', 'Title')}}
-		{{ Form::text('title', null, ['placeholder' => 'Page Title']) }}
-	<br>
-	{{ Form::label('section', 'Section')}}
-		<?php 		
-			(new Aris\Navigation)->buildSelectList();
-		?>
-	<br>
-
+		{{ Form::text('title', null, ['placeholder' => 'Page Title', 'class'=>'form-control']) }}
+	</div>	
+	
+	<div class="form-group">
+		{{ Form::label('section', 'Choose section (Important)')}}
+		<?php (new Aris\Navigation)->buildSelectList();?>
+	</div>	
+	
+	<div class="form-group">
 		{{ Form::label('content', 'Content')}}
-		{{ Form::text('content', null,['id'=>'content']) }}
-		
-	{{ Form::submit('Submit it') }}
+		{{ Form::text('content', null,['id'=>'content', 'placeholder'=>'Insert image by clicking on the icon above']) }}
+	</div>	
+
+	<button type="submit" class="btn btn-default">Submit</button>
 
 	{{ Form::close() }}
-</body>
 
-<!-- Ignite TinyMce -->
+	<!-- Ignite TinyMce -->
+	<?php 
+	Aris\Helpers::activateAdvancedEditor('#content');
+	?>
 
-<script src ="{{asset('js/tinymce/tinymce.min.js')}}"></script>
-<script>
-	tinymce.init({
-    selector: "#content",
-    theme: "modern",
-    width: 780,
-    height: 300,
-    relative_urls: false,
-    plugins: [
-         "advlist autolink link image lists charmap print preview hr anchor pagebreak",
-         "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
-         "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
-   ],
-   toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
-   toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
-   image_advtab: true ,
-   
-   external_filemanager_path:"/filemanager/",
-   filemanager_title:"Responsive Filemanager" ,
-   external_plugins: { "filemanager" : "/filemanager/plugin.min.js"}
- });
-</script>
-</html>
+@stop

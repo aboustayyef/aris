@@ -1,33 +1,31 @@
 <?php
 
-class PageController extends \BaseController {
+class NewsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /page
+	 * GET /news
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		if (Auth::check()) {
-			return View::make('pages.index');
-		}else{
-			return Redirect::to('login');
-		}
+		return 'news index';
+		$news = News::all();
+		return View::make('news.index', compact($news));
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /page/create
+	 * GET /news/create
 	 *
 	 * @return Response
 	 */
 	public function create()
 	{
-		if (Auth::check()) {
-			return View::make('pages.create');
-		}else{
+		if ( Auth::check()) {
+			return View::make('news.create');
+		} else {
 			return Redirect::to('login');
 		}
 		
@@ -35,28 +33,18 @@ class PageController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /page
+	 * POST /news
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-		$v = Validator::make(Input::all(), Page::rules());
-		if ($v->fails()) {
-			return Redirect::route('page.create')->withErrors($v)->withInput();
-		}
-		$page = new Page;
-		$page->title = Input::get('title');
-		$page->slug = Str::slug($page->title);
-		$page->content = Input::get('content');
-		$page->section_id = Input::get('section');
-		$page->save();
-		return Redirect::to('/')->with('flashMessage','You have succesfully created a new page');
+		//
 	}
 
 	/**
 	 * Display the specified resource.
-	 * GET /page/{id}
+	 * GET /news/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -68,7 +56,7 @@ class PageController extends \BaseController {
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /page/{id}/edit
+	 * GET /news/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -80,7 +68,7 @@ class PageController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /page/{id}
+	 * PUT /news/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -92,7 +80,7 @@ class PageController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /page/{id}
+	 * DELETE /news/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

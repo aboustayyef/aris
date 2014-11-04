@@ -75,7 +75,12 @@ class PageController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$pagetoedit = Page::find($id);
+		if (is_object($pagetoedit)) {
+			return View::make('pages.edit')->with('page', $pagetoedit);
+		} else {
+			return "page doesn't exist";
+		}
 	}
 
 	/**
@@ -87,7 +92,20 @@ class PageController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$v = Validator::make(Input::all(), Page::rules());
+		if ($v->fails()) {
+			return Redirect::route('pages.edit', ['id' => $id])->withErrors($v)->withInput();
+		}
+	 	
+	 	$page = Page::find($id);
+	 	$page->title = Input::get('title');
+	 	$page->section_id = Input::get('section');
+	 	$page->content = Input::get('content');
+
+	 	$page->save();
+
+	 	return Redirect::route('pages.index')->with('message', 'Page Updated');
+
 	}
 
 	/**

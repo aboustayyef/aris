@@ -7,7 +7,7 @@ use Form;
 
 	class Ajax
 	{
-		static function renderTableViewOfPagesInSection($sectionId){
+		static function renderTableViewOfPagesInSection($sectionId=10){
 			/**
 		 	* 	This class generates the list of pages with edit and delete buttons from a selected section.
 		 	*/
@@ -32,10 +32,10 @@ use Form;
 						<tr>
 						<?php
 						echo '<td class="col-md-8">'.$page->title.'</td>';
-						echo '<td class="col-md-2"><a href="/pages/' . $page->slug . '/edit" class="btn btn-primary">Edit</a></td>';
+						echo '<td class="col-md-2"><a href="/pages/' . $page->id . '/edit" class="btn btn-primary">Edit</a></td>';
 						echo '<td class="col-md-2">';
 						
-						echo Form::open(array('route' => array('pages.destroy', $page->slug), 'method' => 'delete'));
+						echo Form::open(array('route' => array('pages.destroy', $page->id), 'method' => 'delete'));
 						echo '<button type="submit" class="btn btn-danger btn-mini">Delete</button>';
 						echo Form::close();
 						echo '</td>';

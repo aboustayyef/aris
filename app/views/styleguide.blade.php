@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ARIS - Style Guide</title>
-	<link rel="stylesheet" href="{{asset('css/aris.css')}}">
+	<link rel="stylesheet" href="{{asset('css/aris_home.css')}}">
 	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
 </head>
 <body>

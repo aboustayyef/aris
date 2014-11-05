@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.16)
 # Database: aris
-# Generation Time: 2014-10-26 19:00:52 +0000
+# Generation Time: 2014-11-05 18:11:57 +0000
 # ************************************************************
 
 
@@ -18,6 +18,25 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table news
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `news`;
+
+CREATE TABLE `news` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `featured_image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `excerpt` text COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 
 
 # Dump of table pages
@@ -41,9 +60,9 @@ LOCK TABLES `pages` WRITE;
 
 INSERT INTO `pages` (`id`, `title`, `slug`, `section_id`, `content`, `created_at`, `updated_at`)
 VALUES
-	(8,'Welcome Letter','welcome-letter',10,'<p>Welcome Letter</p>','2014-10-26 09:12:48','2014-10-26 09:12:48'),
-	(9,'Missions','missions',11,'<p>Our Mission and Aims</p>','2014-10-26 09:13:27','2014-10-26 09:13:27'),
-	(10,'Ten Good Reasons for choosing Al-Rayaan International School','ten-good-reasons-for-choosing-al-rayaan-international-school',12,'<p>Ten Good reasons for choosing Al-Rayaan</p>','2014-10-26 09:14:36','2014-10-26 09:14:36'),
+	(8,'Welcome Letter','welcome-letter',10,'<p>Welcome to the Al-Rayan International School website. Recognized as a young and forward thinking school ARIS is an outstanding place to work and go to school. Our students are from over twenty different countries, are hard working and high achieving, our parents are supportive, our faculty is inspirational and our Board of Directors is very dedicated and strategically focused.</p><p>As a not-for-profit International Cambridge School, our curriculum is international and challenging. At the same time, we place a high value on the quality of relationships within the school as we attempt to model behaviors that we hope to see in students. We are dedicated to nurturing creative, resilient, interdependent and socially responsible students with the knowledge and skills necessary to be active contributors in the global community. In this way, we are more than just a school&hellip;we are a place where students emerge as responsible stewards of our global society and natural environment.</p><p>The ARIS family is undertaking big challenges in the coming five years, as our guiding statements so eloquently states. We will keep you updated of our achievements through our website. It is my sincere hope that you will find this website user friendly and you will consider it as the main source of information about the school. Enjoy your browsing.</p><p>Yours Sincerely, <br />Dr Fatma Odaymat</p>','2014-10-26 09:12:48','2014-11-04 21:02:58'),
+	(9,'Aris Mission and Aims','missions',11,'<h2>Mission</h2><p>Al-Rayan International School is a multicultural, non-discriminatory community of learners committed to motivating students to attain their fullest potential through broad-based, world-class curricula that promote critical thinking, foster self-motivation, and encourage self-development.The school is dedicated to nurturing creative, resilient and socially responsible students able to take initiatives, and endowed with the knowledge, skills and global awareness necessary to continue their education and become active contributors to the global community.</p><h2>Aims</h2><p>By 2018, Al-Rayan International School will be recognized nationally and internationally as a leading international school in Ghana, providing a stimulating multicultural learning environment in accordance with the best international standards in education. ARIS will also ensure high quality school support programmes that positively influence less advantaged students&rsquo; opportunities to access teaching and learning.ARIS students and staff will work well in teams and make a positive contribution to the school and to the wider world. Students will enjoy a programme of extended learning opportunities and a school climate characterized by academic excellence, fairness, trust, and mutual respect.</p>','2014-10-26 09:13:27','2014-11-04 21:08:20'),
+	(10,'Why Choose Aris','ten-good-reasons-for-choosing-al-rayaan-international-school',12,'<p>Al-Rayan International School (ARIS) was established in September 2003. As a forward thinking school, our mission focuses on the provision of the highest level of International standards in education adopting the Cambridge International and British National Curricula.</p><blockquote><p>We are committed to inspiring students to attain their fullest potential through a broad based curriculum that promotes critical thinking, fosters self-motivation, and encourages self- development.</p></blockquote><p>We are dedicated to nurturing creative, resilient, interdependent and socially responsible students with the knowledge and skills necessary to be active contributors in the global community. Within a caring, multicultural and courteous environment, the school is committed to instilling in each student a desire to learn, take appropriate risks, accept responsibility and face challenges. It is our task to keep the welfare and well-being of our students at the forefront and provide them with a morally sound learning environment that is respectful of all.</p><p>ARIS also ensures high quality school support programs that positively influences students&rsquo; opportunities to access teaching and learning.</p><p>Our students enjoy a wide program of extended learning opportunities and a school climate characterized by fairness, trust, and mutual respect that supports student development, learning and well-being.</p><p>Further, we aim to build highly professional and dynamic teams across the school that are committed to continuous learning and development in addition to finding fulfillment in their work.</p><p>At ARIS, we encourage our students to learn foreign languages since this exposes them to different cultures as well as different linguistic systems, thereby enabling an understanding of diversities and similarities in the global communities. We believe that intercultural competence is not only one of the essential skills for modern life and work, but is in itself exciting, pleasurable and rewarding. We currently offer Arabic, French, and Hindi.</p><p>In addition ARIS runs an Arabic Language Saturday program. This program caters to more than 120 students who attend other schools in Ghana.</p>','2014-10-26 09:14:36','2014-11-04 21:37:24'),
 	(11,'Primary School Campus','primary-school-campus',13,'<p>Page for Primary School Campus</p>','2014-10-26 09:15:03','2014-10-26 09:15:03'),
 	(12,'Secondary School Campus','secondary-school-campus',13,'<p>Secondary School Campus</p>','2014-10-26 09:15:25','2014-10-26 09:15:25'),
 	(13,'Library / Multimedia Center','library-multimedia-center',13,'<p>Library / Multimedia Center Page</p>','2014-10-26 09:16:14','2014-10-26 09:16:14'),
@@ -68,7 +87,8 @@ VALUES
 	(32,'Primary SRC?','primary-src',17,'<p>Primary SRC?</p>','2014-10-26 10:45:47','2014-10-26 10:45:47'),
 	(33,'Secondary SRC','secondary-src',17,'<p>Secondary SRC</p>','2014-10-26 10:46:01','2014-10-26 10:46:01'),
 	(34,'The Aristotalian','the-aristotalian',18,'<p>The Aristotalian</p>','2014-10-26 10:46:28','2014-10-26 10:46:28'),
-	(35,'ARIS Together','aris-together',18,'<p>Aris Together</p>','2014-10-26 10:47:13','2014-10-26 10:47:13');
+	(35,'ARIS Together','aris-together',18,'<p>Aris Together</p>','2014-10-26 10:47:13','2014-10-26 10:47:13'),
+	(36,'Early Years','early-years',21,'<p>Early Years</p>','2014-11-02 19:38:22','2014-11-02 19:38:22');
 
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -166,7 +186,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `email`, `password`, `remember_token`, `created_at`, `updated_at`)
 VALUES
-	(1,'mustapha.hamoui@gmail.com','$2y$10$ToI3AblR7eruE6pt9MJ.U.TC.NQhGN4l9MAWvcxbPY41e1Uc7clZu',NULL,'2014-10-16 05:40:24','2014-10-16 05:40:24');
+	(1,'mustapha.hamoui@gmail.com','$2y$10$ToI3AblR7eruE6pt9MJ.U.TC.NQhGN4l9MAWvcxbPY41e1Uc7clZu','p0b6ryUnx0LgPBpszeS9heL4GMgOsQaR6ldhZogcdkYSA7l9gKsl61bl7OWz','2014-10-16 05:40:24','2014-11-02 14:51:48');
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;

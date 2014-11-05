@@ -44,7 +44,7 @@ class Navigation
 		}
 	}
 
-	public function buildSelectList(){
+	public function buildSelectList($section_id = 10){
 		echo '<select id="section" name="section" class="form-control">';
 		$sections = (new Section)->sections();
 		foreach ($sections as $key => $section) {
@@ -53,7 +53,11 @@ class Navigation
 			echo '<option value="" disabled="disabled">---------------</option>';
 			$subsections = Section::find($section->id)->subsections();
 			foreach ($subsections as $key => $subsection) {
-				echo '<option value="'. $subsection->id .'">'. $subsection->name .'</option>';
+				echo '<option value="'. $subsection->id .'"';
+					if ($subsection->id == $section_id) {
+						echo 'selected';
+					}
+				echo '> ' . $subsection->name .'</option>';
 			}
 		}
 		echo '</select>';

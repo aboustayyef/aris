@@ -9,7 +9,7 @@
 <h2>Or Manage Existing Pages <small>Pick Section to manage</small></h2>
 
 	<div class="form-group">
-		<?php (new Aris\Navigation)->buildSelectList();?>
+		<?php (new Aris\Navigation)->buildSelectList(10);?>
 	</div>
 
 	<div id="dynamic">

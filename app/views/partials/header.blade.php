@@ -5,9 +5,10 @@
 			Search Engine
 		</div>
 		<ul>
-			<li>Phone: +0000 0 000000</li>
-			<li>Email: aris@aris.edu.gh</li>
-			<li><a href="#">Map</a></li>
+			<li>Email: communication@aris.edu.gh</li>
+			<li>Primary School: +233 54 189 7254</li>
+			<li>Secondary School: +233 302 544511</li>
+			<li>OR +233 302 544503</li>
 		</ul>
 	</div>
 </div>

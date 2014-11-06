@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{{'title'}}</title>
+	<title>{{$title}}</title>
 	<link rel="stylesheet" href="{{asset('/css/aris_home.css')}}">
 </head>
 <body>
@@ -16,9 +16,9 @@
 		<div id="content">
 				@yield('content')
 		</div>	<!-- /content -->
-		<footer>
-			@include('partials.footer')
-		</footer>
 	</div>	<!-- /siteWrapper -->
+<footer>
+	@include('partials.footer')
+</footer>
 </body>
 </html>

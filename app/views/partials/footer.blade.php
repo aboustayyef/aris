@@ -1,5 +1,7 @@
 <div class="inner">
 	
+	Footer Content
+
 	<!-- Jquery, use CDN in production -->
 	<script src="{{asset('js/jquery/jquery.min.js')}}"></script>
 

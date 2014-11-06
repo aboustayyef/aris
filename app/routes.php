@@ -15,7 +15,7 @@ Route::get('styleguide', function(){
 
 Route::get('/', function()
 {
-    return View::make('home');
+    return View::make('home')->with('title', 'Al-Rayan International School - Ghana');
 });
 
 Route::get('admin', array(

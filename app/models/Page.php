@@ -25,4 +25,5 @@ class Page extends \Eloquent {
 		$grandad_slug = $grandad->slug;
 		return '/'.$grandad_slug.'/'.$dad_slug.'/'.$me_slug;
 	}
+
 }

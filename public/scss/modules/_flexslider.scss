@@ -16,12 +16,15 @@ html[xmlns] .slides {display: block;}
 .no-js .slides > li:first-child {display: block;}
 
 // Mustaph Added
-ul{
+.flexslider ul{
 	margin:0;
+	li{
+		margin:-15px 0;
+	}
 }
 ul.flex-direction-nav{
 	display:none;
 }
-ol {
+.flexslider ol {
 	display:none;
 }

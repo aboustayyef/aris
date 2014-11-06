@@ -11,8 +11,16 @@ class PageNavigationController extends \BaseController {
 		*	If $page is set, it means we are going exactly to that page 
 		*/
 		if ($page) {
+
+			$pageExists = Page::where('slug', $page)->get()->count();
+			if ($pageExists > 0) {
+				$page = Page::where('slug', $page)->first();
+				$title = $page->title;
+			} else {
+				app::abort('404');
+			}
 			
-			return View::make('pages.singleView')->with(compact('page'));
+			return View::make('pages.singleView')->with(compact('page'))->with('title', 'ARIS - ' . $title);
 		
 		} else {
 			if ($sub) {
@@ -23,19 +31,24 @@ class PageNavigationController extends \BaseController {
 					
 					// if section doesn't exist, die (for now)
 					if ($subsection->count() == 0) {
-						die('Subsection does not exist');
+						app::abort('404');
 					}	
 
 					// if section only has one page, it means that the section *is* the page
 					// it will immediately display the page, not a list of pages with only one entry
 
 					$subsection = $subsection->first();
+					
 					if ($subsection->hasOnePageOnly()) {
-						$page = $subsection->children()->first()->slug;
-						return View::make('pages.singleView')->with(compact('page'));
+						$page = $subsection->children()->first();
+						$title = $subsection->children()->first()->title;
+						return View::make('pages.singleView')->with(compact('page'))->with('title', 'Aris - ' . $title);
 					}
+
 					// otherwise return a list of pages.
-					return View::make('pages.listView')->with('subsection', $sub);
+					$section = Section::where('slug', $sub)->first();
+					$title = $section->name;
+					return View::make('pages.listView')->with('section', $section)->with('title', 'Aris - ' . $title);
 			} else {
 				$section = Section::where('slug', $section)->get();
 				if ($section->count() == 0) {

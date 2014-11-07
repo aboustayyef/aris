@@ -12,8 +12,12 @@ $header_height:150px;
 $navbar_height:40px;
 
 // navigation 
-$nav_background:rgba(200,200,200,0.93);
-$nav_width:930px;
-$nav_third: $nav_width / 3 ;
+$nav_width:900px;
+$nav_third: ($nav_width / 3)-1 ;
 $nav_height:$nav_third;
 $top_line_thickness: 5px;
+	// colors
+$nav_background:white;
+$nav_link_color:black;
+$nav_highlight_color:lighten($aris_color, 8);
+$nav_panel_border_color: silver;

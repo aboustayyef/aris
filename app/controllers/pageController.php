@@ -51,7 +51,7 @@ class PageController extends \BaseController {
 		$page->content = Input::get('content');
 		$page->section_id = Input::get('section');
 		$page->save();
-		return Redirect::to('/')->with('flashMessage','You have succesfully created a new page');
+		return Redirect::to('/pages')->with('message','You have succesfully created a new page');
 	}
 
 	/**

@@ -1,7 +1,7 @@
 nav{
 	li a{
 		text-decoration:none;
-		color:black;
+		color:$nav_link_color;
 	}
 	height:$navbar_height;
 	line-height:30px;
@@ -26,7 +26,7 @@ nav{
 				ul.subsections
 				{
 					height:$nav_height;
-					border-top:$top_line_thickness solid darken($aris_color, 8);
+					border:1px solid $nav_panel_border_color;
 					display: block;
 					position:absolute;
 					top:$navbar_height;
@@ -46,7 +46,7 @@ nav{
 							display:none;
 						}
 						&.active{
-							background: lighten($aris_color, 8);
+							background: $nav_highlight_color;
 							&:after{
 								content: ">";
 								float:right;
@@ -57,7 +57,7 @@ nav{
 								position:absolute;
 								left:$nav_third;
 								height: $nav_height - $top_line_thickness;
-								border-left:3px solid darken($nav_background, 10);
+								border-left:1px solid $nav_panel_border_color;
 								background:lighten($nav_background,20);
 								top:0;
 								li{

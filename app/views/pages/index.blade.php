@@ -2,6 +2,11 @@
 
 @section('content')
 
+<?php 
+	if (Session::has('message')) {
+		echo Session::get('message');
+	}
+?>
 
 <h2>Create a New Page</h2>
 <a href="/pages/create" class="btn btn-warning">Click here to create a new page</a>

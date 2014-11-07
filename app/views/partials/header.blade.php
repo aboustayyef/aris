@@ -1,5 +1,5 @@
 <div class="inner">
-	<div id="logo">ARIS International School</div>
+	<a href="/"><div id="logo">ARIS International School</div></a>
 	<div id="quickInfo">
 		<div class="searchform">
 			Search Engine

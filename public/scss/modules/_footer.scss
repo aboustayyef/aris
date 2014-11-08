@@ -1,7 +1,9 @@
 footer{
+	width:$page_width;
+	margin:0 auto;
+	padding:10px;
 	background:$aris_color;
 	position: relative;
 	bottom: 0;
 	left: 0;
-	width:100%;
 }

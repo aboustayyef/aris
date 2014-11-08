@@ -7,7 +7,7 @@ html, body{
 #siteWrapper{
 	width: $page_width;
 	background:white;
-	margin:auto;
+	margin:$top_margin auto 0;
 	height:100%;
 	overflow:auto;
 }

@@ -10,12 +10,19 @@ html, body{
 	margin:$top_margin auto 0;
 	height:100%;
 	overflow:auto;
+	@media all and (max-width:$page_width){
+		width: 100%;
+	}
 }
 
 .inner{
 	width:$page_inner_width;
 	margin:auto;
 	overflow:visible;
+	@media all and(max-width: $page_inner_width){
+		width: 100%;
+		padding:0 10px;
+	}
 }
 
 .section{

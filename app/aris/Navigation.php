@@ -11,7 +11,7 @@ class Navigation
 		# code...
 	}
 
-	public function displayHTML(){
+	public function renderFullNav(){
 		echo '<ul class="sections">';
 		$sections = (new Section)->sections();
 		foreach ($sections as $key => $section) {
@@ -42,6 +42,28 @@ class Navigation
 			echo '</ul>';
 			echo '</li>';
 		}
+		echo '</ul>';
+	}
+	public function renderMobileNav(){
+		echo '<div id="mobileMenu"><h3><i class="fa fa-bars"></i> Menu</h3>';
+		echo '<ul class="sectionsMobile">';
+		$sections = (new Section)->sections();
+		foreach ($sections as $key => $section) {
+			echo '<li><h4>' . $section->name . '</h4>';
+		
+			echo '<ul class="subsections">';
+
+			$subsections = Section::find($section->id)->subsections();
+			foreach ($subsections as $key => $subsection) {
+				echo '<li>';
+				echo '<a href="'.$subsection->url().'">' . $subsection->name . '</a>';
+				echo '</li>';
+			}
+			echo '</ul>';
+			echo '</li>';
+		}
+		echo '<ul>';
+		echo '</div>';
 	}
 
 	public function buildSelectList($section_id = 10){

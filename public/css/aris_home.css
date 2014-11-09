@@ -118,6 +118,9 @@ nav {
   height: 40px;
   line-height: 30px;
   background: #0097a1; }
+  @media all and (max-width: 940px) {
+    nav {
+      display: none; } }
   nav li a {
     text-decoration: none;
     color: black; }
@@ -135,13 +138,13 @@ nav {
       nav ul.sections > li.active {
         background: #007178; }
         nav ul.sections > li.active ul.subsections {
-          height: 299px;
+          height: 312.3333333333px;
           border: 1px solid silver;
           display: block;
           position: absolute;
           top: 40px;
           left: 0;
-          width: 900px;
+          width: 940px;
           background: white;
           z-index: 10;
           padding-top: 20px; }
@@ -149,7 +152,7 @@ nav {
             padding: 5px 15px;
             display: block;
             width: 100%;
-            width: 299px;
+            width: 312.3333333333px;
             line-height: 1.1em; }
             nav ul.sections > li.active ul.subsections li ul {
               display: none; }
@@ -162,17 +165,81 @@ nav {
                 padding-top: 20px;
                 display: block;
                 position: absolute;
-                left: 299px;
-                height: 294px;
+                left: 312.3333333333px;
+                height: 307.3333333333px;
                 border-left: 1px solid silver;
                 background: white;
                 top: 0; }
                 nav ul.sections > li.active ul.subsections li.active ul li:hover {
                   background: #00d0de; }
 
+#mobileMenu {
+  height: 40px;
+  line-height: 30px;
+  background: #0097a1; }
+  #mobileMenu h3 {
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    line-height: 40px;
+    width: 120px;
+    padding: 0 20px;
+    background: #00676e; }
+    #mobileMenu h3:hover {
+      background: #007f88; }
+  @media all and (min-width: 939px) {
+    #mobileMenu {
+      display: none; } }
+  #mobileMenu ul.sectionsMobile {
+    display: none; }
+  #mobileMenu.active {
+    height: auto; }
+    #mobileMenu.active ul.sectionsMobile {
+      display: block;
+      margin: 0; }
+      #mobileMenu.active ul.sectionsMobile li {
+        padding: 5px 20px;
+        background: silver;
+        border-bottom: 1px dotted white;
+        cursor: pointer; }
+        #mobileMenu.active ul.sectionsMobile li:hover {
+          background: #dadada; }
+      @media all and (min-width: 939px) {
+        #mobileMenu.active ul.sectionsMobile {
+          display: none; } }
+      #mobileMenu.active ul.sectionsMobile ul {
+        display: none; }
+      #mobileMenu.active ul.sectionsMobile li.active {
+        background: #0097a1; }
+        #mobileMenu.active ul.sectionsMobile li.active:hover {
+          background: #0097a1; }
+        #mobileMenu.active ul.sectionsMobile li.active h4 {
+          margin-left: -20px;
+          margin-right: -20px;
+          margin-top: -5px;
+          margin-bottom: 5px;
+          background: #CBEBED;
+          padding: 5px 20px;
+          cursor: pointer; }
+          #mobileMenu.active ul.sectionsMobile li.active h4:hover {
+            background: #b8e4e6; }
+        #mobileMenu.active ul.sectionsMobile li.active ul {
+          display: block;
+          margin: 0; }
+          #mobileMenu.active ul.sectionsMobile li.active ul li {
+            background: white;
+            border-bottom: 1px solid silver; }
+            #mobileMenu.active ul.sectionsMobile li.active ul li a {
+              color: #0097a1;
+              text-decoration: none; }
+            #mobileMenu.active ul.sectionsMobile li.active ul li:hover {
+              background: #e6e6e6; }
+              #mobileMenu.active ul.sectionsMobile li.active ul li:hover a {
+                color: black; }
+
 header {
-  padding-top: 30px;
-  height: 150px;
+  padding-top: 20px;
+  height: 140px;
   overflow: auto; }
 
 #logo {
@@ -186,6 +253,24 @@ header {
 
 #quickInfo {
   float: right; }
+
+#quickInfo {
+  font-size: 13px;
+  color: #888;
+  margin-right: 5px;
+  line-height: 18px; }
+  #quickInfo .searchform {
+    margin-bottom: 10px; }
+    #quickInfo .searchform input {
+      padding: 3px; }
+  #quickInfo ul {
+    margin: 0; }
+    #quickInfo ul li i {
+      color: #0097a1;
+      font-size: 16px; }
+  @media all and (max-width: 650px) {
+    #quickInfo {
+      display: none; } }
 
 /* FlexSlider Necessary Styles
 *********************************/
@@ -261,11 +346,18 @@ html, body {
   margin: 30px auto 0;
   height: 100%;
   overflow: auto; }
+  @media all and (max-width: 1280px) {
+    #siteWrapper {
+      width: 100%; } }
 
 .inner {
   width: 1024px;
   margin: auto;
   overflow: visible; }
+  @media all and (max-width: 1024px) {
+    .inner {
+      width: 100%;
+      padding: 0 10px; } }
 
 .section {
   margin-top: 0;

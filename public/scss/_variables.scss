@@ -1,5 +1,6 @@
 // colors
 $aris_color: #0097a1;
+$aris_color_light: #CBEBED;
 
 // layout Dimensions
 $top_margin:30px;
@@ -7,13 +8,14 @@ $page_width:1280px;
 $page_inner_width:1024px;
 
 // header
-$header_height:150px;
+$header_height:140px;
+$header_top_padding:20px;
 
 // navbar
 $navbar_height:40px;
 
 // navigation 
-$nav_width:900px;
+$nav_width:940px;
 $nav_third: ($nav_width / 3)-1 ;
 $nav_height:$nav_third;
 $top_line_thickness: 5px;

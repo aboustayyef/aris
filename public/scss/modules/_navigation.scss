@@ -1,4 +1,8 @@
 nav{
+	// Hide when window narrower than width
+	@media all and (max-width:$nav_width){
+		display:none;
+	}
 	li a{
 		text-decoration:none;
 		color:$nav_link_color;
@@ -9,6 +13,7 @@ nav{
 	ul{margin:0}
 	ul.sections 
 	{
+		
 		position:relative;
 		>li
 		{
@@ -72,4 +77,85 @@ nav{
 			}
 		}
 	}
+}
+
+#mobileMenu{
+		height:$navbar_height;
+		line-height:30px;
+		background:$aris_color;
+		h3{
+			cursor:pointer;
+			font-size: 18px;
+			color: white;
+			line-height: 40px;
+			width: 120px;
+			padding: 0 20px;
+			background: darken($aris_color, 10);
+			&:hover{
+				background:  darken($aris_color, 5);
+			}
+		}
+		// Show when window narrower than width
+		@media all and (min-width:$nav_width - 1){
+			display:none;
+		}
+		ul.sectionsMobile{	
+			display:none;
+		}
+		&.active {
+			height:auto;
+			ul.sectionsMobile{
+				display:block;
+				margin:0;
+				li{
+					padding: 5px 20px;
+					background: silver;
+					border-bottom: 1px dotted white;
+					cursor:pointer;
+					&:hover{
+						background:lighten(silver,10);
+					}
+				}
+				@media all and (min-width:$nav_width - 1){
+					display:none;
+				}
+				ul{
+					display:none;
+				}
+				li.active{
+					background:$aris_color;
+					&:hover{
+						background:$aris_color;
+					}
+					h4{
+						margin-left: -20px;
+						margin-right: -20px;
+						margin-top: -5px;
+						margin-bottom: 5px;
+						background:$aris_color_light;
+						padding:5px 20px;
+						cursor:pointer;
+						&:hover{
+							background:darken($aris_color_light,5);
+						}
+					}
+					ul{
+						display:block;
+						margin:0;
+						li{
+							background:white;
+							border-bottom:1px solid silver;
+							a{
+								color:$aris_color;
+								text-decoration:none;
+							}
+							&:hover{
+								a{color: black;}
+								background:darken(white,10);
+							}
+						}
+					}
+				}
+			}
+		}
 }

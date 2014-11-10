@@ -1,14 +1,15 @@
 html, body{
 	background:lighten(silver, 20);
 	height:100%;
-	min-height:100%;
 	position:relative;
 }
 #siteWrapper{
+	border:1px solid lighten(#999,20);
+	border-bottom:none;
 	width: $page_width;
 	background:white;
 	margin:$top_margin auto 0;
-	height:100%;
+	min-height:100%;
 	overflow:auto;
 	@media all and (max-width:$page_width){
 		width: 100%;
@@ -25,12 +26,90 @@ html, body{
 	}
 }
 
+img{
+	&.circle{
+		border-radius:50%;
+	}
+	&.left{
+		float:left;
+		margin-right:$gutter;
+	}
+}
+
+// Grid
+.card {
+	padding:$gutter;
+	border:1px solid $aris_light_grey;
+	background:white;
+}
 .section{
+	h1,h2,h3,h4{
+		margin-top:0;
+	}
 	margin-top:0;
-	padding-top:0;
 	overflow:auto;
 	background:white;
-	&:nth-child(even){
-		background:beige;
+	overflow:auto;
+	padding: 20px 0;
+	&.dk{
+		background:$aris_light_grey;
 	}
+	&.bordered{
+		border-top:1px solid $aris_color;
+		border-bottom:1px solid $aris_color;
+	}
+	.full{
+		width:100%;
+		margin:0;
+		float:left;
+	}
+	.half{
+		margin-right:$gutter;
+		width:($page_inner_width - ($gutter * 1 ))/2;
+		float:left;
+		&.last{
+			margin-right:0;
+		} 
+	}
+	.third{
+		margin-right:$gutter;
+		width:($page_inner_width - ($gutter * 2 ))/3;
+		float:left;
+		&.last{
+			margin-right:0;
+		} 
+	}
+	.twothirds{
+		margin-right:$gutter;
+		width:(($page_inner_width - ($gutter * 2 ))/3)*2 + $gutter;
+		float:left;
+		&.last{
+			margin-right:0;
+		} 
+	}
+	.quarter{
+		margin-right:$gutter;
+		width:($page_inner_width - ($gutter * 3 ))/4;
+		float:left;
+		&.last{
+			margin-right:0;
+		} 
+	}
+	
+	.full, .half, .third , .twothirds , .quarter{
+		img{
+			margin:0;
+			max-width:100%;
+			height:auto;
+		}
+	}
+
+	@media all and(max-width: $page_inner_width){
+		.half, .third , .twothirds, .quarter{
+			padding-top:$gutter;
+			width:100%;
+			margin:0;
+		}
+	}
+
 }

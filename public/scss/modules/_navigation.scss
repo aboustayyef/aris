@@ -39,35 +39,40 @@ nav{
 					width:$nav_width;
 					background: $nav_background;	
 					z-index:10;
-					padding-top:20px;
+					//padding-top:20px;
 					li{
-						padding:5px 15px;
+						padding:6px 15px;
 						display:block;
 						width: 100%;
 						//float:left;
 						width:$nav_third;
 						line-height: 1.1em;
+						color:black;
+						i{
+							display:none;
+						}
 						ul{
 							display:none;
 						}
 						&.active{
 							background: $nav_highlight_color;
-							&:after{
-								content: ">";
+							i{
 								float:right;
+								display:block;
+								color:white;
 							}
 							ul{
-								padding-top:20px;
+								//padding-top:20px;
 								display:block;
 								position:absolute;
 								left:$nav_third;
-								height: $nav_height - $top_line_thickness;
+								height: 100%;
 								border-left:1px solid $nav_panel_border_color;
 								background:lighten($nav_background,20);
 								top:0;
 								li{
 									&:hover{
-										background: lighten($aris_color, 12);
+										background: $aris_color_light;
 									}
 								}
 							}

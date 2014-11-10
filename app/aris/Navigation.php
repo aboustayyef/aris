@@ -2,7 +2,6 @@
 
 use Section; // (from root, so that it doesnt think we're looking for Aris\Section)
 use Page;
-
 class Navigation
 {
 	
@@ -16,7 +15,6 @@ class Navigation
 		$sections = (new Section)->sections();
 		foreach ($sections as $key => $section) {
 			echo '<li>' . $section->name ;
-		
 			echo '<ul class="subsections"';
 				if (file_exists(public_path().'/img/featured/sections/'.$section->slug.'.jpg')) {
 					//echo '<div class="sectionImage"><img src="' . asset('img/featured/sections/'.$section->slug.'.jpg') . '"></div>';
@@ -27,7 +25,7 @@ class Navigation
 			$subsections = Section::find($section->id)->subsections();
 			foreach ($subsections as $key => $subsection) {
 				echo '<li>';
-				echo '<a href="'.$subsection->url().'">' . $subsection->name . '</a>';
+				echo $subsection->name.'<i class="fa fa-caret-right"></i>';
 				$pages = Section::find($subsection->id)->children()->count();
 				if ($pages > 0) {
 					echo '<ul class="pages">';

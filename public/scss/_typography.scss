@@ -7,25 +7,41 @@ html{
 ul{
 	margin-left:25px;
 }
-
+.center {
+	text-align:center;
+}
+.aris {
+	color: $aris_color;
+}
 // vertical unit basis is 15px;
 h1,h2,h3{
 	font-weight:bold;
+	color: #444;
 }
 h1{
-	font-size:34px;
+	font-size:30px;
 	line-height:45px;
 	margin:15px 0;
 	margin-top:30px;
-	color: #555;
 	font-weight:500px;
 }
 
 h2{
-	font-size:26px;
+	font-size:24px;
 	line-height:45px;
 	margin:15px 0;
-	color:$aris_color;
+}
+
+h3{
+	font-size:20px;
+	line-height:30px;
+	margin:15px 0;
+}
+
+h4{
+	font-size:18px;
+	line-height:30px;
+	margin:15px 0;
 }
 
 hr{

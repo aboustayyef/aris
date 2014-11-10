@@ -56,22 +56,37 @@ html {
 ul {
   margin-left: 25px; }
 
+.center {
+  text-align: center; }
+
+.aris {
+  color: #0097a1; }
+
 h1, h2, h3 {
-  font-weight: bold; }
+  font-weight: bold;
+  color: #444; }
 
 h1 {
-  font-size: 34px;
+  font-size: 30px;
   line-height: 45px;
   margin: 15px 0;
   margin-top: 30px;
-  color: #555;
   font-weight: 500px; }
 
 h2 {
-  font-size: 26px;
+  font-size: 24px;
   line-height: 45px;
-  margin: 15px 0;
-  color: #0097a1; }
+  margin: 15px 0; }
+
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 15px 0; }
+
+h4 {
+  font-size: 18px;
+  line-height: 30px;
+  margin: 15px 0; }
 
 hr {
   margin: 15px 0; }
@@ -138,7 +153,7 @@ nav {
       nav ul.sections > li.active {
         background: #007178; }
         nav ul.sections > li.active ul.subsections {
-          height: 312.3333333333px;
+          height: 300px;
           border: 1px solid silver;
           display: block;
           position: absolute;
@@ -146,32 +161,34 @@ nav {
           left: 0;
           width: 940px;
           background: white;
-          z-index: 10;
-          padding-top: 20px; }
+          z-index: 10; }
           nav ul.sections > li.active ul.subsections li {
-            padding: 5px 15px;
+            padding: 6px 15px;
             display: block;
             width: 100%;
             width: 312.3333333333px;
-            line-height: 1.1em; }
+            line-height: 1.1em;
+            color: black; }
+            nav ul.sections > li.active ul.subsections li i {
+              display: none; }
             nav ul.sections > li.active ul.subsections li ul {
               display: none; }
             nav ul.sections > li.active ul.subsections li.active {
               background: #00bdca; }
-              nav ul.sections > li.active ul.subsections li.active:after {
-                content: ">";
-                float: right; }
+              nav ul.sections > li.active ul.subsections li.active i {
+                float: right;
+                display: block;
+                color: white; }
               nav ul.sections > li.active ul.subsections li.active ul {
-                padding-top: 20px;
                 display: block;
                 position: absolute;
                 left: 312.3333333333px;
-                height: 307.3333333333px;
+                height: 100%;
                 border-left: 1px solid silver;
                 background: white;
                 top: 0; }
                 nav ul.sections > li.active ul.subsections li.active ul li:hover {
-                  background: #00d0de; }
+                  background: #CBEBED; }
 
 #mobileMenu {
   height: 40px;
@@ -337,14 +354,15 @@ footer {
 html, body {
   background: #f3f3f3;
   height: 100%;
-  min-height: 100%;
   position: relative; }
 
 #siteWrapper {
+  border: 1px solid #cccccc;
+  border-bottom: none;
   width: 1280px;
   background: white;
   margin: 30px auto 0;
-  height: 100%;
+  min-height: 100%;
   overflow: auto; }
   @media all and (max-width: 1280px) {
     #siteWrapper {
@@ -359,10 +377,64 @@ html, body {
       width: 100%;
       padding: 0 10px; } }
 
+img.circle {
+  border-radius: 50%; }
+img.left {
+  float: left;
+  margin-right: 20px; }
+
+.card {
+  padding: 20px;
+  border: 1px solid #E7E7E7;
+  background: white; }
+
 .section {
   margin-top: 0;
-  padding-top: 0;
   overflow: auto;
-  background: white; }
-  .section:nth-child(even) {
-    background: beige; }
+  background: white;
+  overflow: auto;
+  padding: 20px 0; }
+  .section h1, .section h2, .section h3, .section h4 {
+    margin-top: 0; }
+  .section.dk {
+    background: #E7E7E7; }
+  .section.bordered {
+    border-top: 1px solid #0097a1;
+    border-bottom: 1px solid #0097a1; }
+  .section .full {
+    width: 100%;
+    margin: 0;
+    float: left; }
+  .section .half {
+    margin-right: 20px;
+    width: 502px;
+    float: left; }
+    .section .half.last {
+      margin-right: 0; }
+  .section .third {
+    margin-right: 20px;
+    width: 328px;
+    float: left; }
+    .section .third.last {
+      margin-right: 0; }
+  .section .twothirds {
+    margin-right: 20px;
+    width: 676px;
+    float: left; }
+    .section .twothirds.last {
+      margin-right: 0; }
+  .section .quarter {
+    margin-right: 20px;
+    width: 241px;
+    float: left; }
+    .section .quarter.last {
+      margin-right: 0; }
+  .section .full img, .section .half img, .section .third img, .section .twothirds img, .section .quarter img {
+    margin: 0;
+    max-width: 100%;
+    height: auto; }
+  @media all and (max-width: 1024px) {
+    .section .half, .section .third, .section .twothirds, .section .quarter {
+      padding-top: 20px;
+      width: 100%;
+      margin: 0; } }

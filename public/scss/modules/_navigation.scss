@@ -1,5 +1,6 @@
 nav{
 	// Hide when window narrower than width
+	// So that it will show mobile version instead
 	@media all and (max-width:$nav_width){
 		display:none;
 	}
@@ -13,21 +14,33 @@ nav{
 	ul{margin:0}
 	ul.sections 
 	{
-		
+		// [top section (About Us | Curriculum ..etc)]
 		position:relative;
 		>li
 		{
-			color:white;
 			cursor: pointer;
 			display: inline-block;
-			padding:5px 10px;
+			padding:0 10px;
+			line-height: $navbar_height;
 			ul.subsections
 			{
 				display:none;
 			}
+			a{
+				color:white;
+			}
+			i{
+				color:$aris_color_light;
+				opacity:0.5;
+				margin-left:5px;
+			}
 			&.active
 			{
 				background:darken($aris_color, 8);
+				i{
+					opacity: 1;
+				}
+				// [the whole navigation window]
 				ul.subsections
 				{
 					height:$nav_height;
@@ -39,17 +52,23 @@ nav{
 					width:$nav_width;
 					background: $nav_background;	
 					z-index:10;
-					//padding-top:20px;
+					padding-top:10px;
+
+
+
+					// [first panel]
 					li{
-						padding:6px 15px;
+						padding:8px 15px;
 						display:block;
 						width: 100%;
-						//float:left;
 						width:$nav_third;
 						line-height: 1.1em;
 						color:black;
 						i{
 							display:none;
+						}
+						a{
+							color:black;
 						}
 						ul{
 							display:none;
@@ -61,8 +80,9 @@ nav{
 								display:block;
 								color:white;
 							}
+							// [Second Panel]
 							ul{
-								//padding-top:20px;
+								padding-top:10px;
 								display:block;
 								position:absolute;
 								left:$nav_third;
@@ -71,6 +91,9 @@ nav{
 								background:lighten($nav_background,20);
 								top:0;
 								li{
+									a{
+										color:black;
+									}
 									&:hover{
 										background: $aris_color_light;
 									}
@@ -85,10 +108,11 @@ nav{
 }
 
 #mobileMenu{
-		height:$navbar_height;
-		line-height:30px;
+		height:40px;
+		line-height:40px;
 		background:$aris_color;
 		h3{
+			margin:0;
 			cursor:pointer;
 			font-size: 18px;
 			color: white;
@@ -119,6 +143,9 @@ nav{
 					cursor:pointer;
 					&:hover{
 						background:lighten(silver,10);
+					}
+					h4{
+						margin:0;
 					}
 				}
 				@media all and (min-width:$nav_width - 1){

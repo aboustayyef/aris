@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 // When mouse hovers over section, it becomes active
-$('.sections>li').hoverIntent(
+$('.sections>li').hover(
 	// mouse enter
 	function(){
 		$('.sections li.active').removeClass('active');
@@ -12,7 +12,7 @@ $('.sections>li').hoverIntent(
 		console.log('left');
 });
 
-$('.subsections>li').hoverIntent(
+$('.subsections>li').hover(
 	// mouse enter
 	function(){
 		$('.subsections>li.active').removeClass('active');
@@ -26,7 +26,7 @@ $('.subsections>li').hoverIntent(
 // ways to make sure navigation is turned off if mouse goes far
 
 //1- if it leaves the big ul.subsections window
-$('ul.subsections').hoverIntent(
+$('ul.subsections').hover(
 	// on mouse enter
 	function(){
 		//do nothing
@@ -38,7 +38,7 @@ $('ul.subsections').hoverIntent(
 
 
 //2- if it goes towards the header;
-$('header').hoverIntent(
+$('header').hover(
 	// on mouse enter
 	function(){
 		$('.sections li.active').removeClass('active');

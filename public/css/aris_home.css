@@ -130,10 +130,10 @@ table {
     padding-left: 5px; }
 
 nav {
-  height: 40px;
+  height: 45px;
   line-height: 30px;
   background: #0097a1; }
-  @media all and (max-width: 940px) {
+  @media all and (max-width: 900px) {
     nav {
       display: none; } }
   nav li a {
@@ -144,33 +144,44 @@ nav {
   nav ul.sections {
     position: relative; }
     nav ul.sections > li {
-      color: white;
       cursor: pointer;
       display: inline-block;
-      padding: 5px 10px; }
+      padding: 0 10px;
+      line-height: 45px; }
       nav ul.sections > li ul.subsections {
         display: none; }
+      nav ul.sections > li a {
+        color: white; }
+      nav ul.sections > li i {
+        color: #CBEBED;
+        opacity: 0.5;
+        margin-left: 5px; }
       nav ul.sections > li.active {
         background: #007178; }
+        nav ul.sections > li.active i {
+          opacity: 1; }
         nav ul.sections > li.active ul.subsections {
-          height: 300px;
+          height: 350px;
           border: 1px solid silver;
           display: block;
           position: absolute;
-          top: 40px;
+          top: 45px;
           left: 0;
-          width: 940px;
+          width: 900px;
           background: white;
-          z-index: 10; }
+          z-index: 10;
+          padding-top: 10px; }
           nav ul.sections > li.active ul.subsections li {
-            padding: 6px 15px;
+            padding: 8px 15px;
             display: block;
             width: 100%;
-            width: 312.3333333333px;
+            width: 299px;
             line-height: 1.1em;
             color: black; }
             nav ul.sections > li.active ul.subsections li i {
               display: none; }
+            nav ul.sections > li.active ul.subsections li a {
+              color: black; }
             nav ul.sections > li.active ul.subsections li ul {
               display: none; }
             nav ul.sections > li.active ul.subsections li.active {
@@ -180,21 +191,25 @@ nav {
                 display: block;
                 color: white; }
               nav ul.sections > li.active ul.subsections li.active ul {
+                padding-top: 10px;
                 display: block;
                 position: absolute;
-                left: 312.3333333333px;
+                left: 299px;
                 height: 100%;
                 border-left: 1px solid silver;
                 background: white;
                 top: 0; }
+                nav ul.sections > li.active ul.subsections li.active ul li a {
+                  color: black; }
                 nav ul.sections > li.active ul.subsections li.active ul li:hover {
                   background: #CBEBED; }
 
 #mobileMenu {
   height: 40px;
-  line-height: 30px;
+  line-height: 40px;
   background: #0097a1; }
   #mobileMenu h3 {
+    margin: 0;
     cursor: pointer;
     font-size: 18px;
     color: white;
@@ -204,7 +219,7 @@ nav {
     background: #00676e; }
     #mobileMenu h3:hover {
       background: #007f88; }
-  @media all and (min-width: 939px) {
+  @media all and (min-width: 899px) {
     #mobileMenu {
       display: none; } }
   #mobileMenu ul.sectionsMobile {
@@ -221,7 +236,9 @@ nav {
         cursor: pointer; }
         #mobileMenu.active ul.sectionsMobile li:hover {
           background: #dadada; }
-      @media all and (min-width: 939px) {
+        #mobileMenu.active ul.sectionsMobile li h4 {
+          margin: 0; }
+      @media all and (min-width: 899px) {
         #mobileMenu.active ul.sectionsMobile {
           display: none; } }
       #mobileMenu.active ul.sectionsMobile ul {
@@ -368,6 +385,12 @@ html, body {
     #siteWrapper {
       width: 100%; } }
 
+.arisbackground {
+  background: #0097a1;
+  padding: 20px; }
+  .arisbackground p, .arisbackground h1, .arisbackground h2, .arisbackground h3, .arisbackground h4 {
+    color: white; }
+
 .inner {
   width: 1024px;
   margin: auto;
@@ -376,6 +399,43 @@ html, body {
     .inner {
       width: 100%;
       padding: 0 10px; } }
+  .inner .full {
+    width: 100%;
+    margin: 0;
+    float: left; }
+  .inner .half {
+    margin-right: 20px;
+    width: 502px;
+    float: left; }
+    .inner .half.last {
+      margin-right: 0; }
+  .inner .third {
+    margin-right: 20px;
+    width: 328px;
+    float: left; }
+    .inner .third.last {
+      margin-right: 0; }
+  .inner .twothirds {
+    margin-right: 20px;
+    width: 676px;
+    float: left; }
+    .inner .twothirds.last {
+      margin-right: 0; }
+  .inner .quarter {
+    margin-right: 20px;
+    width: 241px;
+    float: left; }
+    .inner .quarter.last {
+      margin-right: 0; }
+  .inner .full img, .inner .half img, .inner .third img, .inner .twothirds img, .inner .quarter img {
+    margin: 0;
+    max-width: 100%;
+    height: auto; }
+  @media all and (max-width: 1024px) {
+    .inner .half, .inner .third, .inner .twothirds, .inner .quarter {
+      padding-top: 20px;
+      width: 100%;
+      margin: 0; } }
 
 img.circle {
   border-radius: 50%; }
@@ -401,40 +461,3 @@ img.left {
   .section.bordered {
     border-top: 1px solid #0097a1;
     border-bottom: 1px solid #0097a1; }
-  .section .full {
-    width: 100%;
-    margin: 0;
-    float: left; }
-  .section .half {
-    margin-right: 20px;
-    width: 502px;
-    float: left; }
-    .section .half.last {
-      margin-right: 0; }
-  .section .third {
-    margin-right: 20px;
-    width: 328px;
-    float: left; }
-    .section .third.last {
-      margin-right: 0; }
-  .section .twothirds {
-    margin-right: 20px;
-    width: 676px;
-    float: left; }
-    .section .twothirds.last {
-      margin-right: 0; }
-  .section .quarter {
-    margin-right: 20px;
-    width: 241px;
-    float: left; }
-    .section .quarter.last {
-      margin-right: 0; }
-  .section .full img, .section .half img, .section .third img, .section .twothirds img, .section .quarter img {
-    margin: 0;
-    max-width: 100%;
-    height: auto; }
-  @media all and (max-width: 1024px) {
-    .section .half, .section .third, .section .twothirds, .section .quarter {
-      padding-top: 20px;
-      width: 100%;
-      margin: 0; } }

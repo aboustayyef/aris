@@ -9,6 +9,9 @@
 		<div class="half">
 			<h3 class="aris">Welcome from the Principal</h3>
 			<p>Welcome to the Al-Rayan International School website. Recognized as a young and forward thinking school ARIS is an outstanding place to work and go to school. Our students are from over twenty different countries, are hard working and high achieving, our parents are supportive, our faculty is inspirational and our Board of Directors is very dedicated and strategically focused.</p>
+			<div class="arisbackground">
+				<p>This is a bit of information that may be highlighted</p>
+			</div>
 		</div>		
 
 		<div class="quarter">

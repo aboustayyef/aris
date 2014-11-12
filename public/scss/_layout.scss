@@ -15,6 +15,13 @@ html, body{
 		width: 100%;
 	}
 }
+.arisbackground{
+	background: $aris_color;
+	padding:$gutter;
+	p,h1,h2,h3,h4{
+		color: white;
+	}
+}
 
 .inner{
 	width:$page_inner_width;
@@ -23,40 +30,6 @@ html, body{
 	@media all and(max-width: $page_inner_width){
 		width: 100%;
 		padding:0 10px;
-	}
-}
-
-img{
-	&.circle{
-		border-radius:50%;
-	}
-	&.left{
-		float:left;
-		margin-right:$gutter;
-	}
-}
-
-// Grid
-.card {
-	padding:$gutter;
-	border:1px solid $aris_light_grey;
-	background:white;
-}
-.section{
-	h1,h2,h3,h4{
-		margin-top:0;
-	}
-	margin-top:0;
-	overflow:auto;
-	background:white;
-	overflow:auto;
-	padding: 20px 0;
-	&.dk{
-		background:$aris_light_grey;
-	}
-	&.bordered{
-		border-top:1px solid $aris_color;
-		border-bottom:1px solid $aris_color;
 	}
 	.full{
 		width:100%;
@@ -111,5 +84,38 @@ img{
 			margin:0;
 		}
 	}
+}
 
+img{
+	&.circle{
+		border-radius:50%;
+	}
+	&.left{
+		float:left;
+		margin-right:$gutter;
+	}
+}
+
+// Grid
+.card {
+	padding:$gutter;
+	border:1px solid $aris_light_grey;
+	background:white;
+}
+.section{
+	h1,h2,h3,h4{
+		margin-top:0;
+	}
+	margin-top:0;
+	overflow:auto;
+	background:white;
+	overflow:auto;
+	padding: 20px 0;
+	&.dk{
+		background:$aris_light_grey;
+	}
+	&.bordered{
+		border-top:1px solid $aris_color;
+		border-bottom:1px solid $aris_color;
+	}
 }

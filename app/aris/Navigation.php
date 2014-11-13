@@ -16,7 +16,7 @@ class Navigation
 		echo '<ul class="sections">';
 		$sections = (new Node)->topLevel();
 		foreach ($sections as $key => $section) {
-			echo '<li><a href="' . $section->absoluteSlug() . '">' . $section->name . '</a>'  ;
+			echo '<li><a href="/' . $section->absoluteSlug() . '">' . $section->name . '</a>'  ;
 			if ($section->hasChildren()) {
 				echo '<i class="fa fa-caret-down"></i>';
 				echo '<ul class="subsections"';
@@ -89,6 +89,17 @@ class Navigation
 			}
 		}
 		echo '</select>';
+	}
+
+	public static function renderBreadCrumbs($node){
+		$bc = $node->name;
+		while ($node->hasParent()) {
+			$node = $node->parent();
+			$bc = '<a href=/"' . $node->absoluteSlug() . '">' . $node->name . '</a> >' . $bc;
+		}
+
+		$bc = '<div class="breadcrumbs">You are here: <a href="/">Home</a> >'. $bc . '</div>';
+		echo $bc;
 	}
 
 }

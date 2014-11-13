@@ -16,7 +16,7 @@
 		@include('partials.navigation')
 
 		<div id="content">
-				@yield('content')
+			@yield('content')
 		</div>	<!-- /content -->
 	</div>	<!-- /siteWrapper -->
 <footer>

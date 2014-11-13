@@ -29,14 +29,11 @@ class Node extends \Eloquent {
 	}
 
 	public function absoluteSlug(){
-		$slug = $this->slug;
-		if ($this->hasParent()) {
-			$dad = $this->parent();
-			$slug = $dad->slug . '/' . $slug;
-			if ($dad->hasParent()) {
-				$grandDad = $dad->parent();
-				$slug = $grandDad->slug . '/' . $slug;
-			}
+		$node = $this;
+		$slug = $node->slug;
+		while ($node->hasParent()) {
+			$node = $node->parent();
+			$slug = $node->slug . '/' . $slug;
 		}
 		return $slug;
 	}

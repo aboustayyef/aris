@@ -1,0 +1,93 @@
+ul.sections 
+{
+	// [top section (About Us | Curriculum ..etc)]
+	position:relative;
+	>li
+	{
+		cursor: pointer;
+		display: inline-block;
+		padding:0 10px;
+		line-height: $navbar_height;
+		ul.subsections
+		{
+			display:none;
+		}
+		a{
+			color:white;
+		}
+		i{
+			color:$aris_color_light;
+			opacity:0.5;
+			margin-left:5px;
+		}
+		&.active
+		{
+			background:darken($aris_color, 8);
+			i{
+				opacity: 1;
+			}
+			// [the whole navigation window]
+			ul.subsections
+			{
+				height:$nav_height;
+				border:1px solid $nav_panel_border_color;
+				display: block;
+				position:absolute;
+				top:$navbar_height;
+				left:0;
+				width:$nav_width;
+				background: $nav_background;	
+				z-index:10;
+				padding-top:10px;
+
+
+
+				// [first panel]
+				li{
+					padding:8px 15px;
+					display:block;
+					width: 100%;
+					width:$nav_third;
+					line-height: 1.1em;
+					color:black;
+					i{
+						display:none;
+					}
+					a{
+						color:black;
+					}
+					ul{
+						display:none;
+					}
+					&.active{
+						background: $nav_highlight_color;
+						i{
+							float:right;
+							display:block;
+							color:white;
+						}
+						// [Second Panel]
+						ul{
+							padding-top:10px;
+							display:block;
+							position:absolute;
+							left:$nav_third;
+							height: 100%;
+							border-left:1px solid $nav_panel_border_color;
+							background:lighten($nav_background,20);
+							top:0;
+							li{
+								a{
+									color:black;
+								}
+								&:hover{
+									background: $aris_color_light;
+								}
+							}
+						}
+					}
+				}	
+			}
+		}
+	}
+}

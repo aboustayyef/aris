@@ -12,10 +12,10 @@ $('.sections>li').hover(
 		console.log('left');
 });
 
-$('.subsections>li').hover(
+$('.section_nav_list>ul>li').hover(
 	// mouse enter
 	function(){
-		$('.subsections>li.active').removeClass('active');
+		$('.section_nav_list>ul>li.active').removeClass('active');
 		$(this).addClass('active');
 	}, 
 	// mouse leave

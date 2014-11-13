@@ -133,7 +133,7 @@ nav {
   height: 45px;
   line-height: 30px;
   background: #0097a1; }
-  @media all and (max-width: 900px) {
+  @media all and (max-width: 920px) {
     nav {
       display: none; } }
   nav li a {
@@ -148,7 +148,7 @@ nav {
       display: inline-block;
       padding: 0 10px;
       line-height: 45px; }
-      nav ul.sections > li ul.subsections {
+      nav ul.sections > li .navigation_wrapper {
         display: none; }
       nav ul.sections > li a {
         color: white; }
@@ -160,49 +160,48 @@ nav {
         background: #007178; }
         nav ul.sections > li.active i {
           opacity: 1; }
-        nav ul.sections > li.active ul.subsections {
-          height: 350px;
-          border: 1px solid silver;
+        nav ul.sections > li.active .navigation_wrapper {
+          padding: 10px;
           display: block;
+          background: #E7E7E7;
+          height: 400px;
+          width: 920px;
           position: absolute;
+          z-index: 3000;
           top: 45px;
           left: 0;
-          width: 900px;
-          background: white;
-          z-index: 10;
-          padding-top: 10px; }
-          nav ul.sections > li.active ul.subsections li {
-            padding: 8px 15px;
+          overflow: auto; }
+          nav ul.sections > li.active .navigation_wrapper .nav_title {
+            margin: -10px;
+            margin-bottom: 0;
+            margin-right: -10px;
+            background: #CBEBED;
+            padding-left: 20px; }
+            nav ul.sections > li.active .navigation_wrapper .nav_title h2 {
+              margin: 0; }
+          nav ul.sections > li.active .navigation_wrapper .section_image, nav ul.sections > li.active .navigation_wrapper .section_description, nav ul.sections > li.active .navigation_wrapper .section_nav_list {
+            float: right;
+            height: 300px;
+            width: 300px; }
+          nav ul.sections > li.active .navigation_wrapper .section_image {
+            width: 300px;
+            background: white; }
+          nav ul.sections > li.active .navigation_wrapper .section_description {
+            padding: 20px;
+            background: white; }
+          nav ul.sections > li.active .navigation_wrapper .section_nav_list {
+            background: white;
+            padding: 10px; }
+          nav ul.sections > li.active .navigation_wrapper li .section_subnav_list {
+            display: none; }
+          nav ul.sections > li.active .navigation_wrapper li.active .section_subnav_list {
             display: block;
-            width: 100%;
-            width: 299px;
-            line-height: 1.1em;
-            color: black; }
-            nav ul.sections > li.active ul.subsections li i {
-              display: none; }
-            nav ul.sections > li.active ul.subsections li a {
-              color: black; }
-            nav ul.sections > li.active ul.subsections li ul {
-              display: none; }
-            nav ul.sections > li.active ul.subsections li.active {
-              background: #00bdca; }
-              nav ul.sections > li.active ul.subsections li.active i {
-                float: right;
-                display: block;
-                color: white; }
-              nav ul.sections > li.active ul.subsections li.active ul {
-                padding-top: 10px;
-                display: block;
-                position: absolute;
-                left: 299px;
-                height: 100%;
-                border-left: 1px solid silver;
-                background: white;
-                top: 0; }
-                nav ul.sections > li.active ul.subsections li.active ul li a {
-                  color: black; }
-                nav ul.sections > li.active ul.subsections li.active ul li:hover {
-                  background: #CBEBED; }
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 45px;
+            left: 310px;
+            background: #CBEBED; }
 
 #mobileMenu {
   height: 40px;
@@ -219,7 +218,7 @@ nav {
     background: #00676e; }
     #mobileMenu h3:hover {
       background: #007f88; }
-  @media all and (min-width: 899px) {
+  @media all and (min-width: 919px) {
     #mobileMenu {
       display: none; } }
   #mobileMenu ul.sectionsMobile {
@@ -238,7 +237,7 @@ nav {
           background: #dadada; }
         #mobileMenu.active ul.sectionsMobile li h4 {
           margin: 0; }
-      @media all and (min-width: 899px) {
+      @media all and (min-width: 919px) {
         #mobileMenu.active ul.sectionsMobile {
           display: none; } }
       #mobileMenu.active ul.sectionsMobile ul {

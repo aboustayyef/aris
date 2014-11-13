@@ -10,8 +10,60 @@ class Navigation
 	{
 		# code...
 	}
-
 	public function renderFullNav(){
+			// Top Nav (About us - etc)
+			echo '<ul class="sections">';
+			$sections = (new Node)->topLevel();
+			foreach ($sections as $key => $section) {
+				echo '<li><a href="/' . $section->absoluteSlug() . '">' . $section->name . '</a>'  ;
+				if ($section->hasChildren()) {
+					echo '<i class="fa fa-caret-down"></i>';
+					echo '<div class="navigation_wrapper">';
+						echo '<div class="nav_title"><h2>'.$section->name.'</h2></div>';
+						echo '<div class="section_image">';
+							echo '<img src="/img/featured/sections/'.$section->slug.'.jpg">';
+						echo '</div>';
+						echo '<div class="section_description">';
+							echo $section->excerpt;
+						echo '</div>';
+						echo '<div class="section_nav_list">';
+							?>
+							<ul>
+								<li>option a</li>
+								<li>option b</li>
+								<li>option c
+									<div class="section_subnav_list">
+										<ul>
+											<li>option c 1</li>
+											<li>option c 2</li>
+											<li>option c 3</li>
+											<li>option c 4</li>
+										</ul>
+									</div>
+								</li>
+								<li>option d</li>
+								<li >option e
+									<div class="section_subnav_list">
+										<ul>
+											<li>option e 1</li>
+											<li>option e 2</li>
+											<li>option e 3</li>
+											<li>option e 4</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<?php
+						echo '</div>';
+
+
+					echo '</div>';
+				}
+				echo '</li>';
+			}
+			echo '</ul>'; //sections
+		}
+	public function renderFullNav_old(){
 		// Top Nav (About us - etc)
 		echo '<ul class="sections">';
 		$sections = (new Node)->topLevel();

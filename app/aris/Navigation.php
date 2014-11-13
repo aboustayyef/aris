@@ -36,11 +36,11 @@ class Navigation
 						$pages = $subsection->children();
 						// Second Pane
 						foreach ($pages as $key => $page) {
-							echo '<li><a href="'.$page->absoluteSlug().'">' . $page->name . '</li></a>';
+							echo '<li><a href="/'.$page->absoluteSlug().'">' . $page->name . '</li></a>';
 						}
 						echo '</ul>';
 					} else {
-						echo '<a href="' . $subsection->absoluteSlug() . '">' . $subsection->name . '</a>';
+						echo '<a href="/' . $subsection->absoluteSlug() . '">' . $subsection->name . '</a>';
 					}
 					echo '</li>';
 				}

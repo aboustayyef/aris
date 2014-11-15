@@ -188,20 +188,32 @@ nav {
             background: white; }
           nav ul.sections > li.active .navigation_wrapper .section_description {
             padding: 20px;
-            background: white; }
+            background: #f4f4f4; }
           nav ul.sections > li.active .navigation_wrapper .section_nav_list {
             background: white;
             padding: 10px; }
+            nav ul.sections > li.active .navigation_wrapper .section_nav_list a {
+              color: black; }
+            nav ul.sections > li.active .navigation_wrapper .section_nav_list li {
+              line-height: 22px;
+              padding: 5px; }
+              nav ul.sections > li.active .navigation_wrapper .section_nav_list li:hover {
+                background: #CBEBED; }
+              nav ul.sections > li.active .navigation_wrapper .section_nav_list li.haschildren:hover:after {
+                content: ">";
+                float: right; }
           nav ul.sections > li.active .navigation_wrapper li .section_subnav_list {
             display: none; }
           nav ul.sections > li.active .navigation_wrapper li.active .section_subnav_list {
             display: block;
             position: absolute;
-            width: 300px;
+            padding: 5px;
+            width: 295px;
             height: 300px;
             top: 45px;
             left: 310px;
-            background: #CBEBED; }
+            background: #fbfbfb;
+            border-left: 2px solid #0097a1; }
 
 #mobileMenu {
   height: 40px;
@@ -343,6 +355,9 @@ html[xmlns] .slides {
  * include js that eliminates this class on page load */
 .no-js .slides > li:first-child {
   display: block; }
+
+.flexslider {
+  background: #E7E7E7; }
 
 .flexslider ul {
   margin: 0; }

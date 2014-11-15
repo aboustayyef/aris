@@ -16,6 +16,9 @@ html[xmlns] .slides {display: block;}
 .no-js .slides > li:first-child {display: block;}
 
 // Mustaph Added
+.flexslider{
+	background:$aris_light_grey;
+}
 .flexslider ul{
 	margin:0;
 	li{

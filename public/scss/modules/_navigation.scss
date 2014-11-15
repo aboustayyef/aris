@@ -72,11 +72,30 @@ nav{
 					}
 					.section_description{
 						padding:$gutter;
-						background:white;
+						background:lighten($aris_light_grey,5);
 					}
 					.section_nav_list{
 						background: white;
 						padding:10px;
+						a{
+							color:black;
+
+						}
+						li{
+							line-height: 22px;
+							padding: 5px;
+							&:hover{
+								background:$aris_color_light;
+							}
+							&.haschildren{
+								&:hover{
+									&:after{
+										content:">";
+										float:right;
+									}
+								}
+							}
+						}
 					}
 
 					li{
@@ -87,11 +106,13 @@ nav{
 							.section_subnav_list{
 								display:block;
 								position:absolute;
-								width:300px;
+								padding:5px;
+								width:295px;
 								height:300px;
 								top:45px;
 								left:310px;
-								background:$aris_color_light;
+								background:lighten($aris_light_grey,8);
+								border-left:2px solid $aris_color;
 							}
 						}
 					}

@@ -20,44 +20,40 @@ class Navigation
 					echo '<i class="fa fa-caret-down"></i>';
 					echo '<div class="navigation_wrapper">';
 						echo '<div class="nav_title"><h2>'.$section->name.'</h2></div>';
+						
+						// Navigation Image
 						echo '<div class="section_image">';
 							echo '<img src="/img/featured/sections/'.$section->slug.'.jpg">';
 						echo '</div>';
+
+						// Navigation Description
 						echo '<div class="section_description">';
 							echo $section->excerpt;
 						echo '</div>';
+
+						// Navigation Left panel
 						echo '<div class="section_nav_list">';
-							?>
-							<ul>
-								<li>option a</li>
-								<li>option b</li>
-								<li>option c
-									<div class="section_subnav_list">
-										<ul>
-											<li>option c 1</li>
-											<li>option c 2</li>
-											<li>option c 3</li>
-											<li>option c 4</li>
-										</ul>
-									</div>
-								</li>
-								<li>option d</li>
-								<li >option e
-									<div class="section_subnav_list">
-										<ul>
-											<li>option e 1</li>
-											<li>option e 2</li>
-											<li>option e 3</li>
-											<li>option e 4</li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-							<?php
-						echo '</div>';
+							echo '<ul>';
+							foreach ($section->children() as $key => $subsection) {
+								if ($subsection->hasChildren()) {
+									// Navigation right panel
+									echo '<li class="haschildren">' . $subsection->name ;
+										echo '<div class="section_subnav_list">';
+											echo '<ul>';
+											foreach ($subsection->children() as $key => $page) {
+												echo '<a href="/' . $page->absoluteSlug() . '"><li>' . $page->name . '</li></a>';
+											}
+											echo '</ul>';
+										echo '</div>';// section_subnav_list
+									echo '</li>'; // haschildren
+								} else {
+									echo '<a href="/'.$subsection->absoluteSlug().'"><li class="nochildren">'.$subsection->name.'</li></a>';
+								}
+							}
+							echo '</ul>';
+						echo '</div>'; // section_nav_list
 
-
-					echo '</div>';
+					echo '</div>'; // navigation_wrapper
 				}
 				echo '</li>';
 			}

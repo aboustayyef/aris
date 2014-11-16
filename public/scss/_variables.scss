@@ -1,7 +1,34 @@
 // colors
+
+@function light($color){
+	@return desaturate(lighten($color, 35), 50);
+}
+@function verylight($color){
+	@return desaturate(lighten($color, 55), 60);
+}
+
+// Palette Source: http://paletton.com/#uid=33j0u0kleqtbzEKgVuIpcmGtdhZ
+
 $aris_color: #0097a1;
-$aris_color_light: #CBEBED;
+$aris_color_light: light($aris_color);
+$aris_color_very_light: verylight($aris_color);
+$aris_color_dark: darken($aris_color, 8);
+
+$aris_color2: #D3A547;
+$aris_color2_light: #F5CA73;
+$aris_color2_very_light: #FFE1A3; 
+
 $aris_light_grey: #E7E7E7;
+
+// hyperlink
+
+@mixin aris_link{
+	color:black;
+	&:hover{
+		color: $aris_color_dark;
+		text-decoration: underline;
+	}	
+}
 
 // layout Dimensions
 $top_margin:30px;
@@ -20,6 +47,7 @@ $navbar_height:45px;
 $nav_width:920px;
 $nav_third: ($nav_width / 3)-1 ;
 $nav_height:350px;
+$nav_inner_height:330px;
 $top_line_thickness: 5px;
 	// colors
 $nav_background:white;

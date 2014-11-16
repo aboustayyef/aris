@@ -18,6 +18,7 @@ nav{
 		position:relative;
 		>li
 		{
+			color:white;
 			cursor: pointer;
 			display: inline-block;
 			padding:0 10px;
@@ -36,16 +37,18 @@ nav{
 			}
 			&.active
 			{
-				background:darken($aris_color, 8);
+				background:$aris_color_dark;
 				i{
 					opacity: 1;
 				}
+				// Big Navigation Window
 				.navigation_wrapper{
+					color:black;
 					.nav_title{	
 					    margin: -10px;
 					    margin-bottom: 0;
 					    margin-right: -10px;
-					    background: $aris_color_light;
+					    background: $aris_color_very_light;
 					    padding-left:20px;
 					    h2{
 					    	margin:0;
@@ -63,17 +66,31 @@ nav{
 					overflow:auto;
 					.section_image, .section_description, .section_nav_list{
 						float:right;
-						height:300px;
+						height:$nav_inner_height;
 						width:300px;
+						padding:10px;
+						img{
+							max-width:100%;
+						}
+
 					}
 					.section_image{
 						width:300px;
+						height:$nav_inner_height; 
 						background:white;
 					}
 					.section_description{
-						padding:$gutter;
-						background:lighten($aris_light_grey,5);
+						padding:10px;
+						padding-right:0;
+						background:white;
+						p{
+							background: $aris_color2_very_light;
+							padding:10px;
+							min-width:100%;
+							min-height:100%;
+						}
 					}
+					// Left navigation
 					.section_nav_list{
 						background: white;
 						padding:10px;
@@ -87,16 +104,24 @@ nav{
 							&:hover{
 								background:$aris_color_light;
 							}
+							&.nochildren{
+								background: none;
+								a{
+									@include aris_link;
+								}
+							}
 							&.haschildren{
 								&:hover{
-									&:after{
-										content:">";
-										float:right;
-									}
+									background: $aris_color_light url('../img/interface/arrow-end.png');
+									background-repeat:no-repeat;
+									background-position-x: right;
+									background-position-y: center;
 								}
 							}
 						}
 					}
+
+					// right navigation pane
 
 					li{
 						.section_subnav_list{
@@ -106,13 +131,26 @@ nav{
 							.section_subnav_list{
 								display:block;
 								position:absolute;
-								padding:5px;
-								width:295px;
-								height:300px;
+								padding:10px;
+								padding-right:0;
+								width:300px;
 								top:45px;
 								left:310px;
-								background:lighten($aris_light_grey,8);
-								border-left:2px solid $aris_color;
+								background:white;
+								height:$nav_inner_height;
+								ul{
+									padding:10px;
+									border-left:2px solid $aris_color;
+									background:lighten(silver,10);
+									min-height:100%;
+								}
+								
+								li{
+									background:none;
+									a{
+										@include aris_link;
+									}
+								}
 							}
 						}
 					}

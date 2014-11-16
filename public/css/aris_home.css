@@ -53,6 +53,12 @@ html {
   font-weight: 300;
   font-size: 100%; }
 
+a {
+  color: #007178;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
 ul {
   margin-left: 25px; }
 
@@ -144,6 +150,7 @@ nav {
   nav ul.sections {
     position: relative; }
     nav ul.sections > li {
+      color: white;
       cursor: pointer;
       display: inline-block;
       padding: 0 10px;
@@ -153,7 +160,7 @@ nav {
       nav ul.sections > li a {
         color: white; }
       nav ul.sections > li i {
-        color: #CBEBED;
+        color: #7fcfd4;
         opacity: 0.5;
         margin-left: 5px; }
       nav ul.sections > li.active {
@@ -161,6 +168,7 @@ nav {
         nav ul.sections > li.active i {
           opacity: 1; }
         nav ul.sections > li.active .navigation_wrapper {
+          color: black;
           padding: 10px;
           display: block;
           background: #E7E7E7;
@@ -175,20 +183,30 @@ nav {
             margin: -10px;
             margin-bottom: 0;
             margin-right: -10px;
-            background: #CBEBED;
+            background: #cfe9ea;
             padding-left: 20px; }
             nav ul.sections > li.active .navigation_wrapper .nav_title h2 {
               margin: 0; }
           nav ul.sections > li.active .navigation_wrapper .section_image, nav ul.sections > li.active .navigation_wrapper .section_description, nav ul.sections > li.active .navigation_wrapper .section_nav_list {
             float: right;
-            height: 300px;
-            width: 300px; }
+            height: 330px;
+            width: 300px;
+            padding: 10px; }
+            nav ul.sections > li.active .navigation_wrapper .section_image img, nav ul.sections > li.active .navigation_wrapper .section_description img, nav ul.sections > li.active .navigation_wrapper .section_nav_list img {
+              max-width: 100%; }
           nav ul.sections > li.active .navigation_wrapper .section_image {
             width: 300px;
+            height: 330px;
             background: white; }
           nav ul.sections > li.active .navigation_wrapper .section_description {
-            padding: 20px;
-            background: #f4f4f4; }
+            padding: 10px;
+            padding-right: 0;
+            background: white; }
+            nav ul.sections > li.active .navigation_wrapper .section_description p {
+              background: #FFE1A3;
+              padding: 10px;
+              min-width: 100%;
+              min-height: 100%; }
           nav ul.sections > li.active .navigation_wrapper .section_nav_list {
             background: white;
             padding: 10px; }
@@ -198,22 +216,43 @@ nav {
               line-height: 22px;
               padding: 5px; }
               nav ul.sections > li.active .navigation_wrapper .section_nav_list li:hover {
-                background: #CBEBED; }
-              nav ul.sections > li.active .navigation_wrapper .section_nav_list li.haschildren:hover:after {
-                content: ">";
-                float: right; }
+                background: #7fcfd4; }
+              nav ul.sections > li.active .navigation_wrapper .section_nav_list li.nochildren {
+                background: none; }
+                nav ul.sections > li.active .navigation_wrapper .section_nav_list li.nochildren a {
+                  color: black; }
+                  nav ul.sections > li.active .navigation_wrapper .section_nav_list li.nochildren a:hover {
+                    color: #007178;
+                    text-decoration: underline; }
+              nav ul.sections > li.active .navigation_wrapper .section_nav_list li.haschildren:hover {
+                background: #7fcfd4 url("../img/interface/arrow-end.png");
+                background-repeat: no-repeat;
+                background-position-x: right;
+                background-position-y: center; }
           nav ul.sections > li.active .navigation_wrapper li .section_subnav_list {
             display: none; }
           nav ul.sections > li.active .navigation_wrapper li.active .section_subnav_list {
             display: block;
             position: absolute;
-            padding: 5px;
-            width: 295px;
-            height: 300px;
+            padding: 10px;
+            padding-right: 0;
+            width: 300px;
             top: 45px;
             left: 310px;
-            background: #fbfbfb;
-            border-left: 2px solid #0097a1; }
+            background: white;
+            height: 330px; }
+            nav ul.sections > li.active .navigation_wrapper li.active .section_subnav_list ul {
+              padding: 10px;
+              border-left: 2px solid #0097a1;
+              background: #dadada;
+              min-height: 100%; }
+            nav ul.sections > li.active .navigation_wrapper li.active .section_subnav_list li {
+              background: none; }
+              nav ul.sections > li.active .navigation_wrapper li.active .section_subnav_list li a {
+                color: black; }
+                nav ul.sections > li.active .navigation_wrapper li.active .section_subnav_list li a:hover {
+                  color: #007178;
+                  text-decoration: underline; }
 
 #mobileMenu {
   height: 40px;
@@ -263,11 +302,11 @@ nav {
           margin-right: -20px;
           margin-top: -5px;
           margin-bottom: 5px;
-          background: #CBEBED;
+          background: #7fcfd4;
           padding: 5px 20px;
           cursor: pointer; }
           #mobileMenu.active ul.sectionsMobile li.active h4:hover {
-            background: #b8e4e6; }
+            background: #6cc8ce; }
         #mobileMenu.active ul.sectionsMobile li.active ul {
           display: block;
           margin: 0; }
@@ -374,13 +413,16 @@ ul.flex-direction-nav {
   width: 545px; }
 
 footer {
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 10px;
   background: #0097a1;
   position: relative;
   bottom: 0;
   left: 0; }
+
+.breadcrumbs {
+  margin-top: 30px; }
 
 html, body {
   background: #f3f3f3;

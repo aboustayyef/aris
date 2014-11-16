@@ -3,6 +3,13 @@ html{
 	font-weight: 300;
 	font-size: 100%; // 16px , 1rem;
 }
+a{
+	color:$aris_color_dark;
+	text-decoration:none;
+	&:hover{
+		text-decoration:underline;
+	}
+}
 //temp
 ul{
 	margin-left:25px;

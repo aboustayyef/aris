@@ -26,14 +26,14 @@ $('.section_nav_list>ul>li').hover(
 // ways to make sure navigation is turned off if mouse goes far
 
 //1- if it leaves the big ul.subsections window
-$('ul.subsections').hover(
+$('.navigation_wrapper').hover(
 	// on mouse enter
 	function(){
 		//do nothing
 	}, 
 	// on mouse leave
 	function(){
-		$('.sections li.active').removeClass('active');
+		$('li.active').removeClass('active');
 });
 
 

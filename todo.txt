@@ -2,6 +2,7 @@ Things to do:
 
 - Fix grid and adaptive layout and replace grid with semantic sections (use bourbon/neat?)
 - Think of sidebar (random?)
+- News section
 
 ------------------------------------------------------------------------
 CAN BE IMPROVED:

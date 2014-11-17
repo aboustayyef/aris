@@ -71,12 +71,12 @@ nav{
 						padding:10px;
 						img{
 							max-width:100%;
+							height:$nav_inner_height  - 20px;
 						}
 
 					}
 					.section_image{
 						width:300px;
-						height:$nav_inner_height; 
 						background:white;
 					}
 					.section_description{

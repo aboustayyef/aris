@@ -140,7 +140,7 @@ nav {
   height: 45px;
   line-height: 30px;
   background: #0097a1; }
-  @media all and (max-width: 920px) {
+  @media all and (max-width: 970px) {
     nav {
       display: none; } }
   nav li a {
@@ -270,7 +270,7 @@ nav {
     background: #00676e; }
     #mobileMenu h3:hover {
       background: #007f88; }
-  @media all and (min-width: 919px) {
+  @media all and (min-width: 969px) {
     #mobileMenu {
       display: none; } }
   #mobileMenu ul.sectionsMobile {
@@ -326,6 +326,9 @@ header {
   padding-top: 20px;
   height: 140px;
   overflow: auto; }
+  @media all and (max-width: 650px) {
+    header {
+      height: 96.5517241379px; } }
 
 #logo {
   text-indent: -999px;
@@ -335,11 +338,14 @@ header {
   background: url(../img/brand/aris-logo.png);
   background-repeat: no-repeat;
   background-size: 400px 73px; }
+  @media all and (max-width: 650px) {
+    #logo {
+      height: 50.3448275862px;
+      width: 275.8620689655px;
+      background-size: 275.8620689655px 50.3448275862px; } }
 
 #quickInfo {
-  float: right; }
-
-#quickInfo {
+  float: right;
   font-size: 13px;
   color: #888;
   margin-right: 5px;
@@ -425,10 +431,17 @@ footer {
 .breadcrumbs {
   margin-top: 30px; }
 
+/*  */
 html, body {
   background: #f3f3f3;
   height: 100%;
   position: relative; }
+
+.section {
+  overflow: auto;
+  margin-top: 10px; }
+  .section.noTop {
+    margin-top: 0; }
 
 #siteWrapper {
   border: 1px solid #cccccc;
@@ -442,79 +455,26 @@ html, body {
     #siteWrapper {
       width: 100%; } }
 
-.arisbackground {
-  background: #0097a1;
-  padding: 20px; }
-  .arisbackground p, .arisbackground h1, .arisbackground h2, .arisbackground h3, .arisbackground h4 {
-    color: white; }
-
 .inner {
   width: 1024px;
   margin: auto;
   overflow: visible; }
   @media all and (max-width: 1024px) {
     .inner {
-      width: 100%;
-      padding: 0 10px; } }
-  .inner .full {
-    width: 100%;
-    margin: 0;
-    float: left; }
-  .inner .half {
-    margin-right: 20px;
-    width: 502px;
-    float: left; }
-    .inner .half.last {
-      margin-right: 0; }
-  .inner .third {
-    margin-right: 20px;
-    width: 328px;
-    float: left; }
-    .inner .third.last {
-      margin-right: 0; }
-  .inner .twothirds {
-    margin-right: 20px;
-    width: 676px;
-    float: left; }
-    .inner .twothirds.last {
-      margin-right: 0; }
-  .inner .quarter {
-    margin-right: 20px;
-    width: 241px;
-    float: left; }
-    .inner .quarter.last {
-      margin-right: 0; }
-  .inner .full img, .inner .half img, .inner .third img, .inner .twothirds img, .inner .quarter img {
-    margin: 0;
-    max-width: 100%;
-    height: auto; }
+      width: 98%;
+      padding: 0 1%; } }
+
+.leftColumn, .rightColumn {
+  width: 502px; }
   @media all and (max-width: 1024px) {
-    .inner .half, .inner .third, .inner .twothirds, .inner .quarter {
-      padding-top: 20px;
-      width: 100%;
-      margin: 0; } }
+    .leftColumn, .rightColumn {
+      width: 48.5%; } }
+  @media all and (max-width: 740px) {
+    .leftColumn, .rightColumn {
+      width: 100%; } }
 
-img.circle {
-  border-radius: 50%; }
-img.left {
-  float: left;
-  margin-right: 20px; }
+.leftColumn {
+  float: left; }
 
-.card {
-  padding: 20px;
-  border: 1px solid #E7E7E7;
-  background: white; }
-
-.section {
-  margin-top: 0;
-  overflow: auto;
-  background: white;
-  overflow: auto;
-  padding: 20px 0; }
-  .section h1, .section h2, .section h3, .section h4 {
-    margin-top: 0; }
-  .section.dk {
-    background: #E7E7E7; }
-  .section.bordered {
-    border-top: 1px solid #0097a1;
-    border-bottom: 1px solid #0097a1; }
+.rightColumn {
+  float: right; }

@@ -1,4 +1,5 @@
 #quickInfo{
+	float:right;
 	font-size:13px;
 	color: #888;
 	margin-right:5px;
@@ -19,7 +20,7 @@
 
 		}
 	}
-	@media all and (max-width:650px){
+	@media all and (max-width:$header_break_point){
 		display:none;
 	}
 }

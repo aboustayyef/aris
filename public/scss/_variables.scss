@@ -36,6 +36,12 @@ $page_width:1280px;
 $page_inner_width:1024px;
 $gutter: 20px;
 
+// Break Points
+
+$navigation_break_point: 970px; // width of the navigation
+$layout_break_point: 740px ; // the point at which all grid elements become 100% width
+$header_break_point: 650px; // the point at which the quick info on the right disappears
+
 // header
 $header_height:140px;
 $header_top_padding:20px;
@@ -44,7 +50,7 @@ $header_top_padding:20px;
 $navbar_height:45px;
 
 // navigation 
-$nav_width:920px;
+$nav_width: 920px;
 $nav_third: ($nav_width / 3)-1 ;
 $nav_height:350px;
 $nav_inner_height:330px;

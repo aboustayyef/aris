@@ -7,22 +7,63 @@
 <div class="section">
 	<div class="inner">
 		<div class="leftColumn">
-			<h2 class="slogan">The Gateway to Knowledge</h2>
-			<p>Recognized as a young and forward thinking school ARIS is an outstanding place to work and go to school. <a href="">Learn More&nbsp;&rarr;</a></p>
+			<div class="intro">
+				<h2 class="slogan">The Gateway to Knowledge</h2>
+				<p>Recognized as a young and forward thinking school ARIS is an outstanding place to work and go to school. <a href="">Learn More&nbsp;&rarr;</a></p>
+			</div>
+			<div>
+				<img src="http://placehold.it/300x200" alt="">
+			</div>
+			<h3>Toolbox</h3>
+			<div class="toolbox">
+				<ul>
+					<li><a href="">Apply to ARIS</a></li>
+					<li><a href="">Contact Us</a></li>
+					<li><a href="">Find us on a map</a></li>
+				</ul>
+
+			</div>
 		</div> <!-- leftColumn -->
 			
-		<div class="rightColumn">	
+		<div class="rightColumn hasBorder">	
 			<h2 class="latestNews">
 				Latest News
 			</h2>
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
+				<?php
+					$news = News::orderBy('created_at', 'DESC')->take(3)->get();
+					foreach ($news as $key => $news_item) {
+						?>
+							<div class="news_item_wrapper">
+								<a href="/news/{{$news_item->slug}}">
+									<h3>{{$news_item->title}}</h3>
+								</a>
+								@if (!empty($news_item->featured_image))
+									<div class="news_item_photo">
+										<img src="{{$news_item->featured_image}}" alt="">
+									</div>
+								@endif	
+								<div class="news_excerpt">
+									<p>{{$news_item->excerpt}} - <a href="/news/{{$news_item->slug}}">read more&nbsp;&rarr;</a></p>
+								</div>
+							</div>
+						<?php
+					}
+				?>	
 		</div> <!-- rightColumn -->
 	</div> <!-- inner -->
 </div> <!-- section -->
 
+<div class="section darken">
+	<div class="inner">
+		<div class="leftColumn">
+			<h3>Something goes here</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores sunt ut distinctio reiciendis, tenetur reprehenderit corporis laboriosam similique officia porro.</p>
+		</div>
+		<div class="rightColumn hasBorder">
+			<br>
+			<img src="http://placehold.it/500x300">
+		</div>
+	</div>
+</div> <!-- Section darken -->
 
 @stop

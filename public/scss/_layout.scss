@@ -9,6 +9,9 @@
 	&.noTop{
 		margin-top:0;
 	}
+	&.darken{
+		background:darken(white,5);
+	}
 }
 #siteWrapper{
 	border:1px solid lighten(#999,20);
@@ -52,4 +55,12 @@
 .rightColumn{
 	@extend %column;
 	float:right;
+	&.hasBorder{
+		padding-left:20px;
+		border-left:1px dotted silver;
+		@media all and(max-width: $layout_break_point){
+			padding-left:0;
+			border-left:none;
+		}
+	}
 }

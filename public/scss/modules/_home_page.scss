@@ -1,0 +1,31 @@
+h2.slogan{
+	font-size:30px;
+	line-height:40px;
+	color:$aris_color;
+}
+.news_item_wrapper{
+	overflow:hidden;
+	margin-top:5px;
+	border-top:1px dotted silver;
+	h3{
+		color:$aris_color_dark;
+		line-height: 23px;
+	}
+	p{
+		font-size:14px;
+		line-height: 20px;
+	}
+}
+    
+
+.news_item_photo{
+	width:25%;
+	float:right;
+	height:100%;
+}
+
+.news_item_photo ~ .news_excerpt{
+	float:left;
+	width:73%;
+	margin-right:2%;
+}

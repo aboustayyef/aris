@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 // When mouse hovers over section, it becomes active
-$('.sections>li').hover(
+$('.sections>li').hoverIntent(
 	// mouse enter
 	function(){
 		$('.sections li.active').removeClass('active');

@@ -5,7 +5,7 @@
 }
 .section{
 	overflow:auto;
-	margin-top:10px;
+	padding:10px 0;
 	&.noTop{
 		margin-top:0;
 	}
@@ -24,9 +24,13 @@
 	@media all and (max-width:$page_width){
 		width: 100%;
 	}
+	@media all and (max-width:$header_break_point){
+		margin-top:0;
+	}
 }
 
 .inner{
+	position:relative;
 	width:$page_inner_width;
 	margin:auto;
 	overflow:visible;

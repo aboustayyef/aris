@@ -4,18 +4,23 @@
 
 <div class="inner">
 
-	<?php Aris\Navigation::renderBreadCrumbs($node) ?>
+	@include('partials.breadcrumbs')
 
-	
-	<h1>{{$node->name}}</h1>
-	<p>{{$node->description}}</p>
-	<!-- Section Image? -->
-	<?php 
-	$nodes = $node->children();
-	 ?>
+	<div id="content-area">
+		<h1>{{$node->name}}</h1>
+		<p>{{$node->description}}</p>
+		<!-- Section Image? -->
+		<?php 
+		$nodes = $node->children();
+		 ?>
 		@foreach($nodes as $node)
 			<a href="{{$node->absoluteSlug()}}"><h2>{{$node->name}}</h2></a><br>
 			<p>{{$node->description}}</p>
 		@endforeach
+	</div>
+	
+	@include('partials.sidebar')
+
 </div>
+
 @stop

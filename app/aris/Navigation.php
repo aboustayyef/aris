@@ -110,7 +110,7 @@ class Navigation
 			$subsections = $section->children();
 			foreach ($subsections as $key => $subsection) {
 				echo '<li>';
-				echo '<a href="'.$subsection->absoluteSlug().'">' . $subsection->name . '</a>';
+				echo '<a href="/'.$subsection->absoluteSlug().'">' . $subsection->name . '</a>';
 				echo '</li>';
 			}
 			echo '</ul>';

@@ -8,26 +8,17 @@
 	<div class="inner">
 		<div class="leftColumn">
 			<div class="intro">
-				<h2 class="slogan">The Gateway to Knowledge</h2>
-				<p>Recognized as a young and forward thinking school ARIS is an outstanding place to work and go to school. <a href="">Learn More&nbsp;&rarr;</a></p>
+				<h2 class="slogan">Welcome to Aris</h2>
+				<p>Recognized as a young and forward thinking school ARIS is an outstanding place to work and go to school. <a href="" class="learnmore">Learn More&nbsp;&rarr;</a></p>
 			</div>
 			<div>
-				<img src="http://placehold.it/300x200" alt="">
-			</div>
-			<h3>Toolbox</h3>
-			<div class="toolbox">
-				<ul>
-					<li><a href="">Apply to ARIS</a></li>
-					<li><a href="">Contact Us</a></li>
-					<li><a href="">Find us on a map</a></li>
-				</ul>
-
+				<img src="http://placehold.it/500x300" alt="">
 			</div>
 		</div> <!-- leftColumn -->
 			
-		<div class="rightColumn hasBorder">	
+		<div class="rightColumn">	
 			<h2 class="latestNews">
-				Latest News
+				Latest News & Events
 			</h2>
 				<?php
 					$news = News::orderBy('created_at', 'DESC')->take(3)->get();
@@ -53,13 +44,26 @@
 	</div> <!-- inner -->
 </div> <!-- section -->
 
-<div class="section darken">
+<div class="section">
+	<div class="inner">
+		<h3>Toolbox</h3>
+		<div class="toolbox">
+			<ul>
+				<li><a href="">Apply to ARIS</a></li>
+				<li><a href="">Contact Us</a></li>
+				<li><a href="">Find us on a map</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="section">
 	<div class="inner">
 		<div class="leftColumn">
 			<h3>Something goes here</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores sunt ut distinctio reiciendis, tenetur reprehenderit corporis laboriosam similique officia porro.</p>
 		</div>
-		<div class="rightColumn hasBorder">
+		<div class="rightColumn">
 			<br>
 			<img src="http://placehold.it/500x300">
 		</div>

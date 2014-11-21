@@ -1,0 +1,21 @@
+.toolbox{
+	width:100%;
+	padding:20px;
+	border: 1px solid silver;
+	li{
+		display: inline-block;
+		margin-right: 10px;
+		border: 1px solid $aris_color;
+		padding: 6px;
+		border-radius: 6px;
+		a{
+			text-decoration:none;
+		}
+		&:hover{
+			background:$aris_color;
+			a{
+				color:white;
+			}
+		}
+	}
+}

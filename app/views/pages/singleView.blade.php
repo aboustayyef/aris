@@ -2,16 +2,16 @@
 
 @section('content')
 <div class="inner">
-	<div id="material">	
 
-		<?php Aris\Navigation::renderBreadCrumbs($node) ?>
+	@include('partials.breadcrumbs')
 
+	<div id="content-area">	
 		<h1>{{$node->name}}</h1>
 		{{$node->content}}
-		</div>
+	</div>
 	
-	<aside>
-	</aside>
+	@include('partials.sidebar')
+
 </div>
 
 @stop

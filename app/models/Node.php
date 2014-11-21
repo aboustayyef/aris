@@ -28,6 +28,13 @@ class Node extends \Eloquent {
 		return $this->parent();
 	}
 
+	public function siblings(){
+		if ($this->hasParent()) {
+			return $this->parent()->children();
+		}
+		return $this->topLevel();
+	}
+
 	public function absoluteSlug(){
 		$node = $this;
 		$slug = $node->slug;

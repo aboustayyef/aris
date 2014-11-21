@@ -18,7 +18,25 @@ html[xmlns] .slides {display: block;}
 // Mustaph Added
 .flexslider{
 	background:$aris_light_grey;
+	min-height:100px;
 }
+.gateway{
+	font-size:50px;
+	font-size:3.5vw;
+	background:rgba(0,0,0,0.5);
+	position:absolute;
+	z-index:3000;
+	color:white;
+	font-weight:200;
+	padding:10px;
+	top:20px;
+	left:30px;
+	@media all and (max-width:$header_break_point){
+		font-size:18px;
+		font-size:4vw;
+	}
+}
+
 .flexslider ul{
 	margin:0;
 	li{

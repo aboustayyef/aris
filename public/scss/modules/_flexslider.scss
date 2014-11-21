@@ -19,6 +19,12 @@ html[xmlns] .slides {display: block;}
 .flexslider{
 	background:$aris_light_grey;
 	min-height:100px;
+	padding-bottom:39%;
+	position:relative;
+	img{
+		position:absolute;
+		top:0;
+	}
 }
 .gateway{
 	font-size:50px;
@@ -39,9 +45,7 @@ html[xmlns] .slides {display: block;}
 
 .flexslider ul{
 	margin:0;
-	li{
-		margin:-15px 0;
-	}
+	margin-bottom:-15px;
 }
 ul.flex-direction-nav{
 	display:none;

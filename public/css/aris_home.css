@@ -417,7 +417,12 @@ html[xmlns] .slides {
 
 .flexslider {
   background: #F5F5F5;
-  min-height: 100px; }
+  min-height: 100px;
+  padding-bottom: 39%;
+  position: relative; }
+  .flexslider img {
+    position: absolute;
+    top: 0; }
 
 .gateway {
   font-size: 50px;
@@ -436,9 +441,8 @@ html[xmlns] .slides {
       font-size: 4vw; } }
 
 .flexslider ul {
-  margin: 0; }
-  .flexslider ul li {
-    margin: -15px 0; }
+  margin: 0;
+  margin-bottom: -15px; }
 
 ul.flex-direction-nav {
   display: none; }

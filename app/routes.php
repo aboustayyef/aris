@@ -18,6 +18,10 @@ Route::get('/', function()
     return View::make('home')->with('title', 'Al-Rayan International School - Ghana');
 });
 
+Route::get('search', function(){
+    return "Search Feature Coming Soon";
+});
+
 Route::get('admin', array(
     'as'          =>  'admin.index',
     'before'      =>  'auth',

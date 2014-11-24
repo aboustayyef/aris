@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.21)
 # Database: aris
-# Generation Time: 2014-11-19 23:01:11 +0000
+# Generation Time: 2014-11-24 07:05:41 +0000
 # ************************************************************
 
 
@@ -43,7 +43,8 @@ VALUES
 	('2014_10_18_213130_add_column_slug_to_table_sections',5),
 	('2014_10_18_220929_add_columns_to_section',5),
 	('2014_11_02_085348_create_news_table',6),
-	('2014_11_12_190547_create_table_nodes',7);
+	('2014_11_12_190547_create_table_nodes',7),
+	('2014_11_21_185756_add_news',8);
 
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -63,17 +64,18 @@ CREATE TABLE `news` (
   `excerpt` text COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `news_kind` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'news',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
 
-INSERT INTO `news` (`id`, `title`, `slug`, `featured_image`, `content`, `excerpt`, `created_at`, `updated_at`)
+INSERT INTO `news` (`id`, `title`, `slug`, `featured_image`, `content`, `excerpt`, `created_at`, `updated_at`, `news_kind`)
 VALUES
-	(1,'Three-way Conference Success','2014-november-three-way-conference-success','/img/uploads/2014/november/three-way-conference-success.jpg','Thank you to all of the parents who dedicated time for the Three Way Conferences!\r\n\nEvery class had a parent participation rate of 98% and higher. Let’s try to have 100% involvement for \r\nthe upcoming Student Led Conferences.\n\r\nThank you to Leila Zaabalawi year six yearbook photographer for the brilliant photos.','Thank you to all of the parents who dedicated time for the Three Way Conferences!','2014-11-19 18:25:24','2014-11-19 18:25:24'),
-	(2,'2014 Cambridge International Examination Awards Ceremony','2014-november-cambridge-international-examination-awards-ceremony','','<p>The British Council, Ghana organised an awards night on 29 October 2014 to recognise individual students and schools that performed exceptionally during the May/June 2014 Cambridge International Examinations. The awards programme is organised every year as part of their annual activities to promote CIE in Ghana and also to enrich the schools experience of the CIE programme.</p>\n\r<p>We would like to congratulate Mr. Annobil on behalf of all his colleagues and friends at Al-Rayan International School, congratulations on receiving the Best Teacher Award, and being promoted to PYP Team Leader. Your achievements are a source of pride and inspiration to all of us. We are all delighted to know that so many others ap-</p>\r\r<p>preciate your outstanding work as much as we do. It is always a pleasure to see great colleagues like you receiving the recognition and applause you deserve so well.</p>','The British Council, Ghana organised an awards night on 29 October 2014 to recognise individual students and schools that performed exceptionally during the May/June 2014 Cambridge International Examinations','2014-11-19 18:57:24','2014-11-19 17:57:24'),
-	(3,'Akwaba Annette Austin ','2014-november-akwaba-annette-austin','/img/uploads/2014/november/akwaba-annette-austin.jpg','<p>ARIS is on the way to gaining authorization into the PYP. Hoping to be successful, all staff strive and struggle to be victorious.</p>\n\r<p>Coming all the way from Istanbul, Turkey Annette finally arrived in Accra, Ghana on the 29th October 2014. Feeling very much at home, she moves around the ARIS com- pound, visiting several classes and having interactions with teachers , students, and parents.\r￼Reception pupils giving Annette an earful!</p>\r\r<p>Many staff members were nervous about meeting Annette because they were anxious about getting every- thing flawlessly done like always. Annette had a delightful breakfast with the staff of ARIS and enjoyed scrumptious Ghanaian dishes like Omo Tuo, mashed cooked rice with soup. She took the risk of eating a foreign meal and that was surprising. What a risk-taker she was! Annette expressed her feelings about ARIS as an assiduous school, which is taking positive steps sure to make them triumphant in their PYP jour- ney. - Yellow House News</p>','ARIS is on the way to gaining authorization into the PYP. Hoping to be successful, all staff strive and struggle to be victorious','2014-11-19 18:59:58','2014-11-19 16:59:58');
+	(1,'Three-way Conference Success','2014-november-three-way-conference-success','/img/uploads/2014/november/three-way-conference-success.jpg','<p>Thank you to all of the parents who dedicated time for the Three Way Conferences!</p>\n\n<p>Every class had a parent participation rate of 98% and higher. Let’s try to have 100% involvement for \nthe upcoming Student Led Conferences.</p>\n\n<p>Thank you to Leila Zaabalawi year six yearbook photographer for the brilliant photos.</p>','Thank you to all of the parents who dedicated time for the Three Way Conferences!','2014-11-19 18:25:24','2014-11-19 18:25:24','news'),
+	(2,'2014 Cambridge International Examination Awards Ceremony','2014-november-cambridge-international-examination-awards-ceremony','','<p>The British Council, Ghana organised an awards night on 29 October 2014 to recognise individual students and schools that performed exceptionally during the May/June 2014 Cambridge International Examinations. The awards programme is organised every year as part of their annual activities to promote CIE in Ghana and also to enrich the schools experience of the CIE programme.</p>\n\r<p>We would like to congratulate Mr. Annobil on behalf of all his colleagues and friends at Al-Rayan International School, congratulations on receiving the Best Teacher Award, and being promoted to PYP Team Leader. Your achievements are a source of pride and inspiration to all of us. We are all delighted to know that so many others ap-</p>\r\r<p>preciate your outstanding work as much as we do. It is always a pleasure to see great colleagues like you receiving the recognition and applause you deserve so well.</p>','The British Council, Ghana organised an awards night on 29 October 2014 to recognise individual students and schools that performed exceptionally during the May/June 2014 Cambridge International Examinations','2014-11-19 18:57:24','2014-11-19 17:57:24','news'),
+	(3,'Akwaba Annette Austin ','2014-november-akwaba-annette-austin','/img/uploads/2014/november/akwaba-annette-austin.jpg','<p>ARIS is on the way to gaining authorization into the PYP. Hoping to be successful, all staff strive and struggle to be victorious.</p>\n\r<p>Coming all the way from Istanbul, Turkey Annette finally arrived in Accra, Ghana on the 29th October 2014. Feeling very much at home, she moves around the ARIS com- pound, visiting several classes and having interactions with teachers , students, and parents.\r￼Reception pupils giving Annette an earful!</p>\r\r<p>Many staff members were nervous about meeting Annette because they were anxious about getting every- thing flawlessly done like always. Annette had a delightful breakfast with the staff of ARIS and enjoyed scrumptious Ghanaian dishes like Omo Tuo, mashed cooked rice with soup. She took the risk of eating a foreign meal and that was surprising. What a risk-taker she was! Annette expressed her feelings about ARIS as an assiduous school, which is taking positive steps sure to make them triumphant in their PYP jour- ney. - Yellow House News</p>','ARIS is on the way to gaining authorization into the PYP. Hoping to be successful, all staff strive and struggle to be victorious','2014-11-19 18:59:58','2014-11-19 16:59:58','news');
 
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -104,10 +106,10 @@ LOCK TABLES `nodes` WRITE;
 
 INSERT INTO `nodes` (`id`, `name`, `parent_id`, `excerpt`, `content`, `feature_image`, `type`, `slug`, `redirect`, `created_at`, `updated_at`)
 VALUES
-	(1,'About Us',NULL,'This is the description of the About Us Section.. In which we put a little introduction to the school and the about us section',NULL,'','normal','about-us',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-	(2,'Curriculum',NULL,NULL,NULL,'','normal','curriculum',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-	(3,'Pastoral',NULL,NULL,NULL,'','normal','pastoral',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-	(4,'Co-Curricular',NULL,NULL,NULL,'','normal','co-curricular',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+	(1,'About Us',NULL,'<h4>A Special Place</h4>\n<p>This is a quick description of why ARIS is just an awesome place. Just a few lines</p>',NULL,'','normal','about-us',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+	(2,'Curriculum',NULL,'<h4>Excellence in Education</h4>\n\n<p>our curriculum is international and challenging. At the same time, we place a high value on the quality of relationships within the school</p>',NULL,'','normal','curriculum',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+	(3,'Pastoral',NULL,'<h4>Emotional Wellbeing</h4>\n<p>A few lines here on how ARIS focuses on the students wellbeing</p>',NULL,'','normal','pastoral',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+	(4,'Co-Curricular',NULL,'<h4>A Rounded Education<h4>\n<p>A small excerpt on Why a rounded education is important. We can also use a Quote</p>',NULL,'','normal','co-curricular',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
 	(5,'Admissions',NULL,NULL,NULL,'','normal','admissions',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
 	(6,'News & Events',NULL,NULL,NULL,'','normal','news-events',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
 	(7,'Calendar',NULL,NULL,NULL,'','normal','calendar',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),

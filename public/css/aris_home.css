@@ -216,7 +216,7 @@ nav {
             padding: 10px;
             padding-right: 0;
             background: white; }
-            nav ul.sections > li.active .navigation_wrapper .section_description p {
+            nav ul.sections > li.active .navigation_wrapper .section_description .desc {
               background: #FFE1A3;
               padding: 10px;
               min-width: 100%;
@@ -542,6 +542,18 @@ footer {
       background: #0097a1; }
       .toolbox li:hover a {
         color: white; }
+
+.featured_image {
+  float: left;
+  margin-right: 15px; }
+
+small.meta {
+  width: 100%;
+  border-top: 1px solid #cfe9ea;
+  display: block;
+  border-bottom: 1px solid #cfe9ea;
+  padding: 7px 0;
+  margin-bottom: 15px; }
 
 /*  */
 html, body {

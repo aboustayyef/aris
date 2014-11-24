@@ -53,7 +53,7 @@ class NewsController extends \BaseController {
 	{
 		if (News::where('slug', $slug)->get()->count() > 0 ) {
 				$news = News::where('slug', $slug)->get()->first();
-				return '<p>' . $news->content . '</p>';
+				return View::make('news.show')->with('news',$news)->with('title', 'ARIS News | ' . $news->title);
 		}
 		app::abort('404');	
 	}

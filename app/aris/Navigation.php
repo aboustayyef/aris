@@ -15,8 +15,8 @@ class Navigation
 			echo '<ul class="sections">';
 			$sections = (new Node)->topLevel();
 			foreach ($sections as $key => $section) {
-				echo '<li>' . $section->name  ;
 				if ($section->hasChildren()) {
+					echo '<li>' . $section->name  ;
 					echo '<i class="fa fa-caret-down"></i>';
 					echo '<div class="navigation_wrapper">';
 						echo '<div class="nav_title"><h2>'.$section->name.'</h2></div>';
@@ -28,7 +28,7 @@ class Navigation
 
 						// Navigation Description
 						echo '<div class="section_description">';
-							echo '<p>' . $section->excerpt . '</p>';
+							echo '<div class="desc">'.$section->excerpt.'</div>';
 						echo '</div>';
 
 						// Navigation Left panel
@@ -54,6 +54,8 @@ class Navigation
 						echo '</div>'; // section_nav_list
 
 					echo '</div>'; // navigation_wrapper
+				} else {
+					echo '<li><a href="/' . $section->absoluteSlug() . '">' . $section->name . '</a>' ;
 				}
 				echo '</li>';
 			}

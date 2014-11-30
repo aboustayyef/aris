@@ -41,13 +41,14 @@ class Navigation
 										echo '<div class="section_subnav_list">';
 											echo '<ul>';
 											foreach ($subsection->children() as $key => $page) {
-												echo '<li><a href="/' . $page->absoluteSlug() . '">' . $page->name . '</a></li>';
+												echo '<li><a href="/' . $page->getLink() . '">' . $page->name . '</a></li>';
 											}
 											echo '</ul>';
 										echo '</div>';// section_subnav_list
 									echo '</li>'; // haschildren
 								} else {
-									echo '<li class="nochildren"><a href="/'.$subsection->absoluteSlug().'">'.$subsection->name.'</a></li>';
+
+									echo '<li class="nochildren"><a href="/' . $subsection->getLink() . '">'.$subsection->name.'</a></li>';
 								}
 							}
 							echo '</ul>';
@@ -55,7 +56,7 @@ class Navigation
 
 					echo '</div>'; // navigation_wrapper
 				} else {
-					echo '<li><a href="/' . $section->absoluteSlug() . '">' . $section->name . '</a>' ;
+					echo '<li><a href="/' . $section->getLink() . '">' . $section->name . '</a>' ;
 				}
 				echo '</li>';
 			}
@@ -66,7 +67,7 @@ class Navigation
 		echo '<ul class="sections">';
 		$sections = (new Node)->topLevel();
 		foreach ($sections as $key => $section) {
-			echo '<li><a href="/' . $section->absoluteSlug() . '">' . $section->name . '</a>'  ;
+			echo '<li><a href="/' . $section->getLink() . '">' . $section->name . '</a>'  ;
 			if ($section->hasChildren()) {
 				echo '<i class="fa fa-caret-down"></i>';
 				echo '<ul class="subsections"';
@@ -86,11 +87,11 @@ class Navigation
 						$pages = $subsection->children();
 						// Second Pane
 						foreach ($pages as $key => $page) {
-							echo '<li><a href="/'.$page->absoluteSlug().'">' . $page->name . '</li></a>';
+							echo '<li><a href="/'.$page->getLink().'">' . $page->name . '</li></a>';
 						}
 						echo '</ul>';
 					} else {
-						echo '<a href="/' . $subsection->absoluteSlug() . '">' . $subsection->name . '</a>';
+						echo '<a href="/' . $subsection->getLink() . '">' . $subsection->name . '</a>';
 					}
 					echo '</li>';
 				}
@@ -112,7 +113,7 @@ class Navigation
 			$subsections = $section->children();
 			foreach ($subsections as $key => $subsection) {
 				echo '<li>';
-				echo '<a href="/'.$subsection->absoluteSlug().'">' . $subsection->name . '</a>';
+				echo '<a href="/'.$subsection->getLink().'">' . $subsection->name . '</a>';
 				echo '</li>';
 			}
 			echo '</ul>';
@@ -145,7 +146,7 @@ class Navigation
 		$bc = $node->name;
 		while ($node->hasParent()) {
 			$node = $node->parent();
-			$bc = '<a href=/' . $node->absoluteSlug() . '>' . $node->name . '</a> >' . $bc;
+			$bc = '<a href=/' . $node->getLink() . '>' . $node->name . '</a> >' . $bc;
 		}
 
 		$bc = '<div class="breadcrumbs">You are here: <a href="/">Home</a> >'. $bc . '</div>';

@@ -45,6 +45,16 @@ class Node extends \Eloquent {
 		return $slug;
 	}
 
+	public function getLink(){
+	// 'redirect' nodes go straight to the absolute slug in the database, 
+	// normal node use absoluteSlug() function to build slug 
+		if ($this->type == 'redirect') {
+			return $this->slug;
+		}
+		return $this->absoluteSlug();
+	}
+
+
 	public function getByAbsoluteSlug($slug = null){
 		$parts = explode('/', $slug);
 

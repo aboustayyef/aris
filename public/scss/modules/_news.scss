@@ -1,6 +1,7 @@
 .featured_image{
 	float:left;
 	margin-right:15px;
+    max-width:50%;
 }
 
 small.meta{
@@ -10,4 +11,17 @@ small.meta{
 	border-bottom: 1px solid $aris_color_very_light;
 	padding: 7px 0;
 	margin-bottom: 15px;
+}
+
+.newsItem{
+    small{
+        font-size:0.6em;
+        color:#999;
+        margin-left:5px;
+    }
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+    overflow:auto;
+    clear:both;
+    margin-bottom:10px;
 }

@@ -12,10 +12,13 @@
 			    {{ Form::label('title', 'Title')}}
 				{{ Form::text('title', null ,['placeholder' => 'Title of News Item', 'class'=>'form-control']) }}
 			</div>
-			
 			<div class="form-group">
-			    {{ Form::label('description', 'Event Description')}}
-				{{ Form::text('description', null ,['id' => 'description', 'class'=>'form-control']) }}
+			    {{ Form::label('date', 'Date')}}
+				{{ Form::text('date', null ,['placeholder' => 'YYYY-MM-DD', 'class'=>'form-control']) }}
+			</div>
+			<div class="form-group">
+			    {{ Form::label('content', 'News content')}}
+				{{ Form::text('content', null ,['id' => 'description', 'class'=>'form-control']) }}
 			</div>
 
 			<button type="submit" class="btn btn-default">Submit</button>
@@ -23,8 +26,8 @@
 			{{ Form::close() }}
 
 			<!-- Ignite TinyMce -->
-			<?php 
-			Aris\Helpers::activateAdvancedEditor('#description');
+			<?php
+			Aris\Helpers::activateAdvancedEditor('#description',false);
 			?>
 
 @stop

@@ -10,9 +10,8 @@ class NewsController extends \BaseController {
 	 */
 	public function index()
 	{
-		return 'news index';
 		$news = News::all();
-		return View::make('news.index', compact($news));
+		return View::make('news.index')->with('news',$news)->with('title','ARIS News');
 	}
 
 	/**
@@ -28,7 +27,7 @@ class NewsController extends \BaseController {
 		} else {
 			return Redirect::to('login');
 		}
-		
+
 	}
 
 	/**
@@ -39,9 +38,21 @@ class NewsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$v = Validator::make(Input::all(), News::rules());
+		if ($v->fails()) {
+			return Redirect::route('news.create')->withErrors($v)->withInput();
+		}
+		$news = new News;
+		$news->title =
+		$news->title = Input::get('title');
+		$news->slug = $news->slug();
+		$news->content = Input::get('content');
+		$news->excerpt = $news->excerpt();
+		$news->date = Input::get('date');
+		$news->featured_image = $news->getFeaturedImage();
+		$news->save();
+		return Redirect::to('/news')->with('message','You have succesfully created a new page');
 	}
-
 	/**
 	 * Display the specified resource.
 	 * GET /news/{id}
@@ -55,7 +66,7 @@ class NewsController extends \BaseController {
 				$news = News::where('slug', $slug)->get()->first();
 				return View::make('news.show')->with('news',$news)->with('title', 'ARIS News | ' . $news->title);
 		}
-		app::abort('404');	
+		app::abort('404');
 	}
 
 	/**

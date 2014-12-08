@@ -3,9 +3,9 @@
 <div class="inner">
 
 
-	<div id="content-area">	
+	<div id="content-area">
 		<h1>{{$news->title}}</h1>
-		<?php 
+		<?php
 			$date = new dateTime($news->dateCreated);
 			$date = $date->format('F jS, Y');
 		?>
@@ -15,7 +15,7 @@
 		@endif
 		{{$news->content}}
 	</div>
-	
+
 
 </div>
 

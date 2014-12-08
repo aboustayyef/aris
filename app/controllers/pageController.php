@@ -30,7 +30,7 @@ class PageController extends \BaseController {
 		}else{
 			return Redirect::to('login');
 		}
-		
+
 	}
 
 	/**
@@ -96,7 +96,7 @@ class PageController extends \BaseController {
 		if ($v->fails()) {
 			return Redirect::route('pages.edit', ['id' => $id])->withErrors($v)->withInput();
 		}
-	 	
+
 	 	$page = Page::find($id);
 	 	$page->title = Input::get('title');
 	 	$page->section_id = Input::get('section');

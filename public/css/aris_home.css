@@ -56,6 +56,9 @@ html {
   font-weight: 300;
   font-size: 100%; }
 
+strong {
+  font-weight: bold; }
+
 a {
   color: #007178;
   text-decoration: none; }
@@ -109,14 +112,11 @@ h4 {
 hr {
   margin: 15px 0; }
 
-p {
+p, dl {
   font-size: 16px;
   line-height: 30px;
   margin-bottom: 15px;
   color: #666666; }
-  p.lead {
-    font-size: 20px;
-    color: black; }
 
 blockquote {
   font-size: 18px;
@@ -478,7 +478,32 @@ h2.slogan {
 
 #content-area {
   width: 68%;
-  float: left; }
+  float: left;
+  margin-bottom: 40px; }
+  #content-area a {
+    color: #0097a1;
+    text-decoration: underline; }
+  #content-area ul {
+    list-style: initial;
+    margin-bottom: 15px; }
+    #content-area ul li {
+      color: #666;
+      line-height: 25px; }
+      #content-area ul li p:nth-of-type(1) {
+        margin-bottom: 0; }
+  #content-area > p:nth-of-type(1) {
+    font-size: 20px;
+    line-height: 30px;
+    color: #444; }
+  #content-area dt {
+    float: left;
+    font-weight: bold;
+    color: #0097a1; }
+    #content-area dt:after {
+      content: ":";
+      margin-right: 5px; }
+  #content-area dd {
+    margin-bottom: 15px; }
 
 @media all and (max-width: 650px) {
   #content-area {
@@ -525,6 +550,9 @@ footer {
 
 .breadcrumbs {
   margin-top: 30px; }
+  @media print {
+    .breadcrumbs {
+      display: none; } }
 
 .toolbox {
   width: 100%;

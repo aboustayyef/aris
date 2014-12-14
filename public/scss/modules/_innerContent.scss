@@ -2,6 +2,40 @@
 #content-area{
 	width:68%;
 	float:left;
+    a{
+        color:$aris_color;
+        text-decoration:underline;
+    }
+    ul{
+        list-style: initial;
+        margin-bottom:15px;
+        li{
+            p:nth-of-type(1){
+                margin-bottom:0;
+            }
+            color:#666;
+            line-height: 25px;
+        }
+    }
+    > p:nth-of-type(1){
+        font-size: 20px;
+        line-height: 30px;
+        color:#444;
+    }
+
+    dt{
+        float:left;
+        font-weight:bold;
+        color:$aris_color;
+        &:after{
+            content: ":";
+            margin-right:5px;
+        }
+    }
+    dd{
+        margin-bottom:15px;
+    }
+    margin-bottom:40px;
 }
 
 #content-area{

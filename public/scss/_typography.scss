@@ -1,7 +1,10 @@
 html{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
 	font-size: 100%; // 16px , 1rem;
+}
+strong{
+	font-weight: bold;
 }
 a{
 	color:$aris_color_dark;
@@ -66,15 +69,11 @@ hr{
 	margin:15px 0;
 }
 
-p{
+p, dl{
 	font-size:16px;
 	line-height:30px;
 	margin-bottom:15px;
 	color: lighten(black,40);
-	&.lead{
-		font-size:20px;
-		color:black;
-	}
 }
 
 blockquote{

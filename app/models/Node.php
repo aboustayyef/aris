@@ -9,7 +9,7 @@ class Node extends \Eloquent {
 	}
 
 	public function children(){
-		$children = $this->where('parent_id', $this->id)->get();
+		$children = $this->where('parent_id', $this->id)->orderBy('order')->get();
 		return $children;
 	}
 

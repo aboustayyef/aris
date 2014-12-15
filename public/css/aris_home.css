@@ -46,7 +46,8 @@ table {
   border-spacing: 0; }
 
 * {
-  box-sizing: Border-box; }
+  -moz-box-sizing: Border-box;
+       box-sizing: Border-box; }
 
 img {
   max-width: 100%; }
@@ -133,6 +134,7 @@ blockquote {
   font-style: italic; }
 
 table {
+  width: 100%;
   font-size: 16px;
   text-align: left; }
   table tr:nth-child(even) {

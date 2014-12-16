@@ -14,7 +14,7 @@
 		$nodes = $node->children();
 		 ?>
 		@foreach($nodes as $node)
-			<a href="{{$node->absoluteSlug()}}"><h2>{{$node->name}}</h2></a><br>
+			<a href="/{{$node->absoluteSlug()}}"><h2>{{$node->name}}</h2></a><br>
 			<p>{{$node->excerpt}}</p>
 		@endforeach
 	</div>

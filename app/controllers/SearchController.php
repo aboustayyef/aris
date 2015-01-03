@@ -10,14 +10,9 @@ class SearchController extends \BaseController {
 		if (Input::has('query')) {
 			$query = Input::get('query');
 			//return 'You have searched for '.Input::get('query');
-			$results = Node::whereRaw("MATCH(name,content) AGAINST(? IN BOOLEAN MODE)", array($query))->remember(1440)->get();
+			$results = Node::whereRaw("MATCH(name,content) AGAINST(? IN BOOLEAN MODE)", array($query))->remember(1440)->orderBy('parent_id','ASC')->get();
 			if ($results->count() > 0) {
-				echo '<ul>';
-				foreach ($results as $key => $result) {
-					echo "<li>$result->name</li>";
-				}
-				echo '</ul>';
-				die();
+				return View::make('search.main')->with('results',$results)->with('query', $query)->with('title', 'Search Result for '.$query);
 			} else {
 				return '<h3>Sorry, No results for ' . $query . ' </h3>';
 			}

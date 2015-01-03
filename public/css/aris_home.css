@@ -506,6 +506,18 @@ h2.slogan {
       margin-right: 5px; }
   #content-area dd {
     margin-bottom: 15px; }
+  #content-area .halfModules {
+    width: 100%;
+    overflow: auto; }
+    #content-area .halfModules div {
+      width: 50%;
+      float: left; }
+      #content-area .halfModules div.left {
+        padding-right: 20px; }
+      @media all and (max-width: 650px) {
+        #content-area .halfModules div {
+          width: 100%;
+          padding-right: 0; } }
 
 @media all and (max-width: 650px) {
   #content-area {

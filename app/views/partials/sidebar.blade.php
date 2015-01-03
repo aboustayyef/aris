@@ -13,7 +13,7 @@
 						echo '<li>' . $sibling->name . '</li>';
 						continue;
 					}
-					echo '<li><a href="/' . $sibling->absoluteSlug() . '">' . $sibling->name . '</a></li>';
+					echo '<li><a href="/' . $sibling->getLink() . '">' . $sibling->name . '</a></li>';
 				}
 			?>
 		</ul>

@@ -35,6 +35,25 @@
         margin-bottom:15px;
     }
     margin-bottom:40px;
+
+
+    .halfModules{
+        width:100%;
+        overflow:auto;
+        div{
+            width:50%;
+            float:left;
+            &.left{
+                padding-right:20px;
+            }
+            @media all and (max-width:$header_break_point){
+                width:100%;
+                padding-right:0;
+            }
+        }
+        
+    }
+
 }
 
 #content-area{

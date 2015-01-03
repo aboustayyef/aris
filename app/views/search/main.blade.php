@@ -11,7 +11,12 @@
 				<?php 
 					$node = Node::find($result->id);
 				?>
-				<li><a href="{{$result->getLink()}}">{{$result->name}}</a></li>
+				<li><a href="{{$result->getLink()}}">{{$result->name}}</a>
+
+				@if($result->hasChildren())
+				 (Section)
+				@endif
+				</li>
 
 			@endforeach
 		</ul>

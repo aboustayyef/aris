@@ -1,7 +1,7 @@
 <?php
 
 class Node extends \Eloquent {
-	//protected $fillable = [];b 
+	//protected $fillable = [];b
 
 	public function topLevel(){
 		$topLevel = $this->where('parent_id', null)->get();
@@ -28,6 +28,10 @@ class Node extends \Eloquent {
 		return $this->parent();
 	}
 
+	public function excerpt(){
+		return str_limit(strip_tags($this->content), 220);
+	}
+
 	public function siblings(){
 		if ($this->hasParent()) {
 			return $this->parent()->children();
@@ -46,8 +50,8 @@ class Node extends \Eloquent {
 	}
 
 	public function getLink(){
-	// 'redirect' nodes go straight to the absolute slug in the database, 
-	// normal node use absoluteSlug() function to build slug 
+	// 'redirect' nodes go straight to the absolute slug in the database,
+	// normal node use absoluteSlug() function to build slug
 		if ($this->type == 'redirect') {
 			return $this->slug;
 		}
@@ -59,15 +63,15 @@ class Node extends \Eloquent {
 		$parts = explode('/', $slug);
 
 		$section = $this->where('slug', $parts[0])->where('parent_id', null)->first();
-		if ($section) 
+		if ($section)
 		{
 			if (!empty($parts[1]))
 			{
 				$subsection = $this->where('slug', $parts[1])->where('parent_id', $section->id)->first();
-				if (!empty($parts[2])) 
+				if (!empty($parts[2]))
 				{
 					$page = $this->where('slug', $parts[2])->where('parent_id', $subsection->id)->first();
-					if ($page) 
+					if ($page)
 					{
 						return $page;
 					}

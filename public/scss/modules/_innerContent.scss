@@ -3,7 +3,9 @@
 	float:left;
     a{
         color:$aris_color;
-        text-decoration:underline;
+        h1,h2,h3{
+            color:$aris_color;
+        }
     }
     ul{
         list-style: initial;
@@ -51,7 +53,7 @@
                 padding-right:0;
             }
         }
-        
+
     }
 
 }

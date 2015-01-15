@@ -1,11 +1,9 @@
 Things to do:
 
-- Fill rest of top menu
-- Featured image on Home Page from content
-- News section
-- List View
-- data entry
-
+- News section. Fill wordpress site with at least 3 news items. Implement simplepie and caching.
+- List View (add "read more >" links)
+- People. 
+- - analytics and statcounter
 
 ------------------------------------------------------------------------
 CAN BE IMPROVED:
@@ -18,3 +16,5 @@ DONE:
 - fix list view using Node
 - Fix grid and adaptive layout and replace grid with semantic sections (use bourbon/neat?)
 - Think of sidebar (random?)
+- Fill rest of top menu
+- Featured image on Home Page from content

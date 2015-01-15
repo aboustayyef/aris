@@ -46,8 +46,7 @@ table {
   border-spacing: 0; }
 
 * {
-  -moz-box-sizing: Border-box;
-       box-sizing: Border-box; }
+  box-sizing: Border-box; }
 
 img {
   max-width: 100%; }
@@ -483,8 +482,9 @@ h2.slogan {
   float: left;
   margin-bottom: 40px; }
   #content-area a {
-    color: #0097a1;
-    text-decoration: underline; }
+    color: #0097a1; }
+    #content-area a h1, #content-area a h2, #content-area a h3 {
+      color: #0097a1; }
   #content-area ul {
     list-style: initial;
     margin-bottom: 15px; }

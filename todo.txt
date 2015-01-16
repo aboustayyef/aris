@@ -3,7 +3,8 @@ Things to do:
 - News section. Fill wordpress site with at least 3 news items. Implement simplepie and caching.
 - List View (add "read more >" links)
 - People. 
-- - analytics and statcounter
+- analytics and statcounter
+- add Caching to navigation
 
 ------------------------------------------------------------------------
 CAN BE IMPROVED:

@@ -23,15 +23,15 @@ class PageController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
-	{
-		if (Auth::check()) {
-			return View::make('pages.create');
-		}else{
-			return Redirect::to('login');
-		}
+	// public function create()
+	// {
+	// 	if (Auth::check()) {
+	// 		return View::make('pages.create');
+	// 	}else{
+	// 		return Redirect::to('login');
+	// 	}
 
-	}
+	// }
 
 	/**
 	 * Store a newly created resource in storage.
@@ -41,16 +41,15 @@ class PageController extends \BaseController {
 	 */
 	public function store()
 	{
-		$v = Validator::make(Input::all(), Page::rules());
+		$v = Validator::make(Input::all(), Node::rules());
 		if ($v->fails()) {
 			return Redirect::route('page.create')->withErrors($v)->withInput();
 		}
-		$page = new Page;
-		$page->title = Input::get('title');
-		$page->slug = Str::slug($page->title);
-		$page->content = Input::get('content');
-		$page->section_id = Input::get('section');
-		$page->save();
+		$node = new Node;
+		$node->name = Input::get('title');
+		$node->slug = Str::slug($node->name);
+		$node->content = Input::get('content');
+		$node->save();
 		return Redirect::to('/pages')->with('message','You have succesfully created a new page');
 	}
 
@@ -75,7 +74,7 @@ class PageController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$pagetoedit = Page::find($id);
+		$pagetoedit = Node::find($id);
 		if (is_object($pagetoedit)) {
 			return View::make('pages.edit')->with('page', $pagetoedit);
 		} else {
@@ -92,17 +91,15 @@ class PageController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$v = Validator::make(Input::all(), Page::rules());
+		$v = Validator::make(Input::all(), Node::rules());
 		if ($v->fails()) {
 			return Redirect::route('pages.edit', ['id' => $id])->withErrors($v)->withInput();
 		}
 
-	 	$page = Page::find($id);
-	 	$page->title = Input::get('title');
-	 	$page->section_id = Input::get('section');
-	 	$page->content = Input::get('content');
-
-	 	$page->save();
+	 	$node = Node::find($id);
+	 	$node->name = Input::get('title');
+	 	$node->content = Input::get('content');
+	 	$node->save();
 
 	 	return Redirect::route('pages.index')->with('message', 'Page Updated');
 

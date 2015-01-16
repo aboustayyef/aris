@@ -41,17 +41,6 @@ Route::resource('pages', 'PageController');
 // news
 Route::resource('news', 'NewsController');
 
-// Ajax
-Route::get('ajaxEditSections/{id}', function($id){
-	if (Auth::check()) {
-		if (Section::find($id)) {
-			return Aris\Ajax::renderTableViewOfPagesInSection($id);
-		}
-	}
-	return null;
-});
-
-
 // pages (browsing)
 Route::get('/{section}/{subsection?}/{page?}', array(
     'uses'      =>  'pageNavigationController@resolve'

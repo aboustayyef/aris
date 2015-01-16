@@ -83,4 +83,11 @@ class Node extends \Eloquent {
 		return false;
 	}
 
+	public static function rules(){
+		return array(
+			'title'	=>	'required|min:5',
+			'content'	=>	'required|min:10'
+		);
+	}
+
 }

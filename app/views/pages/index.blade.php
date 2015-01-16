@@ -2,38 +2,44 @@
 
 @section('content')
 
-<?php 
+<?php
 	if (Session::has('message')) {
 		echo Session::get('message');
 	}
 ?>
 
-<h2>Create a New Page</h2>
-<a href="/pages/create" class="btn btn-warning">Click here to create a new page</a>
 <hr>
-<h2>Or Manage Existing Pages <small>Pick Section to manage</small></h2>
+<h2>Manage Pages</h2>
 
-	<div class="form-group">
-		<?php (new Aris\Navigation)->buildSelectList(10);?>
-	</div>
+<?php
+	echo '<ul>';
+		$sections = (new Node)->topLevel();
+		foreach ($sections as $key => $section) {
+			echo "<li>$section->name ";
+			if (!$section->hasChildren()) {
+				echo '<a href="/pages/' . $section->id . '/edit">edit</a>';
+			} else {
+				$subsections = $section->children();
+				echo "<ul>";
+				foreach ($subsections as $key => $subsection) {
+					echo "<li>$subsection->name ";
+					if (!$subsection->hasChildren()) {
+						echo '<a href="/pages/' . $subsection->id . '/edit">edit</a>';
+					}else{
+						$pages = $subsection->children();
+						echo "<ul>";
+							foreach ($pages as $key => $page) {
+								echo '<li>'.$page->name. ' <a href="/pages/' . $page->id . '/edit">edit</a></li>';
+							}
+						echo "</ul>";
+					}
+					echo "</li>";
+				}
+				echo "</ul>";
+			}
+			echo "</li>";
+		}
+	echo "</ul>";
+?>
 
-	<div id="dynamic">
-		<?php 
-			Aris\Ajax::renderTableViewOfPagesInSection(10) // 10 is default (Principal's Welcome)
-		?>
-	</div>
-	
-	<!-- Script to change list on select -->
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$('#section').on('change', function(){
-				var $section = $(this).find(":selected").val();
-				$.get( "/ajaxEditSections/" + $section, function( data ) {
-				  $( "#dynamic" ).html( data );
-				  console.log( "Load was performed." );
-				});
-			});
-		});
-	</script>
 @stop

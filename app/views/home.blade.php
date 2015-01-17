@@ -15,31 +15,34 @@
 				<img src="http://placehold.it/500x300" alt="">
 			</div>
 		</div> <!-- leftColumn -->
-			
-		<div class="rightColumn">	
+
+		<div class="rightColumn">
 			<h2 class="latestNews">
-				Latest News & Events
+				Latest News &amp; Events
 			</h2>
 				<?php
-					$news = News::orderBy('created_at', 'DESC')->take(3)->get();
+					if (!Cache::has('latestNews')) {
+						Cache::put('latestNews', (new Aris\NewsArticles())->get(3) , 10); //10 minutes
+					}
+					$news = Cache::get('latestNews');
 					foreach ($news as $key => $news_item) {
 						?>
 							<div class="news_item_wrapper">
-								<a href="/news/{{$news_item->slug}}">
-									<h3>{{$news_item->title}}</h3>
+								<a href="{{$news_item->link()}}">
+									<h3>{{$news_item->title()}}</h3>
 								</a>
-								@if (!empty($news_item->featured_image))
+								@if (($news_item->image()))
 									<div class="news_item_photo">
-										<img src="{{$news_item->featured_image}}" alt="">
+										<img src="{{$news_item->image()}}" alt="">
 									</div>
-								@endif	
+								@endif
 								<div class="news_excerpt">
-									<p>{{$news_item->excerpt}} - <a href="/news/{{$news_item->slug}}">read more&nbsp;&rarr;</a></p>
+									<p>{{$news_item->excerpt()}} - <a href="{{$news_item->link()}}">read more&nbsp;&rarr;</a></p>
 								</div>
 							</div>
 						<?php
 					}
-				?>	
+				?>
 		</div> <!-- rightColumn -->
 	</div> <!-- inner -->
 </div> <!-- section -->

@@ -1,7 +1,8 @@
 Things to do:
 
-- News section. Fill wordpress site with at least 3 news items. Implement simplepie and caching.
+- content (co-curricular..etc)
 - List View (add "read more >" links)
+- footer
 - People. 
 - analytics and statcounter
 - add Caching to navigation
@@ -19,3 +20,4 @@ DONE:
 - Think of sidebar (random?)
 - Fill rest of top menu
 - Featured image on Home Page from content
+- News section. Fill wordpress site with at least 3 news items. Implement simplepie and caching.

@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+use Aris\Node;
+?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -12,6 +15,7 @@
 		Admin Area - (<a href="/logout">logout</a>)
 	</div>
 	<div class="container">
+		<p><a href="/">&larr; Back to Main Site</a></p>
 		<header class="clearfix">
 			<div id="logo">ARIS International School</div>
 		</header>
@@ -23,8 +27,8 @@
 			</div>
 		</content>
 		<footer>
-			
-		</footer>	
+
+		</footer>
 	</div>
 </body>
 </html>

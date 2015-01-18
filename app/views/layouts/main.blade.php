@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+use Aris\Node;
+?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -8,6 +11,11 @@
 	<link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
 </head>
 <body>
+	@if (Auth::Check())
+	<div class="adminStrip">
+		<p>You are signed in as {{Auth::user()->email}}. <a href="/logout">logout</a></p>
+	</div>
+	@endif
 	<div id="siteWrapper">
 		<header>
 			@include('partials.header')

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+<?php
+use Aris\Node;
+?>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Sections</title>
 </head>
 <body>
-	<?php 
+	<?php
 		echo '<h1>Sections</h1>';
 		echo '<ul>';
 		$sections = (new Node)->topLevel();

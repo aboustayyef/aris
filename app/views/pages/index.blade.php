@@ -1,12 +1,18 @@
 @extends('layouts.admin')
-
+<?php
+use Aris\Node;
+?>
 @section('content')
 
-<?php
-	if (Session::has('message')) {
-		echo Session::get('message');
-	}
-?>
+@if(Session::has('message'))
+	<div class="container-fluid">
+	  <div class="row">
+	  	<p class="bg-info" style="padding:15px">
+	  		{{Session::get('message')}}
+	  	</p>
+	  </div>
+	</div>
+@endif
 
 <hr>
 <h2>Manage Pages</h2>

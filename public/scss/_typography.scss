@@ -69,6 +69,11 @@ hr{
 	margin:15px 0;
 }
 
+h1 small, h2 small, h3 small, h4 small {
+	font-size: 0.85em;
+	color:$aris_color;
+	font-weight: normal;
+}
 p, dl{
 	font-size:16px;
 	line-height:30px;

@@ -1,5 +1,5 @@
 <?php
-
+use Aris\Node;
 class PageController extends \BaseController {
 
 	/**
@@ -50,7 +50,8 @@ class PageController extends \BaseController {
 		$node->slug = Str::slug($node->name);
 		$node->content = Input::get('content');
 		$node->save();
-		return Redirect::to('/pages')->with('message','You have succesfully created a new page');
+		$message = 'You have succesfully created a new page';
+		return Redirect::to('/pages')->with('message',$message);
 	}
 
 	/**
@@ -99,9 +100,10 @@ class PageController extends \BaseController {
 	 	$node = Node::find($id);
 	 	$node->name = Input::get('title');
 	 	$node->content = Input::get('content');
+	 	$node->last_edited_by = Auth::user()->email;
 	 	$node->save();
-
-	 	return Redirect::route('pages.index')->with('message', 'Page Updated');
+	 	$message = 'Page <strong>'.$node->name.'</strong> updated. <a href="'.$node->absoluteSlug().'">Click Here to see it</a>';
+	 	return Redirect::route('pages.index')->with('message', $message);
 
 	}
 

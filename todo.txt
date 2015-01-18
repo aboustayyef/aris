@@ -3,9 +3,11 @@ Things to do:
 - content (co-curricular..etc)
 - List View (add "read more >" links)
 - footer
+- home page
 - People. 
 - analytics and statcounter
 - add Caching to navigation
+- sitemap
 
 ------------------------------------------------------------------------
 CAN BE IMPROVED:

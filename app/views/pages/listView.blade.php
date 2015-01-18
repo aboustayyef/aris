@@ -14,8 +14,15 @@
 		$nodes = $node->children();
 		 ?>
 		@foreach($nodes as $node)
-			<a href="/{{$node->absoluteSlug()}}"><h2>{{$node->name}}</h2></a>
-			<p>{{$node->excerpt()}}</p>
+			<div class="listModule">
+				<a href="/{{$node->absoluteSlug()}}"><h2>{{$node->name}}</h2></a>
+				@if($node->image())
+					<div class="featuredImage">
+						<a href="/{{$node->absoluteSlug()}}"><img src ="{{$node->image()}}"></a>
+					</div>
+				@endif
+				<p>{{$node->excerpt()}}</p>
+			</div>
 		@endforeach
 	</div>
 

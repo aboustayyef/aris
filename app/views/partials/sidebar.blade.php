@@ -1,7 +1,7 @@
 <aside id="content-sidebar">
 	<!-- Navigation of sibling sections -->
 	<div class="box siblings">
-			<?php 
+			<?php
 				if ($node->hasParent()) {
 
 					echo '<div class="box_header"><h3>' . $node->parent()->name . '</h3></div>';
@@ -26,20 +26,25 @@
 		</div>
 		<div class="box_body">
 			<ul>
-				<?php $news = News::orderBy('created_at', 'DESC')->take(3)->get(); ?>
+				<?php
+					if (!Cache::has('latestNews')) {
+						Cache::put('latestNews', (new Aris\NewsArticles())->get(3) , 10); //10 minutes
+					}
+					$news = Cache::get('latestNews');
+				?>
 				@foreach ($news as $key => $news_item)
 					<li>
-						@if($news_item->hasImage())
-							<a href="/news/{{$news_item->slug}}"><img src="{{$news_item->featured_image}}" alt=""></a><br>
+						@if($news_item->image())
+							<a href="{{$news_item->link()}}"><img src="{{$news_item->image()}}" alt="{{$news_item->title()}}"></a><br>
 						@endif
-						
-						<a href="/news/{{$news_item->slug}}">{{$news_item->title}}</a>
+
+						<a href="{{$news_item->link()}}">{{$news_item->title()}}</a>
 					</li>
 				@endforeach
 			</ul>
 		</div>
-		
+
 	</div>
-		
+
 
 </aside>

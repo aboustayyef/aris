@@ -518,6 +518,13 @@ h2.slogan {
         #content-area .halfModules div {
           width: 100%;
           padding-right: 0; } }
+  #content-area .listModule {
+    overflow: auto; }
+    #content-area .listModule .featuredImage {
+      float: left;
+      margin-right: 10px;
+      max-width: 150px;
+      height: auto; }
 
 @media all and (max-width: 650px) {
   #content-area {

@@ -1,5 +1,5 @@
 <?php
-
+use Aris\Node;
 class PageNavigationController extends \BaseController {
 
 	/**
@@ -7,7 +7,7 @@ class PageNavigationController extends \BaseController {
 	 */
 	public function resolve($section, $sub=null, $page=null)
 	{
-		
+
 		// build the full slug as a string
 
 		$absoluteSlug = $section;

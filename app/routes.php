@@ -39,7 +39,9 @@ Route::resource('session', 'sessionsController', ['only'=>['store','create','des
 Route::resource('pages', 'PageController');
 
 // news
-Route::resource('news', 'NewsController');
+Route::get('news', function(){
+    return Redirect::away('http://news.aris.edu.gh');
+});
 
 // pages (browsing)
 Route::get('/{section}/{subsection?}/{page?}', array(

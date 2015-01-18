@@ -2,7 +2,6 @@
 
 use Section; // (from root, so that it doesnt think we're looking for Aris\Section)
 use Page;
-use Node;
 class Navigation
 {
 

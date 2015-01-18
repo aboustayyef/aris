@@ -1,4 +1,4 @@
-<?php
+<?php namespace Aris;
 
 class Node extends \Eloquent {
 	//protected $fillable = [];b
@@ -47,6 +47,11 @@ class Node extends \Eloquent {
 			$slug = $node->slug . '/' . $slug;
 		}
 		return $slug;
+	}
+
+	public function image(){
+		$getContent = $this->content;
+		return (new ImageExtractor($getContent))->image();
 	}
 
 	public function getLink(){

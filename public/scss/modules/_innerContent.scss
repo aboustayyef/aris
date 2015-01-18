@@ -56,6 +56,16 @@
 
     }
 
+    .listModule{
+        overflow: auto;
+        .featuredImage{
+            float:left;
+            margin-right: 10px;
+            max-width:150px;
+            height:auto;
+        }
+    }
+
 }
 
 #content-area{

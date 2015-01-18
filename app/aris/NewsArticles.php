@@ -1,7 +1,6 @@
 <?php namespace Aris ;
 
 use \SimplePie;
-use Symfony\Component\DomCrawler\Crawler ;
 
 class NewsArticles{
 
@@ -43,16 +42,8 @@ class Article{
 	}
 
 	public function image(){
-		$crawler = new Crawler($this->original->get_content());
-    	//$crawler->addHTMLContent(file_get_contents($this->original->get_content(), 'UTF-8'));
-    	$count = $imageSrc = $crawler->filter('img')->count();
-    	if ($count > 0) {
-    		$imageSrc = $crawler->filter('img')->first()->attr('src');
-    		if (!empty($imageSrc)) {
-	    		return $imageSrc;
-	    	}
-    	}
-    	return false;
+		$getContent = $this->original->get_content();
+		return (new ImageExtractor($getContent))->image();
 	}
 
 	public function link(){

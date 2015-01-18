@@ -26,7 +26,7 @@ Route::get('search', array(
 Route::get('admin', array(
     'as'          =>  'admin.index',
     'before'      =>  'auth',
-    'uses'        =>  'adminController@index'
+    'uses'        =>  'AdminController@index'
 ));
 
 // session management. Login & logout

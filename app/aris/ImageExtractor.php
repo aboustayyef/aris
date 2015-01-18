@@ -10,6 +10,7 @@ use Symfony\Component\DomCrawler\Crawler ;
         private $crawler;
         function __construct($html)
         {
+            $this->html = $html;
             $this->crawler = new Crawler($html);
         }
 
@@ -22,9 +23,34 @@ use Symfony\Component\DomCrawler\Crawler ;
                     return $imageSrc;
                 }
             }
-            return false;
+            // If no image returned, try to find an embedded youtube video
+            return (new YouTubeImageExtractor($this->html))->youtubeImage();
         }
 
+    }
+
+    class YouTubeImageExtractor{
+
+        private $html;
+        function __construct($html)
+        {
+            $this->html = $html;
+        }
+
+        public function youtubeImage(){
+            preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $this->html, $matches);
+            if(isset($matches[2]) && $matches[2] != '')
+            {
+                $YoutubeCode = $matches[2];
+                $candidate = 'http://img.youtube.com/vi/'.$YoutubeCode.'/0.jpg';
+                // check if image still exists
+                if (@getimagesize($candidate))
+                {
+                  return $candidate;
+                }
+            }
+            return false;
+        }
     }
 
  ?>

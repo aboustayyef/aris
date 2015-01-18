@@ -29,7 +29,11 @@ class Node extends \Eloquent {
 	}
 
 	public function excerpt(){
-		return str_limit(strip_tags($this->content), 220);
+		// if the manual excerpt is empty, generate one.
+		if (empty(trim($this->excerpt))) {
+			return str_limit(strip_tags($this->content), 220);
+		}
+		return $this->excerpt;
 	}
 
 	public function siblings(){

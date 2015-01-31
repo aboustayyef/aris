@@ -1,5 +1,5 @@
 <?php
-
+use Aris\Node;
 class SearchController extends \BaseController {
 
 	/**

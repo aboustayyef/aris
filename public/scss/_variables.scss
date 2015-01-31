@@ -16,10 +16,12 @@ $aris_color_dark: darken($aris_color, 8);
 
 $aris_color2: #D3A547;
 $aris_color2_light: #F5CA73;
-$aris_color2_very_light: #FFE1A3; 
-
+$aris_color2_very_light: #FFE1A3;
 $aris_light_grey: #F5F5F5;
 
+$aris_compl: #FFE1A3;
+$aris_compl_light: #FFF3D9;
+$aris_compl_dark:#F7D184;
 // hyperlink
 
 @mixin aris_link{
@@ -27,7 +29,7 @@ $aris_light_grey: #F5F5F5;
 	&:hover{
 		color: $aris_color_dark;
 		text-decoration: underline;
-	}	
+	}
 }
 
 // layout Dimensions
@@ -49,7 +51,7 @@ $header_top_padding:20px;
 // navbar
 $navbar_height:45px;
 
-// navigation 
+// navigation
 $nav_width: 920px;
 $nav_third: ($nav_width / 3)-1 ;
 $nav_height:350px;

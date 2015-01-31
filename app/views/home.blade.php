@@ -17,12 +17,15 @@
 		</div> <!-- leftColumn -->
 
 		<div class="rightColumn">
+
+			@include('partials.quickAccess')
+
 			<h2 class="latestNews">
 				Latest News &amp; Events
 			</h2>
 				<?php
 					if (!Cache::has('latestNews')) {
-						Cache::put('latestNews', (new Aris\NewsArticles())->get(3) , 10); //10 minutes
+						Cache::put('latestNews', (new Aris\NewsArticles())->get(3) , 60); //60 minutes
 					}
 					$news = Cache::get('latestNews');
 					foreach ($news as $key => $news_item) {
@@ -46,19 +49,6 @@
 		</div> <!-- rightColumn -->
 	</div> <!-- inner -->
 </div> <!-- section -->
-
-<div class="section">
-	<div class="inner">
-		<h3>Toolbox</h3>
-		<div class="toolbox">
-			<ul>
-				<li><a href="">Apply to ARIS</a></li>
-				<li><a href="">Contact Us</a></li>
-				<li><a href="">Find us on a map</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
 
 <div class="section">
 	<div class="inner">

@@ -1,6 +1,9 @@
 <aside id="content-sidebar">
 	<!-- Navigation of sibling sections -->
 	<div class="box siblings">
+		@include('partials.quickAccess')
+	</div>
+	<div class="box siblings">
 			<?php
 				if ($node->hasParent()) {
 

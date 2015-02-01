@@ -1,7 +1,6 @@
 <div class="inner">
-
-	Footer Content
     <div class="footerColumn">
+        <h4>Footer Header</h4>
         <ul>
             <li><a href="">link 1</a></li>
             <li><a href="">link 2</a></li>
@@ -11,6 +10,7 @@
         </ul>
     </div>
     <div class="footerColumn">
+        <h4>Footer Header</h4>
         <ul>
             <li><a href="">link 1</a></li>
             <li><a href="">link 2</a></li>
@@ -20,6 +20,7 @@
         </ul>
     </div>
     <div class="footerColumn">
+        <h4>Footer Header</h4>
         <ul>
             <li><a href="">link 1</a></li>
             <li><a href="">link 2</a></li>

@@ -8,6 +8,15 @@ header{
 	}
 }
 
+.searchform{
+	input[type="submit"]{
+		background:$aris_color;
+		vertical-align: middle;
+		appearance:none;
+	}
+	border:none;
+}
+
 #logo{
 	text-indent: -999px ; //hide text
 	height:73px;

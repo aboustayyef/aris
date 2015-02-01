@@ -350,6 +350,13 @@ header {
     header {
       height: 96.5517241379px; } }
 
+.searchform {
+  border: none; }
+  .searchform input[type="submit"] {
+    background: #0097a1;
+    vertical-align: middle;
+    appearance: none; }
+
 #logo {
   text-indent: -999px;
   height: 73px;
@@ -614,6 +621,9 @@ footer {
   position: relative;
   bottom: 0;
   left: 0; }
+  footer .footerColumn {
+    display: inline-block;
+    width: 30%; }
 
 .breadcrumbs {
   margin-top: 30px; }

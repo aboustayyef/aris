@@ -12,7 +12,7 @@
 				<p>Recognized as a young and forward thinking school ARIS is an outstanding place to work and go to school. <a href="" class="learnmore">Learn More&nbsp;&rarr;</a></p>
 			</div>
 			<div>
-				<img src="http://placehold.it/500x300" alt="">
+				<img src="{{asset('img/featured/welcome.jpg')}}" alt="">
 			</div>
 		</div> <!-- leftColumn -->
 

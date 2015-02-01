@@ -1,9 +1,9 @@
 	<div class="flexslider">
-		<div class="inner">
 			<div class="gateway">
-				The Gateway to Knowledge
+				<div class="inner">
+					The Gateway to Knowledge
+				</div>
 			</div>
-		</div>
 	   <ul class="slides">
 	    <li>
 	      <img src="{{asset('img/slides/slide1.jpg')}}" />

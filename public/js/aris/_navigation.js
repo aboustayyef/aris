@@ -12,7 +12,7 @@ $('.sections>li').hoverIntent(
 		console.log('left');
 });
 
-$('.section_nav_list>ul>li').hover(
+$('.section_nav_list>ul>li').hoverIntent(
 	// mouse enter
 	function(){
 		$('.section_nav_list>ul>li.active').removeClass('active');

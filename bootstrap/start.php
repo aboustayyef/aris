@@ -26,8 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('musiMac.local','vbox','musMBA.local', 'MUSTAPHA-PC'),
-	'staging'=>array('aris')
+	'local' => array('musiMac.local','vbox','musMBA.local', 'MUSTAPHA-PC', 'Mustaphas-MacBook-Air.local'),
+	'staging'=>array('aris'),
 
 ));
 

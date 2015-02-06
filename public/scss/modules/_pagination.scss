@@ -1,0 +1,15 @@
+#pagination{
+	text-align:center;
+	margin-top:20px;
+}
+
+ul.pagination{
+	li{
+		display:inline-block;
+		list-style-type:none;
+		margin-left:10px;
+		&:nth-child(1){
+			margin-left:0;
+		}
+	}
+}

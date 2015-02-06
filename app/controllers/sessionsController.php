@@ -22,10 +22,12 @@ class SessionsController extends \BaseController {
 	public function store()
 	{
 		// validate
-
 		$attempt = Auth::attempt(['email'=>Input::get('email'),'password'=>Input::get('password')]);
 		if ($attempt) {
-			return Redirect::route('admin.index');
+			if (Input::get('return')) {
+				return Redirect::to(Input::get('return'));
+			}
+			return Redirect::to(route('admin.index'));
 		} else {
 			return Redirect::to('login');
 		}

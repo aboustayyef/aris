@@ -30,7 +30,7 @@ class Node extends \Eloquent {
 
 	public function excerpt(){
 		// if the manual excerpt is empty, generate one.
-		if (trim($this->excerpt) != "") {
+		if (trim($this->excerpt) == "") {
 			return str_limit(strip_tags($this->content), 220);
 		}
 		return $this->excerpt;

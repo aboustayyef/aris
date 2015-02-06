@@ -19,6 +19,9 @@
 				{{ Form::password('password', ['class'=>'form-control']) }}
 			</div>
 		</div>
+
+		<input type="hidden" name="return" value="{{Input::get('return')}}">
+        
         <button type="submit" class="btn btn-default">Submit</button>    
      {{ Form::close() }}
 @stop

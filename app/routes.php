@@ -30,7 +30,7 @@ Route::get('admin', array(
 ));
 
 // session management. Login & logout
-Route::get('login', ['uses'=>'sessionsController@create']);
+Route::get('login', ['as'=>'login', 'uses'=>'sessionsController@create']);
 Route::get('logout', ['uses'=>'sessionsController@destroy']);
 Route::resource('session', 'sessionsController', ['only'=>['store','create','destroy']]);
 

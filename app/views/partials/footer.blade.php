@@ -29,6 +29,9 @@
             <li><a href="">link 5</a></li>
         </ul>
     </div>
+    <div>
+        <a href="{{route('login')}}?return={{Request::path()}}">Admin Login</a>
+    </div>
 	<!-- Jquery, use CDN in production -->
 	<script src="{{asset('js/jquery/jquery.min.js')}}"></script>
 

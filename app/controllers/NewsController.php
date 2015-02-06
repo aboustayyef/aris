@@ -12,7 +12,8 @@ class NewsController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('News.index');
+		$news = News::paginate(3);
+		return View::make('News.index')->with('news',$news)->with('title', 'ARIS News');
 	}
 
 	/**
@@ -58,9 +59,18 @@ class NewsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($slug)
 	{
-		return View::make('News.show');
+		// first, convert slug $id to real id
+		
+		$news = News::where('slug', $slug)->get();
+		if ($news->count() > 0) {
+			$newsItem = $news->first();
+			return View::make('News.show')->with('newsItem',$newsItem)->with('title', 'Aris News: '.$newsItem->title);
+		}
+		return Response::make('Sorry, page does not exist',404);
+
+		
 	}
 
 	/**
@@ -72,7 +82,7 @@ class NewsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return 'Editing ID: '.$id;
 	}
 
 	/**

@@ -1,26 +1,30 @@
 $(document).ready(function(){
 
 // When mouse hovers over section, it becomes active
-$('.sections>li').hoverIntent(
+$('.sections>li').hoverIntent({
 	// mouse enter
-	function(){
+	over:function(){
 		$('.sections li.active').removeClass('active');
 		$(this).addClass('active');
 	}, 
 	// do nothing on mouse leave
-	function(){
+	out:function(){
 		console.log('left');
+	},
+	interval:60
 });
 
-$('.section_nav_list>ul>li').hover(
+$('.section_nav_list>ul>li').hoverIntent({
 	// mouse enter
-	function(){
+	over:function(){
 		$('.section_nav_list>ul>li.active').removeClass('active');
 		$(this).addClass('active');
 	}, 
 	// mouse leave
-	function(){
+	out:function(){
 		//do nothing
+	},
+	interval:20
 });
 
 // ways to make sure navigation is turned off if mouse goes far

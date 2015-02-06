@@ -46,8 +46,7 @@ table {
   border-spacing: 0; }
 
 * {
-  -moz-box-sizing: Border-box;
-       box-sizing: Border-box; }
+  box-sizing: Border-box; }
 
 img {
   max-width: 100%; }
@@ -236,8 +235,6 @@ nav {
             nav ul.sections > li.active .navigation_wrapper .section_nav_list li {
               line-height: 22px;
               padding: 5px; }
-              nav ul.sections > li.active .navigation_wrapper .section_nav_list li:hover {
-                background: #7fcfd4; }
               nav ul.sections > li.active .navigation_wrapper .section_nav_list li.nochildren {
                 background: none; }
                 nav ul.sections > li.active .navigation_wrapper .section_nav_list li.nochildren a {
@@ -245,7 +242,7 @@ nav {
                   nav ul.sections > li.active .navigation_wrapper .section_nav_list li.nochildren a:hover {
                     color: #007178;
                     text-decoration: underline; }
-              nav ul.sections > li.active .navigation_wrapper .section_nav_list li.haschildren:hover {
+              nav ul.sections > li.active .navigation_wrapper .section_nav_list li.haschildren.active {
                 background: #7fcfd4 url("../img/interface/arrow-end.png");
                 background-repeat: no-repeat;
                 background-position-x: right;
@@ -478,7 +475,6 @@ html[xmlns] .slides {
   font-size: 50px;
   font-size: 2.5vw;
   width: 100%;
-  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.8));
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
   position: absolute;
   z-index: 2000;

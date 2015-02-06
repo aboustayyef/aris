@@ -21,7 +21,9 @@ use Aris\Node;
 		</header>
 		<content>
 			<div class="row">
+				@include('partials.formerrors')
 				<div class="col-md-9 col-sm-12">
+
 					@yield('content')
 				</div>
 			</div>

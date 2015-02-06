@@ -1,0 +1,1 @@
+/Users/stayyef/Sites/aris/app/views/News/edit.blade.php

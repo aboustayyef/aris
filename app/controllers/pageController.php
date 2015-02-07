@@ -51,7 +51,7 @@ class PageController extends \BaseController {
 		$node->content = Input::get('content');
 		$node->save();
 		$message = 'You have succesfully created a new page';
-		return Redirect::to('/pages')->with('message',$message);
+		return Redirect::to(Input::get('from'))->with('message',$message);
 	}
 
 	/**
@@ -77,7 +77,7 @@ class PageController extends \BaseController {
 	{
 		$pagetoedit = Node::find($id);
 		if (is_object($pagetoedit)) {
-			return View::make('pages.edit')->with('page', $pagetoedit);
+			return View::make('pages.edit')->with('page', $pagetoedit)->with('from', Request::path());
 		} else {
 			return "page doesn't exist";
 		}
@@ -103,7 +103,7 @@ class PageController extends \BaseController {
 	 	$node->last_edited_by = Auth::user()->email;
 	 	$node->save();
 	 	$message = 'Page <strong>'.$node->name.'</strong> updated. <a href="'.$node->absoluteSlug().'">Click Here to see it</a>';
-	 	return Redirect::route('pages.index')->with('message', $message);
+	 	return Redirect::to(Input::get('from'))->with('message',$message);
 
 	}
 

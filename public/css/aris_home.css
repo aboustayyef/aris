@@ -475,6 +475,7 @@ html[xmlns] .slides {
   font-size: 50px;
   font-size: 2.5vw;
   width: 100%;
+  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.8));
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
   position: absolute;
   z-index: 2000;
@@ -605,6 +606,10 @@ h2.slogan {
         border-bottom: none; }
       #content-sidebar ul li img {
         margin-bottom: 5px; }
+  #content-sidebar h3 {
+    font-size: 16px; }
+    #content-sidebar h3 a {
+      color: white; }
   @media all and (max-width: 650px) {
     #content-sidebar {
       width: 100%; } }

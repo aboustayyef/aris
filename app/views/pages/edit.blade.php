@@ -17,6 +17,8 @@
 		{{ Form::label('content', 'Content')}}
 		{{ Form::text('content', $page->content,['id'=>'content', 'placeholder'=>'Insert image by clicking on the icon above']) }}
 	</div>
+	
+	<input type="hidden" name="from" value="{{Input::get('from')}}">
 
 	<button type="submit" class="btn btn-default">Submit</button>
 

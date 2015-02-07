@@ -12,7 +12,7 @@ class NewsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$news = News::paginate(3);
+		$news = News::orderBy('created_at','desc')->paginate(3);
 		return View::make('News.index')->with('news',$news)->with('title', 'ARIS News');
 	}
 
@@ -44,12 +44,11 @@ class NewsController extends \BaseController {
 			return Redirect::route('news.create')->withErrors($v)->withInput();
 		}
 		// $node = new Node;
-		// $node->name = Input::get('title');
-		// $node->slug = Str::slug($node->name);
-		// $node->content = Input::get('content');
-		// $node->save();
-		// $message = 'You have succesfully created a new page';
-		// return Redirect::to('/pages')->with('message',$message);
+		$news = new News;
+		if ($news->store(Input::all())) {
+			return Redirect::route('news.index')->with('message','Successfully created news item');
+		}
+
 	}
 
 	/**
@@ -82,7 +81,11 @@ class NewsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return 'Editing ID: '.$id;
+		$news = News::find($id);
+		if ($news) {
+			return View::make('News.edit')->with('news', $news);
+		}
+		return Response::make('Sorry, page does not exist',404);
 	}
 
 	/**
@@ -94,7 +97,15 @@ class NewsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$v = Validator::make(Input::all(), News::rules());
+		if ($v->fails()) {
+			return Redirect::route('news.edit')->withErrors($v)->withInput();
+		}
+		$news = News::find($id);
+		if ($news->store(Input::all())) {
+			return Redirect::to(Input::get('from'))->with('message','Successfully created news item');
+		}
+
 	}
 
 	/**

@@ -25,7 +25,7 @@
 
 	<div class="box latestnews">
 		<div class="box_header">
-			<h3>Latest News &amp; Events</h3>
+			<h3><a href="{{route('news.index')}}">Latest News &amp; Events</a></h3>
 		</div>
 		<div class="box_body">
 			<ul>

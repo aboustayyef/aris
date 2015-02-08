@@ -16,12 +16,17 @@
 <input type="hidden" name="from" value ="{{Input::get('from')}}">
 
 <button type="submit" class="btn btn-default">Submit</button>
-
 <?php
 // Trigger TinyMCE for editing
 Aris\Helpers::activateAdvancedEditor('#content');
 ?>
 
 {{ Form::close()}}
+
+<!-- Destroy button -->
+
+{{ Form::open(array('route' => array('news.destroy', $news->id), 'method' => 'delete')) }}
+        <button type="submit" class="btn btn-danger btn-mini">Delete</button>
+{{ Form::close() }}
 
 @stop

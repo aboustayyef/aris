@@ -19,6 +19,11 @@
         max-width:50%;
     }
 
+    .newsExcerpt{
+        overflow:auto;
+        margin-bottom:10px;
+    }
+
     .newsItem{
         small{
             font-size:0.6em;
@@ -33,6 +38,7 @@
     }
 
     .meta{
+        clear:both;
         font-size:0.85em;
         background:#F5F0E3;
         width: 100%;

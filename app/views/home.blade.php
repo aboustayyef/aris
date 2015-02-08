@@ -1,3 +1,8 @@
+<?php 
+
+use Aris\News;
+
+?>
 @extends('layouts.main')
 
 @section('content')
@@ -22,25 +27,29 @@
 
 			<h2 class="latestNews">
 				Latest News &amp; Events
+				<small><a href="/news">Read All</a></small>
 			</h2>
 				<?php
-					if (!Cache::has('latestNews')) {
-						Cache::put('latestNews', (new Aris\NewsArticles())->get(3) , 60); //60 minutes
-					}
-					$news = Cache::get('latestNews');
+
+					$news = News::orderBy('created_at','desc')->take(3)->get();
 					foreach ($news as $key => $news_item) {
 						?>
 							<div class="news_item_wrapper">
-								<a href="{{$news_item->link()}}">
-									<h3>{{$news_item->title()}}</h3>
-								</a>
+								
 								@if (($news_item->image()))
 									<div class="news_item_photo">
-										<img src="{{$news_item->image()}}" alt="">
+										<a href="/news/{{$news_item->slug}}">
+											<img src="{{$news_item->image()}}" alt="">
+										</a>
 									</div>
 								@endif
+
+								<a href="/news/{{$news_item->slug}}">
+									<h3>{{$news_item->title}}</h3>
+								</a>
+								
 								<div class="news_excerpt">
-									<p>{{$news_item->excerpt()}} - <a href="{{$news_item->link()}}">read more&nbsp;&rarr;</a></p>
+									<p>{{$news_item->excerpt()}} - <a href="/news/{{$news_item->slug}}">read more&nbsp;&rarr;</a></p>
 								</div>
 							</div>
 						<?php

@@ -89,7 +89,7 @@ class Navigation
 		$bc = $node->name;
 		while ($node->hasParent()) {
 			$node = $node->parent();
-			$bc = '<a href=/' . $node->getLink() . '>' . $node->name . '</a> >' . $bc;
+			$bc = '<a href=/' . $node->getLink() . ' > ' . $node->name . '</a> > ' . $bc;
 		}
 
 		$bc = '<div class="breadcrumbs">You are here: <a href="/">Home</a> >'. $bc . '</div>';

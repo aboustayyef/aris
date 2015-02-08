@@ -117,7 +117,9 @@ class NewsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$news = News::find($id);
+		$news->delete();
+		return Redirect::to(Input::get('from'))->with('message','Successfully deleted news item');
 	}
 
 }

@@ -15,10 +15,10 @@
 		 ?>
 		@foreach($nodes as $node)
 			<div class="listModule">
-				<a href="/{{$node->absoluteSlug()}}"><h2>{{$node->name}}</h2></a>
+				<a href="/{{$node->getLink()}}"><h2>{{$node->name}}</h2></a>
 				@if($node->image())
 					<div class="featuredImage">
-						<a href="/{{$node->absoluteSlug()}}"><img src ="{{$node->image()}}"></a>
+						<a href="/{{$node->getLink()}}"><img src ="{{$node->image()}}"></a>
 					</div>
 				@endif
 				<p>{{$node->excerpt()}}</p>

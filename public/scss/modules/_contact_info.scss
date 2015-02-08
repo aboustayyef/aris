@@ -1,0 +1,22 @@
+#contactInfo{
+	font-family:verdana, sans-serif;
+	font-size:12px;
+	width: $page_width;
+	margin:$top_margin auto 0;
+	opacity:0.3;
+	overflow:auto;
+	.contacts{
+		float:right;
+	}
+	li{
+		display:inline-block;
+	}
+	@media all and (max-width:$page_width){
+		width: 100%;
+		padding-right:10px;
+	}
+	@media all and (max-width:$header_break_point){
+		display:none;
+	}
+}
+

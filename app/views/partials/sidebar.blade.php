@@ -1,3 +1,4 @@
+<?php use Aris\News ; ?>
 <aside id="content-sidebar">
 	<!-- Navigation of sibling sections -->
 	<div class="box siblings">
@@ -30,18 +31,15 @@
 		<div class="box_body">
 			<ul>
 				<?php
-					if (!Cache::has('latestNews')) {
-						Cache::put('latestNews', (new Aris\NewsArticles())->get(3) , 10); //10 minutes
-					}
-					$news = Cache::get('latestNews');
+					$news = News::orderBy('created_at','desc')->take(3)->get();
 				?>
 				@foreach ($news as $key => $news_item)
 					<li>
 						@if($news_item->image())
-							<a href="{{$news_item->link()}}"><img src="{{$news_item->image()}}" alt="{{$news_item->title()}}"></a><br>
+							<a href="/news/{{$news_item->slug}}"><img src="{{$news_item->image()}}" alt="{{$news_item->title}}"></a><br>
 						@endif
 
-						<a href="{{$news_item->link()}}">{{$news_item->title()}}</a>
+						<a href="news/{{$news_item->slug}}">{{$news_item->title}}</a>
 					</li>
 				@endforeach
 			</ul>

@@ -17,13 +17,16 @@
 		@foreach($news as $newsItem)
 			<div class="listModule">
 				<a href="/news/{{$newsItem->slug}}"><h3>{{$newsItem->title}}</h3></a>
-				@if($newsItem->image())
-					<div class="featuredImage">
-						<a href="/news/{{$newsItem->slug}}"><img src ="{{$newsItem->image()}}"></a>
-					</div>
-				@endif
-				<p>{{$newsItem->excerpt()}}</p>
 				
+				<div class="newsExcerpt">
+					@if($newsItem->image())
+						<div class="featuredImage">
+							<a href="/news/{{$newsItem->slug}}"><img src ="{{$newsItem->image()}}"></a>
+						</div>
+					@endif
+					<p>{{$newsItem->excerpt()}}</p>
+				</div>
+
 				@if(Auth::Check())
 					@include('partials.newsmetadata')
 				@endif

@@ -1,3 +1,4 @@
+<?php use Aris\Node; ?>
 @extends('layouts.main')
 
 @section('content')

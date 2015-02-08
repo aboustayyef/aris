@@ -14,13 +14,12 @@ a{
 	}
 	&.learnmore{
 		text-decoration: none;
-		background: $aris_color_dark;
+		background: $aris_color_light;
 		padding: 2px 7px;
 		color: white;
-		border-radius: 4px;
 		font-size:14px;
 		&:hover{
-			background: adjust_hue($aris_color_dark, 180);
+			background: darken($aris_color_light, 10);
 		}
 	}
 }

@@ -66,13 +66,12 @@ a {
     text-decoration: underline; }
   a.learnmore {
     text-decoration: none;
-    background: #007178;
+    background: #7fcfd4;
     padding: 2px 7px;
     color: white;
-    border-radius: 4px;
     font-size: 14px; }
     a.learnmore:hover {
-      background: #780700; }
+      background: #59c1c8; }
 
 ul {
   margin-left: 25px; }

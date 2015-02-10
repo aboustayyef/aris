@@ -1,6 +1,8 @@
 <?php namespace Aris;
 use \Str;
 use \Eloquent;
+use \Carbon\Carbon;
+use \Auth;
 
 Class News extends Eloquent{
 	
@@ -39,14 +41,18 @@ Class News extends Eloquent{
 	public static function rules(){
 		return array(
 			'title'	=>	'required|min:5',
-			'content'	=>	'required|min:10'
+			'content'	=>	'required|min:10',
+			'date'	=> 'required|date_format:Y-m-d'
 		);
 	}
 
 	public function store($data){
+		$date = new Carbon($data['date']);
 		$this->title = $data['title'];
 		$this->excerpt = $this->excerpt();
 		$this->content = $data['content'];
+		$this->last_edited_by = Auth::user()->email;
+		$this->public_date = $date;
 		$this->save();
 
 		$this->generateSlug();

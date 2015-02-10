@@ -1,7 +1,6 @@
 <?php 
 
 use Aris\News;
-
 ?>
 @extends('layouts.main')
 
@@ -14,7 +13,7 @@ use Aris\News;
 		<div class="leftColumn">
 			<div class="intro">
 				<h2 class="slogan">Welcome to Aris</h2>
-				<p>Recognized as a young and forward thinking school ARIS is an outstanding place to work and go to school. <a href="" class="learnmore">Learn More&nbsp;&rarr;</a></p>
+				<p>Recognized as a young and forward thinking school ARIS is an outstanding place to work and go to school. <a href="{{url('/about-us/why-aris')}}" class="learnmore">Learn More&nbsp;&rarr;</a></p>
 			</div>
 			<div>
 				<img src="{{asset('img/featured/welcome.jpg')}}" alt="">
@@ -31,7 +30,7 @@ use Aris\News;
 			</h2>
 				<?php
 
-					$news = News::orderBy('created_at','desc')->take(3)->get();
+					$news = News::orderBy('public_date','desc')->take(3)->get();
 					foreach ($news as $key => $news_item) {
 						?>
 							<div class="news_item_wrapper">

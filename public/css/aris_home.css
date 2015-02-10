@@ -576,6 +576,10 @@ h2.slogan {
     font-size: 20px;
     line-height: 30px;
     color: #444; }
+  #content-area h2 {
+    margin-top: 40px;
+    font-size: 22px;
+    line-height: 1.2; }
   #content-area dt {
     float: left;
     font-weight: bold;

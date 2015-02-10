@@ -6,6 +6,10 @@
 
 
 	<div id="content-area">
+
+
+		<div class="breadcrumbs">You are here: <a href="/">Home</a> > News</div>
+
 		<h1>News</h1>
 
 		@if(Auth::Check())

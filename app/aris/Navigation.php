@@ -22,7 +22,7 @@ class Navigation
 
 						// Navigation Image
 						echo '<div class="section_image">';
-							echo '<img src="/img/featured/sections/'.$section->slug.'.jpg">';
+							echo '<img src="/img/featured/sections/'.$section->getLink().'.jpg">';
 						echo '</div>';
 
 						// Navigation Description

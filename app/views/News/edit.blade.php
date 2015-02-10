@@ -1,3 +1,7 @@
+<?php 
+use Carbon\Carbon;
+$date = new Carbon($news->public_date);
+?>
 @extends('layouts.admin')
 
 @section('content')
@@ -7,6 +11,11 @@
 	<div class="form-group">
 		{{ Form::label('title', 'Title')}}
 		{{ Form::text('title', $news->title, ['placeholder' => 'News Title', 'class'=>'form-control']) }}
+	</div>
+
+	<div class="form-group">
+		<label for="date" class="control-label">Date (yyyy-mm-dd) </label>
+		<input class="form-control" name="date" type="text" id="date" value = "{{$date->format('Y-m-d')}}">
 	</div>
 
 	<div class="form-group">

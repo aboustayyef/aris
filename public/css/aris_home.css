@@ -30,9 +30,6 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1; }
 
-ol, ul {
-  list-style: none; }
-
 blockquote, q {
   quotes: none; }
 
@@ -557,6 +554,7 @@ h2.slogan {
   margin-right: 2%; }
 
 #content-area {
+  color: #444;
   width: 68%;
   float: left;
   margin-bottom: 40px; }
@@ -564,6 +562,9 @@ h2.slogan {
     color: #0097a1; }
     #content-area a h1, #content-area a h2, #content-area a h3 {
       color: #0097a1; }
+  #content-area h1, #content-area h2, #content-area h3, #content-area h4, #content-area h5 {
+    font-weight: bold;
+    line-height: 2; }
   #content-area ul {
     list-style: initial;
     margin-bottom: 15px; }
@@ -574,12 +575,13 @@ h2.slogan {
         margin-bottom: 0; }
   #content-area > p:nth-of-type(1) {
     font-size: 20px;
-    line-height: 30px;
-    color: #444; }
-  #content-area h2 {
-    margin-top: 40px;
-    font-size: 22px;
-    line-height: 1.2; }
+    line-height: 30px; }
+  #content-area em {
+    font-style: italic; }
+  #content-area strong {
+    font-style: bold; }
+  #content-area h3, #content-area h5 {
+    color: #0097a1; }
   #content-area dt {
     float: left;
     font-weight: bold;
@@ -589,6 +591,17 @@ h2.slogan {
       margin-right: 5px; }
   #content-area dd {
     margin-bottom: 15px; }
+  #content-area sup {
+    vertical-align: super;
+    font-weight: normal;
+    margin-left: 3px;
+    color: #0097a1; }
+  #content-area table + p {
+    margin-top: 10px; }
+  #content-area ol {
+    margin-left: 26px; }
+    #content-area ol li {
+      margin-bottom: 10px; }
   #content-area .halfModules {
     width: 100%;
     overflow: auto; }
@@ -651,6 +664,7 @@ h2.slogan {
   #content-sidebar ul {
     margin: 0; }
     #content-sidebar ul li {
+      list-style: none;
       margin: 5px 0;
       padding: 7px 0;
       border-bottom: 1px dotted silver; }
@@ -674,6 +688,8 @@ footer {
   position: relative;
   bottom: 0;
   left: 0; }
+  footer li {
+    list-style: none; }
   footer .footerColumn {
     display: inline-block;
     width: 30%; }

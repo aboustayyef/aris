@@ -39,7 +39,7 @@
 							<a href="/news/{{$news_item->slug}}"><img src="{{$news_item->image()}}" alt="{{$news_item->title}}"></a><br>
 						@endif
 
-						<a href="news/{{$news_item->slug}}">{{$news_item->title}}</a>
+						<a href="/news/{{$news_item->slug}}">{{$news_item->title}}</a>
 					</li>
 				@endforeach
 			</ul>

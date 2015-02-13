@@ -156,6 +156,8 @@ nav {
   @media all and (max-width: 970px) {
     nav {
       display: none; } }
+  nav li {
+    list-style-type: none; }
   nav li a {
     text-decoration: none;
     color: black; }
@@ -272,6 +274,8 @@ nav {
   height: 40px;
   line-height: 40px;
   background: #0097a1; }
+  #mobileMenu li {
+    list-style-type: none; }
   #mobileMenu h3 {
     margin: 0;
     cursor: pointer;

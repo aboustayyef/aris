@@ -4,6 +4,9 @@ nav{
 	@media all and (max-width:$navigation_break_point){
 		display:none;
 	}
+	li{
+		list-style-type:none;
+	}
 	li a{
 		text-decoration:none;
 		color:$nav_link_color;
@@ -165,6 +168,9 @@ nav{
 }
 
 #mobileMenu{
+		li{
+			list-style-type:none;
+		}
 		height:40px;
 		line-height:40px;
 		background:$aris_color;

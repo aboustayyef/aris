@@ -10,8 +10,14 @@ Route::get('sectionsReference', function()
 Route::get('styleguide', function(){
     return View::make('styleguide');
 });
+
+Route::get('thumbs', function(){
+	return View::make('peopleThumbs');
+});
+
 /***************************************************************/
 /***************************************************************/
+
 
 Route::get('/', function()
 {

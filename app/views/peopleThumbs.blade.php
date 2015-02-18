@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Who's Who?</title>
+	x
 	<style type="text/css">
 		body{
 			padding:10px;
@@ -37,7 +40,7 @@
 </head>
 <body>
 	<h1>Who's who?</h1>
-	<p>Please send me a list of names with each person's name next to his or her number.</p>
+	<p>Please send me a list of names with each person's name next to his or her number, and whether that person is a teacher, admin, or staff. Please fill information here</p>
 	<div id="thumbs">
 		<?php 
 			$counter = 1;

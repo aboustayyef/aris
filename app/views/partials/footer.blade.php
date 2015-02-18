@@ -1,33 +1,6 @@
 <div class="inner">
-    <div class="footerColumn">
-        <h4>Footer Header</h4>
-        <ul>
-            <li><a href="">link 1</a></li>
-            <li><a href="">link 2</a></li>
-            <li><a href="">link 3</a></li>
-            <li><a href="">link 4</a></li>
-            <li><a href="">link 5</a></li>
-        </ul>
-    </div>
-    <div class="footerColumn">
-        <h4>Footer Header</h4>
-        <ul>
-            <li><a href="">link 1</a></li>
-            <li><a href="">link 2</a></li>
-            <li><a href="">link 3</a></li>
-            <li><a href="">link 4</a></li>
-            <li><a href="">link 5</a></li>
-        </ul>
-    </div>
-    <div class="footerColumn">
-        <h4>Footer Header</h4>
-        <ul>
-            <li><a href="">link 1</a></li>
-            <li><a href="">link 2</a></li>
-            <li><a href="">link 3</a></li>
-            <li><a href="">link 4</a></li>
-            <li><a href="">link 5</a></li>
-        </ul>
+    <div id="signature">
+        Alrayaan International School, {{date('Y')}}&copy;
     </div>
     <div>
         <a href="{{route('login')}}?return={{Request::path()}}">Admin Login</a>

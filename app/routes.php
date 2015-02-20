@@ -15,6 +15,10 @@ Route::get('thumbs', function(){
 	return View::make('peopleThumbs');
 });
 
+Route::get('imageTest', function(){
+    return View::make('uploadImage');
+});
+
 /***************************************************************/
 /***************************************************************/
 

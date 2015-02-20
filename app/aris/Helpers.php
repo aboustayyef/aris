@@ -36,7 +36,7 @@ class Helpers{
 			    ?>
 			   
 			   image_advtab: true ,
-			   
+			   image_dimensions: false,
 			   external_filemanager_path:"/filemanager/",
 			   filemanager_title:"Responsive Filemanager" ,
 			   external_plugins: { "filemanager" : "/filemanager/plugin.min.js"}

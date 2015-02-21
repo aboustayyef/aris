@@ -51,6 +51,10 @@ Route::resource('pages', 'PageController');
 // news
 Route::resource('news', 'NewsController');
 
+// people 
+Route::resource('people', 'PeopleController');
+
+
 // pages (browsing)
 Route::get('/{section}/{subsection?}/{page?}', array(
     'uses'      =>  'pageNavigationController@resolve'

@@ -46,7 +46,7 @@
 			while ( $counter <= 70) {
 				echo '<div class="thumb">';
 				echo '<div class="number">'.$counter.'</div>';
-				echo '<img src="/img/people-thumbs/people-'.sprintf('%03d',$counter).'.jpg">';
+				echo '<img src="/img/uploads/people/people-'.sprintf('%03d',$counter).'.jpg">';
 				echo '</div>';
 				$counter++;
 			}	

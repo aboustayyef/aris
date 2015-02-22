@@ -19,18 +19,18 @@
 
 <div class="form-group">
 	<label for="type" class="control-label">Position (You can pick more than one)</label>
-	<div><input type="checkbox" name="type[]" value="admin" 
-		@if(strstr($person->type , 'admin'))
+	<div><input type="checkbox" name="type[]" value="Administration" 
+		@if(strstr($person->type , 'Administration'))
 			checked="checked"
 		@endif
-	> Admin</div>
-	<div><input type="checkbox" name="type[]" value="teacher"
-		@if(strstr($person->type , 'teacher'))
+	> Administration</div>
+	<div><input type="checkbox" name="type[]" value="Faculty"
+		@if(strstr($person->type , 'Faculty'))
 			checked="checked"
 		@endif
-	> Teacher</div>
-	<div><input type="checkbox" name="type[]" value="staff"
-		@if(strstr($person->type , 'staff'))
+	> Faculty</div>
+	<div><input type="checkbox" name="type[]" value="Staff"
+		@if(strstr($person->type , 'Staff'))
 			checked="checked"
 		@endif
 	 > Staff</div>

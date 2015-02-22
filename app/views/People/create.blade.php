@@ -23,9 +23,9 @@ $now = new Carbon\Carbon;
 
 <div class="form-group">
 	<label for="type" class="control-label">Position (You can pick more than one)</label>
-	<div><input type="checkbox" name="type[]" value="admin"> Admin</div>
-	<div><input type="checkbox" name="type[]" value="teacher"> Teacher</div>
-	<div><input type="checkbox" name="type[]" value="staff"> Staff</div>
+	<div><input type="checkbox" name="type[]" value="Administration"> Administration</div>
+	<div><input type="checkbox" name="type[]" value="Faculty"> Faculty</div>
+	<div><input type="checkbox" name="type[]" value="Staff"> Staff</div>
 </div>
 
 <div class="form-group">

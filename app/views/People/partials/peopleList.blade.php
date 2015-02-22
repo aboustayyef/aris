@@ -1,10 +1,19 @@
-<ul>
+<ul class="people">
 	@foreach ($people as $key => $person)
-		<li>
-			<a href="/people/{{$person->id}}">{{$person->lastname}}, {{$person->firstname}}</a> {{$person->designation	}}
-			@if(Auth::Check())
-				<a class="admin" href="{{route('people.edit',$person->id)}}?from={{Request::path()}}">Edit Details</a>
-			@endif
+		<li class="person">
+			<a href="/people/{{$person->id}}">
+				<div class="profilepic">
+					<img src="{{$person->image()}}" width="120px" height="auto">
+				</div>
+			</a>
+			<div class="details">
+				<a href="/people/{{$person->id}}">{{$person->lastname}}, {{$person->firstname}}</a> 
+				<br>{{$person->designation	}}
+				@if(Auth::Check())
+					<a class="admin" href="{{route('people.edit',$person->id)}}?from={{Request::path()}}">Edit Details</a>
+				@endif
+			</div>
+			
 		</li>
 	@endforeach
 </ul>

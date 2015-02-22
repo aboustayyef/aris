@@ -4,12 +4,11 @@
 @section('title')
 
 	{{-- Code for Getting title --}}
-	@if (isset($input['type']) && in_array($input['type'], ['teacher','admin','staff']))
-		<?php $type = $input['type']; ?>
-		<title>ARIS | People | {{$input['type']}}</title>
+	
+	@if ($type == 'all')
+		<title>ARIS | People </title>
 	@else
-		<?php $type = null ; ?>
-		<title>ARIS | People</title>
+		<title>ARIS | People | {{$type}}</title>
 	@endif
 
 @stop
@@ -31,39 +30,13 @@
 
 		<div class="breadcrumbs">You are here: <a href="/">Home</a> > People</div>
 		
-		@if ($type)
-			@if ($type == 'admin')
-
-				<h1>Aris Administrative Staff</h1>
-				{{View::make('people.partials.peopleList')->with('people', $admins)}}
-				
-			@elseif ($type == 'teacher')
-
-				<h1>Aris Teachers</h1>
-				{{View::make('people.partials.peopleList')->with('people', $teachers)}}
-
-			@elseif ($type == 'staff' )
-
-				<h1>Aris Staff</h1>
-				{{View::make('people.partials.peopleList')->with('people', $staff)}}
-
-			@endif
-
-		@else
+		@if ($type == 'all')
 			<h1>Aris People</h1>
-
-			<p>Introduction paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis cum eaque expedita cumque fuga vitae consectetur laudantium itaque minus quo accusamus possimus doloribus, quae soluta, culpa quam at hic provident.</p>
-
-			<h2>Aris Administrative Staff</h2>
-			{{View::make('people.partials.peopleList')->with('people', $admins)}}
-
-			<h2>Aris Teachers</h2>
-			{{View::make('people.partials.peopleList')->with('people', $teachers)}}
-
-			<h2>Aris Staff</h2>
-			{{View::make('people.partials.peopleList')->with('people', $staff)}}
-
-		@endif
+			<p>Create here a manual index for 3 types of people</p>
+		@else 
+			<h1>Aris {{$type}}</h1>
+			{{View::make('people.partials.peopleList')->with('people', $people)}}
+		@endif 
 
 	</div>
 

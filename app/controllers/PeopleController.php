@@ -11,10 +11,25 @@ class PeopleController extends \BaseController {
 	 */
 	public function index()
 	{
-		$teachers = People::where('type', 'like', '%teacher%' )->orderBy('lastname', 'asc')->get();;
-		$admins = People::where('type', 'like', '%admin%' )->orderBy('lastname', 'asc')->get();;
-		$staff = People::where('type', 'like', '%staffr%' )->orderBy('lastname', 'asc')->get();;
-		return View::make('People.index')->with('input',Input::all())->with(['teachers'=>$teachers, 'admins'=>$admins, 'staff'=>$staff]);
+		return View::make('People.index')->with(['type'=>'all']);
+	}
+
+	public function adminIndex()
+	{
+		$people = People::where('type', 'Administration' )->orderBy('order', 'asc')->get();
+		return View::make('People.index')->with(['type'=>'Administration','people'=>$people]);
+	}
+
+	public function facultyIndex()
+	{
+		$people = People::where('type', 'Faculty' )->orderBy('lastname', 'asc')->get();
+		return View::make('People.index')->with(['type'=>'Faculty','people'=>$people]);
+	}
+
+	public function staffIndex()
+	{
+		$people = People::where('type', 'Staff' )->orderBy('lastname', 'asc')->get();
+		return View::make('People.index')->with(['type'=>'Staff','people'=>$people]);
 	}
 
 	/**

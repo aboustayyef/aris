@@ -52,6 +52,9 @@ Route::resource('pages', 'PageController');
 Route::resource('news', 'NewsController');
 
 // people 
+Route::get('people/admin', 'PeopleController@adminIndex');
+Route::get('people/faculty', 'PeopleController@facultyIndex');
+Route::get('people/staff', 'PeopleController@staffIndex');
 Route::resource('people', 'PeopleController');
 
 

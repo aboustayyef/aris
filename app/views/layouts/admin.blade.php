@@ -15,7 +15,7 @@ use Aris\Node;
 		Admin Area - (<a href="/logout">logout</a>)
 	</div>
 	<div class="container">
-		<p><a href="/">&larr; Back to Main Site</a></p>
+		<p><a href="/{{Input::get('from')}}">&larr; Cancel and go Back</a></p>
 		<header class="clearfix">
 			<div id="logo">ARIS International School</div>
 		</header>

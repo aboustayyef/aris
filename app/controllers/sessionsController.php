@@ -27,7 +27,7 @@ class SessionsController extends \BaseController {
 			if (Input::get('return')) {
 				return Redirect::to(Input::get('return'));
 			}
-			return Redirect::to('/'));
+			return Redirect::to('/');
 		} else {
 			return Redirect::to('login');
 		}

@@ -566,6 +566,10 @@ h2.slogan {
     color: #0097a1; }
     #content-area a h1, #content-area a h2, #content-area a h3 {
       color: #0097a1; }
+    #content-area a.admin {
+      background: orange;
+      color: white;
+      padding: 1px 5px; }
   #content-area h1, #content-area h2, #content-area h3, #content-area h4, #content-area h5 {
     font-weight: bold;
     line-height: 1.3; }

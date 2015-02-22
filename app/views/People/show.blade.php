@@ -20,8 +20,8 @@
 		
         
         @if(Auth::Check())
-             {{-- Add edit button --}}
-        @endif
+				<a class="admin" href="{{route('people.edit',$person->id)}}?from={{Request::path()}}">Edit Details</a>
+		@endif
 	</div>
 	
 	@include('partials.newssidebar')

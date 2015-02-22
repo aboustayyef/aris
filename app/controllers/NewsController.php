@@ -99,7 +99,7 @@ class NewsController extends \BaseController {
 	{
 		$v = Validator::make(Input::all(), News::rules());
 		if ($v->fails()) {
-			return Redirect::route('news.edit')->withErrors($v)->withInput();
+			return Redirect::route('news.edit', $id)->withErrors($v)->withInput();
 		}
 		$news = News::find($id);
 		if ($news->store(Input::all())) {

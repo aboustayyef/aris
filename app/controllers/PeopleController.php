@@ -11,12 +11,10 @@ class PeopleController extends \BaseController {
 	 */
 	public function index()
 	{
-		if (Input::has('type') && in_array(Input::get('type'), ['admin','teacher', 'staff'])) {
-			$people = People::where('type', 'like', '%' . Input::get('type') . '%' )->get();
-		}else{
-			$people = People::all()->sortBy('lastname');
-		}
-		return View::make('People.index')->with('input',Input::all())->with('people',$people);
+		$teachers = People::where('type', 'like', '%teacher%' )->orderBy('lastname', 'asc')->get();;
+		$admins = People::where('type', 'like', '%admin%' )->orderBy('lastname', 'asc')->get();;
+		$staff = People::where('type', 'like', '%staffr%' )->orderBy('lastname', 'asc')->get();;
+		return View::make('People.index')->with('input',Input::all())->with(['teachers'=>$teachers, 'admins'=>$admins, 'staff'=>$staff]);
 	}
 
 	/**
@@ -79,7 +77,11 @@ class PeopleController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$person = People::find($id);
+		if ($person) {
+			return View::make('People.edit')->with('person', $person);
+		}
+		return Response::make('Sorry, person does not exist',404);
 	}
 
 	/**
@@ -91,7 +93,14 @@ class PeopleController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$v = Validator::make(Input::all(), People::rules());
+		if ($v->fails()) {
+			return Redirect::route('people.edit',$id)->withErrors($v)->withInput();
+		}
+		$people = People::find($id);
+		if ($people->store(Input::all())) {
+			return Redirect::to(Input::get('from'))->with('message','Successfully edited Person');
+		}
 	}
 
 	/**
@@ -103,7 +112,9 @@ class PeopleController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$person = People::find($id);
+		$person->delete();
+		return Redirect::to(Input::get('from'))->with('message','Successfully deleted person');
 	}
 
 }

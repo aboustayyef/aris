@@ -8,6 +8,11 @@
         h1,h2,h3{
             color:$aris_color;
         }
+        &.admin{
+            background:orange;
+            color:white;
+            padding:1px 5px;
+        }
     }
     h1,h2,h3,h4,h5{
         font-weight:bold;

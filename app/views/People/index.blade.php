@@ -23,35 +23,46 @@
 
 	<div id="content-area">
 
+		@if(Auth::Check())
+			<div id="adminCreate">
+				<a href="{{route('people.create')}}/?from={{Request::path()}}">Add New Person</a>
+			</div>
+		@endif
+
 		<div class="breadcrumbs">You are here: <a href="/">Home</a> > People</div>
 		
 		@if ($type)
 			@if ($type == 'admin')
+
 				<h1>Aris Administrative Staff</h1>
+				{{View::make('people.partials.peopleList')->with('people', $admins)}}
+				
 			@elseif ($type == 'teacher')
+
 				<h1>Aris Teachers</h1>
+				{{View::make('people.partials.peopleList')->with('people', $teachers)}}
+
 			@elseif ($type == 'staff' )
+
 				<h1>Aris Staff</h1>
+				{{View::make('people.partials.peopleList')->with('people', $staff)}}
+
 			@endif
+
 		@else
 			<h1>Aris People</h1>
-		@endif
 
-		@if(Auth::Check())
-			<div id="adminCreate">
-				<a href="{{route('people.create')}}">Add New Person</a>
-			</div>
-		@endif
+			<p>Introduction paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis cum eaque expedita cumque fuga vitae consectetur laudantium itaque minus quo accusamus possimus doloribus, quae soluta, culpa quam at hic provident.</p>
 
+			<h2>Aris Administrative Staff</h2>
+			{{View::make('people.partials.peopleList')->with('people', $admins)}}
 
-		@if ($people->count() == 0)
-			<p>Sorry. Database is still new. No people to enter yet</p>
-		@else
-			<ul>
-				@foreach ($people as $key => $person) 
-					<li><a href="/people/{{$person->id}}">{{$person->lastname}}, {{$person->firstname}}</a> {{$person->designation	}}</li>
-				@endforeach
-			</ul>
+			<h2>Aris Teachers</h2>
+			{{View::make('people.partials.peopleList')->with('people', $teachers)}}
+
+			<h2>Aris Staff</h2>
+			{{View::make('people.partials.peopleList')->with('people', $staff)}}
+
 		@endif
 
 	</div>

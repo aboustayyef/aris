@@ -57,7 +57,7 @@
 
 		@else 
 			<h1>Aris {{$type}}</h1>
-			{{View::make('people.partials.peopleList')->with('people', $people)}}
+			{{View::make('People.partials.peopleList')->with('people', $people)}}
 		@endif 
 
 	</div>

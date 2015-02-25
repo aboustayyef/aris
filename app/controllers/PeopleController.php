@@ -73,9 +73,11 @@ class PeopleController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($slug)
 	{
-		if ($person = People::find($id)) {
+		$query = Aris\People::Where('slug', $slug);
+		if ($query->count() > 0) {
+			$person = $query->first();
 			return View::make('People.show')->with(compact('person'));
 		} else {
 			return "Sorry, this person doesn't exist";

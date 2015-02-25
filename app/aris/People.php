@@ -1,6 +1,7 @@
 <?php namespace Aris;
 
 use \Auth;
+use \Str;
 class People extends \Eloquent {
 	
 	protected $table = 'people';
@@ -23,6 +24,10 @@ class People extends \Eloquent {
 
 	}
 
+	public function slug(){
+		return Str::slug($this->firstname . ' ' . $this->lastname);
+	}
+
 	public function store($data){
 		$this->title = $data['title'];
 		$this->firstname = $data['firstname'];
@@ -31,6 +36,7 @@ class People extends \Eloquent {
 		$this->type = implode(',',$data['type']);
 		$this->bio = $data['bio'];
 		$this->last_edited_by = Auth::user()->email;
+		$this->slug = $this->slug();
 		$this->save();
 		return true;
 	}

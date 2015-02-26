@@ -1,6 +1,6 @@
 <div class="inner">
     <div id="signature">
-        Alrayaan International School, {{date('Y')}}&copy;
+        Al-Rayan International School, {{date('Y')}} &copy;
     </div>
     <div>
         <a href="{{route('login')}}?return={{Request::path()}}">Admin Login</a>

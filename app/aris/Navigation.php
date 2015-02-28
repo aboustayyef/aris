@@ -68,18 +68,23 @@ class Navigation
 		$mobilenav = "";
 		$sections = (new Node)->topLevel();
 		foreach ($sections as $key => $section) {
-			$mobilenav .= '<li><h4>' . $section->name . '</h4>';
+			if ($section->hasChildren()) {
+				$mobilenav .= '<li><h4>' . $section->name . '</h4>';
 
-			$mobilenav .= '<ul class="subsections">';
+				$mobilenav .= '<ul class="subsections">';
 
-			$subsections = $section->children();
-			foreach ($subsections as $key => $subsection) {
-				$mobilenav .= '<li>';
-				$mobilenav .= '<a href="/'.$subsection->getLink().'">' . $subsection->name . '</a>';
+				$subsections = $section->children();
+				foreach ($subsections as $key => $subsection) {
+					$mobilenav .= '<li>';
+					$mobilenav .= '<a href="/'.$subsection->getLink().'">' . $subsection->name . '</a>';
+					$mobilenav .= '</li>';
+				}
+				$mobilenav .= '</ul>';
 				$mobilenav .= '</li>';
+			}else{
+				$mobilenav .= '<li><h4><a href="' . $section->getLink() . '">' . $section->name . '</a></h4>';
 			}
-			$mobilenav .= '</ul>';
-			$mobilenav .= '</li>';
+				
 		}
 		return $mobilenav;
 	}

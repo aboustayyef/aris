@@ -17,6 +17,5 @@
 				@endforeach
 			</ul>
 		</div>
-		<p>News Stuff</p>
 	</div><!-- / box body -->
 </aside>

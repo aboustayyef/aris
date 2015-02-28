@@ -8,7 +8,7 @@ Frontend:
 	Encoding layouts, styles and content;
 	Responsive design for all screen sizes.
 	User Experience research and Optimization.
-	Search Engine Optimization
+	Search Engine Optimization (SEO)
 	Usability testing and reviewing
 
 Backend: 
@@ -22,7 +22,6 @@ Content:
 System Administration: 
 	DNS Transfer
 	Initializing Dedicated VPS and online storage
-
 
 Training:
 	Preparing School Staff for CMS Handoff.

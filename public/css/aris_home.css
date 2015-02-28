@@ -866,3 +866,7 @@ ul.pagination li {
     width: 200px;
     width: calc(100% - 140px);
     float: right; }
+
+#message {
+  padding: 10px;
+  background: #eee; }

@@ -103,7 +103,7 @@ class NewsController extends \BaseController {
 		}
 		$news = News::find($id);
 		if ($news->store(Input::all())) {
-			return Redirect::to(Input::get('from'))->with('message','Successfully created news item');
+			return Redirect::to(Input::get('from'))->with('message','Successfully edited story');
 		}
 
 	}

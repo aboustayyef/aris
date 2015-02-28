@@ -38,6 +38,10 @@ $now = new Carbon\Carbon;
 	<textarea class="form-control" type="textarea" name="bio" cols="50" rows="10" id="bio"></textarea>
 </div>
 
+@if(Input::has('from'))
+<input type="hidden" name="from" value="{{Input::get('from')}}">
+@endif
+
 <button type="submit" class="btn btn-default">Submit</button>
 
 <?php

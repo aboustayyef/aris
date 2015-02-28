@@ -102,7 +102,7 @@ class PageController extends \BaseController {
 	 	$node->content = Input::get('content');
 	 	$node->last_edited_by = Auth::user()->email;
 	 	$node->save();
-	 	$message = 'Page <strong>'.$node->name.'</strong> updated. <a href="'.$node->absoluteSlug().'">Click Here to see it</a>';
+	 	$message = 'Page <strong>'.$node->name.'</strong> updated.';
 	 	return Redirect::to(Input::get('from'))->with('message',$message);
 
 	}

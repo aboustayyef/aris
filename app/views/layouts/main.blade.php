@@ -1,7 +1,8 @@
-<!DOCTYPE html>
 <?php
 use Aris\Node;
 ?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -32,6 +33,11 @@ use Aris\Node;
 		@include('partials.navigation')
 
 		<div id="content">
+			
+			@if(Session::has('message'))
+				{{View::make('partials.message')->with('message',Session::get('message'))}}
+			@endif
+
 			@yield('content')
 		</div>	<!-- /content -->
 	</div>	<!-- /siteWrapper -->

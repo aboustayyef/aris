@@ -30,6 +30,5 @@
 			echo Cache::get('mobilenav');
 
 			?>
-			{{$navigation->renderMobileNav()}}
 		</ul>
 	</div>

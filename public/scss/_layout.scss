@@ -6,11 +6,19 @@
 .section{
 	overflow:auto;
 	padding:10px 0;
+	margin-top:10px 0;
+	padding:15px 0;
 	&.noTop{
 		margin-top:0;
 	}
 	&.darken{
 		background:darken(white,5);
+	}
+	&.hasBorder{
+		border-top:1px solid silver;
+	}
+	&.green{
+		background-color:$aris_color;
 	}
 }
 .adminStrip{
@@ -47,23 +55,11 @@
 	margin:auto;
 	overflow:visible;
 	@media all and(max-width: $page_inner_width){
-		width: 98%;
-		padding:0 1%;
+		width: calc(100% - 20px);
+		padding:0 10px;
 	}
 }
 
-// basic grid
-
-%column{
-	width:(($page_inner_width) - $gutter) /2;
-	@media all and(max-width: $page_inner_width){
-		width: 48.5%;
-	}
-	@media all and(max-width: $layout_break_point){
-		width: 100%;
-	}
-
-}
 p.meta{
 	background: #FFE9C1;
 	padding: 5px;
@@ -72,19 +68,3 @@ p.meta{
 	font-color:#888;
 }
 
-.leftColumn{
-	@extend %column;
-	float:left;
-}
-.rightColumn{
-	@extend %column;
-	float:right;
-	&.hasBorder{
-		padding-left:20px;
-		border-left:1px dotted silver;
-		@media all and(max-width: $layout_break_point){
-			padding-left:0;
-			border-left:none;
-		}
-	}
-}

@@ -1,5 +1,10 @@
 @extends('layouts.admin')
 
+
+@section('title')
+	<title>Edit Page</title>
+@stop
+
 @section('content')
 
 	<h2>Edit Page</h2>

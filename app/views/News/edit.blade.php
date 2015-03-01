@@ -4,6 +4,10 @@ $date = new Carbon($news->public_date);
 ?>
 @extends('layouts.admin')
 
+@section('title')
+	<title>Edit Story</title>
+@stop
+
 @section('content')
 
 {{ Form::open(array('route' => array('news.update', $news->id), 'method' => 'put')); }}

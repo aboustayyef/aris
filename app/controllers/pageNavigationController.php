@@ -20,9 +20,9 @@ class PageNavigationController extends \BaseController {
 
 		if ($node = (New Node)->getByAbsoluteSlug($absoluteSlug)) {
 			if ($node->hasChildren()) {
-				return View::make('pages.listView')->with(compact('node'))->with('title', 'ARIS - ' . $node->name);
+				return View::make('pages.listView')->with(compact('node'));
 			}
-			return View::make('pages.singleView')->with(compact('node'))->with('title', 'ARIS - ' . $node->name);
+			return View::make('pages.singleView')->with(compact('node'));
 		}
 
 		app::abort('404');

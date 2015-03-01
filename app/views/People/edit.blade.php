@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('title')
+	<title>Edit Person</title>
+@stop
+
 @section('content')
 
 {{ Form::open(array('route' => array('people.update', $person->id), 'method' => 'put')); }}

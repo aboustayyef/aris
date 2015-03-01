@@ -5,7 +5,7 @@ use Aris\Node;
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{{'title'}}</title>
+	@yield('title')
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="{{asset('/css/aris_admin.css')}}">
 </head>

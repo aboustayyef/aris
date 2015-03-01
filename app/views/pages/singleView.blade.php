@@ -1,5 +1,11 @@
 @extends('layouts.main')
 
+
+@section('title')
+	<title>ARIS - {{$node->name}}</title>
+	<meta name="Description" content="{{$node->excerpt()}}">
+@stop
+
 @section('content')
 <div class="inner">
 

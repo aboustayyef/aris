@@ -22,7 +22,7 @@ Route::get('thumbs', function(){
 
 Route::get('/', function()
 {
-    return View::make('home')->with('title', 'Al-Rayan International School - Ghana');
+    return View::make('home');
 });
 
 Route::get('search', array(

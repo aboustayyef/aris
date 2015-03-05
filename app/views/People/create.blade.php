@@ -29,8 +29,13 @@ $now = new Carbon\Carbon;
 </div>
 
 <div class="form-group">
-	<label for="designation" class="control-label">Designation: </label>
+	<label for="designation" class="control-label">Designation: (Description of what they do) </label>
 	<input class="form-control" name="designation" type="text" id="designation">
+</div>
+
+<div class="form-group">
+	<label for="department" class="control-label">Department: (Example: Foundation, Primary.. etc) </label>
+	<input class="form-control" name="department" type="text" id="department">
 </div>
 
 <div class="form-group">

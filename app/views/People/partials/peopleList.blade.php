@@ -1,4 +1,5 @@
 <ul class="people">
+	
 	@foreach ($people as $key => $person)
 		<li class="person">
 			<a href="/people/{{$person->slug}}">
@@ -7,7 +8,7 @@
 				</div>
 			</a>
 			<div class="details">
-				<a href="/people/{{$person->slug}}">{{$person->lastname}}, {{$person->firstname}}</a> 
+				<a href="/people/{{$person->slug}}">{{$person->lastname}}, {{$person->firstname}}</a> <small>({{$person->department}})</small>
 				<br>{{$person->designation	}}
 				@if(Auth::Check())
 					<a class="admin" href="{{route('people.edit',$person->id)}}?from={{Request::path()}}">Edit Details</a>

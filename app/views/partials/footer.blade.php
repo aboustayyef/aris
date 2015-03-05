@@ -15,3 +15,4 @@
 	<script src="{{asset('js/aris-min.js')}}"></script>
 	<!-- Don't forget analytics -->
 </div>
+@yield('additionalScripts')

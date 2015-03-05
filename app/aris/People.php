@@ -17,6 +17,7 @@ class People extends \Eloquent {
 		return array(
 			'firstname'	=>	'required',
 			'lastname'	=>	'required',
+			'department' =>	'required',
 			'designation'	=>	'required',
 			'bio'	=> 'required',
 			'type'	=>	'required'
@@ -33,6 +34,7 @@ class People extends \Eloquent {
 		$this->firstname = $data['firstname'];
 		$this->lastname = $data['lastname'];
 		$this->designation = $data['designation'];
+		$this->department = $data['department'];
 		$this->type = implode(',',$data['type']);
 		$this->bio = $data['bio'];
 		$this->last_edited_by = Auth::user()->email;

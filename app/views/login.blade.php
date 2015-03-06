@@ -15,7 +15,7 @@
 		</div>
 		<div class="row">
 			<div class="form-group col-md-6 col-lg-4">
-			    {{ Form::label('password', 'Password')}}
+			    {{ Form::label('password', 'Pass Phrase')}}
 				{{ Form::password('password', ['class'=>'form-control']) }}
 			</div>
 		</div>

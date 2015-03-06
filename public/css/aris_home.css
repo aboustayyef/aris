@@ -600,7 +600,6 @@ h2.slogan {
   margin-left: 10px; }
 
 .news_item_photo ~ .news_excerpt {
-  float: left;
   width: 73%;
   margin-right: 2%; }
 

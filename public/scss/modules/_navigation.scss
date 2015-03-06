@@ -1,7 +1,7 @@
 nav{
 	// Hide when window narrower than width
 	// So that it will show mobile version instead
-	@media all and (max-width:$navigation_break_point){
+	@media all and (max-width:$navigation_break_point - 1){
 		display:none;
 	}
 	li{
@@ -188,7 +188,7 @@ nav{
 			}
 		}
 		// Show when window narrower than width
-		@media all and (min-width:$navigation_break_point - 1){
+		@media all and (min-width:$navigation_break_point){
 			display:none;
 		}
 		ul.sectionsMobile{	
@@ -211,7 +211,7 @@ nav{
 						margin:0;
 					}
 				}
-				@media all and (min-width:$nav_width - 1){
+				@media all and (min-width:$navigation_break_point){
 					display:none;
 				}
 				ul{

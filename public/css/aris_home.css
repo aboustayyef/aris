@@ -199,7 +199,7 @@ nav {
   height: 45px;
   line-height: 30px;
   background: #0097a1; }
-  @media all and (max-width: 970px) {
+  @media all and (max-width: 969px) {
     nav {
       display: none; } }
   nav li {
@@ -333,7 +333,7 @@ nav {
     background: #00676e; }
     #mobileMenu h3:hover {
       background: #007f88; }
-  @media all and (min-width: 969px) {
+  @media all and (min-width: 970px) {
     #mobileMenu {
       display: none; } }
   #mobileMenu ul.sectionsMobile {
@@ -352,7 +352,7 @@ nav {
           background: #dadada; }
         #mobileMenu.active ul.sectionsMobile li h4 {
           margin: 0; }
-      @media all and (min-width: 919px) {
+      @media all and (min-width: 970px) {
         #mobileMenu.active ul.sectionsMobile {
           display: none; } }
       #mobileMenu.active ul.sectionsMobile ul {

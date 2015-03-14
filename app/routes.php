@@ -36,6 +36,15 @@ Route::get('admin', array(
     'uses'        =>  'AdminController@index'
 ));
 
+Route::get('rss', array(
+    'as'        =>  'rss.index',
+    'uses'      =>  'RssController@index'
+));
+
+Route::get('feed', function(){
+    return \Redirect::action('RssController@index');
+});
+
 // session management. Login & logout
 Route::get('login', ['as'=>'login', 'uses'=>'sessionsController@create']);
 Route::get('logout', ['uses'=>'sessionsController@destroy']);

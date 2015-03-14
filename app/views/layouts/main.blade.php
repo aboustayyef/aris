@@ -9,6 +9,7 @@ use Aris\Node;
 	@yield('title')
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="alternate" type="application/rss+xml" title="ARIS News Feed" href="{{getenv('WEB_ROOT')}}rss" />
 	<link rel="stylesheet" href="{{asset('/css/aris_home.css?v=1.04')}}">
 	<link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
 </head>

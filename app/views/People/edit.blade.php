@@ -61,6 +61,8 @@
 
 <button type="submit" class="btn btn-default">Submit</button>
 
+@include('partials.scratchpad')
+
 <?php
 // Trigger TinyMCE for editing
 Aris\Helpers::activateAdvancedEditor('#bio');

@@ -29,6 +29,9 @@ $date = new Carbon($news->public_date);
 <input type="hidden" name="from" value ="{{Input::get('from')}}">
 
 <button type="submit" class="btn btn-default">Submit</button>
+
+@include('partials.scratchpad')
+
 <?php
 // Trigger TinyMCE for editing
 Aris\Helpers::activateAdvancedEditor('#content');

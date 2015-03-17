@@ -27,6 +27,8 @@
 
 	<button type="submit" class="btn btn-default">Submit</button>
 
+	@include('partials.scratchpad')
+
 	{{ Form::close() }}
 
 	<!-- Ignite TinyMce -->

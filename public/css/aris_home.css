@@ -621,6 +621,9 @@ h2.slogan {
   #content-area h1, #content-area h2, #content-area h3, #content-area h4, #content-area h5 {
     font-weight: bold;
     line-height: 1.3; }
+  #content-area .outline {
+    padding: 2px 20px;
+    background: #efefef; }
   #content-area ul {
     list-style: initial;
     margin-bottom: 15px; }

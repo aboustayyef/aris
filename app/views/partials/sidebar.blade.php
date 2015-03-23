@@ -31,7 +31,7 @@
 		<div class="box_body">
 			<ul>
 				<?php
-					$news = News::orderBy('created_at','desc')->take(3)->get();
+					$news = News::orderBy('public_date','desc')->take(3)->get();
 				?>
 				@foreach ($news as $key => $news_item)
 					<li>

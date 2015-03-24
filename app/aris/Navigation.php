@@ -82,7 +82,7 @@ class Navigation
 				$mobilenav .= '</ul>';
 				$mobilenav .= '</li>';
 			}else{
-				$mobilenav .= '<li><h4><a href="' . $section->getLink() . '">' . $section->name . '</a></h4>';
+				$mobilenav .= '<li><h4><a href="/' . $section->getLink() . '">' . $section->name . '</a></h4>';
 			}
 				
 		}

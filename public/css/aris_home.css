@@ -932,7 +932,7 @@ ul.pagination li {
       width: 50%; }
   #tabs-wrapper .tab_sections {
     position: relative;
-    min-height: 500px; }
+    min-height: 1500px; }
   #tabs-wrapper .tab_section {
     display: none;
     padding: 10px;

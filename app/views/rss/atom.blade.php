@@ -12,7 +12,7 @@
       <item>
         <title>{{ $news_item->title }}</title>
         <description>
-          {{ htmlspecialchars($news_item->excerpt) }}
+          {{ htmlspecialchars($news_item->content) }}
         </description>
         <content>{{ htmlspecialchars($news_item->content) }}</content>
         <link>{{getenv('WEB_ROOT')}}news/{{$news_item->slug}}</link>

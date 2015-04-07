@@ -12,6 +12,12 @@ use Aris\Node;
 	<link rel="alternate" type="application/rss+xml" title="ARIS News Feed" href="{{getenv('WEB_ROOT')}}rss" />
 	<link rel="stylesheet" href="{{asset('/css/aris_home.css?v=1.08')}}">
 	<link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
+
+	<!-- Facebook Open Graph Data -->
+    <meta property="og:url" content="http://aris.edu.gh">
+    <meta property="og:title" content="Al-Rayan International School, Ghana">
+    <meta property="og:image" content="http://aris.edu.gh/img/slides/slide1.jpg">
+
 </head>
 <body>
 	@if (Auth::Check())

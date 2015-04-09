@@ -277,7 +277,7 @@ nav {
             nav ul.sections > li.active .navigation_wrapper .section_nav_list a {
               color: black; }
             nav ul.sections > li.active .navigation_wrapper .section_nav_list li {
-              line-height: 22px;
+              line-height: 18px;
               padding: 5px; }
               nav ul.sections > li.active .navigation_wrapper .section_nav_list li.nochildren {
                 background: none; }

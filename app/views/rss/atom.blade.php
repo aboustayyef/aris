@@ -11,7 +11,7 @@
       <item>
         <title>{{htmlspecialchars($news_item->title)}}</title>
         <description>{{htmlspecialchars($news_item->content)}}</description>
-        <content>{{htmlspecialchars($news_item->content)}}</content>
+        <content:encoded><![CDATA[{{htmlspecialchars($news_item->content)}}]]></content:encoded>
         <link>{{getenv('WEB_ROOT')}}news/{{$news_item->slug}}</link>
         <guid isPermaLink="true">{{getenv('WEB_ROOT')}}news/{{$news_item->slug}}</guid>
         <?php 

@@ -10,8 +10,7 @@
     @foreach ($news as $news_item)
       <item>
         <title>{{htmlspecialchars($news_item->title)}}</title>
-        <description>{{htmlspecialchars($news_item->content)}}</description>
-        <content:encoded><![CDATA[{{htmlspecialchars($news_item->content)}}]]></content:encoded>
+        <content type="xhtml"><![CDATA[{{htmlspecialchars($news_item->content)}}]]></content>
         <link>{{getenv('WEB_ROOT')}}news/{{$news_item->slug}}</link>
         <guid isPermaLink="true">{{getenv('WEB_ROOT')}}news/{{$news_item->slug}}</guid>
         <?php 

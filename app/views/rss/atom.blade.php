@@ -1,24 +1,32 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ARIS News</title>
-    <link>http://aris.edu.gh</link>
-    <atom:link href="{{getenv('WEB_ROOT')}}rss" rel="self" type="application/rss+xml" />
-    <description>The Latest News from Al-Rayane International School in Ghana</description>
-    <copyright>http://aris.edu.gh</copyright>
-    <ttl>20</ttl>
-
-    @foreach ($news as $news_item)
-      <item>
-        <title>{{htmlspecialchars($news_item->title)}}</title>
-        <content type="xhtml"><![CDATA[{{htmlspecialchars($news_item->content)}}]]></content>
-        <link>{{getenv('WEB_ROOT')}}news/{{$news_item->slug}}</link>
-        <guid isPermaLink="true">{{getenv('WEB_ROOT')}}news/{{$news_item->slug}}</guid>
-        <?php 
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>ARIS News</title>
+  <link href="http://aris.edu.gh/rss/" rel="self" />
+  <link href="http://aris.edu.gh/" />
+    <?php 
           // calculate date;
-          $pubdate = (new \Carbon\Carbon($news_item->public_date))->format('r');
-        ?>
-        <pubDate>{{$pubdate}}</pubDate>
-      </item>
-    @endforeach
-  </channel>
-</rss>
+          $pubdate = (new \Carbon\Carbon)->format('Y-m-d\TH:i:sP');
+    ?>
+  <updated>{{$pubdate}}</updated>
+
+  @foreach ($news as $news_item)
+  <entry>
+    <title>{{htmlspecialchars($news_item->title)}}</title>
+    <link>{{getenv('WEB_ROOT')}}news/{{$news_item->slug}}</link>
+    <?php 
+          // calculate date;
+          $pubdate = (new \Carbon\Carbon($news_item->public_date))->format('Y-m-d\TH:i:sP');
+    ?>
+    <updated>{{$pubdate}}</updated>
+    <summary>{{htmlspecialchars($news_item->excerpt)}}</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        {{htmlspecialchars($news_item->content)}}
+      </div>
+    </content>
+  </entry>
+  @endforeach
+ 
+</feed>

@@ -16,7 +16,7 @@ use Aris\News;
 	<div class="inner">
 		<div class="grid1-2">
 			<div class="intro">
-				<h2 class="slogan">Welcome to Aris</h2>
+				<h2 class="slogan">Welcome to ARIS</h2>
 				<p>Recognized as a young and forward-thinking school, ARIS is an outstanding place for students and teachers alike. <a href="{{url('/about-us/why-aris')}}" class="learnmore">Learn More&nbsp;&rarr;</a></p>
 			</div>
 			<div>

@@ -32,11 +32,11 @@ format('r');
   <pubDate>{{$pubdate}}</pubDate>
 <guid isPermaLink="true">{{getenv('WEB_ROOT')}}news/{{$news_item->slug}}</guid>
   <description>
-    <![CDATA[{{($news_item->excerpt, ENT_QUOTES)}}
+    <![CDATA[{{$news_item->excerpt, ENT_QUOTES}}
   ]]>
 </description>
 <content:encoded>
-  <![CDATA[{{($news_item->content, ENT_QUOTES)}}]]>
+  <![CDATA[{{$news_item->content, ENT_QUOTES}}]]>
 </content:encoded>
 </item>
 @endforeach

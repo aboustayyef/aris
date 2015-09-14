@@ -10,10 +10,21 @@
 	@else
 		<title>ARIS | People | {{$type}}</title>
 	@endif
+	<meta name="description" content="Meet the people who make ARIS what it is">
 
 @stop
 
+@section('facebookMeta')
 
+	<!-- Facebook Open Graph Data -->
+	@if ($type == 'all')
+		<meta property="og:title" content="ARIS | People">
+	@else
+		<meta property="og:title" content="ARIS | People | {{$type}}">
+	@endif
+    <meta property="og:description" content="Meet the people who make ARIS what it is">
+
+@stop
 
 @section('content')
 

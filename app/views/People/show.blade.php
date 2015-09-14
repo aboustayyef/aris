@@ -4,6 +4,15 @@
 	<title>{{$person->title}} {{$person->firstname}} {{$person->lastname}} | ARIS People</title>
 @stop
 
+@section('facebookMeta')
+	<!-- Facebook Open Graph Data -->
+    <meta property="og:title" content="{{$person->title}} {{$person->firstname}} {{$person->lastname}} | ARIS People">
+    <meta property="og:description" content="{{$person->designation}}, {{$person->department}}">
+    @if($person->image())
+	    <meta property="og:image" content="http://aris.edu.gh{{$person->image()}}">
+	@endif
+@stop
+
 @section('content')
 <div class="inner">
 

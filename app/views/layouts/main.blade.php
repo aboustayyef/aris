@@ -13,11 +13,7 @@ use Aris\Node;
 	<link rel="stylesheet" href="{{asset('/css/aris_home.css?v=1.09')}}">
 	<link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
 
-	<!-- Facebook Open Graph Data -->
-    <meta property="og:url" content="http://aris.edu.gh">
-    <meta property="og:title" content="Al-Rayan International School, Ghana">
-    <meta property="og:image" content="http://aris.edu.gh/img/slides/slide1.jpg">
-
+	@yield('facebookMeta')
 </head>
 <body>
 	@if (Auth::Check())

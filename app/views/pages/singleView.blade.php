@@ -6,6 +6,15 @@
 	<meta name="Description" content="{{$node->excerpt()}}">
 @stop
 
+@section('facebookMeta')
+	<!-- Facebook Open Graph Data -->
+    <meta property="og:title" content="ARIS - {{$node->name}}">
+    <meta property="og:description" content="ARIS - {{$node->excerpt()}}">
+    @if($node->image())
+	    <meta property="og:image" content="http://aris.edu.gh{{$node->image()}}">
+	@endif
+@stop
+
 @section('content')
 <div class="inner">
 

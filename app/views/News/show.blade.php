@@ -1,5 +1,18 @@
 @extends('layouts.main')
 
+@section('title')
+	<title>ARIS News: {{$newsItem->title}}</title>
+@stop
+
+@section('facebookMeta')
+	<!-- Facebook Open Graph Data -->
+    <meta property="og:title" content="ARIS News: {{$newsItem->title}}">
+    @if($newsItem->image())
+		<meta property="og:image" content="http://aris.edu.gh{{$newsItem->image()}}">
+    @endif
+    
+@stop
+
 @section('content')
 <div class="inner">
 

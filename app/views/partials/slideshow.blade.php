@@ -4,8 +4,8 @@
 	
 	//settings
 	
-	$slidesAvailable = 10;
-	$slidesToShow = 4;
+	$slidesAvailable = 12;
+	$slidesToShow = 5;
 	$slideSet = [];
 
 	// Create random set;

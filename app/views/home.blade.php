@@ -27,7 +27,7 @@ use Aris\News;
 				<p>Recognized as a young and forward-thinking school, ARIS is an outstanding place for students and teachers alike. <a href="{{url('/about-us/why-aris')}}" class="learnmore">Learn More&nbsp;&rarr;</a></p>
 			</div>
 			<div>
-				<img src="{{asset('img/featured/welcome.jpg')}}" alt="">
+				@include('partials.homePagePhotoRotate')
 			</div>
 			<h3>ARIS is an <a href="http://www.ibo.org/">IB World School</a></h3>
 			<a href="http://www.ibo.org/en/programmes/diploma-programme/">

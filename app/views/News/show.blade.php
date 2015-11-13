@@ -21,6 +21,13 @@
 		<div class="breadcrumbs">You are here: <a href="/">Home</a> > <a href="/news">News</a> > Story</div>
 
 		<h2>{{$newsItem->title}}</h2>
+
+		<?php 
+			$publicDate = new \Carbon\Carbon($newsItem->public_date);
+			$publicDate = $publicDate->toFormattedDateString();
+		?>
+		<div class="timestamp">{{$publicDate}}</div>
+
 		{{$newsItem->content}}
         
         @if(Auth::Check())

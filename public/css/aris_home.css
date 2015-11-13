@@ -218,7 +218,7 @@ nav {
       padding: 0 10px;
       line-height: 45px; }
       nav ul.sections > li:hover {
-        background: #00afba; }
+        background: #00afbb; }
       nav ul.sections > li .navigation_wrapper {
         display: none; }
       nav ul.sections > li a {
@@ -776,6 +776,11 @@ footer {
 #content-area .newsExcerpt {
   overflow: auto;
   margin-bottom: 10px; }
+#content-area .timestamp {
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-size: 0.8em;
+  color: #B79F6D; }
 #content-area .newsItem {
   padding-bottom: 20px;
   border-bottom: 1px solid silver;

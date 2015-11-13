@@ -21,7 +21,11 @@
 		@foreach($news as $newsItem)
 			<div class="listModule">
 				<a href="/news/{{$newsItem->slug}}"><h3>{{$newsItem->title}}</h3></a>
-				
+				<?php 
+					$publicDate = new \Carbon\Carbon($newsItem->public_date);
+					$publicDate = $publicDate->toFormattedDateString();
+				?>
+				<div class="timestamp">{{$publicDate}}</div>
 				<div class="newsExcerpt">
 					@if($newsItem->image())
 						<div class="featuredImage">

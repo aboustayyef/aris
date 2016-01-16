@@ -65,6 +65,6 @@ Route::resource('people', 'PeopleController');
 
 
 // pages (browsing)
-Route::get('/{section}/{subsection?}/{page?}', array(
+Route::get('/{section}/{subsection?}/{page?}/{subpage?}', array(
     'uses'      =>  'pageNavigationController@resolve'
 ));

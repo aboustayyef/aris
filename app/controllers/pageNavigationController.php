@@ -5,7 +5,7 @@ class PageNavigationController extends \BaseController {
 	/**
 	 * Resolves which page to show from url
 	 */
-	public function resolve($section, $sub=null, $page=null)
+	public function resolve($section, $sub=null, $page=null, $subpage=null)
 	{
 
 		// build the full slug as a string
@@ -15,6 +15,9 @@ class PageNavigationController extends \BaseController {
 			$absoluteSlug .= '/' . $sub;
 			if ($page) {
 				$absoluteSlug .= '/' . $page;
+				if ($subpage) {
+					$absoluteSlug .= '/' . $subpage;
+				}
 			}
 		}
 

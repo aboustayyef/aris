@@ -68,7 +68,7 @@ class Node extends \Eloquent {
 	}
 
 
-	public function getByAbsoluteSlug($slug = null){
+	public function getByAbsoluteSlug__old($slug = null){
 		$parts = explode('/', $slug);
 
 		$section = $this->where('slug', $parts[0])->where('parent_id', null)->first();
@@ -90,6 +90,28 @@ class Node extends \Eloquent {
 			return $section;
 		}
 		return false;
+	}
+
+	public function getByAbsoluteSlug($slug = null){
+
+		$parts = explode('/', $slug);
+		$parts = array_reverse($parts);
+		
+		// how many nodes exist with a slug for the final part of the Absolute Path?
+		$possible_nodes_for_slug = $this->where('slug', $parts[0])->get();
+		
+		// if there's only one option, return that node
+		if ($possible_nodes_for_slug->count() == 1) {
+			return $possible_nodes_for_slug->first();
+		}
+
+		// if there's more, we check the parent page. 
+		// We are making the assumption that it is not possible to 
+		// have two pages where the final slug and its parent slug are the same
+		
+		$parentId = $this->where('slug', $parts[1])->get()->first()->id;
+		return $this->where(['slug'=>$parts[0], 'parent_id'=>$parentId])->first();
+
 	}
 
 	public static function rules(){

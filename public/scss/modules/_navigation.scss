@@ -63,7 +63,7 @@ nav{
 					padding:10px;
 					display:block;
 					background: $aris_light_grey;
-					height:400px;
+					height:450px;
 					width:$nav_width;
 					position:absolute;
 					z-index: 3000;
@@ -76,8 +76,9 @@ nav{
 						width:300px;
 						padding:10px;
 						img{
+							width:100%;
 							max-width:100%;
-							height:$nav_inner_height  - 20px;
+							height:auto;
 						}
 
 					}

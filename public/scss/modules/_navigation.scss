@@ -69,7 +69,7 @@ nav{
 					z-index: 3000;
 					top:$navbar_height;
 					left:0;
-					overflow:auto;
+					overflow:hidden;
 					.section_image, .section_description, .section_nav_list{
 						float:right;
 						height:$nav_inner_height;

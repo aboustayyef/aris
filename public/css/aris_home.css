@@ -946,3 +946,9 @@ ul.pagination li {
     clear: both; }
     #tabs-wrapper .tab_section.active {
       display: block; }
+
+.special_banner {
+  margin-top: 22px;
+  padding: 10px;
+  border: 1px dotted #6B6969;
+  background: #F1F8F9; }

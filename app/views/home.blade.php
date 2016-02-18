@@ -40,10 +40,15 @@ use Aris\News;
 
 			@include('partials.quickAccess')
 
+			@include('partials.specialBanner')
+
+
 			<h2 class="latestNews">
 				Latest News &amp; Events
 				<small><a href="/news">Read All</a></small>
 			</h2>
+
+
 				<?php
 
 					$news = News::orderBy('public_date','desc')->take(3)->get();

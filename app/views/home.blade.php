@@ -42,7 +42,6 @@ use Aris\News;
 
 			@include('partials.specialBanner')
 
-
 			<h2 class="latestNews">
 				Latest News &amp; Events
 				<small><a href="/news">Read All</a></small>
@@ -75,6 +74,7 @@ use Aris\News;
 						<?php
 					}
 				?>
+				@include('partials/latestBlogPosts')
 		</div> <!-- grid2-2 -->
 	</div> <!-- inner -->
 </div> <!-- section -->

@@ -47,5 +47,29 @@
 
 	</div>
 
+<!-- Latest Blog Posts -->
+
+<?php
+	$sp = new SimplePie();
+	$sp->set_feed_url('https://arisprimaryict.wordpress.com/feed');
+	$sp->set_cache_duration(1800);
+	$sp->set_cache_location(storage_path().'/spcache');
+	$sp->init();
+	$latestPosts = $sp->get_items(0,3);
+?>
+
+	<div class="box latestnews">
+		<div class="box_header">
+			<h3>Latest Blog Posts</h3>
+		</div>
+		<div class="box_body">
+			<ul>
+				@foreach ($latestPosts as $post)
+					<li><a href="{{$post->get_link()}}">{{$post->get_title()}}</a></li>
+				@endforeach		
+			</ul>			
+		</div>
+	</div>
+
 
 </aside>

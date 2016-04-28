@@ -30,13 +30,15 @@ use Aris\News;
 				@include('partials.homePagePhotoRotate')
 			</div>
 			<h3>ARIS is an <a href="http://www.ibo.org/">IB World School</a></h3>
+			
+			<a href ="http://www.ibo.org/programmes/primary-years-programme/">
+				<img src="{{asset('img/ib-pyp-colour-en.png')}}" width="200px" height="auto" alt="PYP">
+			</a>
+
 			<a href="http://www.ibo.org/en/programmes/diploma-programme/">
 				<img src="{{asset('img/dp-programme-logo-en.png')}}" width="200px" height="auto" alt="">
 			</a>
-			<a href ="http://www.ibo.org/programmes/primary-years-programme/">
-				<img src="{{asset('img/ib_primary_years_programme.png')}}" width="200px" height="auto" alt="PYP">
-			</a>
-			
+						
 		</div> <!-- grid1-2 -->
 
 		<div class="grid2-2">

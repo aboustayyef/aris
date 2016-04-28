@@ -33,6 +33,9 @@ use Aris\News;
 			<a href="http://www.ibo.org/en/programmes/diploma-programme/">
 				<img src="{{asset('img/dp-programme-logo-en.png')}}" width="200px" height="auto" alt="">
 			</a>
+			<a href ="http://www.ibo.org/programmes/primary-years-programme/">
+				<img src="{{asset('img/ib_primary_years_programme.png')}}" width="200px" height="auto" alt="PYP">
+			</a>
 			
 		</div> <!-- grid1-2 -->
 

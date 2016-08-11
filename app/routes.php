@@ -11,11 +11,6 @@ Route::get('styleguide', function(){
     return View::make('styleguide');
 });
 
-Route::get('thumbs', function(){
-	return View::make('peopleThumbs');
-});
-
-
 /***************************************************************/
 /***************************************************************/
 

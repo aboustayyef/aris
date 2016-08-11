@@ -38,6 +38,10 @@ use Aris\News;
 			<a href="http://www.ibo.org/en/programmes/diploma-programme/">
 				<img src="{{asset('img/dp-programme-logo-en.png')}}" width="200px" height="auto" alt="">
 			</a>
+
+			<h3>And a <a href="http://www.theptc.org/">PTC member School</a></h3>
+				<img src="/img/ptc.jpg" width="100px" alt="PTC Logo">
+
 						
 		</div> <!-- grid1-2 -->
 

@@ -1,9 +1,16 @@
-<div class="inner">
-    <div id="signature">
-        Al-Rayan International School, {{date('Y')}} &copy;
+<div class="inner" style="overflow:auto">
+	<div style="float:left">
+	    <div id="signature">
+	        Al-Rayan International School, {{date('Y')}} &copy;
+	    </div>
+	    <div>
+	        <a href="{{route('login')}}?return={{Request::path()}}">Admin Login</a>
+	    </div>
     </div>
-    <div>
-        <a href="{{route('login')}}?return={{Request::path()}}">Admin Login</a>
+    <div style="float:right">
+    	<a href="https://web.facebook.com/ArisGhana/">
+	    	<img src="/img/find-us-facebook.png" height="30px" width="auto">
+    	</a>
     </div>
 	<!-- Jquery, use CDN in production -->
 	<script src="{{asset('js/jquery/jquery.min.js')}}"></script>

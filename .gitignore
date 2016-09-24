@@ -12,3 +12,5 @@ public/config.codekit
 public/scss/.sass-cache/
 public/img/thumbs/
 !*.sql
+
+*.spc

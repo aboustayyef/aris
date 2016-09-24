@@ -11,16 +11,20 @@
 	<hr>
 	@include('partials.formerrors')
 
-	{{ Form::open(array('route' => array('pages.update', $page->id), 'method' => 'put')); }}
+<form method="POST" action="/pages/{{$page->id}}" accept-charset="UTF-8">
+
+	<input name="_method" type="hidden" value="PUT">
+	<input type="hidden" name="_token" value="{{csrf_token()}}">
 
 	<div class="form-group">
-		{{ Form::label('title', 'Title')}}
-		{{ Form::text('title', $page->name, ['placeholder' => 'Page Title', 'class'=>'form-control']) }}
+		<label for="title">Title</label>
+		<input placeholder="Page Title" class="form-control" name="title" type="text" value="{{$page->name}}" id="title">
 	</div>
 
+
 	<div class="form-group">
-		{{ Form::label('content', 'Content')}}
-		{{ Form::text('content', $page->content,['id'=>'content', 'placeholder'=>'Insert image by clicking on the icon above']) }}
+		<label for="content">Content</label>
+		<input id="content" placeholder="Insert image by clicking on the icon above" name="content" type="text" value="{{htmlentities($page->content)}}">
 	</div>
 	
 	<input type="hidden" name="from" value="{{Input::get('from')}}">
@@ -29,7 +33,7 @@
 
 	@include('partials.scratchpad')
 
-	{{ Form::close() }}
+</form>
 
 	<!-- Ignite TinyMce -->
 	<?php

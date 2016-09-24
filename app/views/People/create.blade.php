@@ -6,7 +6,8 @@ $now = new Carbon\Carbon;
 
 @section('content')
 
-{{ Form::open(array('route' => 'people.store')); }}
+<form method="POST" action="/people" accept-charset="UTF-8">
+<input name="_token" type="hidden" value="{{csrf_token()}}">
 
 <div class="form-group">
 	<label for="title" class="control-label">Title: (Mr. , Ms. , Dr. , Prof.)</label>
@@ -55,6 +56,5 @@ $now = new Carbon\Carbon;
 // Trigger TinyMCE for editing
 Aris\Helpers::activateAdvancedEditor('#bio');
 ?>
-{{ Form::close()}}
-
+</form>
 @stop

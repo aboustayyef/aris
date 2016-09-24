@@ -6,7 +6,7 @@
 
 @section('content')
 
-{{ Form::open(array('route' => array('people.update', $person->id), 'method' => 'put')); }}
+<form method="POST" action="/people/{{$person->id}}" accept-charset="UTF-8"><input name="_method" type="hidden" value="PUT"><input name="_token" type="hidden" value="{{csrf_token()}}">
 
 <div class="form-group">
 	<label for="title" class="control-label">Title: (Mr. , Ms. , Dr. , Prof.)</label>
@@ -67,12 +67,11 @@
 // Trigger TinyMCE for editing
 Aris\Helpers::activateAdvancedEditor('#bio');
 ?>
-{{ Form::close()}}
+</form>
 
 <!-- Destroy button -->
 
-{{ Form::open(array('route' => array('people.destroy', $person->id), 'method' => 'delete')) }}
+<form method="POST" action="/people/{{$person->id}}" accept-charset="UTF-8"><input name="_method" type="hidden" value="DELETE"><input name="_token" type="hidden" value="{{csrf_token()}}">
         <button type="submit" class="btn btn-danger btn-mini">Delete Person</button>
-{{ Form::close() }}
-
+</form>
 @stop

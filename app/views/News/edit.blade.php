@@ -10,11 +10,13 @@ $date = new Carbon($news->public_date);
 
 @section('content')
 
-{{ Form::open(array('route' => array('news.update', $news->id), 'method' => 'put')); }}
+<form method="POST" action="/news/{{$news->id}}" accept-charset="UTF-8">
+	<input name="_method" type="hidden" value="PUT">
+	<input type="hidden" name="_token" value="{{csrf_token()}}">
 
 	<div class="form-group">
-		{{ Form::label('title', 'Title')}}
-		{{ Form::text('title', $news->title, ['placeholder' => 'News Title', 'class'=>'form-control']) }}
+		<label for="title">Title</label>
+		<input placeholder="News Title" class="form-control" name="title" type="text" value="{{htmlentities($news->title)}}" id="title">
 	</div>
 
 	<div class="form-group">
@@ -23,9 +25,10 @@ $date = new Carbon($news->public_date);
 	</div>
 
 	<div class="form-group">
-		{{ Form::label('content', 'Content')}}
-		{{ Form::text('content', $news->content,['id'=>'content']) }}
+		<label for="content">Content</label>
+		<input id="content" name="content" type="text" value="{{ htmlentities($news->content) }}">
 	</div>
+
 <input type="hidden" name="from" value ="{{Input::get('from')}}">
 
 <button type="submit" class="btn btn-default">Submit</button>
@@ -36,13 +39,13 @@ $date = new Carbon($news->public_date);
 // Trigger TinyMCE for editing
 Aris\Helpers::activateAdvancedEditor('#content');
 ?>
-
-{{ Form::close()}}
+</form>
 
 <!-- Destroy button -->
-
-{{ Form::open(array('route' => array('news.destroy', $news->id), 'method' => 'delete')) }}
-        <button type="submit" class="btn btn-danger btn-mini">Delete</button>
-{{ Form::close() }}
+<form method="POST" action="/news/{{$news->id}}" accept-charset="UTF-8">
+	<input name="_method" type="hidden" value="DELETE">
+	<input type="hidden" name="_token" value="{{csrf_token()}}">
+    <button type="submit" class="btn btn-danger btn-mini">Delete</button>
+</form>
 
 @stop

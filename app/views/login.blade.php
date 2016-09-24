@@ -6,22 +6,23 @@
 	<hr>
 	@include('partials.formerrors')
 
-	{{ Form::open(array('route'=>'session.store')) }}
+	<form method="POST" action="/session" accept-charset="UTF-8">
+		<input type="hidden" name="_token" value="{{csrf_token()}}">
         <div class="row">
 	        <div class="form-group col-md-6 col-lg-4">
-			    {{ Form::label('email', 'Email')}}
-				{{ Form::text('email', null ,['placeholder' => 'Email Address', 'class'=>'form-control']) }}
+			    <label for="email">Email</label>
+				<input placeholder="Email Address" class="form-control" name="email" type="text" id="email">
 			</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-6 col-lg-4">
-			    {{ Form::label('password', 'Pass Phrase')}}
-				{{ Form::password('password', ['class'=>'form-control']) }}
+			    <label for="password">Pass Phrase</label>
+				<input class="form-control" name="password" type="password" value="" id="password">
 			</div>
 		</div>
 
 		<input type="hidden" name="return" value="{{Input::get('return')}}">
         
         <button type="submit" class="btn btn-default">Submit</button>    
-     {{ Form::close() }}
+     </form>
 @stop

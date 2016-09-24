@@ -18,7 +18,7 @@
 
 	<div class="form-group">
 		<label for="title">Title</label>
-		<input placeholder="Page Title" class="form-control" name="title" type="text" value="{{$page->name}}" id="title">
+		<input placeholder="Page Title" class="form-control" name="title" type="text" value="{{htmlentities($page->name)}}" id="title">
 	</div>
 
 

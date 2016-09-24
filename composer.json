@@ -6,9 +6,7 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"way/generators": "2.*",
-		"simplepie/simplepie": "1.3.*",
-		"way/form": "dev-master"
+		"simplepie/simplepie": "1.3.*"
 	},
 	"autoload": {
 		"classmap": [

@@ -41,7 +41,11 @@ class Navigation
 										$fullnav .= '<div class="section_subnav_list">';
 											$fullnav .= '<ul>';
 											foreach ($subsection->children() as $key => $page) {
-												$fullnav .= '<li><a href="/' . $page->getLink() . '">' . $page->name . '</a></li>';
+												$fullnav .= '<li><a href="/' . $page->getLink() . '">' . $page->name;
+													if ($page->hasRole()) {
+														$fullnav .= ' <i class="fa fa-lock"></i> ';
+													}
+													 $fullnav .= '</a></li>';
 											}
 											$fullnav .= '</ul>';
 										$fullnav .= '</div>';// section_subnav_list

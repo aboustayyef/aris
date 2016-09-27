@@ -92,6 +92,11 @@ class Node extends \Eloquent {
 		return false;
 	}
 
+	public function hasRole()
+	{
+		return $this->role != Null;
+	}
+
 	public function getByAbsoluteSlug($slug = null){
 
 		$parts = explode('/', $slug);

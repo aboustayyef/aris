@@ -47,7 +47,7 @@ Route::resource('session', 'sessionsController', ['only'=>['store','create','des
 
 // role session management;
 Route::resource('rolelogin', 'roleSessionsController', ['only'=>['store','create']]);
-
+Route::get('rolelogout', 'roleSessionsController@destroy');
 
 // pages (admin)
 Route::resource('pages', 'PageController');

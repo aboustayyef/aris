@@ -40,7 +40,7 @@
 	</style>	
 	<div id="middle">
 		<img src="/img/brand/aris-logo.png" height="60" width="auto">
-		<h1>You need to be a {{ strtolower($role->description) }} to access that page</h1>
+		<h1>You need to be a {{ strtolower($role->description) }} to access this page</h1>
 		<form method="POST" action="/rolelogin">
 			<input type="hidden" name="_token" value="{{csrf_token()}}">
 			<input type="hidden" name="return" value="{{Input::get('return')}}">

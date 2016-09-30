@@ -17,8 +17,14 @@ use Aris\Node;
 </head>
 <body>
 	@if (Auth::Check())
-	<div class="adminStrip">
+	<div class="topStrip adminStrip">
 		<p>You are signed in as {{Auth::user()->email}}. <a href="/logout">logout</a></p>
+	</div>
+	@endif
+
+	@if(Session::has('aris_role') && is_object(Session::get('aris_role')))
+	<div class="topStrip roleStrip">
+		<p>You are signed in as {{Session::get('aris_role')->description;}} <a href="/rolelogout">logout</a></p>
 	</div>
 	@endif
 	<div id="contactInfo">

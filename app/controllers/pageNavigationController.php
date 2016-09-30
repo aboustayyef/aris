@@ -26,7 +26,7 @@ class PageNavigationController extends \BaseController {
 			// Check if Node has a role
 			if ($node->role) {
 				if (Session::has('aris_role')) {
-					if (Session::get('aris_role') == $node->role) {
+					if (Session::get('aris_role')->shortname == $node->role) {
 						# a-ok!
 					} else {
 						return Redirect::to('/rolelogin/create?role=' . $node->role . '&return=' . urlencode($absoluteSlug));

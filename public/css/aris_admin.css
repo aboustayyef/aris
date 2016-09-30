@@ -1,28 +1,3 @@
-.container{
-  margin-top:20px;
-  margin-top: 5vh;
-}
+.container{margin-top:20px;margin-top:5vh}.adminarea{width:100%;top:0;padding:2px;font-size:14px;color:white;background:#999;text-align:right;padding-right:10px}.adminarea a{color:orange}#logo{text-indent:-999px;height:74.5px;width:400px;float:left;background:url(../img/brand/aris-admin-logo.png);background-repeat:no-repeat;background-size:400px 64.5px}
 
-.adminarea{
-	width:100%;
-	top:0;
-	padding:2px;
-	font-size:14px;
-	color:white;
-	background: #999;
-	text-align: right;
-	padding-right:10px;
-}
-.adminarea a{
-	color: orange;
-}
-
-#logo {
-  text-indent: -999px;
-  height: 74.5px;
-  width: 400px;
-  float: left;
-  background: url(../img/brand/aris-admin-logo.png);
-  background-repeat: no-repeat;
-  background-size: 400px 64.5px; 
-}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXJpc19hZG1pbi5jc3MiLCJzb3VyY2VzIjpbImFyaXNfYWRtaW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVye1xuICBtYXJnaW4tdG9wOjIwcHg7XG4gIG1hcmdpbi10b3A6IDV2aDtcbn1cblxuLmFkbWluYXJlYXtcblx0d2lkdGg6MTAwJTtcblx0dG9wOjA7XG5cdHBhZGRpbmc6MnB4O1xuXHRmb250LXNpemU6MTRweDtcblx0Y29sb3I6d2hpdGU7XG5cdGJhY2tncm91bmQ6ICM5OTk7XG5cdHRleHQtYWxpZ246IHJpZ2h0O1xuXHRwYWRkaW5nLXJpZ2h0OjEwcHg7XG59XG4uYWRtaW5hcmVhIGF7XG5cdGNvbG9yOiBvcmFuZ2U7XG59XG5cbiNsb2dvIHtcbiAgdGV4dC1pbmRlbnQ6IC05OTlweDtcbiAgaGVpZ2h0OiA3NC41cHg7XG4gIHdpZHRoOiA0MDBweDtcbiAgZmxvYXQ6IGxlZnQ7XG4gIGJhY2tncm91bmQ6IHVybCguLi9pbWcvYnJhbmQvYXJpcy1hZG1pbi1sb2dvLnBuZyk7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJhY2tncm91bmQtc2l6ZTogNDAwcHggNjQuNXB4OyBcbn0iXSwibWFwcGluZ3MiOiJBQUFBLEFBQUEsVUFBVSxBQUFBLENBQ1IsVUFBVSxDQUFDLElBQUssQ0FDaEIsVUFBVSxDQUFFLEdBQUksQ0FDakIsQUFFRCxBQUFBLFVBQVUsQUFBQSxDQUNULEtBQUssQ0FBQyxJQUFLLENBQ1gsR0FBRyxDQUFDLENBQUUsQ0FDTixPQUFPLENBQUMsR0FBSSxDQUNaLFNBQVMsQ0FBQyxJQUFLLENBQ2YsS0FBSyxDQUFDLEtBQU0sQ0FDWixVQUFVLENBQUUsSUFBSyxDQUNqQixVQUFVLENBQUUsS0FBTSxDQUNsQixhQUFhLENBQUMsSUFBSyxDQUNuQixBQUNELEFBQVcsVUFBRCxDQUFDLENBQUMsQUFBQSxDQUNYLEtBQUssQ0FBRSxNQUFPLENBQ2QsQUFFRCxBQUFBLEtBQUssQUFBQyxDQUNKLFdBQVcsQ0FBRSxNQUFPLENBQ3BCLE1BQU0sQ0FBRSxNQUFPLENBQ2YsS0FBSyxDQUFFLEtBQU0sQ0FDYixLQUFLLENBQUUsSUFBSyxDQUNaLFVBQVUsQ0FBc0MscUNBQUMsQ0FDakQsaUJBQWlCLENBQUUsU0FBVSxDQUM3QixlQUFlLENBQUUsWUFBYSxDQUMvQiIsIm5hbWVzIjpbXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

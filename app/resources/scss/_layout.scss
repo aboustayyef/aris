@@ -21,18 +21,35 @@
 		background-color:$aris_color;
 	}
 }
-.adminStrip{
-	p{color:black;}
+
+.topStrip{
+	p{color:black;margin:0}
 	text-align: center;
-	padding-right:10px;
-	background:orange;
+	padding:10px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
 	a{
-		background:#AE506D;
-		padding: 2px 5px;
+		padding: 5px 15px;
 		border-radius: 3px;
 		color:white;
 	}
 }
+
+.adminStrip{
+	background:orange;
+	a{
+		background:#AE506D;
+	}
+}
+
+.roleStrip{
+	background:#f7d184;
+	a{
+		background:teal;
+	}
+}
+
 #siteWrapper{
 	border:1px solid lighten(#999,20);
 	border-bottom:none;

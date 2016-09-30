@@ -1,6 +1,7 @@
 /bootstrap/compiled.php
 /app/storage/**
 /vendor
+/node_modules
 /public/img/uploads/
 composer.phar
 .env.*.php

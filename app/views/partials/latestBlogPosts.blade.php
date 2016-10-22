@@ -18,9 +18,9 @@ $latestPosts = $sp->get_items(0,4);
 <div class="news_item_wrapper">
 <div class="news_item_photo">
 	@if( strpos($post->get_link(), 'arisprimaryict.wordpress.com'))
-		<img src="https://arisprimaryict.files.wordpress.com/2016/01/arisictlogo3.png" width="60" height="auto" alt="">
+		<img src="https://arisprimaryict.files.wordpress.com/2016/01/arisictlogo3.png" width="45" height="auto" alt="">
 	@else
-		<img src="/img/wordpress-logo.png" width="60" height="auto" alt="wordpress logo">
+		<img src="/img/wordpress-logo.png" width="45" height="auto" alt="wordpress logo">
 	@endif
 </div>
 	<a href="{{$post->get_link()}}">

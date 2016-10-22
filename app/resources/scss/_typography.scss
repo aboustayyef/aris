@@ -13,14 +13,8 @@ a{
 		text-decoration:underline;
 	}
 	&.learnmore{
-		text-decoration: none;
-		background: $aris_color_light;
-		padding: 2px 7px;
-		color: white;
-		font-size:14px;
-		&:hover{
-			background: darken($aris_color_light, 10);
-		}
+		text-decoration: underline;
+		color: $aris_color;
 	}
 }
 //temp
@@ -50,6 +44,9 @@ h2{
 	font-size:24px;
 	line-height:45px;
 	margin:15px 0;
+	&.latestNews{
+		margin-top: 30px;
+	}
 }
 
 h3{

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 use Aris\News;
 ?>
@@ -21,6 +21,7 @@ use Aris\News;
 
 <div class="section">
 	<div class="inner">
+		<div>
 		<div class="grid1-2">
 			<div class="intro">
 				<h2 class="slogan">Welcome to ARIS</h2>
@@ -29,20 +30,21 @@ use Aris\News;
 			<div>
 				@include('partials.homePagePhotoRotate')
 			</div>
+			<div class="aris_credentials">
 			<h3>ARIS is an <a href="http://www.ibo.org/">IB World School</a></h3>
-			
+
 			<a href ="http://www.ibo.org/programmes/primary-years-programme/">
-				<img src="{{asset('img/ib-pyp-colour-en.png')}}" width="200px" height="auto" alt="PYP">
+				<img src="{{asset('img/ib-pyp-colour-en.png')}}" width="160px" height="auto" alt="PYP">
 			</a>
 
 			<a href="http://www.ibo.org/en/programmes/diploma-programme/">
-				<img src="{{asset('img/dp-programme-logo-en.png')}}" width="200px" height="auto" alt="">
+				<img src="{{asset('img/dp-programme-logo-en.png')}}" width="160px" height="auto" alt="">
 			</a>
 
 			<h3>And a <a href="http://www.theptc.org/">PTC member School</a></h3>
-				<img src="/img/ptc.jpg" width="100px" alt="PTC Logo">
+				<img src="/img/ptc.jpg" width="80px" alt="PTC Logo">
+			</div>
 
-						
 		</div> <!-- grid1-2 -->
 
 		<div class="grid2-2">
@@ -63,7 +65,7 @@ use Aris\News;
 					foreach ($news as $key => $news_item) {
 						?>
 							<div class="news_item_wrapper">
-								
+
 								@if (($news_item->image()))
 									<div class="news_item_photo">
 										<a href="/news/{{$news_item->slug}}">
@@ -78,22 +80,35 @@ use Aris\News;
 								<div class="news_excerpt">
 									<p>{{$news_item->excerpt()}}</p>
 								</div>
-								
+
 							</div>
 						<?php
 					}
 				?>
-				@include('partials/latestBlogPosts')
-		</div> <!-- grid2-2 -->
+
+			</div> <!-- grid2-2 -->
+		</div>
+				<div>
+					<div class="grid1-2">
+						@include('partials/latestBlogPosts')
+					</div>
+					<div class="grid2-2">
+						<h2 class="latestNews">Latest Videos</h2>
+						<div class="videoWrapper">
+							<iframe src="https://www.youtube.com/embed/+lastest?list=UUWiDGaT2tIlkfo5tNzVS-_Q" frameborder="0" allowfullscreen></iframe><br/>
+						</div>
+
+					</div>
+				</div>
 	</div> <!-- inner -->
 </div> <!-- section -->
 
-{{--  
+{{--
 <div class="section green">
 	<div class="inner">
 			<blockquote>
 				“Inclusive, good-quality education is a foundation for dynamic and equitable societies.” -- Desmond Tutu
-			</blockquote>		
+			</blockquote>
 	</div>
 </div>
 
@@ -119,7 +134,7 @@ use Aris\News;
 --}}
 <div class="section">
 	<div class="innner">
-		
+
 	</div>
 </div>
 

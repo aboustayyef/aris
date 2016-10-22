@@ -8,8 +8,10 @@
 	    </div>
     </div>
     <div style="float:right">
-    	<a href="https://web.facebook.com/ArisGhana/">
-	    	<img src="/img/find-us-facebook.png" height="30px" width="auto">
+    	<a class="nounderline" href="https://web.facebook.com/ArisGhana/">
+				<div class="findUsOnFacebook">
+					Find Us On Facebook
+				</div>
     	</a>
     </div>
 	<!-- Jquery, use CDN in production -->
@@ -20,7 +22,7 @@
 	<script src="{{asset('js/hoverintent/hoverintent.min.js')}}"></script>
 
 	<script src="{{asset('js/aris-min.js')}}"></script>
-	
+
 	<!-- Analytics -->
 
 	<script>

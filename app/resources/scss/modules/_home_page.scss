@@ -6,7 +6,7 @@ h2.slogan{
 .news_item_wrapper{
 	overflow:hidden;
 	margin-top:5px;
-	border-top:1px dotted silver;
+	border-top:1px solid #ededed;
 	h3{
 		color:$aris_color_dark;
 		line-height: 20px;
@@ -16,7 +16,7 @@ h2.slogan{
 		line-height: 20px;
 	}
 }
-    
+
 .latestNews{
 	small{
 		font-size:0.7em;
@@ -38,4 +38,12 @@ h2.slogan{
 .news_item_photo ~ .news_excerpt{
 	width:73%;
 	margin-right:2%;
+}
+
+.aris_credentials{
+	background: #f3f3f3;
+	padding-bottom: 13px;
+	padding-left: 13px;
+	margin-top: 18px;
+	border: 1px solid #e5e6ea;
 }

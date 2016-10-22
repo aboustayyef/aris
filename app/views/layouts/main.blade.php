@@ -10,7 +10,7 @@ use Aris\Node;
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="alternate" type="application/rss+xml" title="ARIS News Feed" href="{{getenv('WEB_ROOT')}}rss" />
-	<link rel="stylesheet" href="{{asset('/css/aris_home.css?v=1.28')}}">
+	<link rel="stylesheet" href="{{asset('/css/aris_home.css?v=1.3')}}">
 	<link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
 
 	@yield('facebookMeta')
@@ -33,7 +33,7 @@ use Aris\Node;
 			<li class="contact"> +233 54 189 7254 (primary) </li>
 			<li class="contact"> +233 30 254 4511 (secondary) </li>
 		</ul>
-			
+
 	</div>
 	<div id="siteWrapper">
 		<header>
@@ -43,7 +43,7 @@ use Aris\Node;
 		@include('partials.navigation')
 
 		<div id="content">
-			
+
 			@if(Session::has('message'))
 				{{View::make('partials.message')->with('message',Session::get('message'))}}
 			@endif

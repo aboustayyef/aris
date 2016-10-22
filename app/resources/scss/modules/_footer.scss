@@ -14,3 +14,18 @@ footer{
         width:30%;
     }
 }
+
+.findUsOnFacebook{
+  border: 1px solid $aris_color_light;
+  padding: 8px;
+  font-size: 12px;
+  color: white;
+	&:hover{
+		background:$aris_color_light;
+		color:$aris_color;
+	}
+}
+
+a.nounderline{
+	text-decoration: none;
+}

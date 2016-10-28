@@ -30,7 +30,7 @@ use Aris\Node;
 	<div id="contactInfo">
 		<ul class="contacts">
 			<li>Al-Rayan International School, Ghana</li>
-			<li class="contact"> +233 54 189 7254 (primary) </li>
+			<li class="contact"> +233 30 700 2467 (primary) </li>
 			<li class="contact"> +233 30 254 4511 (secondary) </li>
 		</ul>
 

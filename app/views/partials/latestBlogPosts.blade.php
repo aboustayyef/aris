@@ -5,7 +5,7 @@
 $sp = new SimplePie();
 $sp->set_feed_url(
 	[
-		'https://arisprimaryict.wordpress.com/feed',
+		'https://arisprimaryict.com/feed',
 		'https://nikasemo.wordpress.com/feed',
 		'https://parentsblog.aris.edu.gh/feed'
 	]
@@ -18,7 +18,7 @@ $latestPosts = $sp->get_items(0,4);
 $blog_definitions = 
 [
 	[
-		'unique_identifier'		=>	'arisprimaryict.wordpress.com',
+		'unique_identifier'		=>	'arisprimaryict.com',
 		'thumb_location'		=>	'https://arisprimaryict.files.wordpress.com/2016/01/arisictlogo3.png',
 		'blog_title'			=>	'The Online Journal of ICT at ARIS Primary'
 	],
@@ -32,7 +32,6 @@ $blog_definitions =
 		'thumb_location'		=>	'/img/nikasemo.png',
 		'blog_title'			=>	'Our Learning Experiences (Nikasemo)'
 	],
-
 ]
 
 ?>

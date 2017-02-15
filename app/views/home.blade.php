@@ -41,8 +41,10 @@ use Aris\News;
 				<img src="{{asset('img/dp-programme-logo-en.png')}}" width="160px" height="auto" alt="">
 			</a>
 
-			<h3>And a <a href="http://www.theptc.org/">PTC member School</a></h3>
-				<img src="/img/ptc.jpg" width="80px" alt="PTC Logo">
+			<h3>And a member of:</h3>
+				<a href="http://www.theptc.org/"><img src="/img/ptc.jpg" width="80px" alt="PTC Logo"></a>
+				&nbsp;
+				<a href="https://www.aisa.or.ke/"><img src="/img/uploads/news/2017/sports%20day%20eyp/logo_aisa_.jpeg" height="55px" alt=""></a>
 			</div>
 
 		</div> <!-- grid1-2 -->

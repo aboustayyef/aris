@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "description": "Alrayan international School",
   "main": "gulpfile.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,11 +30,5 @@
   "bugs": {
     "url": "https://github.com/aboustayyef/aris/issues"
   },
-  "homepage": "https://github.com/aboustayyef/aris#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "vinyl-source-stream": "^1.1.0"
-  }
+  "homepage": "https://github.com/aboustayyef/aris#readme"
 }

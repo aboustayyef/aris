@@ -125,3 +125,27 @@
 		width:100%;
 	}
 }
+
+.jobbox {
+    padding: 1em;
+    background: #fafafa;
+    border: 1px solid silver;
+    margin-bottom: 1em;
+}
+
+h4.folding{
+    color:white;
+    background:$aris_color;
+    padding: 3px 5px;
+    cursor: pointer;
+    display:inline-block;
+}
+
+.foldable{
+    display:none;
+}
+
+.foldable.open{
+    display:block;
+}
+

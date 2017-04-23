@@ -1,2 +1,0 @@
-<h3>Scratch Pad <small>Paste copied text here to remove formating</small></h3>
-<div class="form-group"><textarea class="form-control" type="textarea" name="_scratch" cols="50" rows="10" id="_scratch"></textarea></div>

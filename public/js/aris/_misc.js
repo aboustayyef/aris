@@ -1,1 +1,0 @@
-$('.flexslider').flexslider();

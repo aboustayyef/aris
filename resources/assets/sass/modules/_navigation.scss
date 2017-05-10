@@ -1,0 +1,257 @@
+nav{
+	// Hide when window narrower than width
+	// So that it will show mobile version instead
+	@media all and (max-width:$navigation_break_point - 1){
+		display:none;
+	}
+	li{
+		list-style-type:none;
+	}
+	li a{
+		text-decoration:none;
+		color:$nav_link_color;
+	}
+	height:$navbar_height;
+	line-height:30px;
+	background:$aris_color;
+	ul{margin:0}
+	ul.sections 
+	{
+		// [top section (About Us | Curriculum ..etc)]
+		position:relative;
+		>li
+		{
+			color:white;
+			cursor: pointer;
+			display: inline-block;
+			padding:0 10px;
+			line-height: $navbar_height;
+			&:hover{
+				background:lighten($aris_color, 5);
+			}
+			.navigation_wrapper
+			{
+				display:none;
+			}
+			a{
+				color:white;
+			}
+			i{
+				color:$aris_color_light;
+				opacity:0.5;
+				margin-left:5px;
+			}
+			&.active
+			{
+				background:$aris_color_dark;
+				i{
+					opacity: 1;
+				}
+				// Big Navigation Window
+				.navigation_wrapper{
+					color:black;
+					.nav_title{	
+					    margin: -10px;
+					    margin-bottom: 0;
+					    margin-right: -10px;
+					    background: $aris_color_very_light;
+					    padding-left:20px;
+					    h2{
+					    	margin:0;
+					    }
+					}
+					padding:10px;
+					display:block;
+					background: $aris_light_grey;
+					height:450px;
+					width:$nav_width;
+					position:absolute;
+					z-index: 3000;
+					top:$navbar_height;
+					left:0;
+					overflow:hidden;
+					.section_image, .section_description, .section_nav_list{
+						float:right;
+						height:$nav_inner_height;
+						width:300px;
+						padding:10px;
+						img{
+							width:100%;
+							max-width:100%;
+							height:auto;
+						}
+
+					}
+					.section_image{
+						width:300px;
+						background:white;
+					}
+					.section_description{
+						padding:10px;
+						padding-right:0;
+						background:white;
+						.desc{
+							background: $aris_color2_very_light;
+							padding:10px;
+							min-width:100%;
+							min-height:100%;
+						}
+					}
+					// Left navigation
+					.section_nav_list{
+						background: white;
+						padding:10px;
+						a{
+							color:black;
+
+						}
+						li{
+							line-height: 18px;
+							padding: 5px;
+
+							&.nochildren{
+								background: none;
+								a{
+									@include aris_link;
+								}
+							}
+							&.haschildren{
+								&.active{
+									background: $aris_color_light url('../img/interface/arrow-end.png');
+									background-repeat:no-repeat;
+									background-position-x: right;
+									background-position-y: center;
+								}
+							}
+						}
+					}
+
+					// right navigation pane
+
+					li{
+						.section_subnav_list{
+							display:none;
+						}
+						&.active{
+							.section_subnav_list{
+								display:block;
+								position:absolute;
+								padding:10px;
+								padding-right:0;
+								width:300px;
+								top:45px;
+								left:310px;
+								background:white;
+								height:$nav_inner_height;
+								ul{
+									padding:10px;
+									border-left:2px solid $aris_color;
+									background:lighten(silver,10);
+									min-height:100%;
+								}
+								
+								li{
+									background:none;
+									a{
+										@include aris_link;
+									}
+								}
+							}
+						}
+					}
+
+				}
+				// [the whole navigation window]
+
+			}
+		}
+	}
+}
+
+#mobileMenu{
+		li{
+			list-style-type:none;
+		}
+		height:40px;
+		line-height:40px;
+		background:$aris_color;
+		h3{
+			margin:0;
+			cursor:pointer;
+			font-size: 18px;
+			color: white;
+			line-height: 40px;
+			width: 120px;
+			padding: 0 20px;
+			background: darken($aris_color, 10);
+			&:hover{
+				background:  darken($aris_color, 5);
+			}
+		}
+		// Show when window narrower than width
+		@media all and (min-width:$navigation_break_point){
+			display:none;
+		}
+		ul.sectionsMobile{	
+			display:none;
+		}
+		&.active {
+			height:auto;
+			ul.sectionsMobile{
+				display:block;
+				margin:0;
+				li{
+					padding: 5px 20px;
+					background: silver;
+					border-bottom: 1px dotted white;
+					cursor:pointer;
+					&:hover{
+						background:lighten(silver,10);
+					}
+					h4{
+						margin:0;
+					}
+				}
+				@media all and (min-width:$navigation_break_point){
+					display:none;
+				}
+				ul{
+					display:none;
+				}
+				li.active{
+					background:$aris_color;
+					&:hover{
+						background:$aris_color;
+					}
+					h4{
+						margin-left: -20px;
+						margin-right: -20px;
+						margin-top: -5px;
+						margin-bottom: 5px;
+						background:$aris_color_light;
+						padding:5px 20px;
+						cursor:pointer;
+						&:hover{
+							background:darken($aris_color_light,5);
+						}
+					}
+					ul{
+						display:block;
+						margin:0;
+						li{
+							background:white;
+							border-bottom:1px solid silver;
+							a{
+								color:$aris_color;
+								text-decoration:none;
+							}
+							&:hover{
+								a{color: black;}
+								background:darken(white,10);
+							}
+						}
+					}
+				}
+			}
+		}
+}

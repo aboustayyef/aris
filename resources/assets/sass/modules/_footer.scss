@@ -1,0 +1,31 @@
+footer{
+	li{
+		list-style:none;
+	}
+	width:100%;
+	margin:0 auto;
+	padding:10px;
+	background:$aris_color;
+	position: relative;
+	bottom: 0;
+	left: 0;
+    .footerColumn{
+        display: inline-block;
+        width:30%;
+    }
+}
+
+.findUsOnFacebook{
+  border: 1px solid $aris_color_light;
+  padding: 8px;
+  font-size: 12px;
+  color: white;
+	&:hover{
+		background:$aris_color_light;
+		color:$aris_color;
+	}
+}
+
+a.nounderline{
+	text-decoration: none;
+}

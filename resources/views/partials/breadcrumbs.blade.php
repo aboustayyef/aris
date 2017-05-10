@@ -1,0 +1,1 @@
+<?php Aris\Navigation::renderBreadCrumbs($node) ?>

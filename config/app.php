@@ -168,14 +168,21 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
 
+        // Laravel Filemanager
+        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+
+        // Laravel Collective Form
+        Collective\Html\HtmlServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Aris\Providers\AppServiceProvider::class,
+        Aris\Providers\AuthServiceProvider::class,
+        // Aris\Providers\BroadcastServiceProvider::class,
+        Aris\Providers\EventServiceProvider::class,
+        Aris\Providers\RouteServiceProvider::class,
 
     ],
 
@@ -206,8 +213,11 @@ return [
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
         'File' => Illuminate\Support\Facades\File::class,
+        'Form' => Collective\Html\FormFacade::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,

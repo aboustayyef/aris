@@ -1,0 +1,18 @@
+.listModule{
+    border-bottom:1px dotted #ddd;
+    h2{
+        margin-bottom:0;
+    }
+    overflow: auto;
+    .featuredImage{
+        float:left;
+        margin-right: 10px;
+        max-width:150px;
+        height:auto;
+        margin-top:10px;
+    }
+    p{
+        overflow:auto;
+    }
+
+}

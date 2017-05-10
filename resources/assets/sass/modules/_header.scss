@@ -1,0 +1,47 @@
+$shrink_factor:1.45;
+header{
+	padding-top:$header_top_padding;
+	height:$header_height;
+	overflow:auto;
+	@media all and (max-width: $header_break_point){
+		height: ($header_height / $shrink_factor );
+	}
+}
+
+.searchform{
+	margin-top:5px;
+	input{
+		background-color: #ECF7F6;
+		background-image: url('../img/interface/search.png');
+		background-repeat:no-repeat;
+		background-position: 210px -3px;
+		vertical-align: middle;
+		appearance:none;
+		border:none;
+		border-radius:10px;
+		padding:5px 10px;
+		width:250px;
+		border:1px solid silver;
+		&:hover{
+			background-position: 210px -33px;
+		}
+	}
+	
+}
+
+#logo{
+	text-indent: -999px ; //hide text
+	height:73px;
+	width:400px;
+	float:left;
+	background:url(../img/brand/aris-logo.png);
+	background-repeat:no-repeat;
+	background-size:400px 73px;
+	@media all and (max-width: $header_break_point){
+		height:73px / $shrink_factor;
+		width:400px / $shrink_factor;
+		background-size: (400px / $shrink_factor) (73px / $shrink_factor);
+	}
+}
+
+// Quick info has its own module in modules/_quickinfo.scss

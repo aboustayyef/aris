@@ -1,0 +1,11 @@
+Warning!
+========
+
+Don't delete anything... some images not part of github
+
+
+Things to do for deployment:
+============================
+
+- Migrate
+- php artisan aris:buildPaths

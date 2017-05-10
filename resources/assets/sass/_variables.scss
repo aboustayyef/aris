@@ -1,38 +1,64 @@
+// colors
 
-// Body
-$body-bg: #f5f8fa;
+@function light($color){
+	@return desaturate(lighten($color, 35), 50);
+}
+@function verylight($color){
+	@return desaturate(lighten($color, 55), 60);
+}
 
-// Borders
-$laravel-border-color: darken($body-bg, 10%);
-$list-group-border: $laravel-border-color;
-$navbar-default-border: $laravel-border-color;
-$panel-default-border: $laravel-border-color;
-$panel-inner-border: $laravel-border-color;
+// Palette Source: http://paletton.com/#uid=33j0u0kleqtbzEKgVuIpcmGtdhZ
 
-// Brands
-$brand-primary: #3097D1;
-$brand-info: #8eb4cb;
-$brand-success: #2ab27b;
-$brand-warning: #cbb956;
-$brand-danger: #bf5329;
+$aris_color: #0097a1;
+$aris_color_light: light($aris_color);
+$aris_color_very_light: verylight($aris_color);
+$aris_color_dark: darken($aris_color, 8);
 
-// Typography
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 14px;
-$line-height-base: 1.6;
-$text-color: #636b6f;
+$aris_color2: #D3A547;
+$aris_color2_light: #F5CA73;
+$aris_color2_very_light: #FFE1A3;
+$aris_light_grey: #F5F5F5;
 
-// Navbar
-$navbar-default-bg: #fff;
+$aris_compl: #FFE1A3;
+$aris_compl_light: #FFF3D9;
+$aris_compl_dark:#F7D184;
+// hyperlink
 
-// Buttons
-$btn-default-color: $text-color;
+@mixin aris_link{
+	color:black;
+	&:hover{
+		color: $aris_color_dark;
+		text-decoration: underline;
+	}
+}
 
-// Inputs
-$input-border: lighten($text-color, 40%);
-$input-border-focus: lighten($brand-primary, 25%);
-$input-color-placeholder: lighten($text-color, 30%);
+// layout Dimensions
+$top_margin:30px;
+$page_width:1280px;
+$page_inner_width:1024px;
+$gutter: 30px;
 
-// Panels
-$panel-default-heading-bg: #fff;
+// Break Points
+
+$navigation_break_point: 970px; // width of the navigation
+$layout_break_point: 740px ; // the point at which all grid elements become 100% width
+$header_break_point: 650px; // the point at which the quick info on the right disappears
+
+// header
+$header_height:140px;
+$header_top_padding:20px;
+
+// navbar
+$navbar_height:45px;
+
+// navigation
+$nav_width: 920px;
+$nav_third: ($nav_width / 3)-1 ;
+$nav_height:350px;
+$nav_inner_height:400px;
+$top_line_thickness: 5px;
+	// colors
+$nav_background:white;
+$nav_link_color:black;
+$nav_highlight_color:lighten($aris_color, 8);
+$nav_panel_border_color: silver;

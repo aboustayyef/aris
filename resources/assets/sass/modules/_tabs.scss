@@ -1,0 +1,51 @@
+#tabs-wrapper{
+	$color:#e1e1e1;
+	border:1px solid $color;
+	margin-top:30px;
+	.tabs{
+		background:$color;
+		width:100%;
+		margin-bottom:20px;
+		overflow:auto;
+	}
+
+	.tab{
+		
+		float:left;
+		padding:20px 10px;
+		cursor:pointer;
+		&:hover{
+			background-color:lighten($color,5);
+		}
+		&.active{
+			background-color:white;
+			cursor:auto;
+			border-right:2px solid rgb(213,209,209);
+			&:last-child{
+				border-right:none;
+			}
+		}
+
+		&.tab1of2{
+			width:50%;
+		}
+		&.tab2of2{
+			width:50%;
+		}
+	}
+	.tab_sections{
+		position:relative;
+		min-height:1500px;
+	}
+
+	.tab_section{
+		display:none;
+		padding:10px;
+		position:absolute;
+		clear: both;
+		&.active{
+			display:block;
+		}
+	}
+	
+}

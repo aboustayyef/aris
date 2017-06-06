@@ -27,8 +27,9 @@ Route::get('styleguide', function(){
 });
 
 Route::get('test', function(){
-    return view('editor');
+    return \Aris\News::all();
 });
+
 
 /**************************************************************
 NEWS
@@ -38,9 +39,8 @@ Route::resource('news', 'NewsController');
 /**************************************************************
 PEOPLE
 **************************************************************/
-Route::get('/people/{who?}', function($who){
-	return $who;
-});
+Route::get('people/{category}/{slug}', ['uses'=>'PeopleController@person', 'as' => 'people.person']);
+Route::resource('people', 'PeopleController');
 
 /**************************************************************
 SEARCH

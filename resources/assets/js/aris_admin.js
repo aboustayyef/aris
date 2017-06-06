@@ -5,7 +5,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap'); // gets jQuery (could also get Axios, and Lodash)
+require('./bootstrap'); // This is Laravel's bootstrapping file. it gets jQuery (could also get Axios, and Lodash)
+require('bootstrap'); // This is Bootstrap's JS dependency. Not to be confused with Laravel's bootstrapping file.
 require('./flexslider/jquery.flexslider-min.js');
 require('./hoverintent/hoverintent.min.js');
 

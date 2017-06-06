@@ -30,7 +30,12 @@ Class News extends Eloquent{
 		$this->public_date = $date;
 		$this->excerpt = str_limit(strip_tags($this->content), 220);
 		$this->created_at = new Carbon;
-		$this->slug = strtolower($this->created_at->format('Y-F')).'-'.str_slug($this->title,'-');
+		
+		// set slug only if empty, because slugs shouldn't be changed after editing
+		if (empty($this->slug)) {
+			$this->slug = strtolower($this->created_at->format('Y-F')).'-'.str_slug($this->title,'-');
+		}
+		
 		$this->save();
 		return true;
 

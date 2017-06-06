@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class NewsController extends Controller
 {
-public function index()
+public function index(Request $request)
 	{
 		$news = News::orderBy('public_date','desc')->paginate(8);
-		return view('news.index')->with('news',$news)->with('title', 'ARIS News');
+		return view('news.index')->with('news',$news)->with('title', 'ARIS News')->with('request', $request);
 	}
 
 	/**
@@ -21,10 +21,10 @@ public function index()
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create(Request $request)
 	{
 		if (Auth::check()) {
-			return view('news.create');
+			return view('news.create', ['news' => new News, 'request' => $request]);
 		}else{
 			return redirect('login');
 		}
@@ -58,16 +58,16 @@ public function index()
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($slug)
+	public function show($slug, Request $request)
 	{
 		// first, convert slug $id to real id
 		
 		$news = News::where('slug', $slug)->get();
 		if ($news->count() > 0) {
 			$newsItem = $news->first();
-			return view('news.show')->with('newsItem',$newsItem)->with('title', 'Aris News: '.$newsItem->title);
+			return view('news.show')->with('newsItem',$newsItem)->with('title', 'Aris News: '.$newsItem->title)->with('request', $request);
 		}
-		return Response::make('Sorry, page does not exist',404);
+		return response('Sorry, page does not exist',404);
 
 		
 	}
@@ -79,13 +79,9 @@ public function index()
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit(News $news, Request $request)
 	{
-		$news = News::find($id);
-		if ($news) {
-			return view('news.edit')->with('news', $news);
-		}
-		return Response::make('Sorry, page does not exist',404);
+		return view('news.edit')->with(['news' => $news, 'request' => $request]);
 	}
 
 	/**
@@ -95,15 +91,16 @@ public function index()
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(News $news, Request $request)
 	{
-		$v = Validator::make(Input::all(), News::rules());
-		if ($v->fails()) {
-			return Redirect::route('news.edit', $id)->withErrors($v)->withInput();
-		}
-		$news = News::find($id);
-		if ($news->store(Input::all())) {
-			return redirect(Input::get('from'))->with('message','Successfully edited story');
+		$this->validate($request, [
+			'title'	=>	'required|min:5',
+			'content'	=>	'required|min:10',
+			'date'	=> 'required|date_format:Y-m-d'
+		]);
+
+		if ($news->store($request->all())) {
+			return redirect($request->get('from'))->with('message','Successfully edited story');
 		}
 
 	}
@@ -115,10 +112,10 @@ public function index()
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy(News $news, Request $request)
 	{
-		$news = News::find($id);
 		$news->delete();
-		return redirect(Input::get('from'))->with('message','Successfully deleted news item');
+
+		return redirect('news')->with('message','Successfully deleted story');
 	}
 }

@@ -47,7 +47,7 @@ use Aris\Node;
 		<div id="content">
 
 			@if(Session::has('message'))
-				{{View::make('partials.message')->with('message',Session::get('message'))}}
+				@include('partials.message', ['message'=> Session::get('message')])
 			@endif
 
 			@yield('content')

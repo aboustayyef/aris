@@ -43,4 +43,8 @@ class People extends \Eloquent {
 		return true;
 	}
 
+	static function slugExists($slug){
+		return Static::whereSlug($slug)->get()->count() > 0;
+	}
+
 }

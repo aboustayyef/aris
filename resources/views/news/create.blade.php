@@ -10,26 +10,10 @@ $now = new Carbon\Carbon;
 
 	{{csrf_field()}}
 
-	<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-	    {!! Form::label('title', 'Title') !!}
-	    {!! Form::text('title', null, ['class' => 'form-control', 'required' => 'required']) !!}
-	    <small class="text-danger">{{ $errors->first('title') }}</small>
-	</div>
+	@include('news._form')
+	<button type="submit" class="btn btn-default">Submit</button>
 
-	<div class="form-group{{ $errors->has('date') ? ' has-error' : '' }}">
-	    {!! Form::label('date', 'Date (yyyy-mm-dd)') !!}
-	    {!! Form::text('date', null, ['class' => 'form-control', 'required' => 'required']) !!}
-	    <small class="text-danger">{{ $errors->first('date') }}</small>
-	</div>
-
-	<div class="form-group{{ $errors->has('content') ? ' has-error' : '' }}">
-	    {!! Form::label('content', 'Content: ') !!}
-	    {!! Form::textarea('content', null, ['class' => 'form-control', 'required' => 'required']) !!}
-	    <small class="text-danger">{{ $errors->first('content') }}</small>
-	</div>
-
-
-<button type="submit" class="btn btn-default">Submit</button>
+@include('partials.scratchpad')
 
 {{-- @include('partials.scratchpad') --}}
 

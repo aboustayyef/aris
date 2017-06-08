@@ -14,7 +14,7 @@
 
 		@if(Auth::Check())
 		<div id="adminCreate">
-			<a href="{{route('news.create')}}/?from={{Request::path()}}">Create News Item</a>
+			<a href="{{route('news.create')}}/?from={{Request::path()}}">Create Story</a>
 		</div>
 		@endif
 

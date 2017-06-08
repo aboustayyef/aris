@@ -4,6 +4,8 @@ namespace Aris\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Aris\People;
+use \Auth;
+
 class PeopleController extends Controller
 {
 	/**
@@ -17,12 +19,6 @@ class PeopleController extends Controller
 		return view('People.index')->with(['category'=>'index', 'title' => 'ARIS | People']);
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /people/create
-	 *
-	 * @return Response
-	 */
 
 	/**
 	 * Display the specified category index.
@@ -31,10 +27,13 @@ class PeopleController extends Controller
 	 * @param  int  $id
 	 * @return Response
 	 */
+
 	public function show(Request $request, $category)
 	{
-		// If category (example: aris.com.gh/admin)
+		// If a category is entered (example: aris.com.gh/admin)
+
 		if ( in_array($category, ['staff', 'admin', 'faculty'])) {
+
 			$dict = ['admin' =>	'Administration', 'staff' => 'Staff', 'faculty' => 'Faculty'];
 			$category = $dict[$category];
 
@@ -50,14 +49,22 @@ class PeopleController extends Controller
 			return view('People.person')->with(compact('person'))->with('title',  "$person->title $person->firstname $person->lastname | ARIS People" );
 		}
 
-		// otherwise
+		// otherwise, a wrong url is entered
+		
 		return redirect('/people');
 	}
+
+	/**
+	 * Show the form for creating a new resource.
+	 * GET /people/create
+	 *
+	 * @return Response
+	 */
 
 	public function create()
 	{
 		if (Auth::check()) {
-			return view('People.create');
+			return view('People.create')->with('person', New People);
 		}else{
 			return Redirect::to('login');
 		}
@@ -69,16 +76,12 @@ class PeopleController extends Controller
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		$v = Validator::make(Input::all(), People::rules());
-		if ($v->fails()) {
-			return Redirect::route('people.create')->withErrors($v)->withInput();
-		}
-		// $node = new Node;
+		$this->validate($request, People::validationRules());
 		$person = new People;
-		if ($person->store(Input::all())) {
-			return Redirect::route('people.index')->with('message','Successfully added a new Person');
+		if ($person->store($request->all())) {
+			return redirect()->route('people.index')->with('message','Successfully added a new Person');
 		}
 	}
 	public function person(Request $request, $category, $slug){
@@ -108,15 +111,12 @@ class PeopleController extends Controller
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request, People $person)
 	{
-		$v = Validator::make(Input::all(), People::rules());
-		if ($v->fails()) {
-			return Redirect::route('people.edit',$id)->withErrors($v)->withInput();
-		}
-		$people = People::find($id);
-		if ($people->store(Input::all())) {
-			return Redirect::to(Input::get('from'))->with('message','Successfully edited Person');
+		$this->validate($request, People::validationRules());
+
+		if ($person->store($request->all())) {
+			return redirect($request->get('from'))->with('message','Successfully edited Person');
 		}
 	}
 
@@ -127,11 +127,10 @@ class PeopleController extends Controller
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy(Request $request, People $person)
 	{
-		$person = People::find($id);
 		$person->delete();
-		return Redirect::to(Input::get('from'))->with('message','Successfully deleted person');
+		return redirect($request->get('from'))->with('message','Successfully deleted Person');
 	}
 
 

@@ -1,0 +1,1 @@
+<p><a href="/{{request()->get('from')}}">&larr; Cancel and go back</a></p>

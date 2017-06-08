@@ -39,6 +39,7 @@ Route::resource('news', 'NewsController');
 /**************************************************************
 PEOPLE
 **************************************************************/
+Route::get('people/{id}/edit', ['uses'=>'PeopleController@edit', 'as' => 'people.edit']);
 Route::get('people/{category}/{slug}', ['uses'=>'PeopleController@person', 'as' => 'people.person']);
 Route::resource('people', 'PeopleController');
 

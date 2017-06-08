@@ -6,6 +6,10 @@ $now = new Carbon\Carbon;
 
 @section('content')
 
+@include('partials.cancellink')
+
+<h2>Create Story</h2>
+
 <form method="POST" action="/news" accept-charset="UTF-8" novalidate>
 
 	{{csrf_field()}}

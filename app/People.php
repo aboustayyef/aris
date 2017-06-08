@@ -13,7 +13,7 @@ class People extends \Eloquent {
 	}
 
 
-	public static function rules(){
+	public static function validationRules(){
 		return array(
 			'firstname'	=>	'required',
 			'lastname'	=>	'required',
@@ -25,10 +25,6 @@ class People extends \Eloquent {
 
 	}
 
-	public function slug(){
-		return Str::slug($this->firstname . ' ' . $this->lastname);
-	}
-
 	public function store($data){
 		$this->title = $data['title'];
 		$this->firstname = $data['firstname'];
@@ -38,7 +34,9 @@ class People extends \Eloquent {
 		$this->type = implode(',',$data['type']);
 		$this->bio = $data['bio'];
 		$this->last_edited_by = Auth::user()->email;
-		$this->slug = $this->slug();
+		if (empty($this->slug)) {
+			$this->slug = str_slug($this->firstname . ' ' . $this->lastname);
+		}
 		$this->save();
 		return true;
 	}

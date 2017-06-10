@@ -37,6 +37,7 @@ class RoleSessionsController extends Controller
 		}
 	
 		// otherwise go back to login 
+		session()->flash('wrongpassword', true);
 		return redirect('/rolelogin/create?role='.$request->get('role'). '&return=' . urlencode($request->get('return')));
 	}
 

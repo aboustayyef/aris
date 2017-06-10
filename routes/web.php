@@ -58,6 +58,7 @@ AUTHENTICATION
 
 // USERS
 Auth::routes();
+
 Route::get('logout', function(){
 	Auth::logout();
 	return redirect('/');
@@ -74,14 +75,12 @@ PAGES
 
 // HOME PAGE
 Route::get('/', function(){
-	return redirect('/home');
-});
-Route::get('/home', function(){
     return view('home');
 });
 
+// Edit Pages (Nodes)
 
-// OTHER PAGES
+// Read Pages (Nodes)
 Route::get('/{section}/{subsection?}/{page?}/{subpage?}', array(
     'uses'      =>  'pageNavigationController@resolve'
 ));

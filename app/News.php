@@ -10,8 +10,11 @@ Class News extends Eloquent{
 
 
 	public function image(){
-		$getContent = $this->content;
-		return (new ImageExtractor($getContent))->image();
+		if ( ! cache('newsImage_' . $this->id)) {
+			$getContent = $this->content;
+			cache(['newsImage_' . $this->id => (new ImageExtractor($getContent))->image() ], 5000);
+		}
+		return cache('newsImage_' . $this->id) ;
 	}
 
 	public static function rules(){

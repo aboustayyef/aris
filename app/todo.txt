@@ -1,7 +1,13 @@
+- role managment
+- page editing
+
+Before deploying:
+
+
 Warning!
 ========
 
-Don't delete anything... some images not part of github
+In deployment, don't delete anything... some images not part of github
 
 
 Things to do for deployment:

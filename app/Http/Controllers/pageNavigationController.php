@@ -24,13 +24,14 @@ class pageNavigationController extends Controller
 
 		$path = $request->path();
 		$node = (new Node)->getByPath($path);
-		if ($node) {
-			if ($node->hasChildren()) {
-			return view('pages.listView')->with(compact('node'));			
-		}
-		
+		if ($node) 
+		{
+			if ($node->hasChildren()) 
+			{
+				return view('pages.listView')->with(compact('node'));			
+			}
 			return view('pages.singleView')->with(compact('node'));
 		}
-		// return response('Page Does Not Exist', 404);
+
 	}
 }

@@ -41,6 +41,9 @@
 	<div id="middle">
 		<img src="/img/brand/aris-logo.png" height="60" width="auto">
 		<h1>You need to be a {{ strtolower($role->description) }} to access this page</h1>
+		@if(session()->has('wrongpassword'))
+			<p style="color:red">Wrong Password</p>
+		@endif
 		<form method="POST" action="/rolelogin">
 			<input type="hidden" name="_token" value="{{csrf_token()}}">
 			<input type="hidden" name="return" value="{{$request->get('return')}}">
@@ -51,7 +54,6 @@
 				<input type="submit" name="submit">
 			</div>
 		</form>
-	<!-- {{var_dump($request->all())}} -->
 	</div>
 
 

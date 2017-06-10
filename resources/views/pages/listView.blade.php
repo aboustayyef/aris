@@ -22,7 +22,7 @@
 
 	<div id="content-area">
 		<h1>{{$node->name}}</h1>
-		<p>{{$node->excerpt}}</p>
+		<p>{!!$node->excerpt!!}</p>
 		<!-- Section Image? -->
 		<?php
 		$nodes = $node->children();

@@ -40,6 +40,13 @@ class NewsTest extends TestCase
     }
 
     /** @test */
+    public function unauthenticated_users_cannot_post_to_news()
+    {
+        $this->response = $this->post('news');
+        $this->response->assertRedirect('/login');
+    }
+
+    /** @test */
     public function authenticated_users_can_access_news_creation_page(){
     	$this->response = $this->actingAs($this->user)->get('/news/create');
     	$this->response->assertStatus(200);
@@ -55,6 +62,7 @@ class NewsTest extends TestCase
 
         $this->createdNewsItem = \Aris\News::Where('title', $this->news->title)->first();
         $this->assertInstanceOf(\Aris\News::class, $this->createdNewsItem);
+        $this->createdNewsItem->delete();
 
     }
 

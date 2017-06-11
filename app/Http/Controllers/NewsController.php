@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class NewsController extends Controller
 {
+
+public function __construct(){
+	$this->middleware('auth')->except(['index', 'show']);
+}
+
 public function index(Request $request)
 	{
 		$news = News::orderBy('public_date','desc')->paginate(8);
@@ -23,11 +28,7 @@ public function index(Request $request)
 	 */
 	public function create(Request $request)
 	{
-		if (Auth::check()) {
-			return view('news.create', ['news' => new News, 'request' => $request]);
-		}else{
-			return redirect('login');
-		}
+		return view('news.create', ['news' => new News, 'request' => $request]);
 	}
 
 	/**

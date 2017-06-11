@@ -18,6 +18,12 @@ class AuthenticationTest extends TestCase
 	}
 
 	/** @test */
+	public function registration_form_should_not_be_accessible(){
+		$response = $this->get('/register');
+		$response->assertStatus(401);
+	}
+
+	/** @test */
 	public function anyone_can_access_login_form()
 	{
 		$response = $this->get('/login');

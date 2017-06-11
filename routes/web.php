@@ -30,6 +30,18 @@ Route::get('test', function(){
     return \Aris\News::all();
 });
 
+/**************************************************************
+AUTHENTICATION
+**************************************************************/
+
+// USERS
+Auth::routes();
+
+
+Route::get('logout', function(){
+	Auth::logout();
+	return redirect('/');
+});
 
 /**************************************************************
 NEWS
@@ -52,17 +64,6 @@ Route::get('search', array(
 ));
 
 
-/**************************************************************
-AUTHENTICATION
-**************************************************************/
-
-// USERS
-Auth::routes();
-
-Route::get('logout', function(){
-	Auth::logout();
-	return redirect('/');
-});
 
 // ROLES
 Route::resource('rolelogin', 'RoleSessionsController', ['only'=>['store','create']]);

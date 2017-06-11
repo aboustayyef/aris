@@ -9,7 +9,6 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 class LoginTest extends DuskTestCase
 {
 
-
     use DatabaseMigrations;
 
     public function setUp()

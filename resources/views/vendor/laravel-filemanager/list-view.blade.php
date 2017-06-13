@@ -28,10 +28,10 @@
         <a href="javascript:cropImage('{{ $item->name }}')">
           <i class="fa fa-crop fa-fw"></i>
         </a> --}}
-        <a href="javascript:resizeImage('{{ $item->name }}')">
+        {{-- <a href="javascript:resizeImage('{{ $item->name }}')">
           <i class="fa fa-arrows fa-fw"></i>
-        </a>
-        @endif
+        </a> --}}
+        {{-- @endif --}}
         @endif
       </td>
     </tr>

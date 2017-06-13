@@ -33,7 +33,7 @@ class NewsTest extends TestCase
     }
 
     /** @test */
-    public function unauthenticated_users_trying_to_create_news_should_be_redirected_to_login()
+    public function unauthenticated_users_cannot_create_news()
     {
     	$this->response = $this->get('/news/create');
     	$this->response->assertRedirect('/login');

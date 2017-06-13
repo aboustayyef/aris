@@ -55,6 +55,14 @@ Route::get('people/{id}/edit', ['uses'=>'PeopleController@edit', 'as' => 'people
 Route::get('people/{category}/{slug}', ['uses'=>'PeopleController@person', 'as' => 'people.person']);
 Route::resource('people', 'PeopleController');
 
+
+/**************************************************************
+Node Editor
+**************************************************************/
+Route::resource('node', 'NodeController', ['except' => [
+    'create', 'index' , 'show', 'store'
+]]);
+
 /**************************************************************
 SEARCH
 **************************************************************/

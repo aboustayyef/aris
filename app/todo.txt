@@ -3,12 +3,12 @@
 
 Before deploying:
 
+- add folder "thumbs" to each subfolder in public/img/uploads and copy contents from /thumbs individually to subfolders.
 
 Warning!
 ========
 
-In deployment, don't delete anything... some images not part of github
-
+- In deployment, don't delete anything... some images not part of github
 
 Things to do for deployment:
 ============================

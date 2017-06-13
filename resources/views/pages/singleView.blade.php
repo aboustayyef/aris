@@ -25,7 +25,7 @@
 		{!!$node->content!!}
         @if(Auth::Check())
                 <?php $lastEdited = $node->updated_at->format('d M Y, H:i'); ?>
-                <p class="meta">Page last edited by {{$node->last_edited_by}} on {{$lastEdited}} | <a href="/pages/{{$node->id}}/edit?from={{Request::path()}}">Edit This Page</a> (Only admins can see this)</p>
+                <p class="meta">Page last edited by {{$node->last_edited_by}} on {{$lastEdited}} | <a href="/node/{{$node->id}}/edit?from={{request()->path()}}">Edit This Page</a> (Only admins can see this)</p>
         @endif
 	</div>
 

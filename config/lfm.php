@@ -47,7 +47,7 @@ return [
     'images_folder_name' => 'img/uploads',
     'files_folder_name'  => 'img/uploads',
 
-    'thumb_folder_name'  => 'thumbs',
+    'thumb_folder_name'  => '/thumbs',
 
     /*
     |--------------------------------------------------------------------------
@@ -59,7 +59,7 @@ return [
     // Supported: "grid", "list"
     'images_startup_view' => 'grid',
     'files_startup_view' => 'list',
-
+    'title-panel'   => 'Photos and Files',
     /*
     |--------------------------------------------------------------------------
     | Upload / Validation

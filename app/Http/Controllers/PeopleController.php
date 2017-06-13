@@ -8,6 +8,11 @@ use \Auth;
 
 class PeopleController extends Controller
 {
+	public function __construct()
+	{
+		$this->middleware('auth')->except(['index','show','person']);
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 * GET /people
@@ -30,7 +35,7 @@ class PeopleController extends Controller
 
 	public function show(Request $request, $category)
 	{
-		// If a category is entered (example: aris.com.gh/admin)
+		// If a category is entered (example: aris.com.gh/people/admin)
 
 		if ( in_array($category, ['staff', 'admin', 'faculty'])) {
 
@@ -41,7 +46,7 @@ class PeopleController extends Controller
 			return view('People.index')->with(compact('category'))->with('title', 'ARIS People | ' . $category )->with(compact('people'));
 		}
 
-		// If person's slug (example: aris.com.gh/fatma-odaymat)
+		// If person's slug (example: aris.com.gh/people/fatma-odaymat)
 		
 		if (People::slugExists($category)) {
 			$slug = $category;
@@ -63,11 +68,7 @@ class PeopleController extends Controller
 
 	public function create()
 	{
-		if (Auth::check()) {
-			return view('People.create')->with('person', New People);
-		}else{
-			return Redirect::to('login');
-		}
+		return view('People.create')->with('person', New People);
 	}
 
 	/**

@@ -24,10 +24,22 @@ $factory->define(Aris\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(Aris\News::class, function (Faker\Generator $faker) {
-    
+$factory->define(Aris\People::class, function (Faker\Generator $faker) {
     static $password;
-    
+    $firstname = $faker->firstName;
+    $lastname = $faker->lastName;
+    return [
+		'firstname' =>	$firstname,
+		'lastname' =>	$lastname,
+		'designation' => $faker->jobTitle,
+		'bio'	=> '<p><img src="">' . $faker->imageUrl . '</p>' . '<p>' . $faker->paragraph . '</p>' . '<p>' . $faker->paragraph . '</p>',
+		'slug'	=>	strtolower($firstname) . '-' . strtolower($lastname),
+		'type' =>	['Administration','Faculty', 'Staff'][rand(0,2)],
+    ];
+});
+
+$factory->define(Aris\News::class, function (Faker\Generator $faker) {
+       
     $newstitle = $faker->sentence(5);
     $image = $faker->imageUrl;
 

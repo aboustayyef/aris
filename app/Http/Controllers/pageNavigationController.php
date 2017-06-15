@@ -33,5 +33,8 @@ class pageNavigationController extends Controller
 			return view('pages.singleView')->with(compact('node'));
 		}
 
+		// page doesn't exist
+        return response()->view('404', [], 404);
+
 	}
 }

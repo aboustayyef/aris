@@ -22,17 +22,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-                <div class="navbar-header">
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        ARIS Admin
-                    </a>
-                </div>
+                        <img src="/img/brand/aris-admin-logo.png" width="340">
+
             </div>
-        </nav>
 
         <div class="container">
             @yield('content')

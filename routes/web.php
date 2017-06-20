@@ -17,18 +17,18 @@ use Illuminate\Http\Request;
 DEV STUFF - NOT FOR PUBLIC
 **************************************************************/
 
-Route::get('sectionsReference', function()
-{
-    return view('sections');
-});
+// Route::get('sectionsReference', function()
+// {
+//     return view('sections');
+// });
 
-Route::get('styleguide', function(){
-    return view('styleguide');
-});
+// Route::get('styleguide', function(){
+//     return view('styleguide');
+// });
 
-Route::get('test', function(){
-    return \Aris\News::all();
-});
+// Route::get('test', function(){
+//     return \Aris\News::all();
+// });
 
 /**************************************************************
 AUTHENTICATION
@@ -37,6 +37,15 @@ AUTHENTICATION
 // USERS
 Auth::routes();
 
+// ADMIN
+Route::get('admin', function(){
+    // last ten news stories
+    $news = \Aris\News::getLatest();
+    $faculty = \Aris\People::Where('type','Faculty')->orderBy('lastname', 'asc')->get();
+    $admin = \Aris\People::Where('type','Administration')->orderBy('lastname', 'asc')->get();
+    $staff = \Aris\People::Where('type','Staff')->orderBy('lastname', 'asc')->get();
+    return view('admin')->with(['news'=>$news , 'faculty'=>$faculty , 'staff'=>$staff , 'admin'=>$admin]);
+})->middleware('auth');
 
 Route::get('logout', function(){
 	Auth::logout();
@@ -70,8 +79,6 @@ Route::get('search', array(
     'as'    =>  'search',
     'uses'  =>  'SearchController@index'
 ));
-
-
 
 // ROLES
 Route::resource('rolelogin', 'RoleSessionsController', ['only'=>['store','create']]);

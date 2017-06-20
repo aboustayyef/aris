@@ -8,6 +8,9 @@ Class News extends Eloquent{
 	
 	protected $table = "news";
 
+	public static function getLatest($n = 10){
+		return Static::orderBy('public_date','desc')->take($n)->get();
+	}
 
 	public function image(){
 		if ( ! cache('newsImage_' . $this->id)) {

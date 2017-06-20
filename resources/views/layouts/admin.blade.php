@@ -25,6 +25,9 @@
             <div class="container">
 
                         <img src="/img/brand/aris-admin-logo.png" width="340">
+                        @if( request()->path() != 'login')
+                            <a class="btn pull-right btn-danger btn-lg" href="/logout" role="button">Log Out</a>
+                        @endif
 
             </div>
 

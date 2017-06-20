@@ -3,9 +3,9 @@
 	    <div id="signature">
 	        Al-Rayan International School, {{date('Y')}} &copy;
 	    </div>
-{{-- 	    <div>
-	        <a href="{{route('login')}}?return={{Request::path()}}">Admin Login</a>
-	    </div> --}}
+	    <div>
+	        <a href="/admin">Admin</a>
+	    </div>
     </div>
     <div style="float:right">
     	<a class="nounderline" href="https://web.facebook.com/ArisGhana/">

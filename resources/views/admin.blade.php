@@ -9,7 +9,7 @@
 		<h2>News <a class="btn btn-warning" href="/news/create/?from=admin">Create Story</a></h2>
 		<table class="table">
 			<caption>
-				Listed are the 10 latest stories. To see more, go to the <a href="/news">news</a> page.
+				Listed are the 15 latest stories. To see more, go to the <a href="/news">news</a> page.
 			</caption>
 			<thead>
 				<tr>

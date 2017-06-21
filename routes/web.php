@@ -40,7 +40,7 @@ Auth::routes();
 // ADMIN
 Route::get('admin', function(){
     // last ten news stories
-    $news = \Aris\News::getLatest();
+    $news = \Aris\News::getLatest(15);
     $faculty = \Aris\People::Where('type','Faculty')->orderBy('lastname', 'asc')->get();
     $admin = \Aris\People::Where('type','Administration')->orderBy('lastname', 'asc')->get();
     $staff = \Aris\People::Where('type','Staff')->orderBy('lastname', 'asc')->get();

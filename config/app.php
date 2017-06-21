@@ -184,6 +184,8 @@ return [
         Aris\Providers\EventServiceProvider::class,
         Aris\Providers\RouteServiceProvider::class,
 
+        // RSS package from Spatie
+        Spatie\Feed\FeedServiceProvider::class,
     ],
 
     /*

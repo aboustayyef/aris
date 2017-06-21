@@ -4,7 +4,7 @@ use \Eloquent;
 use \Carbon\Carbon;
 use \Auth;
 
-Class News extends Eloquent{
+Class News extends Eloquent implements \Spatie\Feed\FeedItem {
 	
 	protected $table = "news";
 
@@ -46,6 +46,37 @@ Class News extends Eloquent{
 		return true;
 
 	}
+
+	public function getFeedItems($n = 20){
+		return News::orderBy('public_date','desc')->take($n)->get();
+	}
+
+    public function getFeedItemId(){
+    	return $this->id;
+    }
+
+    public function getFeedItemTitle(){
+    	return $this->title;
+    }
+
+    public function getFeedItemUpdated(){
+    	return $this->updated_at;
+    }
+
+    public function getFeedItemSummary(){
+    	// convert relative img urls to absolute urls
+    	$dest = '<img src="' . env('WEB_ROOT') . 'img';
+    	$content = preg_replace("#<img src((\\s+)?=(\\s+)?\"/img)#um", "$dest", $this->content );
+    	return $content;
+    }
+
+    public function getFeedItemLink(){
+    	return env('WEB_ROOT') . '/news/' . $this->slug;
+    }
+
+    public function getFeedItemAuthor(){
+    	return 'Aris Staff';
+    }
 
 }
 

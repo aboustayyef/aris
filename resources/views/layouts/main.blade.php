@@ -1,7 +1,3 @@
-<?php
-use Aris\Node;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

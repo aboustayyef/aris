@@ -11,7 +11,7 @@
     <title>ARIS Admin</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/aris_admin.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/aris_admin.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -37,6 +37,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/aris_admin.js') }}"></script>
+    <script src="{{ mix('js/aris_admin.js') }}"></script>
 </body>
 </html>

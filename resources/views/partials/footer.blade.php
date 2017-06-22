@@ -22,7 +22,7 @@
 	{{-- <script src="{{asset('js/hoverintent/hoverintent.min.js')}}"></script> --}}
 
 	{{-- <script src="{{asset('js/aris.min.js')}}"></script> --}}
-	<script src="{{asset('js/aris_main.js')}}"></script>
+	<script src="{{mix('js/aris_main.js')}}"></script>
 	<!-- Analytics -->
 
 	<script>

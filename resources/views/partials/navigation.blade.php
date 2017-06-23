@@ -1,23 +1,56 @@
+<nav>
+	<div class="inner">
+		<ul class="megaMenu">
+			<?php $sections = (new \Aris\Node)->topLevel(); ?>
+			@foreach($sections as $section)	
+				@if($section->hasChildren())
+					<li class="megaMenu__section">
+						{{$section->name}}<i class="fa fa-caret-down"></i>
+						<div class="megaMenu__wrapper">
+							<div class="megaMenu__title">
+								<h2>{{$section->name}}</h2>
+							</div>
+							<div class="megaMenu__featuredImage">
+								<img src="/img/featured/sections/{{$section->getLink()}}.jpg">
+							</div>
+							<div class="megaMenu__description">
+								<div class="desc">{!!$section->excerpt!!}</div>
+							</div>
+							<div class="megaMenu__left_panel">
+								<ul>
+									@foreach($section->children() as $key => $subsection)
+										@if($subsection->hasChildren())
+											<li class="haschildren">
+												{{$subsection->name}}
+												<div class="megaMenu__center_panel">
+													<ul>
+														@foreach($subsection->children() as $key => $page)
+															<li><a href="/{{$page->getLink()}}">{{$page->name}}
+																@if($page->hasRole())
+																	<i class="fa fa-lock"></i>
+																@endif
+															</a></li>
+														@endforeach
+													</ul>
+												</div>
+											</li>
+										@else
+											<li class="nochildren"><a href="/{{$subsection->getLink()}}">{{$subsection->name}}</a></li>
+										@endif
+									@endforeach
+								</ul>
+							</div>
+						</div>
+					</li>
+				@else
+					<li class="megaMenu__section"><a href="/{{$section->getLink()}}">{{$section->name}}</a>
+				@endif
+			@endforeach
+		</ul>		
+	</div>
+</nav>
 
-<?php 
-	$navigation = new Aris\Navigation;
-?>
-	<nav>
-		<div class="inner">
-
-			<?php 
-			if ( ! Cache::has('fullnav')) {
-				Cache::forever('fullnav', $navigation->renderFullNav());
-			}
-
-			echo Cache::get('fullnav');
-
-			?>
-			
-		</div>
-	</nav>
-
-	<!-- Mobile Navigation -->
+	<!-- Mobile Navigation 
 	
 	<div id="mobileMenu">
 		<h3><i class="fa fa-bars"></i> Menu</h3>
@@ -31,4 +64,5 @@
 
 			?>
 		</ul>
-	</div>
+	</div> 
+	-->

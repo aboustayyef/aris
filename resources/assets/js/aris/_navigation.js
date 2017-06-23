@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
 // When mouse hovers over section, it becomes active
-$('.sections>li').hoverIntent({
+$('.megaMenu>li').hoverIntent({
 	// mouse enter
 	over:function(){
-		$('.sections li.active').removeClass('active');
+		$('.megaMenu li.active').removeClass('active');
 		$(this).addClass('active');
 	}, 
 	// do nothing on mouse leave
@@ -14,10 +14,10 @@ $('.sections>li').hoverIntent({
 	interval:60
 });
 
-$('.section_nav_list>ul>li').hoverIntent({
+$('.megaMenu__left_panel>ul>li').hoverIntent({
 	// mouse enter
 	over:function(){
-		$('.section_nav_list>ul>li.active').removeClass('active');
+		$('.megaMenu__left_panel>ul>li.active').removeClass('active');
 		$(this).addClass('active');
 	}, 
 	// mouse leave
@@ -30,7 +30,7 @@ $('.section_nav_list>ul>li').hoverIntent({
 // ways to make sure navigation is turned off if mouse goes far
 
 //1- if it leaves the big ul.subsections window
-$('.navigation_wrapper').hover(
+$('.megaMenu__wrapper').hover(
 	// on mouse enter
 	function(){
 		//do nothing
@@ -45,7 +45,7 @@ $('.navigation_wrapper').hover(
 $('header').hover(
 	// on mouse enter
 	function(){
-		$('.sections li.active').removeClass('active');
+		$('.megaMenu li.active').removeClass('active');
 	}, 
 	// on mouse leave
 	function(){

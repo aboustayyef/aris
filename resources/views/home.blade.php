@@ -13,7 +13,7 @@ use Aris\News;
 	<!-- Facebook Open Graph Data -->
     <meta property="og:title" content="Al-Rayan International School, Ghana">
     <meta property="og:description" content="As a forward thinking school, our mission focuses on the provision of the highest level of International standards in education adopting the Cambridge International and British National Curricula.">
-    <meta property="og:image" content="http://aris.edu.gh/img/slides/slide1.jpg">
+    <meta property="og:image" content="https://aris.edu.gh/img/slides/slide1.jpg">
 @stop
 
 @section('content')

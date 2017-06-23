@@ -10821,10 +10821,10 @@ $('.flexslider').flexslider();
 $(document).ready(function () {
 
 	// When mouse hovers over section, it becomes active
-	$('.sections>li').hoverIntent({
+	$('.megaMenu>li').hoverIntent({
 		// mouse enter
 		over: function over() {
-			$('.sections li.active').removeClass('active');
+			$('.megaMenu li.active').removeClass('active');
 			$(this).addClass('active');
 		},
 		// do nothing on mouse leave
@@ -10834,10 +10834,10 @@ $(document).ready(function () {
 		interval: 60
 	});
 
-	$('.section_nav_list>ul>li').hoverIntent({
+	$('.megaMenu__left_panel>ul>li').hoverIntent({
 		// mouse enter
 		over: function over() {
-			$('.section_nav_list>ul>li.active').removeClass('active');
+			$('.megaMenu__left_panel>ul>li.active').removeClass('active');
 			$(this).addClass('active');
 		},
 		// mouse leave
@@ -10850,7 +10850,7 @@ $(document).ready(function () {
 	// ways to make sure navigation is turned off if mouse goes far
 
 	//1- if it leaves the big ul.subsections window
-	$('.navigation_wrapper').hover(
+	$('.megaMenu__wrapper').hover(
 	// on mouse enter
 	function () {
 		//do nothing
@@ -10864,7 +10864,7 @@ $(document).ready(function () {
 	$('header').hover(
 	// on mouse enter
 	function () {
-		$('.sections li.active').removeClass('active');
+		$('.megaMenu li.active').removeClass('active');
 	},
 	// on mouse leave
 	function () {

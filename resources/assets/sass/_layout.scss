@@ -73,7 +73,6 @@
 	overflow:visible;
 	@media all and(max-width: $page_inner_width){
 		width: calc(100% - 20px);
-		padding:0 10px;
 	}
 }
 

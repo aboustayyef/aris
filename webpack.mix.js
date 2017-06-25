@@ -11,7 +11,7 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/aris_main.js', 'public/js').version();
-mix.js('resources/assets/js/aris_admin.js', 'public/js').version();
+mix.js('resources/assets/js/aris_main.js', 'public/js').sourceMaps().version();
+mix.js('resources/assets/js/aris_admin.js', 'public/js').sourceMaps().version();
 mix.sass('resources/assets/sass/aris_home.scss', 'public/css').version();
 mix.sass('resources/assets/sass/aris_admin.scss', 'public/css').version();

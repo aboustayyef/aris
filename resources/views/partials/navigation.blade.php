@@ -1,5 +1,8 @@
 <nav>
 	<div class="inner">
+		<div class="mobileMenuButton">
+			Menu
+		</div>
 		<ul class="megaMenu">
 			<?php $sections = (new \Aris\Node)->topLevel(); ?>
 			@foreach($sections as $section)	
@@ -21,7 +24,7 @@
 									@foreach($section->children() as $key => $subsection)
 										@if($subsection->hasChildren())
 											<li class="haschildren">
-												{{$subsection->name}}
+												<a href="{{$subsection->getLink()}}">{{$subsection->name}}</a>
 												<div class="megaMenu__center_panel">
 													<ul>
 														@foreach($subsection->children() as $key => $page)
@@ -49,20 +52,3 @@
 		</ul>		
 	</div>
 </nav>
-
-	<!-- Mobile Navigation 
-	
-	<div id="mobileMenu">
-		<h3><i class="fa fa-bars"></i> Menu</h3>
-		<ul class="sectionsMobile">
-			<?php 
-			if ( ! Cache::has('mobilenav')) {
-				Cache::forever('mobilenav', $navigation->renderMobileNav());
-			}
-
-			echo Cache::get('mobilenav');
-
-			?>
-		</ul>
-	</div> 
-	-->

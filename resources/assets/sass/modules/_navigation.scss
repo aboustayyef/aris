@@ -37,14 +37,6 @@ nav{
 	}
 }
 
-// Apply only to mouse interactions
-// otherwise, we'll have sticky hover effect on mobile
-@media (pointer:fine) {
-	.megaMenu__section:hover{
-		background:lighten($aris_color, 5);
-	}
-}
-
 .megaMenu__section.active{
 	background:$aris_color_dark;
 	i{

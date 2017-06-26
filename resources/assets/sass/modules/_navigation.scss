@@ -27,9 +27,6 @@ nav{
 	display: inline-block;
 	padding:0 10px;
 	line-height: $navbar_height;
-	&:hover{
-		background:lighten($aris_color, 5);
-	}
 	a{
 		color:white;
 	}
@@ -37,6 +34,14 @@ nav{
 		color:$aris_color_light;
 		opacity:0.5;
 		margin-left:5px;
+	}
+}
+
+// Apply only to mouse interactions
+// otherwise, we'll have sticky hover effect on mobile
+@media (pointer:fine) {
+	.megaMenu__section:hover{
+		background:lighten($aris_color, 5);
 	}
 }
 
@@ -167,7 +172,6 @@ li.active > .megaMenu__center_panel{
 @media all and (max-width: $navigation_break_point){
 	nav{
 		padding-top: $navbar_height;
-		margin: 0 -10px;
 	}
 
 	.mobileMenuButton{

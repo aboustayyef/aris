@@ -1,19 +1,27 @@
 $(document).ready(function(){
 
-// When mouse hovers over section, it becomes active
-$('.megaMenu>li').hoverIntent({
-	// mouse enter
-	over:function(){
-		$('.megaMenu li.active').removeClass('active');
-		$(this).addClass('active');
-	}, 
-	// do nothing on mouse leave
-	out:function(){
-		console.log('left');
-	},
-	interval:60
+$('.megaMenu>li').mouseenter(function(){
+	$('.megaMenu li.active').removeClass('active');
+	$(this).addClass('active');
+}).mouseleave(function(){
+
 });
 
+	
+// $('.megaMenu>li').hoverIntent({
+// 	// mouse enter
+// 	over:function(){
+// 		$('.megaMenu li.active').removeClass('active');
+// 		$(this).addClass('active');
+// 	}, 
+// 	// do nothing on mouse leave
+// 	out:function(){
+// 		console.log('left');
+// 	},
+// 	interval:60
+// });
+
+// When mouse hovers over section, it becomes active
 $('.megaMenu__left_panel>ul>li').hoverIntent({
 	// mouse enter
 	over:function(){

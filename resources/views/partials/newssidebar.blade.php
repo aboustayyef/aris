@@ -1,6 +1,9 @@
 <?php 
 	use Aris\News;
 	$latestNews = News::orderBy('public_date','desc')->take(15)->pluck('title','slug');
+	$latestNews = Cache::Remember('latest_news_10', 5 * 60, function(){
+		return News::orderBy('public_date','desc')->take(15)->pluck('title','slug');
+	});
 
 ?>
 <aside id="content-sidebar">

@@ -63,7 +63,9 @@ use Aris\News;
 
 				<?php
 
-					$news = News::orderBy('public_date','desc')->take(3)->get();
+					$news = Cache::Remember('latest_news_3', 5 * 60, function(){
+						return News::orderBy('public_date','desc')->take(3)->get();
+					});
 					foreach ($news as $key => $news_item) {
 						?>
 							<div class="news_item_wrapper">

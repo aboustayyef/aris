@@ -1,4 +1,6 @@
-<?php use Aris\News ; ?>
+<?php 
+	use Aris\News ; 
+?>
 <aside id="content-sidebar">
 	<!-- Navigation of sibling sections -->
 	<div class="box siblings">
@@ -31,7 +33,9 @@
 		<div class="box_body">
 			<ul>
 				<?php
-					$news = News::orderBy('public_date','desc')->take(3)->get();
+					$news = Cache::Remember('latest_news_3', 5 * 60, function(){
+						return News::orderBy('public_date','desc')->take(3)->get();
+					});
 				?>
 				@foreach ($news as $key => $news_item)
 					<li>

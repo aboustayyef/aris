@@ -5,7 +5,7 @@ namespace Aris\Http\Controllers;
 use Illuminate\Http\Request;
 use Aris\News;
 use Illuminate\Support\Facades\Auth;
-
+use \Cache;
 
 class NewsController extends Controller
 {
@@ -16,7 +16,9 @@ public function __construct(){
 
 public function index(Request $request)
 	{
-		$news = News::orderBy('public_date','desc')->paginate(8);
+		$news = Cache::Remember('news_all', 5, function(){
+			return News::orderBy('public_date','desc')->paginate(8);
+		});
 		return view('news.index')->with('news',$news)->with('title', 'ARIS News')->with('request', $request);
 	}
 

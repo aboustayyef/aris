@@ -16,7 +16,7 @@ public function __construct(){
 
 public function index(Request $request)
 	{
-		$news = Cache::Remember('news_all', 5, function(){
+		$news = Cache::Remember('news_all', 5 * 60, function(){
 			return News::orderBy('public_date','desc')->paginate(8);
 		});
 		return view('news.index')->with('news',$news)->with('title', 'ARIS News')->with('request', $request);
@@ -49,6 +49,10 @@ public function index(Request $request)
 
 		$news = new News;
 		if ($news->store($request->all())) {
+			// bust news cache first:
+			Cache::forget('news_all');
+			Cache::forget('latest_news_10');
+			Cache::forget('latest_news_3');
 			return redirect(route('news.index'))->with('message','Successfully created news item');
 		}
 

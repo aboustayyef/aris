@@ -4,28 +4,44 @@ footer{
 	}
 	width:100%;
 	margin:0 auto;
-	padding:10px;
+	padding:1em;
 	background:$aris_color;
 	position: relative;
 	bottom: 0;
 	left: 0;
-    .footerColumn{
-        display: inline-block;
-        width:30%;
+}
+
+.socialMediaLinks{
+	margin-left:0;
+	float:right;
+}
+
+.socialMediaLinks li{
+    color: #7fcfd4;
+    display: inline-block;
+    margin-left: 5px;
+    border: 1px solid $aris_color_light;
+    padding: 8px 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+    &:hover{
+    	color:white;
+    	background-color:$aris_color_light;
     }
 }
 
-.findUsOnFacebook{
-  border: 1px solid $aris_color_light;
-  padding: 8px;
-  font-size: 12px;
-  color: white;
-	&:hover{
-		background:$aris_color_light;
-		color:$aris_color;
-	}
+.bottomPadding{
+	padding-bottom: 1em;
 }
 
-a.nounderline{
-	text-decoration: none;
-}
+// .boxedText{
+//   border: 1px solid $aris_color_light;
+//   padding: 8px;
+//   display: inline-block;
+//   font-size: 12px;
+//   color: white;
+// 	&:hover{
+// 		background:$aris_color_light;
+// 		color:$aris_color;
+// 	}
+// }

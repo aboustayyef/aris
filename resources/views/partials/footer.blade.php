@@ -1,5 +1,5 @@
 <div class="inner" style="overflow:auto">
-	<div style="float:left">
+	<div class="grid1-2 bottomPadding">
 	    <div id="signature">
 	        Al-Rayan International School, {{date('Y')}} &copy;
 	    </div>
@@ -7,12 +7,19 @@
 	        <a href="/admin">Admin</a>
 	    </div>
     </div>
-    <div style="float:right">
-    	<a class="nounderline" href="https://web.facebook.com/ArisGhana/">
-				<div class="findUsOnFacebook">
-					Find Us On Facebook
-				</div>
-    	</a>
+    <div class="grid2-2">
+		<ul class="socialMediaLinks">
+			Find us on:
+			<a href="https://web.facebook.com/ArisGhana/">
+				<li><i class="fa fa-facebook"></i> Facebook</li>
+			</a>
+			<a href="https://twitter.com/ARIS_Ghana">
+				<li><i class="fa fa-twitter"></i> Twitter</li>
+			</a>
+			<a href="https://www.instagram.com/aris_ghana/">
+				<li><i class="fa fa-instagram"></i> Instagram</li>
+			</a>
+		</ul>
     </div>
 	<!-- Jquery, use CDN in production -->
 	{{-- <script src="{{asset('js/jquery/jquery.min.js')}}"></script> --}}

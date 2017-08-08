@@ -15,7 +15,6 @@
 
 }
 
-
 %third{
 	// ( 100% - $gutter*2 ) / 3
 	// Can't add variables to calc functions
@@ -71,4 +70,8 @@
 
 .grid3-3{
 	margin-right:0;
+}
+
+.pull-right{
+	float:right;
 }

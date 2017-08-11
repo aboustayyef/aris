@@ -24,13 +24,14 @@
         <a href="javascript:trash('{{ $item->name }}')">
           <i class="fa fa-trash fa-fw"></i>
         </a>
-       {{--  @if($item->thumb)
+        {{-- @if($item->thumb) 
         <a href="javascript:cropImage('{{ $item->name }}')">
           <i class="fa fa-crop fa-fw"></i>
-        </a> --}}
-        {{-- <a href="javascript:resizeImage('{{ $item->name }}')">
+        </a>
+        <a href="javascript:resizeImage('{{ $item->name }}')">
           <i class="fa fa-arrows fa-fw"></i>
-        </a> --}}
+        </a>
+        --}}
         {{-- @endif --}}
         @endif
       </td>

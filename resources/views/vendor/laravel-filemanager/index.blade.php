@@ -27,7 +27,7 @@
   <div class="container-fluid" id="wrapper">
     <div class="panel panel-primary hidden-xs">
       <div class="panel-heading">
-        <h1 class="panel-title">Manage ARIS Files<h1>
+        <h1 class="panel-title">Manage ARIS Files</h1>
       </div>
     </div>
     <div class="row">

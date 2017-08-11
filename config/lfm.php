@@ -12,7 +12,7 @@ return [
 
     // Middlewares which should be applied to all package routes.
     // For laravel 5.1 and before, remove 'web' from the array.
-    'middlewares' => ['web','auth'],
+    'middlewares' => ['web', 'auth'],
 
     // The url to this package. Change it if necessary.
     'prefix' => 'laravel-filemanager',
@@ -29,10 +29,11 @@ return [
     'allow_share_folder' => false,
 
     // Flexibla way to customize client folders accessibility
+    // If you want to customize client folders, publish tag="lfm_handler"
+    // Then you can rewrite userField function in App\Handler\ConfigHander class
+    // And set 'user_field' to App\Handler\ConfigHander::class
     // Ex: The private folder of user will be named as the user id.
-    'user_field' => function() {
-        return auth()->user()->id;
-    },
+    'user_field' => Unisharp\Laravelfilemanager\Handlers\ConfigHandler::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -47,6 +48,7 @@ return [
     'images_folder_name' => 'img/uploads',
     'files_folder_name'  => 'img/uploads',
 
+    'shared_folder_name' => 'shares',
     'thumb_folder_name'  => '/thumbs',
 
     /*
@@ -59,7 +61,8 @@ return [
     // Supported: "grid", "list"
     'images_startup_view' => 'grid',
     'files_startup_view' => 'list',
-    'title-panel'   => 'Photos and Files',
+    'title-panel'   =>  'Photos and Files', 
+
     /*
     |--------------------------------------------------------------------------
     | Upload / Validation
@@ -73,7 +76,7 @@ return [
     'alphanumeric_filename' => true,
 
     // If true, non-alphanumeric folder name will be rejected.
-    'alphanumeric_directory' => false,
+    'alphanumeric_directory' => true,
 
     // If true, the uploading file's size will be verified for over than max_image_size/max_file_size.
     'should_validate_size' => false,
@@ -154,11 +157,15 @@ return [
     |--------------------------------------------------------------------------
     | php.ini override
     |--------------------------------------------------------------------------
+    |
+    | These values override your php.ini settings before uploading files
+    | Set these to false to ingnore and apply your php.ini settings
+    |
+    | Please note that the 'upload_max_filesize' & 'post_max_size'
+    | directives are not supported.
     */
-    // These values override your php.ini settings before uploading files
-    // Set these to false to ingnore and apply your php.ini settings
     'php_ini_overrides' => [
-        'memory_limit'        => '256M'
-    ]
+        'memory_limit'        => '256M',
+    ],
 
 ];

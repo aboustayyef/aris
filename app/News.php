@@ -66,7 +66,7 @@ Class News extends Eloquent implements \Spatie\Feed\FeedItem {
     public function getFeedItemSummary(){
     	// convert relative img urls to absolute urls
     	$dest = '<img src="' . env('WEB_ROOT') . 'img';
-    	$content = preg_replace("#<img src((\\s+)?=(\\s+)?\"/img)#um", "$dest", $this->content );
+    	$content = preg_replace("#<img src((\\s+)?=(\\s+)?\"//img)#um", "$dest", $this->content );
     	return $content;
     }
 

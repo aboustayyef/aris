@@ -11,7 +11,7 @@ $now = new Carbon\Carbon;
 <h2>Create New Person</h2>
 <hr>
 
-<form method="POST" action="/people/{{$person->id}}" accept-charset="UTF-8">
+<form method="POST" action="/people" accept-charset="UTF-8">
 
 @include('People._form')
 

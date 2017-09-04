@@ -28,7 +28,11 @@ use Aris\News;
 				<p>Recognized as a young and forward-thinking school, ARIS is an outstanding place for students and teachers alike. <a href="{{url('/about-us/why-aris')}}" class="learnmore">Learn More&nbsp;&rarr;</a></p>
 			</div>
 			<div>
-				@include('partials.homePagePhotoRotate')
+				<div class="videoWrapper">
+					<iframe src="https://player.vimeo.com/video/222509969?byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/222509969">IB Global Conference, The Hague 2017</a> from <a href="https://vimeo.com/iboorg">International Baccalaureate</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+				</div>		
+				{{-- @include('partials.homePagePhotoRotate') --}}
 			</div>
 			<div class="aris_credentials">
 			<h3>ARIS is an <a href="http://www.ibo.org/">IB World School</a></h3>

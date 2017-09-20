@@ -4,7 +4,9 @@
       <a href="http://apply.aris.edu.gh">
          <li style="background-color: #0097a1;color: white;padding: 4px 16px; border: 1px white solid;"> <i class="fa fa-file-o"></i>Enroll Now</li>
       </a>
-       <a href="mailto:communication@aris.edu.gh?subject=Request for ARIS Tour">
+       <a href="mailto:communication@aris.edu.gh?subject=Request for ARIS Tour"
+         onclick="ga('send', 'event', 'Outgoing Link', 'Book A Tour')">
+         
          <li style="background-color: #0097a1;color: white;padding: 4px 16px; border: 1px white solid;"><i class="fa fa-list-ul"></i>Book A Tour</li>
       </a>
       <a href="{{Url('contact-us')}}">
@@ -13,9 +15,7 @@
       <a href="{{Url('contact-us')}}">
          <li><i class="fa fa-map-marker"></i>Map</li>
       </a>
-      <a href="{{Url('calendar')}}"
-         onclick="ga('send', 'event', 'Outgoing Link', 'Book A Tour')"
-         >
+      <a href="{{Url('calendar')}}">
          <li><i class="fa fa-calendar"></i>Academic Calendar</li>
       </a>
       <a href="{{Url('news')}}">

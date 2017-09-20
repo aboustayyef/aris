@@ -13,7 +13,9 @@
       <a href="{{Url('contact-us')}}">
          <li><i class="fa fa-map-marker"></i>Map</li>
       </a>
-      <a href="{{Url('calendar')}}">
+      <a href="{{Url('calendar')}}"
+         onclick="ga('send', 'event', 'Outgoing Link', 'Book A Tour')"
+         >
          <li><i class="fa fa-calendar"></i>Academic Calendar</li>
       </a>
       <a href="{{Url('news')}}">

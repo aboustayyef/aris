@@ -4,7 +4,7 @@
 	
 	//settings
 	
-	$slidesAvailable = 16;
+	$slidesAvailable = 17;
 	$slidesToSkip = [1,3,9,12];
 	$slidesToShow = 6;
 	$slideSet = [];

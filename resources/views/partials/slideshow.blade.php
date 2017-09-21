@@ -7,7 +7,6 @@
 	$slides= [
 		'aris_boy_on_his_hands.jpg',
 		'aris_graduating_students.jpg',
-		'aris_library_inside.jpg',
 		'aris_pe_student.jpg',
 		'aris_pe_students_group.jpg',
 		'aris_pyp_students_painting.jpg',
@@ -23,10 +22,14 @@
 		'aris_teacher_demonstrating_to_students.jpg',
 		'aris_teacher_showing_students_art.jpg',
 		'aris_teacher_surrounded_by_eyp_students.jpg',
+		'aris_library_inside.jpg',
+		'aris_library_inside_new.jpg',
 		'dr_fatma_with_teachers_and_students.jpg'
 	];
 	$slidesToSkip = [
 		'aris_pyp_students_with_toys.jpg',
+		'aris_library_inside.jpg',
+		'aris_teacher_showing_students_art.jpg',
 		'aris_pyp_students_painting.jpg',
 		'aris_students_painted_hands_no_ties.jpg',
 		'aris_teacher_surrounded_by_eyp_students.jpg',

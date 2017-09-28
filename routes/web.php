@@ -1,5 +1,6 @@
 <?php
 
+use Aris\Blog;
 use Aris\News;
 use Illuminate\Http\Request;
 
@@ -68,11 +69,13 @@ PAGES
 
 // HOME PAGE
 Route::get('/', function(){
-    // get latest three news stories
+    // get latest news stories
     $news = Cache::Remember('latest_news_3', 5 * 60, function(){
         return News::orderBy('public_date','desc')->take(3)->get();
     });
-    return view('home')->with(compact('news'));
+    // get latest blog posts
+    $blog_posts = Blog::getLatest(4);
+    return view('home')->with(compact('news'))->with(compact('blog_posts'));
 });
 
 // Edit Pages (Nodes)

@@ -1,37 +1,10 @@
 <?php
 
+use Aris\News;
 use Illuminate\Http\Request;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 /**************************************************************
-DEV STUFF - NOT FOR PUBLIC
-**************************************************************/
-
-// Route::get('sectionsReference', function()
-// {
-//     return view('sections');
-// });
-
-// Route::get('styleguide', function(){
-//     return view('styleguide');
-// });
-
-// Route::get('test', function(){
-//     return \Aris\News::all();
-// });
-
-/**************************************************************
-RSS
+RSS Feeds
 **************************************************************/
 Route::feeds();
 
@@ -53,8 +26,8 @@ Route::get('admin', function(){
 })->middleware('auth');
 
 Route::get('logout', function(){
-	Auth::logout();
-	return redirect('/');
+    Auth::logout();
+    return redirect('/');
 });
 
 /**************************************************************
@@ -68,7 +41,6 @@ PEOPLE
 Route::get('people/{id}/edit', ['uses'=>'PeopleController@edit', 'as' => 'people.edit']);
 Route::get('people/{category}/{slug}', ['uses'=>'PeopleController@person', 'as' => 'people.person']);
 Route::resource('people', 'PeopleController');
-
 
 /**************************************************************
 Node Editor
@@ -96,7 +68,11 @@ PAGES
 
 // HOME PAGE
 Route::get('/', function(){
-    return view('home');
+    // get latest three news stories
+    $news = Cache::Remember('latest_news_3', 5 * 60, function(){
+        return News::orderBy('public_date','desc')->take(3)->get();
+    });
+    return view('home')->with(compact('news'));
 });
 
 // Edit Pages (Nodes)
@@ -105,3 +81,24 @@ Route::get('/', function(){
 Route::get('/{section}/{subsection?}/{page?}/{subpage?}', array(
     'uses'      =>  'pageNavigationController@resolve'
 ));
+
+/**************************************************************
+DEV STUFF - NOT FOR PUBLIC
+**************************************************************/
+
+// Route::get('sectionsReference', function()
+// {
+//     return view('sections');
+// });
+
+// Route::get('styleguide', function(){
+//     return view('styleguide');
+// });
+
+// Route::get('test', function(){
+//     return \Aris\News::all();
+// });
+
+/**************************************************************
+RSS
+**************************************************************/

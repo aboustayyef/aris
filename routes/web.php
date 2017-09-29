@@ -2,6 +2,7 @@
 
 use Aris\Blog;
 use Aris\News;
+use Aris\Slideset;
 use Illuminate\Http\Request;
 
 /**************************************************************
@@ -69,13 +70,20 @@ PAGES
 
 // HOME PAGE
 Route::get('/', function(){
+
+    // get list of slides
+    $slides = Slideset::getLatest(6);
+
     // get latest news stories
     $news = Cache::Remember('latest_news_3', 5 * 60, function(){
         return News::orderBy('public_date','desc')->take(3)->get();
     });
+
     // get latest blog posts
     $blog_posts = Blog::getLatest(4);
-    return view('home')->with(compact('news'))->with(compact('blog_posts'));
+
+    return view('home')->with(compact('news'))->with(compact('blog_posts'))->with(compact('slides'));
+    
 });
 
 // Edit Pages (Nodes)

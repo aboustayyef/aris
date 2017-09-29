@@ -14,7 +14,19 @@
 
 @section('content')
 
-@include('partials.slideshow')
+<!-- Slide Show -->
+<div class="flexslider">
+	<div class="gateway">
+		<div class="inner">
+			The Gateway to Knowledge
+		</div>
+	</div>
+   <ul class="slides">
+	   	@foreach ($slides as $key => $slide)
+			<li><img src="{{asset('img/slides/' . $slide . '?v=2')}}" alt=""></li>
+	   	@endforeach
+  </ul>
+</div>
 
 <div class="section">
 	<div class="inner">

@@ -56,7 +56,7 @@
 				<h3>And a member of:</h3>
 					<a href="http://www.theptc.org/"><img src="/img/ptc.jpg" width="80px" alt="PTC Logo"></a>
 					&nbsp;
-					<a href="https://www.aisa.or.ke/"><img src="/img/uploads/news/2017/sports%20day%20eyp/logo_aisa_.jpeg" height="55px" alt=""></a>
+					<a href="https://www.aisa.or.ke/"><img src="/img/aisa_logo.png" width="55px" height="55px" alt=""></a>
 				</div>
 
 			</div> <!-- grid1-2 -->

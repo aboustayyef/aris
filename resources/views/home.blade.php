@@ -52,7 +52,7 @@
 				<a href="http://www.ibo.org/en/programmes/diploma-programme/">
 					<img src="{{asset('img/dp-programme-logo-en.png')}}" width="160px" height="auto" alt="">
 				</a>
-
+				<p>ARIS is Candidate school for the IB-MYP</p>
 				<h3>And a member of:</h3>
 					<a href="http://www.theptc.org/"><img src="/img/ptc.jpg" width="80px" alt="PTC Logo"></a>
 					&nbsp;

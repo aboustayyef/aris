@@ -118,5 +118,15 @@
 		</div>
 	</div> <!-- inner -->
 </div> <!-- section -->
-
+<div class="section">
+	<div class="inner" style="margin-bottom:3.5em">
+		<hr style="margin-bottom:1.5em;border:1px solid #ededed">
+		<div class="grid2-2">
+			<a href="http://www.cambridgeinternational.org/"><img src= {{asset('/img/cambridge.png')}} width="50%" height="50%"></a>
+		</div>
+		<div class="grid1-2">
+				<p>ARIS is a registered Associate of Cambridge Assessment International Education</p>
+		</div>
+	</div>
+</div>
 @stop

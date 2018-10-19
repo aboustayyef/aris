@@ -37,9 +37,18 @@
 					<p>Recognized as a young and forward-thinking school, ARIS is an outstanding place for students and teachers alike. <a href="{{url('/about-us/why-aris')}}" class="learnmore">Learn More&nbsp;&rarr;</a></p>
 				</div>
 				<div>
-					<div class="videoWrapper">
-	                    <iframe src="https://player.vimeo.com/video/221415953" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-					</div>		
+					{{-- <div style="width:30%; display:inline-block;">
+						<div class="videoWrapper">
+		                    <iframe src="https://player.vimeo.com/video/221415953" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div> --}}
+					<div style="width:48%; display:inline-block;">
+						<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/286186538?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p><a href="https://vimeo.com/286186538">Students in Ghana talk about the PYP (Part 1)</a></p>
+					</div>
+					<div style="width:48%; display:inline-block;"><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/286188364?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p><a href="https://vimeo.com/286188364">Students in Ghana talk about the PYP (Part 2)</a> </p>
+					</div>
 					{{-- @include('partials.homePagePhotoRotate') --}}
 				</div>
 				<div class="aris_credentials">

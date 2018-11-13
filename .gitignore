@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
+/public/img/slides/*.*
 /public/img/uploads/**
 /storage/*.key
 /storage/spcache/*.spc

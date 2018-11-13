@@ -10,14 +10,12 @@ class Slideset
     {
         $slides= 
         [
-            'aris_pe_students_group.jpg',
             'aris_soccer_player_in_hallway.jpg',
             'aris_student_on_electronic_board.jpg',
             'aris_student_reading.jpg',
             'aris_student_with_books.jpg',
             'aris_students_looking_intently.jpg',
             'aris_students_painted_hands_with_ties.jpg',
-            'aris_students_peace_collage.jpg',
             'aris_library_inside.jpg',
             'aris_library_inside_new.jpg',
             'dr_fatma_with_teachers_and_students.jpg',
@@ -25,6 +23,8 @@ class Slideset
         ];
         $slidesToSkip = 
         [
+            'aris_pe_students_group.jpg',
+            'aris_students_peace_collage.jpg',
             'aris_teacher_demonstrating_to_students.jpg',
             'aris_boy_on_his_hands.jpg',
             'aris_graduating_students.jpg',

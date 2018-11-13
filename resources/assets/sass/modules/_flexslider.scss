@@ -26,20 +26,23 @@ html[xmlns] .slides {display: block;}
 		top:0;
 	}
 }
-.gateway{
-	font-size:50px;
-	font-size:2.5vw;
+.slogan_background{
+
 	width:100%;
 	background:linear-gradient(to bottom,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 	position:absolute;
 	z-index:2000;
 	height:100px;
-	color:white;
-	font-weight:200;
 	bottom:0px;
 	padding-top:50px;
-	text-transform: uppercase;
+	display:flex;
+}
+.slogan{
 	font-weight: bold;
+	text-transform: uppercase;
+	color:white;
+	font-size:50px;
+	font-size:2.5vw;
 	@media all and (max-width:$header_break_point){
 		font-size:18px;
 		font-size:4vw;

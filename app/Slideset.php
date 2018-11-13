@@ -22,7 +22,6 @@ class Slideset
             'aris_library_inside_new.jpg',
             'dr_fatma_with_teachers_and_students.jpg',
             'aris_girls_traditional_wear.jpg',
-            'aris_graduating_class_2018.jpg'
         ];
         $slidesToSkip = 
         [

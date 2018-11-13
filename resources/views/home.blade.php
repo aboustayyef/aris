@@ -16,9 +16,9 @@
 
 <!-- Slide Show -->
 <div class="flexslider">
-	<div class="gateway">
+	<div class="slogan_background">
 		<div class="inner">
-			Inspire, Empower, Transform	
+			<div class="slogan">Inspire, Empower, Transform</div>	
 		</div>
 	</div>
    <ul class="slides">

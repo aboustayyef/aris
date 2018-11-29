@@ -55,14 +55,16 @@
 					{{-- @include('partials.homePagePhotoRotate') --}}
 				</div>
 				<div class="aris_credentials">
+
 				<h3>ARIS is an <a href="http://www.ibo.org/">IB World School</a></h3>
-
-				<a href ="http://www.ibo.org/programmes/primary-years-programme/">
-					<img src="{{asset('img/ib-pyp-colour-en.png')}}" width="160px" height="auto" alt="PYP">
+				<a href="">
+					<img src="{{asset('/img/ib-world-school-logo-2-colour.png')}}" height="54px" style="margin-right:1em;padding-right:1em;border-right:solid silver 1px"> 
 				</a>
-
+				<a href ="http://www.ibo.org/programmes/primary-years-programme/">
+					<img src="{{asset('img/ib-pyp-colour-en.png')}}" width="160px" style="margin-bottom:5px" height="auto" alt="PYP">
+				</a>
 				<a href="http://www.ibo.org/en/programmes/diploma-programme/">
-					<img src="{{asset('img/dp-programme-logo-en.png')}}" width="160px" height="auto" alt="">
+					<img src="{{asset('img/dp-programme-logo-en.png')}}" width="160px" style="margin-bottom:5px" height="auto" alt="">
 				</a>
 				<p>ARIS is Candidate school for the IB-MYP</p>
 				<h3>And a member of:</h3>

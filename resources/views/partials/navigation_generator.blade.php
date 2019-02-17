@@ -24,7 +24,7 @@
 									@foreach($section->children() as $key => $subsection)
 										@if($subsection->hasChildren())
 											<li class="haschildren">
-												<a href="{{$subsection->getLink()}}">{{$subsection->name}}</a>
+												<a href="/{{$subsection->getLink()}}">{{$subsection->name}}</a>
 												<div class="megaMenu__center_panel">
 													<ul>
 														@foreach($subsection->children() as $key => $page)

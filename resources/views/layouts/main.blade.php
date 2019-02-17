@@ -45,7 +45,13 @@
 				@include('partials.header')
 			</header>
 
-			@include('partials.navigation')
+			{{-- Make sure the navigation menu is cached. If not, cache it --}}
+			@if ( ! Cache::has('navigation_menu'))
+				{{Cache::forever('navigation_menu', view('partials.navigation_generator')->render())}}
+			@endif
+			
+			{{-- Show Cached navigation menu --}}
+			{!!Cache::get('navigation_menu')!!}
 
 			<div id="content">
 

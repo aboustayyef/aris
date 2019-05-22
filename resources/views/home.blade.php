@@ -57,16 +57,12 @@
 				<div class="aris_credentials">
 
 				<h3>ARIS is an <a href="https://www.ibo.org/">IB World School</a></h3>
-				<a href="https://www.ibo.org/school/050487">
-					<img src="{{asset('/img/ib-world-school-logo-2-colour.png')}}" height="54px" style="margin-right:1em;padding-right:1em;border-right:solid silver 1px"> 
-				</a>
-				<a href ="https://www.ibo.org/programmes/primary-years-programme/">
-					<img src="{{asset('img/ib-pyp-colour-en.png')}}" width="160px" style="margin-bottom:5px" height="auto" alt="PYP">
-				</a>
-				<a href="https://www.ibo.org/en/programmes/diploma-programme/">
-					<img src="{{asset('img/dp-programme-logo-en.png')}}" width="160px" style="margin-bottom:5px" height="auto" alt="">
-				</a>
-				<p>ARIS is Candidate school for the IB-MYP</p>
+					<a href="https://www.ibo.org/school/050487">
+						<img src="{{asset('/img/ib-world-school-logo-2-colour.png')}}" height="150px" style="margin-right:1em;padding-right:1em;border-right:solid silver 1px"> 
+					</a>
+					<a href="https://www.ibo.org/school/050487">
+						<img src="{{asset('/img/ib-world-school-continuum.png')}}" height="150px"> 
+					</a>
 				<h3>And a member of:</h3>
 					<a href="http://www.theptc.org/"><img src="/img/ptc.jpg" width="80px" alt="PTC Logo"></a>
 					&nbsp;

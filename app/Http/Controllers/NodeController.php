@@ -4,6 +4,7 @@ namespace Aris\Http\Controllers;
 
 use Aris\Node;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class NodeController extends Controller
 {
@@ -23,10 +24,36 @@ class NodeController extends Controller
     	]);
 
     	$node->name = $request->get('name');
-    	$node->content = $request->get('content');
-    	$node->save();
+		$node->content = $request->get('content');
+		
+		$node->slug = str_slug($request->get('name'));
+		
+		$old_path = $node->path; // will be changed
 
-    	return redirect($request->get('from'))->with('message', 'succesfully edited page');
+		if ($node->parent()) {
+			$node->path = $node->parent()->path . '/' . $node->slug;
+		}else{
+			$node->path = $node->slug;
+		}
+
+		$node->save();
+
+		// Some nodes are redirect nodes and potentially redirect to this one 
+		// Make sure those are updated as well.
+		
+		$potential_redirecting_nodes = Node::where('slug', $old_path)->get();
+
+		foreach ($potential_redirecting_nodes as $key => $n) {
+			$n->path = $node->path;
+			$n->slug = $node->path;
+			$n->name = $node->name;
+			$n->save();	
+		}
+
+		// clear cache for generated menu
+		Cache::forget('navigation_menu');
+
+    	return redirect($node->path)->with('message', 'succesfully edited page');
 
     }
 

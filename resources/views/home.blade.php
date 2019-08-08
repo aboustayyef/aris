@@ -23,7 +23,6 @@
 	</div>
    <ul class="slides">
    		{{-- special pinned slide --}}
-   		<li><img src="{{asset('img/slides/aris_fifteen_years.gif?v=2')}}" alt=""></li>
    		<li><img src="{{asset('img/slides/aris_graduating_class_2018.jpg?v=2')}}" alt=""></li>
 	   	@foreach ($slides as $key => $slide)
 			<li><img src="{{asset('img/slides/' . $slide . '?v=2')}}" alt=""></li>

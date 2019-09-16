@@ -103,26 +103,14 @@
 		</div>
 		<div>
 			<div class="grid1-2">
-				<h2 class="latestNews">Latest Blog Posts</h2>
-				@foreach($blog_posts as $blog_post)
-					<div class="news_item_wrapper">
-							<div class="news_item_photo">
-								<img src="{{$blog_post['thumb']}}" width="45" height="auto" alt="">
-							</div>
-							<a href="{{$blog_post['link']}}">
-								<h3>{{$blog_post['title']}}</h3>
-							</a>
-							<div class="news_excerpt">
-								<p>{{$blog_post['blog title']}}</p>
-							</div>
-					</div>	
-				@endforeach
-			</div>
-			<div class="grid2-2">
 				<h2 class="latestNews">Latest Videos</h2>
 				<div class="videoWrapper">
 					<iframe src="https://www.youtube.com/embed/+lastest?list=UUWiDGaT2tIlkfo5tNzVS-_Q" frameborder="0" allowfullscreen></iframe><br/>
 				</div>
+			</div>	
+			<div class="grid2-2">
+				{{-- Empty --}}
+			</div>
 			</div>
 		</div>
 	</div> <!-- inner -->

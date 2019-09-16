@@ -1,6 +1,6 @@
 <?php
 
-use Aris\Blog;
+// use Aris\Blog;
 use Aris\News;
 use Aris\Slideset;
 use Illuminate\Http\Request;
@@ -79,10 +79,10 @@ Route::get('/', function(){
         return News::orderBy('public_date','desc')->take(3)->get();
     });
 
-    // get latest blog posts
-    $blog_posts = Blog::getLatest(4);
+    // get latest blog posts (disabled)
+    // $blog_posts = Blog::getLatest(4);
 
-    return view('home')->with(compact('news'))->with(compact('blog_posts'))->with(compact('slides'));
+    return view('home')->with(compact('news'))->with(compact('slides'));
     
 });
 

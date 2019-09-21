@@ -16,11 +16,6 @@
 
 <!-- Slide Show -->
 <div class="flexslider">
-	<div class="slogan_background">
-		<div class="inner">
-			<div class="slogan">Inspire, Empower, Transform</div>	
-		</div>
-	</div>
    <ul class="slides">
    		{{-- special pinned slide --}}
    		<li><img src="{{asset('img/slides/aris_graduating_class_2019.jpg')}}" alt=""></li>

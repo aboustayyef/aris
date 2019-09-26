@@ -14,7 +14,7 @@
 								<h2>{{$section->name}}</h2>
 							</div>
 							<div class="megaMenu__featuredImage">
-								<img src="/img/featured/sections/{{$section->getLink()}}.jpg">
+								<img src="/img/featured/sections/{{$section->getLink()}}.jpg?v=sep_19">
 							</div>
 							<div class="megaMenu__description">
 								<div class="desc">{!!$section->excerpt!!}</div>

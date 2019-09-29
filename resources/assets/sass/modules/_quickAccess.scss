@@ -37,5 +37,11 @@
             width:100%;
             margin-left:0;
         }
+        &.highlighted{
+            background-color: #0097a1;
+            color: white;
+            padding: 4px 16px; 
+            border: 1px white solid;
+        }
     }
 }

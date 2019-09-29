@@ -14,6 +14,8 @@ $aris_color_light: light($aris_color);
 $aris_color_very_light: verylight($aris_color);
 $aris_color_dark: darken($aris_color, 8);
 
+$aris_navy: #28286a;
+
 $aris_color2: #D3A547;
 $aris_color2_light: #F5CA73;
 $aris_color2_very_light: #FFE1A3;
@@ -35,7 +37,7 @@ $aris_compl_dark:#F7D184;
 // layout Dimensions
 $top_margin:30px;
 $page_width:1280px;
-$page_inner_width:1024px;
+$page_inner_width:1124px;
 $gutter: 30px;
 
 // Break Points

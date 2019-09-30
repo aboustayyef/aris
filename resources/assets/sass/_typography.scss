@@ -45,7 +45,7 @@ h2{
 	line-height:45px;
 	margin:15px 0;
 	&.latestNews{
-		margin-top: 30px;
+		margin-top: 1em;
 	}
 }
 
@@ -69,12 +69,12 @@ h1 small, h2 small, h3 small, h4 small {
 	font-size: 0.85em;
 	color:$aris_color;
 	font-weight: normal;
-}
+} 
 p, dl{
-	font-size:16px;
-	line-height:30px;
+	font-size: 1.5rem;
+	line-height: 1.9rem;
 	margin-bottom:15px;
-	color: lighten(black,40);
+	color: lighten(black,50);
 }
 
 blockquote{

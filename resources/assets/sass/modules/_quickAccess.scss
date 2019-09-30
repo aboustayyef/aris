@@ -1,37 +1,38 @@
 .quickAccess, #content-sidebar .quickAccess{
     background:white;
-    h2{
-        color:#555;
-        background: $aris_compl;
-        width:220px;
-        margin-bottom:0;
-        padding-left: 8px;
-        font-size: 1.1em;
-        line-height: 1.5;
-        @media all and (max-width: 300px){
-            width:100%;
-        }
-    }
+
     ul{
         margin-left:0;
-        background: $aris_compl_dark;
-        padding-bottom:4px;
     }
     li{
+        width:calc(33.333% - 6px);
         margin:0;
-        margin-top: 3px;
+        margin-top: 5px;
         margin-left: 3px;
         display:inline-block;
         line-height: 20px;
-        background: $aris_compl_light;
-        padding:5px 8px;
-        font-size:14px;
+        border-radius: 5px;
+        font-size:12px;
+        background:$aris_light_grey;
         .fa{
-            margin-right:6px;
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #28286a;
+            margin-right: 3px;
+            color: white;
+            padding: 5px;
+            border-radius: 50%;
+            border: 2px solid;
         }
         color:#666;
         &:hover{
-            background:white;
+            color:white;
+            background:$aris_color;
+            a{
+                color:white;
+            }
         }
         @media all and (max-width: 300px){
             width:100%;
@@ -42,6 +43,11 @@
             color: white;
             padding: 4px 16px; 
             border: 1px white solid;
+        }
+        a{
+            display: block;
+            padding:5px 8px;
+            text-decoration: none;
         }
     }
 }

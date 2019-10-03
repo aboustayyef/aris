@@ -46,7 +46,7 @@ class buildPaths extends Command
             $node->save();
             $this->info($path);   
             Cache::flush();
-            $this->info('Cache Cleared');
         }
+        $this->info('Cache Cleared');
     }
 }

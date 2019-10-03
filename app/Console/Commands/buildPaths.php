@@ -4,6 +4,7 @@ namespace Aris\Console\Commands;
 
 use Illuminate\Console\Command;
 use Aris\Node;
+use \Cache;
 
 class buildPaths extends Command
 {

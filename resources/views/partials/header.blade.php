@@ -1,5 +1,5 @@
 <div class="section">
-	@include('partials.ariseagle')
+	{{-- @include('partials.ariseagle') --}}
 	<div class="inner">
 		<a href="/"><div id="logo">ARIS International School</div></a>
 		<div id="quickInfo">

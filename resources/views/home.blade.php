@@ -47,6 +47,7 @@
 				@include('partials.arisCredentials')
 				{{-- @include('partials.arisRecruiting') --}}
 				@include('partials.videoTestimonials')
+				@include('partials.ucas')
 
 
 			</div> <!-- grid2-2 -->

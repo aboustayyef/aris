@@ -45,6 +45,9 @@
 				@include('partials.header')
 			</header>
 
+			{{-- Virtual Learning Banner--}}
+			@include('partials.virtual_learning_banner')
+
 			{{-- Make sure the navigation menu is cached. If not, cache it --}}
 			@if ( ! Cache::has('navigation_menu'))
 				{{Cache::forever('navigation_menu', view('partials.navigation_generator')->render())}}

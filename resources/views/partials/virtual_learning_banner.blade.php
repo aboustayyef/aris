@@ -37,7 +37,7 @@
     right: auto;
     left: 8px;
     bottom: auto;
-    top: 11px;
+    top: 0px;
     padding: 4px;
     color: #28286a;
     font-size:26px;
@@ -45,7 +45,7 @@
 </style>
 
 <div id ="virtual_learning_banner" class="section">
-    <div id="close_button">&times;</div>
+    <div id="close_button" aria-label="Close">&times;</div>
     <div class="inner">
         <div>
             <div class="grid1-2">

@@ -42,7 +42,7 @@ use Symfony\Component\DomCrawler\Crawler ;
             if(isset($matches[2]) && $matches[2] != '')
             {
                 $YoutubeCode = $matches[2];
-                $candidate = 'http://img.youtube.com/vi/'.$YoutubeCode.'/0.jpg';
+                $candidate = 'https://img.youtube.com/vi/'.$YoutubeCode.'/0.jpg';
                 // check if image still exists
                 if (@getimagesize($candidate))
                 {

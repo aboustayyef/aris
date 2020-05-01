@@ -7,7 +7,7 @@
 	        <a href="/admin">Admin</a>
 	    </div>
     </div>
-    <div class="grid2-2">
+    {{-- <div class="grid2-2">
 		<ul class="socialMediaLinks">
 			Find us on:
 			<a href="https://web.facebook.com/ArisGhana/">
@@ -20,7 +20,7 @@
 				<li><i class="fa fa-instagram"></i> Instagram</li>
 			</a>
 		</ul>
-    </div>
+    </div> --}}
 	<!-- Jquery, use CDN in production -->
 	{{-- <script src="{{asset('js/jquery/jquery.min.js')}}"></script> --}}
 

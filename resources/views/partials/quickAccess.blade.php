@@ -51,6 +51,24 @@
             Join The Team!
          </a>
       </li>
+      <li>
+         <a href="{{Url('https://twitter.com/ARIS_Ghana')}}">
+            <i class="fa fa-twitter"></i>
+            Twitter 
+         </a>
+      </li>
+      <li>
+         <a href="{{Url('https://web.facebook.com/ArisGhana/')}}">
+            <i class="fa fa-facebook"></i>
+            Facebook
+         </a>
+      </li>
+      <li>
+         <a href="{{Url('https://www.instagram.com/aris_ghana/')}}">
+            <i class="fa fa-instagram"></i>
+            Instagram
+         </a>
+      </li>
 
    </ul>
 </div>

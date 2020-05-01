@@ -51,7 +51,8 @@
             <div class="grid1-2">
                 <div class="notice">Notice:</div>
                 <h2>Our Campus is Closed. <br>Our Learning Continues.</h2>
-                <p>We are virtually learning at this time while our campus is under a government closure decree. Our learning continues, check the ARIS Virtual Learning Programme page (under construction) to know more about how students will remotely continue to study during this time.</p>
+                {{-- <p>We are virtually learning at this time while our campus is under a government closure decree. Our learning continues, check the ARIS Virtual Learning Programme page (under construction) to know more about how students will remotely continue to study during this time.</p> --}}
+                <p style="font-size:21px">Visit the <a href="/news/2020-march-aris-moves-to-virtual-learning-due-to-the-covid-19-arrival-in-ghana">ARIS Virtual Learning Information </a>page to get updates on Covid-19, read stories, show appreciation, improve your wellbeing, and more!</p>
             </div>
             <div class="grid2-2">
                 <p>For more information on our current school operation level and communication you can contact us, use the following channels:</p>

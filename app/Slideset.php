@@ -19,10 +19,10 @@ class Slideset
             'aris_library_inside.jpg',
             'aris_library_inside_new.jpg',
             'dr_fatma_with_teachers_and_students.jpg',
-            'aris_girls_traditional_wear.jpg',
         ];
         $slidesToSkip = 
         [
+            'aris_girls_traditional_wear.jpg',
             'aris_pe_students_group.jpg',
             'aris_students_peace_collage.jpg',
             'aris_teacher_demonstrating_to_students.jpg',

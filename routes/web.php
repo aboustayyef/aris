@@ -93,6 +93,9 @@ Route::get('/activities/aris-mun-2020', function(){
 Route::get('/activities/aris-mun-2020/about', function(){
     return view('arismun.about')->with('title','About ARISMUN');
 });
+Route::get('/activities/aris-mun-2020/secretariat', function(){
+    return view('arismun.secretariat')->with('title','ARISMUN 2020 Secretariat');
+});
 
 // Read Pages (Nodes)
 Route::get('/{section}/{subsection?}/{page?}/{subpage?}', array(

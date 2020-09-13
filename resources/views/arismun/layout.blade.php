@@ -19,7 +19,6 @@
             <div class="navbar-brand">
                 <a class="navbar-item" href="/activities/aris-mun-2020">
                     <img src="/img/arismun/ARISMUN_header.svg" alt="">
-                    
                 </a>
 
                 <a role="button" id="burger" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -45,7 +44,9 @@
                     >
                         About
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item @if($title== 'ARISMUN 2020 Secretariat')is-active is-tab @endif"
+                        href ="/activities/aris-mun-2020/secretariat"
+                    >
                         Secretariat
                     </a>
                     <div class="navbar-item">

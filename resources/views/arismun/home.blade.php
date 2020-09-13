@@ -55,8 +55,8 @@
             <div class="column">
                 <p>In the spirit of both open and international mindedness, we extend nothing but warm greetings
                     from Al-Rayan International School in Ghana. Our names are Riwa Mattouk and Yasmin Alfa and
-                    we’ve had the privilege of hosting this year’s conference virtually. Our theme, “The Future We
-                    Want” resonates very well with us because we have witnessed the severe effects of COVID-19
+                    we’ve had the privilege of hosting this year’s conference virtually.</p><p class="mt-4"> <span class="has-text-warning has-text-weight-bold">Our theme, “The Future We
+                    Want”</span> resonates very well with us because we have witnessed the severe effects of COVID-19
                     around the globe and experienced its impact on our lives in varying degrees. If we are to become
                     today's leaders and tomorrow’s decision makers, then we must fight for the future we want, the
                     future we hope for and the future we dream of. </p>
@@ -79,7 +79,7 @@
 <div class="container">
     <div class="columns">
         <div class="column is-offset-1 is-5">
-        <h2 class="title is-size-4 has-text-weight-bold has-text-white">Read more messages and introductions from Under-Secretaries and Directors in the <a href="" class="has-text-warning has-text-weight-bold">Secretariat Page &rarr;</a></h2>
+        <h2 class="title is-size-4 has-text-weight-bold has-text-white">Read more messages and introductions from Under-Secretaries and Directors in the <a href="/activities/aris-mun-2020/secretariat" class="has-text-warning has-text-weight-bold">Secretariat Page &rarr;</a></h2>
         </div>
         <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="/img/arismun/nadia.jpg" class="is-rounded" alt=""></figure></div>
         <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="/img/arismun/ouahil.jpg" class="is-rounded" alt=""></figure></div>

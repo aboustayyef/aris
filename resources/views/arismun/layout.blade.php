@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="{{mix('/css/arismun.css')}}">
 </head>
 <body>
-    <section class="section is-paddingless py-1 has-background-primary">
+    <section class="section is-paddingless has-background-primary">
         <div class="container">
-            <a class="has-text-white" href="/">&larr;ARIS</a>
+            <a class="has-text-white has-text-weight-bold" style="font-size:12px;opacity:0.6" href="/">&larr;BACK TO ARIS</a>
         </div>
     </section>
     <!-- Navbar -->
@@ -17,7 +17,7 @@
         <div class="container">
 
             <div class="navbar-brand">
-                <a class="navbar-item" href="/">
+                <a class="navbar-item" href="/activities/aris-mun-2020">
                     <img src="/img/arismun/ARISMUN_header.svg" alt="">
                     
                 </a>
@@ -33,10 +33,16 @@
             <div class="navbar-menu">
                 
                 <div class="navbar-end">
-                    <a class="navbar-item @if($title == 'ARISMUN 2020 Home')is-active is-tab @endif">
+                    <a 
+                        class="navbar-item @if($title == 'ARISMUN 2020 Home')is-active is-tab @endif"
+                        href ="/activities/aris-mun-2020"
+                    >
                        Welcome 
                     </a>
-                    <a class="navbar-item">
+                    <a 
+                        class="navbar-item @if($title == 'About ARISMUN')is-active is-tab @endif"
+                        href ="/activities/aris-mun-2020/about"
+                    >
                         About
                     </a>
                     <a class="navbar-item">

@@ -90,6 +90,9 @@ Route::get('/', function(){
 Route::get('/activities/aris-mun-2020', function(){
     return view('arismun.home')->with('title','ARISMUN 2020 Home');
 });
+Route::get('/activities/aris-mun-2020/about', function(){
+    return view('arismun.about')->with('title','About ARISMUN');
+});
 
 // Read Pages (Nodes)
 Route::get('/{section}/{subsection?}/{page?}/{subpage?}', array(

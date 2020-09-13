@@ -22,7 +22,7 @@
                     
                 </a>
 
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                <a role="button" id="burger" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
                     data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -30,7 +30,7 @@
                 </a>
             </div>
 
-            <div class="navbar-menu">
+            <div class="navbar-menu" id="navbar-menu">
                 
                 <div class="navbar-end">
                     <a 
@@ -69,6 +69,20 @@
 <footer class="has-text-centered section has-background-light is-paddingless py-4">
 ARIS 2020®
 </footer>
+
+<script>
+
+let burger = document.getElementById('burger');
+let menu = document.getElementById('navbar-menu');
+
+burger.addEventListener('click', function(e){
+    console.log('burger clicked' );
+    burger.classList.toggle('is-active')
+    menu.classList.toggle('is-active')
+});
+
+
+</script>
 
 </body>
 

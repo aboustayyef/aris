@@ -81,11 +81,11 @@
         <div class="column is-offset-1 is-5">
         <h2 class="title is-size-4 has-text-weight-bold has-text-white">Read more messages and introductions from Under-Secretaries and Directors in the <a href="" class="has-text-warning has-text-weight-bold">Secretariat Page &rarr;</a></h2>
         </div>
-        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
-        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
-        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
-        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
-        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="/img/arismun/nadia.jpg" class="is-rounded" alt=""></figure></div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="/img/arismun/ouahil.jpg" class="is-rounded" alt=""></figure></div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="/img/arismun/fedaus.jpg" class="is-rounded" alt=""></figure></div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="/img/arismun/anik.jpg" class="is-rounded" alt=""></figure></div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="/img/arismun/sara.jpg" class="is-rounded" alt=""></figure></div>
     </div>
 </div>
 </section>

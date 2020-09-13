@@ -5,10 +5,7 @@
     <div class="hero-body">
         <div class="container">
             <div class="columns">
-                <div class="column is-4">
-                    <div>
-
-                    </div>
+                <div class="column is-4 is-three-quarters-mobile is-offset-2-mobile">
                     <img src="/img/arismun/aris_mun_logo.svg" alt="">
                 </div>
                 <div class="column is-offset-1 is-7">
@@ -21,32 +18,22 @@
                         educational levels. Many of today’s leaders in law, government, business and the arts –
                         including at the UN itself – participated in Model UN as student.
                     </h2>
-                    <div class="field is-grouped">
+                    <div class="buttons control">
                         
-                        <p class="control">
-                            <button class="button is-primary">
-                                    <figure class="image is-24x24 mr-3">
-                                        <img src="/img/arismun/book.svg">
-                                        </figure>
-                                Learn More
-                            </button>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3OdswirR6eOVhBax3P4KVIT6bSSlBa9czBw-IE20Iu8W92Q/viewform">
-                                <button class="button is-warning">
-                                    <figure class="image is-24x24 mr-3">
-                                        <img src="/img/arismun/pen.svg">
-                                    </figure>
-                                    Apply For Chair
+                            <a href="/activities/aris-mun-2020/about" class="button is-primary">
+                                    <img src="/img/arismun/book.svg" class="mr-2">
+                                    Learn More &nbsp;
+                            </a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3OdswirR6eOVhBax3P4KVIT6bSSlBa9czBw-IE20Iu8W92Q/viewform" class="button is-warning">
+                                        <img src="/img/arismun/pen.svg" class="mr-2">
+                                    Apply For Chair &nbsp;
                                 </button>
                             </a>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSffKN4wxejdgNrs3l3DN4SRaoOP37Nx7MaY8WP5sZ3DsMfsAw/viewform">
-                                <button class="button is-warning">
-                                    <figure class="image is-24x24 mr-3">
-                                        <img src="/img/arismun/clipboard.svg">
-                                    </figure>
-                                    Register As Delegate
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSffKN4wxejdgNrs3l3DN4SRaoOP37Nx7MaY8WP5sZ3DsMfsAw/viewform" class="button is-warning">
+                                    <img src="/img/arismun/clipboard.svg" class="mr-2">
+                                    Register As Delegate &nbsp;
                                 </button>
                             </a>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -60,6 +47,7 @@
             <h1 class="has-text-centered has-text-white is-size-2 has-text-weight-bold	">
                 A Welcome Message from your Secretaries-General
             </h1>
+            <hr>
     </div>
     <div class="container mt-6">
         <div class="columns has-text-white">
@@ -86,4 +74,20 @@
         </div>
     </div>
 </section>
+
+<section class="section has-background-primary is-medium py-5" style="background-color:#0592A4 !important">
+<div class="container">
+    <div class="columns">
+        <div class="column is-offset-1 is-5">
+        <h2 class="title is-size-4 has-text-weight-bold has-text-white">Read more messages and introductions from Under-Secretaries and Directors in the <a href="" class="has-text-warning has-text-weight-bold">Secretariat Page &rarr;</a></h2>
+        </div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
+        <div class="column is-1 is-half-mobile is-offset-3-mobile"><figure class="image"><img src="https://bulma.io/images/placeholders/128x128.png" class="is-rounded" alt=""></figure></div>
+    </div>
+</div>
+</section>
+
 @endsection()

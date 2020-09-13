@@ -66,6 +66,10 @@
 
     @yield('content')
 
+<footer class="has-text-centered section has-background-light is-paddingless py-4">
+ARIS 2020®
+</footer>
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <div class="hero-body">
         <div class="container">
             <div class="columns">
-                <div class="column is-4 is-three-quarters-mobile is-offset-2-mobile">
+                <div class="column is-4 is-three-quarters-mobile is-offset-1-mobile">
                     <img src="/img/arismun/aris_mun_logo.svg" alt="">
                 </div>
                 <div class="column is-offset-1 is-7">

@@ -15,3 +15,4 @@ mix.js('resources/assets/js/aris_main.js', 'public/js').sourceMaps().version();
 mix.js('resources/assets/js/aris_admin.js', 'public/js').sourceMaps().version();
 mix.sass('resources/assets/sass/aris_home.scss', 'public/css').sourceMaps();
 mix.sass('resources/assets/sass/aris_admin.scss', 'public/css').sourceMaps().version();
+mix.sass('resources/assets/sass/arismun.scss', 'public/css').sourceMaps().version();

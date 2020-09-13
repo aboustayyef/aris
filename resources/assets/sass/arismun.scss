@@ -1,0 +1,9 @@
+// Set Variables
+// $family-sans-serif: 'Poppins', sans-serif;
+$turquoise: #06ACC1;
+$primary: $turquoise;
+$navbar-tab-active-color: $turquoise;
+$navbar-tab-active-border-bottom-color: $turquoise;
+
+// Bulma
+@import "../../../node_modules/bulma/bulma.sass";

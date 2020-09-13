@@ -88,7 +88,7 @@ Route::get('/', function(){
 
 // ARIS MUN
 Route::get('/activities/aris-mun-2020', function(){
-    return view('arismun.home');
+    return view('arismun.home')->with('title','ARISMUN 2020 Home');
 });
 
 // Read Pages (Nodes)

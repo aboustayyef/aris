@@ -79,7 +79,7 @@
               </div>
               <div class="media-content">
                 <p class="title is-4">Fidaus Alfa</p>
-                <p class="subtitle is-6">Under Secretary General of Delegate Affairs</p>
+                <p class="subtitle is-6">Head of Delegate Affairs</p>
               </div>
             </div>
 
@@ -164,7 +164,7 @@
               </div>
               <div class="media-content">
                 <p class="title is-4">Ouail Kahoul</p>
-                <p class="subtitle is-6">Under Secretary General of IT</p>
+                <p class="subtitle is-6">Head of IT</p>
               </div>
             </div>
 
@@ -196,7 +196,7 @@
               </div>
               <div class="media-content">
                 <p class="title is-4">Anik Mukherjee</p>
-                <p class="subtitle is-6">Under Secretary General of Chairs</p>
+                <p class="subtitle is-6">Head of Chairs</p>
               </div>
             </div>
 

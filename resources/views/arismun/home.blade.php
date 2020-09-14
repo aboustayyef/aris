@@ -21,16 +21,13 @@
                     <div class="buttons control">
                         
                             <a href="/activities/aris-mun-2020/about" class="button is-primary">
-                                    <img src="/img/arismun/book.svg" class="mr-2">
                                     Learn More &nbsp;
                             </a>
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3OdswirR6eOVhBax3P4KVIT6bSSlBa9czBw-IE20Iu8W92Q/viewform" class="button is-warning">
-                                        <img src="/img/arismun/pen.svg" class="mr-2">
                                     Apply For Chair &nbsp;
                                 </button>
                             </a>
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSffKN4wxejdgNrs3l3DN4SRaoOP37Nx7MaY8WP5sZ3DsMfsAw/viewform" class="button is-warning">
-                                    <img src="/img/arismun/clipboard.svg" class="mr-2">
                                     Register As Delegate &nbsp;
                                 </button>
                             </a>

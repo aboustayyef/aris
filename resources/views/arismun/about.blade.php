@@ -20,19 +20,11 @@
                    </style> 
 <p>For our very first conference, the ARISMUN secretariat has carefully curated topics for each committee with topics that are relevant to current situations and aim to stimulate intense debates and discussions that eventually lead to the drafting of feasible solutions. Committees for our conference will include the Economic and Social Council (ECOSOC), Human Rights Council (UNHRC), Security Council (UNSC), UN Women, Disarmament and International Security (DISEC), General Assembly (GA), a very special Crisis Committee, and the International Court of Justice (ICJ).</p>
 
-<p class="has-text-weight-bold has-text-primary">We hope to live up to your expectations and that you leave this conference becoming a better leader whose principles and ideals will greatly contribute to the vision of The Future We Want, the theme for our conference this year.</p>
-
+<div class="is-size-1 has-text-primary has-text-centered my-4">&middot;&middot;&middot;</div>
+<p class="has-text-weight-bold">We hope to live up to your expectations and that you leave this conference becoming a better leader whose principles and ideals will greatly contribute to the vision of The Future We Want, the theme for our conference this year.</p>
+<div class="is-size-1 has-text-primary has-text-centered my-4">&middot;&middot;&middot;</div>
 <p>Finally, delegates, remember to continue to inspire your communities by recognizing your common humanity, empower them through the skills you will have equipped yourself with through this conference and transform the world to be a more peaceful one, for every single one of us. We wish you a great debate.As ARIS sets forth on its mission towards ‘inspiring, empowering, and transforming,’ ARISMUN 2020 plays its part in achieving just that. In the 5 years that Al-Rayan International School has offered MUN as an extracurricular activity, it has become a platform for students to explore topics that are current and pertinent to our modern global issues. Student delegates learn about diplomacy, international relations, research techniques, public speaking, debating, compromise, and writing skills in addition to improving their critical thinking, teamwork and leadership abilities. Along with this, ARISMUN intends to foster a respectful space where students can interact with one another in a very professional and diplomatic manner.</p>
 
-<div class="is-size-1 has-text-primary has-text-centered my-4">&middot;&middot;&middot;</div>
-<p>For our very first conference, the ARISMUN secretariat has carefully curated topics for each committee with topics that are relevant to current situations and aim to stimulate intense debates and discussions that eventually lead to the drafting of feasible solutions. Committees for our conference will include the Economic and Social Council (ECOSOC), Human Rights Council (UNHRC), Security Council (UNSC), UN Women, Disarmament and International Security (DISEC), General Assembly (GA), a very special Crisis Committee, and the International Court of Justice (ICJ).</p>
-<div class="is-size-1 has-text-primary has-text-centered my-4">&middot;&middot;&middot;</div>
-<p>
-    We hope to live up to your expectations and that you leave this conference becoming a better leader whose principles and ideals will greatly contribute to the vision of The Future We Want, the theme for our conference this year.
-</p>
-
-<p>Finally, delegates, remember to continue to inspire your communities by recognizing your common humanity, empower them through the skills you will have equipped yourself with through this conference and transform the world to be a more peaceful one, for every single one of us. We wish you a great debate.
-                    </p>
                    </div> 
                 </div>
             </div>

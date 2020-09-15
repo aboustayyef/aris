@@ -13,7 +13,7 @@
                 <p> <span class="is-uppercase has-text-weight-bold has-text-primary">As ARIS sets forth on its mission towards ‘inspiring, empowering, and transforming,’ ARISMUN 2020 plays its part in achieving just that.</span></p><p> In the 5 years that Al-Rayan International School has offered MUN as an extracurricular activity, it has become a platform for students to explore topics that are current and pertinent to our modern global issues. Student delegates learn about diplomacy, international relations, research techniques, public speaking, debating, compromise, and writing skills in addition to improving their critical thinking, teamwork and leadership abilities. Along with this, ARISMUN intends to foster a respectful space where students can interact with one another in a very professional and diplomatic manner.</p>
 
                     <figure class="image is-3x2 mb-6">
-                        <img src="https://www.aris.edu.gh/img/uploads/news/2019/mun/PHOTO-2019-11-02-16-59-46.jpg" alt="">
+                        <img src="/img/arismun/students.jpg" alt="">
                     </figure> 
                    <style>
                     p{font-size:1.3rem; opacity:0.9;line-height: 1.8; margin-bottom:1em;}

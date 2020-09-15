@@ -107,6 +107,27 @@
             </div>
           </div>
         </div>
+
+
+        {{-- Advisors --}}
+
+        <div class="card mt-4">
+          <div class="card-header">
+            <h2 class="px-4 py-4 title is-3">
+              Advisors
+            </h2>
+          </div>
+          <div class="card-content">
+            <div class="columns is-mobile">
+              <div class="column is-6-mobile"><img src="/img/arismun/dorinda.jpg" alt=""> </div>
+              <div class="column is-6-mobile"><img src="/img/arismun/ishmael.jpg" alt=""> </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
         
       </div>
       <div class="column is-6">

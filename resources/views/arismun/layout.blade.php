@@ -49,6 +49,7 @@
                     >
                         Secretariat
                     </a>
+                    <a href="#google_form" class="navbar-item">Pay Now</a>
                     <div class="navbar-item">
                         <div class="buttons">
                             <a class="button is-light" href="https://docs.google.com/forms/d/e/1FAIpQLSe3OdswirR6eOVhBax3P4KVIT6bSSlBa9czBw-IE20Iu8W92Q/viewform">

@@ -21,6 +21,7 @@
                                 <p class="pr-4">Tens of thousands of Malians have taken to the streets in recent months, in protests fueled by pervasive corruption, extreme poverty, and protracted conflict. The unrest risks further destabilizing a region already battling an alarming rise in violent extremism. President Keïta resigned and dissolved parliament following military take over and the crisis committee must find a way to reach peaceful agreement and restore stability within the regions involved. </p>
                             </li>
                         </ol>
+                        <a href="/img/arismun/chair_reports/crisis_committee_chair_report.pdf" class="button">Read Chair Report</a>
                     </div>
         
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
@@ -31,6 +32,8 @@
                             <li>Elimination of gender based violence against women and enforcing ameliorated reproductive rights for women. </li>
                             <li>Encouraging the Surge and Broadening the Scope of Women’s Leadership and Political Participation Globally by 10% by 2040. </li>
                         </ol>
+                        <a href="/img/arismun/chair_reports/UNWOMEN_chair_report.pdf" class="button">Read Chair Report</a>
+
                     </div>
 
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
@@ -62,6 +65,7 @@
                             <li>Addressing the Violation of the Rights of Uyghur Muslims Placed in Mass Detention in China</li>
                             <li>Combatting Racial Discrimination and Related Forms of Intolerance</li>
                         </ol>
+                        <a href="/img/arismun/chair_reports/UNHRC_chair_report.pdf" class="button">Read Chair Report</a>
                     </div>
 
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
@@ -72,6 +76,8 @@
                             <li>Advisory Opinion on the Legal Consequences of the Construction of a Wall in Palestinian Territory</li>
                             <li>Croatia v Serbia (Genocide Case)</li>
                         </ol>
+                        <a href="/img/arismun/chair_reports/ICJ_chair_report.pdf" class="button">Read Chair Report</a>
+
                     </div>
 
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
@@ -102,6 +108,8 @@
                             <li>The Socio-Economic Effects of COVID-19</li>
                             <li>Establishing Universal Acceptance of Medical Marijuana (CBD).</li>
                         </ol>
+                        <a href="/img/arismun/chair_reports/ECOSOC_chair_report.pdf" class="button">Read Chair Report</a>
+
                     </div>
 
                 </div>

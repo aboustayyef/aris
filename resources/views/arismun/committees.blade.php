@@ -89,16 +89,6 @@
                             <li>The Rights of People to Self-Determination</li>
                         </ol>
                     </div>
-
-                    <h2 class="is-size-4 has-text-weight-bold has-text-primary">
-                        General Assembly (GA):
-                    </h2>
-                    <div class="mt-4 content">
-                        <ol>
-                            <li>International Laws and Regulations for Vaccinations</li>
-                            <li>The Rights of People to Self-Determination</li>
-                        </ol>
-                    </div>
                     
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
                         Economic and Social Council (ECOSOC):

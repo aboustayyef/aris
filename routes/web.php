@@ -96,6 +96,9 @@ Route::get('/activities/aris-mun-2020/about', function(){
 Route::get('/activities/aris-mun-2020/secretariat', function(){
     return view('arismun.secretariat')->with('title','ARISMUN 2020 Secretariat');
 });
+Route::get('/activities/aris-mun-2020/committees-and-chair-reports', function(){
+    return view('arismun.committees')->with('title','ARISMUN 2020. Committees and Chair Reports');
+});
 
 // Read Pages (Nodes)
 Route::get('/{section}/{subsection?}/{page?}/{subpage?}', array(

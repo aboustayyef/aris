@@ -49,6 +49,10 @@
                     >
                         Secretariat
                     </a>
+                    <a class="navbar-item @if($title=='ARISMUN 2020. Committees and Chair Reports')is-active is-tab @endif" 
+                        href ="/activities/aris-mun-2020/committees-and-chair-reports">
+                        Committees &amp; Chair Reports
+                    </a>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScwJ0DdWY05T7IiHd2Df_aboi8qJ7ubcRj75LZGyG73HIdTBw/viewform" class="navbar-item">Pay Now</a>
                     <div class="navbar-item">
                         <div class="buttons">

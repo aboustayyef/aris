@@ -1,5 +1,10 @@
 @extends('arismun.layout')
 @section('content')
+<style>
+    ol li{
+        list-style: upper-alpha;
+    }
+</style>
 <!-- Hero Intro -->
 <section class="hero is-medium">
     <div class="hero-body">
@@ -7,8 +12,9 @@
             <div class="columns">
                 <div class="column is-4">
                     <h1 class="is-size-3 has-text-weight-bold">
-                        Committees and Chairs Reports
+                        Committees and Chair Reports
                     </h1>
+                    <img src="/img/arismun/aris_mun_logo.svg" style="opacity:0.2" class="is-hidden-mobile mr-6 mt-6" alt="">
                 </div>
                 <div class="column is-4 px-4">
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
@@ -37,28 +43,30 @@
                     </div>
 
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
-                        Security Council (UNSC):
+                        United Nations Security Council (UNSC):
                     </h2>
                     <div class="mt-4 content">
                         <ol>
                             <li>The Militarization of the Arctic</li>
                             <li>The Hezbollah-Israel Conflict</li>
                         </ol>
+                        <a href="/img/arismun/chair_reports/security_council_chair_report.pdf" class="button">Read Chair Report</a>
                     </div>
 
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
-                        Disarmament (DISEC)
+                        United Nations General Assembly First Committee (DISEC)
                     </h2>
                     <div class="mt-4 content">
                         <ol>
                             <li>Disarmament of Gaza in the Palestinean/ Israeli conflict</li>
                             <li>Mitigating Civilian Airstrikes in the Middle East</li>
                         </ol>
+                        <a href="/img/arismun/chair_reports/DISEC_chair_report_topic_2.pdf" class="button">Read Chair Report on Topic B</a>
                     </div>
                 </div>
                 <div class="column is-4">
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
-                        Human Rights Council (UNHRC):
+                        United Nations Human Rights Council (UNHRC):
                     </h2>
                     <div class="mt-4 content">
                         <ol>
@@ -81,17 +89,18 @@
                     </div>
 
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
-                        General Assembly (GA):
+                        United Nations General Assembly (GA):
                     </h2>
                     <div class="mt-4 content">
                         <ol>
                             <li>International Laws and Regulations for Vaccinations</li>
                             <li>The Rights of People to Self-Determination</li>
                         </ol>
+                        <a href="/img/arismun/chair_reports/general_assembly_chair_report.pdf" class="button">Read Chair Report</a>
                     </div>
                     
                     <h2 class="is-size-4 has-text-weight-bold has-text-primary">
-                        Economic and Social Council (ECOSOC):
+                        United Nations Economic and Social Council (ECOSOC):
                     </h2>
                     <div class="mt-4 content">
                         <ol>

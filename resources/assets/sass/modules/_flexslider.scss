@@ -37,3 +37,32 @@ ul.flex-direction-nav{
 .flexslider ol {
 	display:none;
 }
+
+.inspirewrap{
+	display: block;
+	z-index: 100;
+	position: absolute;
+	bottom: 1rem;
+	width:100%;
+}
+.inspireempowertransform{
+	display:block;
+	width:1124px;
+	margin:auto;
+	padding-top:1rem;
+	padding-bottom:0.5rem;
+	font-size: 3rem;
+	font-weight: bold;
+	color: white;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+@media (max-width:1124px){
+	.inspireempowertransform{
+		width: calc(100% - 20px);
+	}
+}
+@media (max-width:740px){
+	.inspireempowertransform{
+		font-size:2rem;
+	}
+}

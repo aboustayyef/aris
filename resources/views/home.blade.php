@@ -24,6 +24,9 @@
 			<li><img src="{{asset('img/slides/' . $slide . '?v=2')}}" alt=""></li>
 	   	@endforeach
   </ul>
+	<div class="inspirewrap">
+		<div class="inspireempowertransform">Inspire, Empower,Transform</div>
+	</div>
 </div>
 
 <div class="section">

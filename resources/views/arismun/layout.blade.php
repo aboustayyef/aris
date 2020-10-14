@@ -72,6 +72,13 @@
 
     @yield('content')
 
+<section class="section pt-2 pb-2">
+    <div class="container has-text-centered">
+        <a href="https://www.japanmotors.com/">
+            <img src="/img/japan_motors_logo_820x206.png" width="205px" alt="Japan Motors Logo">
+        </a>
+    </div>
+</section>
 <footer class="has-text-centered section has-background-light is-paddingless py-4">
 ARIS 2020®
 </footer>

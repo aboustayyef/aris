@@ -45,10 +45,7 @@
 
 				@include('partials.latestNews')
 				@include('partials.latestVideos')
-				<h2 class="latestNews">Thank You</h2>
-				<a href="https://www.japanmotors.com/">
-					<img src="/img/japan_motors_logo_820x206.png" width="410px" alt="Japan Motors Logo">
-				</a>
+				
 				
 			</div> <!-- grid1-2 -->
 

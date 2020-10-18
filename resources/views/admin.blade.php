@@ -6,6 +6,9 @@
 </div>
 <div class="row">
 	<div class="col-md-8">
+		<h2>Pages</h2>
+		<a href="/node/create?from=admin" class="btn btn-warning btn-lg">Create A New Page in The Website</a>
+		<hr>
 		<h2>News <a class="btn btn-warning" href="/news/create/?from=admin">Create Story</a></h2>
 		<table class="table">
 			<caption>

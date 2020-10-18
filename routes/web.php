@@ -48,7 +48,7 @@ Route::resource('people', 'PeopleController');
 Node Editor
 **************************************************************/
 Route::resource('node', 'NodeController', ['except' => [
-    'create', 'index' , 'show', 'store'
+    'index' , 'show'
 ]]);
 
 /**************************************************************
@@ -100,6 +100,10 @@ Route::get('/activities/aris-mun-2020/committees-and-chair-reports', function(){
     return view('arismun.committees')->with('title','ARISMUN 2020. Committees and Chair Reports');
 });
 
+Route::get('sectionsReference', function()
+{
+    return view('sections');
+});
 // Read Pages (Nodes)
 Route::get('/{section}/{subsection?}/{page?}/{subpage?}', array(
     'uses'      =>  'pageNavigationController@resolve'
@@ -109,10 +113,6 @@ Route::get('/{section}/{subsection?}/{page?}/{subpage?}', array(
 DEV STUFF - NOT FOR PUBLIC
 **************************************************************/
 
-// Route::get('sectionsReference', function()
-// {
-//     return view('sections');
-// });
 
 // Route::get('styleguide', function(){
 //     return view('styleguide');

@@ -5,8 +5,11 @@ namespace Aris;
 use Illuminate\Database\Eloquent\Model;
 use \Exception;
 
+
 class Node extends Model
 {
+	protected $fillable = ['parent_it','name','content'];
+	
     public function topLevel(){
 		$topLevel = $this->where('parent_id', null)->get();
 		return $topLevel;
@@ -159,4 +162,14 @@ class Node extends Model
 			'content'	=>	'required|min:10'
 		);
 	}
+
+
+	public static function validationRules(){
+		return array(
+			'name'	=>	'required',
+			'content' => 'required'
+		);
+
+	}
+
 }

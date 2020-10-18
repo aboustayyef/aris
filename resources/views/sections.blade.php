@@ -9,27 +9,29 @@ use Aris\Node;
 	<title>Sections</title>
 </head>
 <body>
-	<?php
-		echo '<h1>Sections</h1>';
-		echo '<ul>';
-		$sections = (new Node)->topLevel();
-		foreach ($sections as $key => $section) {
-			echo '<li>' . $section->name ;//. ' ( ' . $section->id . ' )';
-			echo '<ul>';
+	<h1>Sections</h1>
+	<ul>
+		@php $sections = (new Node)->topLevel(); @endphp
+		@foreach ($sections as $section)
+			<li >{{$section->name}}
+				<ul>
+					@php $subsections = $section->children();@endphp
+					@foreach ($subsections as $subsection)
+						<li class="closed">
+							{{$subsection->name}}
+							@php $pages = $subsection->children(); @endphp
+							<ul>
+								@foreach ($pages as $page)
+									<li>{{$page->name}}</li>
+								@endforeach
+							</ul>
+						</li>	
+					@endforeach
+				</ul>
+			</li>
 
-			$subsections = $section->children();
-			foreach ($subsections as $key => $subsection) {
-				echo '<li>' . $subsection->name ;//. ' ( ' . $subsection->id . ' )</li>';
-				$pages = $subsection->children();
-				echo '<ul>';
-				foreach ($pages as $key => $page) {
-					echo "<li>$page->name</li>";
-				}
-				echo '</ul>';
-			}
-			echo '</ul>';
-			echo '</li>';
-		}
-	?>
+			@endforeach
+		</ul>
+
 </body>
 </html>

@@ -20,7 +20,7 @@ class NodeController extends Controller
 		foreach ($sections as $section) {
 			$parents->push(['id'=>$section->id, 'name'=>$section->name]);
 			foreach ($section->children() as $subsection) {
-				$parents->push(['id' => $subsection->id, 'name'=> "- $subsection->name"]);
+				$parents->push(['id' => $subsection->id, 'name'=> "├ $subsection->name"]);
 			}
 			$parents->push('divider');
 		}

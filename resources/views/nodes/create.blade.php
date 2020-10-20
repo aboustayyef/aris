@@ -24,7 +24,7 @@
       >
       {{$parent['name']}}</option>
       @else
-      <option disabled> -------------- </option>
+      <option disabled>──────────────</option>
       @endif
       @endforeach
     </select>

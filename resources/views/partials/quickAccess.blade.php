@@ -39,6 +39,12 @@
       </li>
 
       <li>
+         <a href="{{Url('https://pay.aris.edu.gh')}}">
+            <i class="fa fa-credit-card"></i>
+            Make a Payment
+         </a>
+      </li>
+      <li>
          <a href="{{Url('news')}}">
             <i class="fa fa-list-ul"></i>
             News

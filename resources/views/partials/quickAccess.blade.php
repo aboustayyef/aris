@@ -11,6 +11,13 @@
       </li>
 
       <li>
+         <a href="https://aris.openapply.com/tours/new" onclick="ga('send', 'event', 'Outgoing Link', 'Book A Tour')">
+            <i class="fa fa-list-ul"></i> 
+            Book a Tour
+         </a>
+      </li>
+
+      <li>
          <a href="{{Url('contact-us')}}">
             <i class="fa fa-phone"></i>
             Contact

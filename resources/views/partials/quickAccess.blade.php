@@ -11,13 +11,6 @@
       </li>
 
       <li>
-         <a href="mailto:communication@aris.edu.gh?subject=Request for ARIS Tour" onclick="ga('send', 'event', 'Outgoing Link', 'Book A Tour')">
-            <i class="fa fa-list-ul"></i> 
-            Book a Tour
-         </a>
-      </li>
-
-      <li>
          <a href="{{Url('contact-us')}}">
             <i class="fa fa-phone"></i>
             Contact

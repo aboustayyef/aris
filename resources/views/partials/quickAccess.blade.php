@@ -4,7 +4,7 @@
 <div class="quickAccess">
    <ul>
       <li>
-         <a href="https://aris.openapply.com/apply">
+         <a href="https://aris.openapply.com">
             <i class="fa fa-file-o"></i> 
             Enroll Now 
          </a>

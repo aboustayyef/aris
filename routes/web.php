@@ -21,10 +21,11 @@ Auth::routes();
 Route::get('admin', function(){
     // last ten news stories
     $news = \Aris\News::getLatest(15);
-    $faculty = \Aris\People::Where('type','Faculty')->orderBy('lastname', 'asc')->get();
-    $admin = \Aris\People::Where('type','Administration')->orderBy('lastname', 'asc')->get();
-    $staff = \Aris\People::Where('type','Staff')->orderBy('lastname', 'asc')->get();
-    return view('admin')->with(['news'=>$news , 'faculty'=>$faculty , 'staff'=>$staff , 'admin'=>$admin]);
+    // $faculty = \Aris\People::Where('type','Faculty')->orderBy('lastname', 'asc')->get();
+    // $admin = \Aris\People::Where('type','Administration')->orderBy('lastname', 'asc')->get();
+    // $staff = \Aris\People::Where('type','Staff')->orderBy('lastname', 'asc')->get();
+    // return view('admin')->with(['news'=>$news , 'faculty'=>$faculty , 'staff'=>$staff , 'admin'=>$admin]);
+    return view('admin')->with(['news'=>$news ]);
 })->middleware('auth');
 
 Route::get('logout', function(){
@@ -40,9 +41,9 @@ Route::resource('news', 'NewsController');
 /**************************************************************
 PEOPLE
 **************************************************************/
-Route::get('people/{id}/edit', ['uses'=>'PeopleController@edit', 'as' => 'people.edit']);
-Route::get('people/{category}/{slug}', ['uses'=>'PeopleController@person', 'as' => 'people.person']);
-Route::resource('people', 'PeopleController');
+// Route::get('people/{id}/edit', ['uses'=>'PeopleController@edit', 'as' => 'people.edit']);
+// Route::get('people/{category}/{slug}', ['uses'=>'PeopleController@person', 'as' => 'people.person']);
+// Route::resource('people', 'PeopleController');
 
 /**************************************************************
 Node Editor

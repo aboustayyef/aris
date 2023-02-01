@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="page-header">
-	<p class="lead">Management dashboard for News And People</p>
+	<p class="lead">Management dashboard for News And Pages</p>
 </div>
 <div class="row">
 	<div class="col-md-8">
@@ -30,7 +30,7 @@
 			</tbody>
 		</table>
 	</div>
-	<div class="col-md-4">
+	{{-- <div class="col-md-4">
 		<h2>People <a class="btn btn-warning" href="/people/create/?from=admin">Create Person</a></h2>
 		  <!-- Nav tabs -->
 		  <ul class="nav nav-tabs" role="tablist">
@@ -77,6 +77,6 @@
 				</table>
 		    </div>
 		  </div>
-	</div>
+	</div> --}}
 </div>
 @stop

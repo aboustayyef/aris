@@ -20,7 +20,7 @@
 <div class="flexslider">
 	<ul class="slides">
 		{{-- special pinned slide --}}
-		<li><img src="{{asset('img/slides/aris_graduating_class_2021.jpg')}}" alt=""></li>
+		<li><img src="{{asset('img/slides/aris_graduating_class_2023.jpg')}}" alt=""></li>
 		<li><img src="{{asset('img/slides/ibcp_all_four_programs.png')}}" alt=""></li>
 		@foreach ($slides as $key => $slide)
 		<li><img src="{{asset('img/slides/' . $slide . '?v=2')}}" alt=""></li>

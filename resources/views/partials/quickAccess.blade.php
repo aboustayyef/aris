@@ -75,6 +75,13 @@
             Instagram
          </a>
       </li>
+      </li>
+      <li>
+         <a href="{{Url('https://sites.google.com/aris.edu.gh/repository/home')}}">
+            <i class="fa fa-book"></i>
+            Aris Digital Library
+         </a>
+      </li>
 
    </ul>
 </div>

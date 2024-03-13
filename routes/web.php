@@ -87,6 +87,11 @@ Route::get('/', function(){
     
 });
 
+// AISA GISS Link
+Route::get('/activities/aisa-giss-2024', function(){
+    return redirect('https://www.aisagiss.org/2024/');
+});
+
 // ARIS MUN
 Route::get('/activities/aris-mun-2020', function(){
     return view('arismun.home')->with('title','ARISMUN 2020 Home');

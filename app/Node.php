@@ -16,7 +16,10 @@ class Node extends Model
 	}
 
 	public function children(){
-		$children = $this->where('parent_id', $this->id)->orderBy('name','asc')->get();
+		$children = $this->where('parent_id', $this->id)
+                 ->orderBy('order', 'asc')  // Primary sorting by "order"
+                 ->orderBy('name', 'asc')   // Secondary sorting by "name"
+                 ->get();
 		return $children;
 	}
 

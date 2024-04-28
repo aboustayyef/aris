@@ -32,7 +32,7 @@
       </li>
 
       <li>
-         <a href="{{Url('calendar')}}">
+         <a href="{{Url('learning/academic-calendar')}}">
             <i class="fa fa-calendar"></i>
             Calendar
          </a>
